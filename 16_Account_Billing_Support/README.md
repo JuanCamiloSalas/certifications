@@ -61,6 +61,8 @@
 
 ![](./assets/consolidate-billing.png)
 
+En este ejemplo podemos ver cómo una cuante que tiene 5 instancias reservadas y está usando solo 3 puede darle esas 2 faltantes a otra cuenta que las puede usar (deben estar en la misma zona de disponibilidad).
+
 ## [AWS Control Tower](https://aws.amazon.com/controltower)
 - Una forma fácil de **configurar y gobernar un entorno AWS multicuenta seguro** y conforme a las mejores prácticas
 - Ventajas:
@@ -74,12 +76,12 @@
 ## [AWS Resource Access Manager (AWS RAM)](https://aws.amazon.com/ram)
 - Comparte los recursos de AWS que poseas con otras cuentas de AWS
 - Comparte con cualquier cuenta o dentro de tu organización
-- ¡Evita la duplicación de recursos!
+- **¡Evita la duplicación de recursos!**
 - Los recursos soportados incluyen Aurora, Subredes de VPC, Transit Gateway, Route 53, EC2 Hosts dedicados...
 
 
 <img src="./assets/aws-ram.png"/>
-<figcaption>Como se aprecia en la imagen existe una master account que tiene una VPC compartida y una RDS DB, los demás recursos están desplegados en otras dos cuentas pero en la VPC de la master account</figcaption>
+<figcaption>Arquitectura multi-cuenta con AWS RAM: el propietario comparte una VPC y subred privada con dos cuentas independientes, permitiéndoles desplegar recursos (EC2, ALB) en una red común con acceso centralizado a Amazon RDS.</figcaption>
 
 ## [AWS Service Catalog](https://aws.amazon.com/servicecatalog)
 
@@ -96,8 +98,8 @@ AWS tiene 4 modelos de precios:
 1. **Paga por lo que usas:** sigue siendo ágil, responde, cumple con las demandas de escala
 2. **Ahorra cuando reserves:** minimiza los riesgos, gestiona de forma predecible los presupuestos, cumple con los requisitos a largo plazo 
 > Las reservas están disponibles para instancias reservadas de EC2, capacidad reservada de DynamoDB, nodos reservados de ElastiCache, instancias reservadas de RDS y nodos reservados de Redshift
-3. **Paga menos usando más:** descuentos por volumen
-4. **Paga menos al crecer AWS**
+3. **Paga menos usando más:** descuentos por volumen - a medida que aumenta el uso, obtienes descuentos por volumen. Servicios como S3 reducen el precio por GB conforme almacenas más datos, y la transferencia de datos también se abarata con el volumen.
+4. **Paga menos al crecer AWS:** a medida que AWS optimiza su infraestructura y crece su escala global, traslada los ahorros operativos a los clientes mediante reducciones de precios, sin necesidad de renegociar contratos.
 
 ### Servicios y niveles gratuitos en AWS
 - IAM
@@ -285,7 +287,7 @@ Servicios gratuitos pero que generan costos por los servicios que éstos crean:
 ### Cost Explore- Coste mensual por servicio de AWS
 ![](./assets/aws-cost-exp-monthly-dashboard.png)
 
-### Cost Explore- Nivel de horas y recursos
+### Cost Explorer - Nivel de horas y recursos
 ![](./assets/aws-cost-exp-cost&usage.png)
 
 ### Cost Explorer - Plan de ahorro, Alternativa a las instancias reservadas
@@ -421,7 +423,7 @@ recomendaciones en 5 categorías
 
 ## Resumen - Herramientas de facturación y cálculo de costes
 - **Compute Optimizer:** recomienda configuraciones de recursos para reducir el coste
-- **Pricing Calculator:** coste de los servicios en AWS
+- **Pricing Calculator:** calculadore de costes de los servicios en AWS
 - **Dashboard de facturación:** visión general de alto nivel + dashboards de niveles gratuitos
 - **Etiquetas de asignación de costes:** etiqueta los recursos para crear informes detallados
 - **Cost & Usage Reports:** el conjunto de datos de facturación más completo
