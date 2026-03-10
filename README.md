@@ -22,5 +22,5 @@
 14. [Seguridad y normativa](./14_Security_&_Compliance/README.md)
 15. [Machine Learning](./15_Machine_Learning/README.md)
 16. [Gestión de la cuenta, facturación y soporte técnico](./16_Account_Billing_Support/README.md)
-17. Identidad avanzada
-18. Otros servicios
+17. [Identidad avanzada](./17_Advanced_Identity/README.md)
+18. [Otros servicios](./18_Other_Services/README.md)
