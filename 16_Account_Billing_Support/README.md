@@ -433,3 +433,7 @@ recomendaciones en 5 categorías
 - **Planes de ahorro:** forma sencilla de ahorrar según el uso a largo plazo de AWS
 - **Cost Anomaly Detection:** detecta gastos inusuales utilizando Machine Learning
 - **Service Quotas:** te avisa cuando estás cerca del umbral de cuota de servicio
+
+[![](https://img.shields.io/badge/<-FF4859?style=for-the-badge)](../15_Machine_Learning/README.md)
+[![](https://img.shields.io/badge/CONTENT_TABLE-175074?style=for-the-badge)](../README.md)
+[![](https://img.shields.io/badge/>-FF4859?style=for-the-badge)](../17_Advanced_Identity/README.md)
