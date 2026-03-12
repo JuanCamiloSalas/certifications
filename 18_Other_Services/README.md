@@ -4,7 +4,7 @@
 
 # Otros Servicios
 
-> ![NOTE]
+> [!NOTE]
 > - Los otros servicios representan servicios que no pude agrupar con los otros
 > - Son servicios que, según los estudiantes, aparecen a veces, pero raramente, en el examen de AWS
 > - Las clases son cortas y breves y, probablemente, sin prácticas
