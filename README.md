@@ -24,3 +24,4 @@
 16. [Gestión de la cuenta, facturación y soporte técnico](./16_Account_Billing_Support/README.md)
 17. [Identidad avanzada](./17_Advanced_Identity/README.md)
 18. [Otros servicios](./18_Other_Services/README.md)
+19. [Arquitectura y ecosistema de AWS](./19_AWS_Architecture_&_Ecosystem/README.md)
