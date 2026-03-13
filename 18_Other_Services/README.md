@@ -31,12 +31,12 @@
 > Siemrpre que pregunten sobre entregar una aplicación desde un navegador web piensa en este servicio!
 
 ## Amazon AppStream 2.0 vs WorkSpaces
-- **Workspaces**
+### Workspaces
 - Dispones de una VDI y un escritorio totalmente gestionados
 - Los usuarios se conectan a la VDI y abren aplicaciones nativas o WAM
 - Los espacios de trabajo están bajo demanda o siempre encendidos
 
-- **AppStream 2.0**
+### AppStream 2.0
 - Transmite una aplicación de escritorio a los navegadores web (sin necesidad de
 conectarse a una VDI)
 - Funciona con cualquier dispositivo (que tenga un navegador web)
