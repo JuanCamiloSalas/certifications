@@ -116,3 +116,152 @@
 
 ### Servicios AWS - Sostenibilidad
 ![](./assets/sixth-pilar-services.png)
+
+## [Herramienta AWS Well-Architected](https://console.aws.amazon.com/wellarchitected)
+- Herramienta gratuita para revisar tus arquitecturas con respecto al Marco de los 6 pilares de la buena arquitectura y adoptar las mejores prácticas de arquitectura
+- ¿Cómo funciona?
+- Selecciona tu carga de trabajo y responde a las preguntas
+- Revisa tus respuestas con respecto a los 6 pilares
+- Obtén asesoramiento: obtén vídeos y documentación, genera un informe, ve los resultados en un
+dashboards
+
+## [AWS Customer Carbon Footprint Tool](https://aws.amazon.com/es/blogs/aws/new-customer-carbon-footprint-tool)
+- Realiza seguimiento, medición, revisión y proyección de las emisiones de carbono generadas por tu uso de AWS
+- Te ayuda a cumplir tus propios objetivos de sostenibilidad
+
+![](./assets/aws-footprint.png)
+
+## AWS Cloud Adoption Framework (AWS CAF)
+- Te ayuda a construir y luego ejecutar un plan integral para tu transformación digital mediante el uso innovador de AWS
+- Creado por profesionales de AWS aprovechando las mejores prácticas de AWS y las lecciones aprendidas de miles de clientes
+- AWS CAF identifica las capacidades organizativas específicas que apuntalan el éxito de las transformaciones en el Cloud
+- AWS CAF agrupa sus capacidades en seis perspectivas: Negocio, Personas, Gobierno, Plataforma, Seguridad y Operaciones
+
+![](./assets/aws-caf.png)
+
+### Perspectivas y capacidades fundamentales del CAF Capacidades empresariales
+- **Perspectiva empresarial** ayuda a garantizar que tus inversiones en el Cloud aceleran tus ambiciones de transformación digital y los resultados empresariales.
+- **Perspectiva de las personas** sirve **como puente entre la tecnología y la empresa**, acelerando el viaje en el Cloud para ayudar a las organizaciones a evolucionar más rápidamente hacia una cultura de crecimiento continuo, aprendizaje y en la que el cambio se convierte en algo normal, centrándose en la cultura, la estructura organizativa, el liderazgo y el personal.
+- **Perspectiva de gobierno** te ayuda a orquestar tus iniciativas en el Cloud maximizando los beneficios organizativos y minimizando los riesgos relacionados con la transformación.
+
+![](./assets/aws-caf-enterpise.png)
+
+### Perspectivas y capacidades fundamentales del CAF Capacidades técnicas
+- **Perspectiva de la plataforma** te ayuda a crear una plataforma de Cloud híbrida, escalable y de calidad empresarial, a modernizar las cargas de trabajo existentes y a implantar nuevas soluciones nativas de Cloud.
+- **Perspectiva de seguridad** te ayuda a conseguir la confidencialidad, integridad y disponibilidad de tus datos y cargas de trabajo en el Cloud.
+- **Perspectiva de las operaciones** ayuda a garantizar que tus servicios en el Cloud se prestan a un nivel que satisface las necesidades de tu empresa.
+
+![](./assets/aws-caf-tech.png)
+
+### Cadena de valor de la transformación Cloud
+![](./assets/cloud-cadena-valor.png)
+
+### AWS CAF - Dominios de transformación
+- **Tecnología** - utilizar el Cloud para migrar y modernizar la infraestructura heredada, las aplicaciones, los datos y las plataformas de análisis...
+- **Proceso** - digitalizando, automatizando y optimizando tus operaciones empresariales
+  - aprovechar las nuevas plataformas de datos y análisis para crear perspectivas procesables
+  - utilizando Machine Learning (ML) para mejorar tu experiencia de servicio al cliente...
+- **Organización** - Reimaginando tu modelo operativo
+  - organizar tus equipos entorno a productos y flujos de valor
+  - aprovechando métodos ágiles para iterar y evolucionar rápidamente
+- **Producto** - Reimaginar tu modelo de negocio creando nuevas propuestas de valor (productos y servicios) y modelos de ingresos
+
+### AWS CAF - Fases de transformación
+- **Envision:** demuestra cómo la nube acelerará los resultados del negocio al identificar oportunidades de transformación y crear una base para tu transformación digital
+- **Align:** identifica brechas de capacidades en las 6 perspectivas de AWS CAF, lo que da como resultado un plan de acción
+- **Launch:** construye y entrega iniciativas piloto en producción y demuestra valor de negocio incremental
+- **Scale:** expande las iniciativas piloto a la escala deseada mientras obtienes los beneficios de negocio esperados
+
+## Dimensionamiento correcto de AWS
+- EC2 tiene muchos tipos de instancia, pero elegir el tipo de instancia más potente no es la mejor opción, porque el Cloud es **elástico**
+- El dimensionamiento correcto es el proceso de adecuar los tipos y tamaños de instancia a los requisitos de rendimiento y capacidad de tu carga de trabajo al menor coste posible
+- **Aumentar la escala es fácil, así que empieza siempre con algo pequeño**
+- También es el proceso de examinar las instancias desplegadas e identificar las oportunidades de eliminar o reducir su tamaño sin comprometer la capacidad u otros requisitos, lo que da lugar a una reducción de los costes
+- Es importante dimensionar correctamente...
+  - **antes de una migración al Cloud**
+  - **continuamente después del proceso de incorporación al Cloud (los requisitos cambian con el tiempo)**
+- CloudWatch, Cost Explorer, Trusted Advisor y herramientas de terceros pueden ayudar
+
+## Ecosistema AWS - Recursos gratuitos
+- [**Blogs de AWS**](https://aws.amazon.com/blogs/aws/)
+- [**Foros (comunidad) de AWS**](https://forums.aws.amazon.com/index.jspa)
+- [**Whitepapers y guías de AWS**](https://aws.amazon.com/whitepapers)
+- [**Inicio rápido de AWS**](https://aws.amazon.com/quickstart/)
+  - Despliegues automatizados y de calidad en el Cloud de AWS
+  - Construye tu entorno de producción rápidamente con plantillas
+  - Ejemplo: [WordPress en AWS](https://fwd.aws/P3yyv?did=qs_card&trk=qs_card)
+  - Aprovecha CloudFormation
+- [**Soluciones AWS**](https://aws.amazon.com/solutions/)
+  - Soluciones tecnológicas vetadas para el Cloud de AWS
+  - Ejemplo - AWS Landing Zone: entorno AWS seguro y multicuenta
+    - [https://aws.amazon.com/solutions/implementations/aws-landing-zone/](https://aws.amazon.com/solutions/implementations/aws-landing-zone/)
+    - "Sustituido" por AWS Control Tower
+
+## Ecosistema AWS - AWS Support
+- **DEVELOPER**
+  - Acceso por correo electrónico en horario laboral a los asociados de soporte de Cloud
+  - Orientación general: < 24 horas laborables
+  - Sistema deteriorado: < 12 horas laborables
+- **BUSINESS**
+  - Acceso telefónico, por correo electrónico y por chat 24x7 a los ingenieros de soporte de Cloud
+  - Sistema de producción deteriorado: < 4 horas
+  - Sistema de producción averiado: < 1 hora
+- **ENTERPRISE**
+  - Acceso a un Gestor Técnico de Cuentas (TAM)
+  - Equipo de soporte de atención (para la facturación y las mejores prácticas de la cuenta)
+  - Caída del sistema crítico para el negocio < 15 minutos
+
+## AWS Marketplace
+- Catálogo digital con miles de listados de software de **proveedores de software independientes** (3ª parte)
+- Ejemplo:
+  - AMI personalizada (SO personalizado, firewalls, soluciones técnicas...)
+  - Plantillas de CloudFormation
+  - Software como servicio
+  - Contenedores
+- Si compras a través de AWS Marketplace, se incluye en tu factura de AWS
+- Puedes **vender tus propias soluciones** en AWS Marketplace
+
+## AWS Training
+- Formación digital (online) y presencial de AWS (presencial o virtual)
+- Formación privada de AWS (para tu organización)
+- Formación y certificación para el Gobierno de EE.UU.
+- Formación y certificación para la empresa
+- Academia AWS: ayuda a las universidades a enseñar AWS
+- Y tu profesor online favorito… enseñándote todo sobre las certificaciones de AWS y mucho más!! :)
+
+## AWS Professional Services y Partner Network
+- La organización de servicios profesionales de AWS es un equipo global de expertos
+- Trabajan junto a tu equipo y a un miembro elegido de la APN
+- APN = AWS Partner Network (Red de Socios de AWS)
+- **Socios tecnológicos de APN**: proporcionan hardware, conectividad y software
+- **Socios de consultoría de APN**: empresa de servicios profesionales para ayudar a construir en AWS
+- **Socios de formación de APN**: encuentra quién puede ayudarte a aprender AWS
+- **Programa de competencias de AWS**: las competencias de AWS se conceden a los socios de APN que han demostrado su competencia técnica y el éxito probado de sus clientes en áreas de soluciones especializadas
+- **AWS Navigate Program**: ayuda a los socios a convertirse en mejores partners
+
+## AWS IQ
+- Encuentra rápidamente ayuda profesional para tus proyectos de AWS
+- Contrata y paga a expertos de terceros certificados por AWS para trabajar en proyectos bajo demanda
+- Videoconferencia, gestión de contratos, colaboración segura, facturación integrada
+
+![](./assets/aws-iq.png)
+
+## [AWS re:Post](https://repost.aws/es/knowledge-center)
+- **Servicio de preguntas y respuestas gestionado por AWS** que ofrece respuestas a tus preguntas técnicas sobre AWS, revisadas por expertos y que sustituye a los foros originales de AWS
+- Forma parte de la capa gratuita de AWS
+- Los miembros de la comunidad pueden ganar puntos de reputación para aumentar su estatus de experto de la comunidad proporcionando respuestas aceptadas y revisando las respuestas de otros usuarios
+- **Las preguntas de los clientes de AWS Premium Support que no reciben respuesta de la comunidad se transmiten a los ingenieros de AWS Support**
+- AWS re:Post no está destinado a ser utilizado para preguntas que son sensibles al tiempo o que impliquen cualquier información de propiedad
+
+## AWS Managed Services (AMS)
+- Proporciona soporte de infraestructuras y aplicaciones en AWS.
+- **AMS ofrece un equipo de expertos en AWS** que gestionan y operan tu infraestructura para garantizar la seguridad, fiabilidad y disponibilidad.
+- Ayuda a las organizaciones a descargar las tareas rutinarias de gestión y centrarse en sus objetivos empresariales.
+- Servicio totalmente gestionado, por lo que AWS se encarga de actividades comunes como peticiones de cambios, monitorización, gestión de parches, seguridad y servicios de backup
+- Implementa las mejores prácticas y mantiene tu infraestructura de AWS para reducir tu sobrecarga operativa y el riesgo
+- El horario comercial de AMS es 24/365
+
+![](./assets/aws-ams.png)
+
+[![](https://img.shields.io/badge/<-FF4859?style=for-the-badge)](../18_Other_Services/README.md)
+[![](https://img.shields.io/badge/CONTENT_TABLE-175074?style=for-the-badge)](../README.md)
