@@ -275,6 +275,12 @@ Cifra objetos en Amazon S3 utilizando claves de cifrado
 - Clases de almacenamiento de S3
 - Encriptación de datos en reposo y en tránsito
 
+## IAM Access Analyzer para S3
+- Garantiza que solo las personas previstas tengan acceso a tus buckets de S3
+- Ejemplo: bucket accesible públicamente, bucket compartido con otra cuenta de AWS...
+- Evalúa políticas de buckets de S3, ACL de S3 y políticas de S3 Access Point
+- Funciona con el respaldo de IAM Access Analyzer
+
 ## Familia AWS Snow
 [![aws-links](https://img.shields.io/badge/Documentación-orange?style=for-the-badge)](https://aws.amazon.com/es/snowball/)
 
