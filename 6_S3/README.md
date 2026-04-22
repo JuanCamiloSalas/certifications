@@ -278,6 +278,9 @@ Cifra objetos en Amazon S3 utilizando claves de cifrado
 ## Familia AWS Snow
 [![aws-links](https://img.shields.io/badge/Documentación-orange?style=for-the-badge)](https://aws.amazon.com/es/snowball/)
 
+> [!NOTE]
+> Los servicios de la familia AWS Snow han sido descontinuados para nuevos clientes, pero siguen en la guía oficial del examen AWS Certified Cloud Practitioner, por lo que debes conocerlos.
+
 Dispositivos portátiles de alta seguridad para **recopilar, procesar datos, y migrar datos hacia y desde AWS**
 
 - Snowcone (Migración de datos & Edge computing)
