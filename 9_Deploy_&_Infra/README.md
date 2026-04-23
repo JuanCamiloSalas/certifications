@@ -45,6 +45,13 @@ Entonces CloudFormation los crea por el usuario, en el orden correcto, con la co
 
 ![](./assets/cloudformation-ex.png)
 
+### CloudFormation + Infrastructure Composer
+- Ejemplo: stack de CloudFormation para WordPress
+- Podemos ver todos los recursos
+- Podemos ver las relaciones entre los componentes
+
+![](./assets/cf-&-composer.png)
+
 ## [AWS Cloud Development Kit (CDK)](https://aws.amazon.com/cdk)
 - Define la infraestructura de Cloud usando un lenguaje conocido:
     - JavaScript/TypeScript, Python, Java y .NET
@@ -53,7 +60,7 @@ Entonces CloudFormation los crea por el usuario, en el orden correcto, con la co
 - Útil para las funciones Lambda
 - Útil para contenedores Docker en ECS / EKS
 
-![alt text](./assets/aws-cdk.png)
+![](./assets/aws-cdk.png)
 
 ## [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk)
 
@@ -63,6 +70,9 @@ Entonces CloudFormation los crea por el usuario, en el orden correcto, con la co
 - Pero todo está en una sola vista que es fácil de entender.
 - Seguimos teniendo un control total sobre la configuración
 - Beanstalk es gratuito, pero se paga por las instancias subyacentes
+
+> [!TIP]
+> **Sugerencia de examen:** siempre que nos pregunten por un PaaS (Plataforma como Servicio) para desplegar aplicaciones web sin gestionar la infraestructura, piensa en Elastic Beanstalk.
 
 #### Servicio gestionado
 - La configuración de la instancia / el sistema operativo es manejado por Beanstalk
@@ -99,9 +109,16 @@ Entonces CloudFormation los crea por el usuario, en el orden correcto, con la co
     - Funciona con servidores locales
 - Los servidores / instancias deben ser aprovisionados y configurados de antemano con el agente de CodeDeploy
 
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por el despliegue automatizado de aplicaciones en un entorno **híbrido** (instancias EC2 **y/o** servidores on-premises), piensa en AWS CodeDeploy.
+
 ![](./assets/code-deploy.png)
 
 ## [AWS CodeCommit](https://aws.amazon.com/codecommit)
+
+> [!WARNING]
+> En julio de 2024 AWS dejó de aceptar nuevos clientes en CodeCommit, por lo que mucho material antiguo del CLF-C02 lo describe como descontinuado. Sin embargo, el servicio [volvió a estar disponible en GA](https://aws.amazon.com/es/blogs/devops/aws-codecommit-returns-to-general-availability/) el 24/11/2025 y vuelve a aceptar nuevos clientes. Verifica siempre el temario vigente antes del examen.
+
 - Antes de enviar el código de la aplicación a los servidores, es necesario almacenarlo en algún lugar
 - Los desarrolladores suelen almacenar el código en un repositorio, utilizando la tecnología Git
 - Una oferta pública famosa es GitHub, el producto competidor de AWS es CodeCommit
@@ -136,6 +153,9 @@ Orquestar los diferentes pasos para que el código sea empujado automáticamente
 - Totalmente gestionado, compatible con CodeCommit, CodeBuild, CodeDeploy, Elastic Beanstalk, CloudFormation, GitHub, servicios de terceros (GitHub...) y plugins personalizados...
 - Entrega rápida y actualizaciones rápidas
 
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por **orquestar un pipeline CI/CD** en AWS (conectar las etapas de Código → Build → Test → Deploy), piensa en AWS CodePipeline. No lo confundas con CodeBuild (solo compila/testea) ni CodeDeploy (solo despliega).
+
 ![](./assets/code-pipeline.png)
 
 ## [AWS CodeArtifact](https://aws.amazon.com/codeartifact)
@@ -146,24 +166,14 @@ Orquestar los diferentes pasos para que el código sea empujado automáticamente
 - Funciona con herramientas comunes de gestión de dependencias como Maven, Gradle, npm, yarn, twine, pip y NuGet
 - **Los desarrolladores y CodeBuild pueden recuperar las dependencias directamente desde CodeArtifact**
 
-## [AWS CodeStar](https://aws.amazon.com/codestar)
-- Interfaz de usuario unificada para gestionar fácilmente las actividades de desarrollo de software en un solo lugar
-- "Forma rápida" de empezar a configurar correctamente CodeCommit, CodePipeline,
-CodeBuild, CodeDeploy, Elastic Beanstalk, EC2, etc.
-- Puedes editar el código "en la nube" utilizando AWS Cloud9
-
-> [!CAUTION]
-> Suspensión del soporte de AWS CodeStar
-
-## [AWS Cloud9](https://aws.amazon.com/cloud9)
-- AWS Cloud9 es un IDE (Entorno de Desarrollo Integrado) en el Cloud para escribir, ejecutar y depurar código
-- Los IDE "clásicos" (como IntelliJ, Visual Studio Code...) se descargan en un ordenador antes de ser utilizados
-- Un IDE en el Cloud se puede utilizar dentro de un navegador web, lo que significa que puedes trabajar en tus proyectos desde tu oficina, casa o cualquier lugar con Internet sin necesidad de configuración
-- AWS Cloud9 también permite la colaboración de código en tiempo real (pair programming)
-
-![](./assets/cloud9-ex.png)
+> [!TIP]
+> **Sugerencia de examen:** siempre que mencionen **"artefactos"** o dependencias de paquetes (npm, pip, Maven, NuGet...), piensa en AWS CodeArtifact.
 
 ## [AWS Systems Manager (SSM)](https://aws.amazon.com/systems-manager)
+
+> [!NOTE]
+> **Analogía práctica:** SSM es *"el Ansible de AWS"* — un servicio de **gestión de configuración y operaciones a escala** sobre una flota de servidores (parchear, ejecutar comandos, instalar software, inventariar, etc.). Igual que Ansible, usa un agente en cada máquina y te permite aplicar acciones en paralelo a cientos o miles de servidores sin entrar por SSH uno por uno.
+
 - Nos ayuda a **gestionar** nuestros **sistemas EC2 y On-Premises** a <ins>*escala*</ins>
 - Otro servicio **híbrido** de AWS
 - Obtenga información operativa sobre el estado de su infraestructura
@@ -194,6 +204,16 @@ CodeBuild, CodeDeploy, Elastic Beanstalk, EC2, etc.
 
 ![](./assets/ssm-session-manager.png)
 
+### Systems Manager Parameter Store
+
+- Almacenamiento seguro para configuración y secretos
+- Claves API, contraseñas, configuraciones...
+- Serverless, escalable, duradero y con SDK fácil de usar
+- Controla los permisos de acceso mediante IAM
+- Versionado y cifrado (opcional)
+
+![](./assets/ssm-parameter-store.png)
+
 ### Pasos para implementar SSM
 1. Crear la instancia EC2 sin key pair
 2. Crear un Role para EC2 con la policy `AmazonSSMManagedInstanceCore`
@@ -201,41 +221,24 @@ CodeBuild, CodeDeploy, Elastic Beanstalk, EC2, etc.
 4. Volver a *AWS Systems Manager* > *Node Tools* (panel izquierdo) > *Session Manager*
 5. Dar click en *start a session* y seleccionar la instancia
 
-## [AWS OpsWorks](https://docs.aws.amazon.com/opsworks)
-- Chef y Puppet ayudan a realizar la configuración del servidor de forma automática, o acciones repetitivas
-- Funcionan muy bien con EC2 y VM On-Premises
-- AWS OpsWorks = Chef y Puppet gestionados
-- Es una alternativa a AWS SSM
-- Sólo aprovisiona **recursos estándar de AWS**: Instancias EC2, bases de datos, balanceadores de carga, volúmenes EBS...
-
-> [!NOTE]
-> En el examen: Se necesita Chef o Puppet => AWS OpsWorks
-
-### Arquitectura de OpsWorks
-![](./assets/aws-opswork.png)
-
 ## Resumen - Despliegue
-- **CloudFormation:** (sólo AWS)
-    - Infraestructura como código, funciona con casi todos los recursos de AWS
-    - Se repite en todas las regiones y cuentas
-- **Beanstalk:** (sólo AWS)
-    - Plataforma como servicio (PaaS), limitada a ciertos lenguajes de programación o Docker
-    - Implementa el código de forma coherente con una arquitectura conocida: por ejemplo, ALB + EC2 + RDS
-- **CodeDeploy:** (híbrido) despliega y actualiza cualquier aplicación en los servidores
-- **Systems Manager:** (híbrido) parchea, configura y ejecuta comandos a escala
-- **OpsWorks:** (híbrido) gestiona Chef y Puppet en AWS
+- **CloudFormation**: (sólo AWS)
+  - Infraestructura como código, funciona con casi todos los recursos de AWS
+  - Se repite en todas las regiones y cuentas
+  - Con **Infrastructure Composer** permite visualizar recursos y relaciones entre componentes
+- **Beanstalk**: (sólo AWS)
+  - Plataforma como servicio (PaaS), limitada a ciertos lenguajes de programación o Docker
+  - Implementa el código de forma coherente con una arquitectura conocida: por ejemplo, ALB + EC2 + RDS
+- **CodeDeploy** (híbrido): despliega y actualiza cualquier aplicación en los servidores
+- **Systems Manager** (híbrido): parchea, configura y ejecuta comandos a escala
 
 ## Resumen - Servicios para desarrolladores
-- **CodeCommit:** Almacena el código en un repositorio git privado (versión controlada)
-- **CodeBuild:** Construye y prueba el código en AWS
-- **CodeDeploy:** Implementa el código en los servidores
-- **CodePipeline:** Orquestación del pipeline (desde el código hasta la construcción y el
-despliegue)
-- **CodeArtifact:** Almacena paquetes de software / dependencias en AWS
-- **CodeStar:** Vista unificada para permitir a los desarrolladores hacer CICD y código
-- **Cloud9:** IDE (Entorno de Desarrollo Integrado) en el Cloud con collab
-- **AWS CDK:** Define tu infraestructura en el Cloud utilizando un lenguaje de
-programación
+- **CodeCommit**: Almacena el código en un repositorio git privado (versión controlada)
+- **CodeBuild**: Construye y prueba el código en AWS
+- **CodeDeploy**: Implementa el código en los servidores
+- **CodePipeline**: Orquestación del pipeline (desde el código hasta la construcción y el despliegue)
+- **CodeArtifact**: Almacena paquetes de software / dependencias en AWS
+- **AWS CDK**: Define tu infraestructura en el Cloud utilizando un lenguaje de programación
 
 [![](https://img.shields.io/badge/<-FF4859?style=for-the-badge)](../8_Other_Compute_Services/README.md)
 [![](https://img.shields.io/badge/CONTENT_TABLE-175074?style=for-the-badge)](../README.md)

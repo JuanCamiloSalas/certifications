@@ -41,6 +41,8 @@
   - Fargate (Serverless)
 - **Kubernetes es agnóstico de la nube** (puede usarse en cualquier nube: Azure, GCP...)
 
+![](./assets/eks.png)
+
 ## [Lambda](https://aws.amazon.com/lambda)
 ### ¿Por qué Lambda?
 **EC2:**
