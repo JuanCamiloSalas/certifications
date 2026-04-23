@@ -124,6 +124,9 @@
 - Ayuda a **reducir la carga de las bases de datos para cargas de trabajo de lectura intensiva**
 - AWS se encarga del mantenimiento/parche del sistema operativo, las optimizaciones, la instalación, la configuración, la supervisión, la recuperación de fallos y las copias de seguridad
 
+> [!TIP]
+> **Sugerencia de examen:** cada vez que pregunten por bases de datos en MEMORIA como Redis o Memcached piensa en ElasticCache
+
 ### Arquitectura de ElasticCache - Caché
 
 ![](./assets/elastic-cache.png)
@@ -152,9 +155,12 @@
 - **Caché en memoria** totalmente gestionada para DynamoDB
 - **Mejora del rendimiento x10** - latencia de un milisegundo a microsegundos - al acceder a tus tablas de DynamoDB
 - Seguridad, alta escalabilidad y alta disponibilidad
-- Diferencia con ElastiCache a nivel de CCP:  
-   **DAX sólo se utiliza y se integra con DynamoDB**, mientras que ElastiCache puede utilizarse para otras bases de datos
-  ![](./assets/dynamo-accelerator.png)
+
+> [!TIP]
+> **Sugerencia de examen - Diferencia con ElastiCache a nivel de CCP:**
+> **DAX sólo se utiliza y se integra con DynamoDB**, mientras que ElastiCache puede utilizarse para otras bases de datos
+
+![](./assets/dynamo-accelerator.png)
 
 ### DynamoDB - Tablas Globales
 
@@ -189,6 +195,9 @@
 > - Machine Learning
 > - Indexación web
 > - Big data...
+
+> [!TIP]
+> **Sugerencia de examen:** si en el examen nos hablan de "clusters de Hadoop" o "BigData" piensa siempre en Amazon EMR!
 
 ## [Amazon Athena](https://aws.amazon.com/athena)
 
@@ -227,6 +236,9 @@ Así como Aurora es una "implementación de AWS" de PostgreSQL, MySQL, etc. Docu
 - El almacenamiento de DocumentDB crece automáticamente en incrementos de 10 GB, hasta 128 TB
 - Escala automáticamente a cargas de trabajo con millones de peticiones por segundo
 
+> [!TIP]
+> **Sugerencia de examen:** siempre que haya una pregunta con relación a **mongoDB** piensa en en DocumentDB, si es relacionado a no relacional en general puede estar también relacionado a DynamoDB
+
 ## [Amazon Neptune](https://aws.amazon.com/neptune)
 
 - Base de datos gráfica totalmente gestionada = conjunto de grafos
@@ -236,6 +248,9 @@ Así como Aurora es una "implementación de AWS" de PostgreSQL, MySQL, etc. Docu
   - Los comentarios tienen likes de los usuarios
   - Los usuarios comparten y les gustan las publicaciones...
 
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por **grafos** en un examen de CCP piensa en Amazon Neptune
+
 ![](./assets/neptune-use-case.png)
 
 - Alta disponibilidad en 3 AZ, con hasta 15 réplicas de lectura
@@ -244,9 +259,7 @@ Así como Aurora es una "implementación de AWS" de PostgreSQL, MySQL, etc. Docu
 - Alta disponibilidad con réplicas a través de múltiples AZs
 - Excelente para grafos de conocimiento (Wikipedia), detección de fraudes, motores de recomendación, redes sociales
 
-## [Amazon QLDB](https://aws.amazon.com/qldb/)
-
-[![aws-links](https://img.shields.io/badge/CORE_CONCEPTS_&_TERMINOLOGY-blue?style=for-the-badge)](https://docs.aws.amazon.com/qldb/latest/developerguide/ledger-structure.html)
+## Amazon QLDB
 
 - QLDB significa "Quantum Ledger Database" (base de datos de libros contables)
 - Un libro de contabilidad es un libro que registra las transacciones financieras
@@ -258,6 +271,17 @@ Así como Aurora es una "implementación de AWS" de PostgreSQL, MySQL, etc. Docu
 
 - Rendimiento 2-3 veces mejor que los marcos de blockchain de libro mayor común
 - Diferencia con Amazon Managed Blockchain: no hay componente de descentralización, de acuerdo con las normas de regulación financiera
+
+> [!WARNING]
+> QLDB fue descontinuado el 31/07/2025 y ya no está en el temario oficial del CLF-C02. Ignorar preguntas sobre este servicio en material antiguo.
+
+## [Amazon Timestream](https://aws.amazon.com/timestream)
+
+- Base de datos de series temporales totalmente administrada, rápida, escalable y serverless
+- Escala automáticamente hacia arriba o hacia abajo para ajustar la capacidad
+- Permite almacenar y analizar billones de eventos por día
+- Hasta 1000 veces más rápida y a 1/10 del costo de las bases de datos relacionales
+- Incluye funciones integradas de análisis de series temporales (te ayudan a identificar patrones en tus datos casi en tiempo real)
 
 ## [Amazon Managed Blockchain](https://aws.amazon.com/managed-blockchain)
 
@@ -283,8 +307,8 @@ Así como Aurora es una "implementación de AWS" de PostgreSQL, MySQL, etc. Docu
 
 Soporta:
 
-- Migraciones homogéneas: por ejemplo, de Oracle a Oracle
-- Migraciones heterogéneas: por ejemplo, de Microsoft SQL Server a Aurora
+- **Migraciones homogéneas:** por ejemplo, de Oracle a Oracle
+- **Migraciones heterogéneas:** por ejemplo, de Microsoft SQL Server a Aurora
 
 ![](./assets/dms-example.png)
 
