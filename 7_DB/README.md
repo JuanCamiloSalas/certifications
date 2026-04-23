@@ -324,6 +324,7 @@ Soporta:
 - **QuickSight:** dashboards sobre tus datos (sin servidor)
 - **DocumentDB:** "Aurora para MongoDB" (JSON - base de datos NoSQL)
 - **Amazon QLDB:** Libro de transacciones financieras (libro inmutable, verificable criptográficamente)
+- **Amazon Timestream:** base de datos de series temporales serverless (almacena y analiza billones de eventos por día)
 - **Amazon Managed Blockchain:** cadenas de bloques Hyperledger Fabric y Ethereum gestionadas
 - **Glue:** Servicio gestionado de ETL (Extract-Transform-Load) y Catálogo de Datos
 - **Database Migration:** DMS

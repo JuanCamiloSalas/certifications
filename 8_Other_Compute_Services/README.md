@@ -32,6 +32,15 @@
 - Serverless fue pionero por AWS Lambda, pero ahora también incluye todo lo que se gestiona "bases de datos, mensajería, almacenamiento, etc."
 - Serverless no significa que no haya servidores... significa que simplemente el usuario no los gestiona / aprovisiona / ni ve
 
+## [Amazon EKS](https://aws.amazon.com/eks)
+- EKS = Elastic Kubernetes Service
+- Te permite lanzar clústeres de Kubernetes administrados en AWS
+- Kubernetes es un sistema de código abierto para la **administración, despliegue y escalado** de aplicaciones en contenedores (Docker)
+- Los contenedores pueden alojarse en:
+  - Instancias EC2
+  - Fargate (Serverless)
+- **Kubernetes es agnóstico de la nube** (puede usarse en cualquier nube: Azure, GCP...)
+
 ## [Lambda](https://aws.amazon.com/lambda)
 ### ¿Por qué Lambda?
 **EC2:**
@@ -57,7 +66,7 @@
 - Fácil de obtener más recursos por funciones (¡hasta 10 GB de RAM!)
 - ¡El aumento de la RAM también mejorará la CPU y la red!
 
-## Soporte del lenguaje AWS Lambda
+### Soporte del lenguaje AWS Lambda
 ```
 - Node.js (JavaScript)
 - Python
@@ -98,6 +107,9 @@ Pago por **duración**: (en incrementos de 1 ms)
 - **Serverless** y **escalable**
 - Soporta APIs RESTful y APIs WebSocket
 - Soporta seguridad, autenticación de usuarios, claves de la API, monitorización...
+
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten sobre la creación de APIs piensa en Amazon API Gateway
 
 ### Ejemplo: construir una API serverless
 ![](./assets/api-gtw-ex.png)
@@ -148,6 +160,7 @@ Pago por **duración**: (en incrementos de 1 ms)
     - Ejecuta contenedores Docker sin aprovisionar la infraestructura
     - Oferta serverless (sin instancias EC2)
 - **ECR:** Repositorio privado de imágenes Docker
+- **EKS:** ejecuta clústeres de Kubernetes administrados en AWS (agnóstico de la nube)
 - **Batch:** ejecuta trabajos por lotes en AWS a través de instancias EC2
 gestionadas
 - **Lightsail:** precios predecibles y bajos para pilas de aplicaciones y bases de datos sencillas
