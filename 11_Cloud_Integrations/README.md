@@ -67,6 +67,9 @@ Los mensajes son procesados en orden por el consumidor
 - Cada suscriptor del Topic **recibirá todos los mensajes**
 - Hasta 12.500.000 suscriptores por SNS Topic, límite de 100.000 Topics
 
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por **pub/sub** o enviar **un mensaje a múltiples suscriptores a la vez** (email, SMS, HTTP, Lambda, SQS...), piensa en Amazon SNS. No lo confundas con **SQS**, que es una **cola** 1-a-1 donde cada mensaje lo consume un único receptor.
+
 ![](./assets/sns-ex.png)
 
 ## [Amazon MQ](https://aws.amazon.com/amazon-mq)
