@@ -9,6 +9,9 @@
 - Las métricas tienen marcas de tiempo
 - Podemos crear dashboards de CloudWatch con las métricas
 
+> [!TIP]
+> **Sugerencia de examen:** CloudWatch es el servicio de **monitorización** ("¿qué está pasando con mis recursos?") — reúne **Metrics**, **Logs**, **Alarms** y **Dashboards**. No lo confundas con **CloudTrail** (auditoría de llamadas a la API: "¿quién hizo qué?") ni con **AWS Config** (cumplimiento de configuración: "¿está configurado como debería?"). Este trío aparece casi siempre junto en el examen.
+
 ### [Métricas importantes](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/working_with_metrics.html)
 
 - **Instancias EC2:** Utilización de la CPU, Comprobaciones de estado, Red
@@ -74,6 +77,9 @@
 - Puedes **archivar los eventos** (todos/filtro) enviados a un bus de eventos (indefinidamente o por un periodo determinado)
 - Posibilidad de **reproducir los eventos archivados**
 
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por **tareas programadas (cron)** o por **reaccionar a eventos** de servicios de AWS para disparar acciones (Lambda, SNS, SQS...), piensa en Amazon EventBridge (antes CloudWatch Events). Si además mencionan **eventos de aplicaciones SaaS de terceros** (Zendesk, Datadog, Shopify...), también es EventBridge.
+
 ## [AWS CloudTrail](https://aws.amazon.com/cloudtrail )
 - **Proporciona gobernanza, normativa y auditoría para nuestra cuenta de AWS**
 - CloudTrail está activado por defecto
@@ -87,6 +93,18 @@
 - Si se elimina un recurso en AWS, **¡investiga primero CloudTrail!**
 
 ![](./assets/cloudtrail-diagram.png)
+
+### [CloudTrail Insights](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-insights-events-with-cloudtrail.html)
+- Función **opcional de pago** de CloudTrail para **detectar actividad inusual** en tu cuenta de AWS de forma automática
+- Analiza los eventos de gestión (management events) y aprende tu patrón normal de uso para detectar **anomalías**, por ejemplo:
+  - Aprovisionamiento inusual de recursos (picos de creación de EC2, IAM users, etc.)
+  - Ráfagas de llamadas a la API fuera de lo habitual
+  - Límites de servicio alcanzados de forma inesperada
+- Genera **Insights events** en un rastro (trail) dedicado de CloudTrail, los puedes ver en la consola y enviar a CloudWatch Events/EventBridge o SNS para alertar
+- Útil para **detección de actividad sospechosa** (posibles credenciales comprometidas, mala configuración, errores operativos)
+
+> [!TIP]
+> **Sugerencia de examen:** si la pregunta menciona **detectar actividad inusual/anómala** en las llamadas a la API de tu cuenta AWS, piensa en **CloudTrail Insights**. CloudTrail "normal" sólo **registra** las llamadas; Insights añade la capa de **análisis automático** para detectar patrones raros.
 
 ## [AWS X-Ray](https://aws.amazon.com/xray)
 - Depuración en producción, a la vieja usanza:
@@ -109,6 +127,9 @@
 - Responde a ¿Cumplimos el Acuerdo de nivel de servicio (SLA) de tiempo?
 - Responde a ¿Dónde estoy limitado?
 - Identificar los usuarios que se ven afectados
+
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por **trazabilidad distribuida**, depurar **microservicios** o ver el **recorrido completo** de una petición entre varios servicios AWS (Lambda, API Gateway, EC2, ECS...) con un **mapa visual de dependencias** y cuellos de botella, piensa en AWS X-Ray.
 
 ## [Amazon CodeGuru](https://aws.amazon.com/codeguru)
 - Un servicio con tecnología ML para **revisiones de código automatizadas y recomendaciones sobre el rendimiento de las aplicaciones**
@@ -138,6 +159,9 @@
     - Detección de anomalías
 - Soporta aplicaciones que se ejecutan en AWS o en las instalaciones
 - Mínima sobrecarga en la aplicación
+
+> [!TIP]
+> **Sugerencia de examen:** siempre que mencionen **Machine Learning aplicado al código** —ya sea para **revisiones estáticas** en tiempo de desarrollo (Reviewer) o para **profiling** de rendimiento en producción (Profiler)—, piensa en Amazon CodeGuru. Regla rápida: **Reviewer = código fuente (dev)**, **Profiler = ejecución (prod)**.
 
 ## [AWS Health Dashboard](https://docs.aws.amazon.com/health/latest/ug/getting-started-health-dashboard.html)
 [![aws-links](https://img.shields.io/badge/SERVICE_HEALTH-orange?style=for-the-badge)](https://health.aws.amazon.com/health/status)
