@@ -31,9 +31,10 @@ Una **aplicación global** es una aplicación desplegada en **múltiples geograf
 - **S3 Transfer Acceleration:**
     - Acelera las cargas y descargas globales en Amazon S3
 - **AWS Global Accelerator:**
-    - Mejora la dispon
+    - Mejora la disponibilidad y el rendimiento de las aplicaciones globales utilizando la red
+global de AWS
 
-## [Amazon Route 53](https://aws.amazon.com/route53) - Visión general
+## [Amazon Route 53](https://aws.amazon.com/route53)
 - Route53 es un DNS gestionado (Sistema de Nombres de Dominio)
 - El DNS es una colección de reglas y registros que ayuda a los clientes a entender cómo llegar a un servidor a través de las URL
 - En AWS, los registros más comunes son
@@ -53,8 +54,8 @@ Una **aplicación global** es una aplicación desplegada en **múltiples geograf
 ![](./assets/route53-route-type-1.png)
 ![](./assets/route53-route-type-2.png)
 
-> [!IMPORTANT]
-> Se recomienda conocerlas para el examen CCP
+> [!TIP]
+> **Sugerencia de examen:** se recomienda conocer estas políticas de enrutamiento (Simple, Weighted, Latency, Failover) para el CCP.
 
 ## [AWS CloudFront](https://aws.amazon.com/cloudfront)
 [![aws-links](https://img.shields.io/badge/AWS_Edge_Locations-orange?style=for-the-badge)](https://aws.amazon.com/cloudfront/features/?nc=sn&loc=2)
@@ -107,6 +108,9 @@ Aumenta la velocidad de transferencia transfiriendo el archivo a una ubicación 
 - Se crean **2 IP Anycast** para la aplicación y el tráfico se envía a través de los p**untos de presencia (Edge Locations)**
 - Las Edge Locations envían el tráfico a la aplicación
 
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por mejorar el **rendimiento global** de una aplicación **TCP/UDP** (no solo HTTP), con **IPs Anycast estáticas** y **failover regional rápido**, piensa en AWS Global Accelerator. Si en cambio hablan de cachear **contenido estático** (imágenes, vídeos, HTML), es CloudFront.
+
 ![](./assets/aws-global-accelerator.png)
 
 ### Comparativa del tráfico sin y con AWS Global Accelerator
@@ -155,6 +159,9 @@ Eres responsable de la seguridad física del rack de Outposts
 - Amazon RDS 
 - Amazon EMR
 
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por ejecutar servicios de AWS **en tu propio centro de datos on-premises** (baja latencia local, residencia de datos, cloud híbrido), piensa en AWS Outposts. Son "racks físicos" gestionados por AWS que **llevan AWS a tus instalaciones** (lo contrario de mover tu infra a AWS).
+
 ## [AWS WaveLength](https://aws.amazon.com/wavelength)
 - Las **WaveLength Zones** son despliegues de infraestructura incrustados en los centros de datos de los proveedores de telecomunicaciones de las **redes 5G**
 - Lleva los servicios de AWS al límite de las **redes 5G**, Ejemplo: `EC2`, `EBS`, `VPC`...
@@ -162,6 +169,9 @@ Eres responsable de la seguridad física del rack de Outposts
 - El tráfico no sale de la red del proveedor de servicios de comunicación (**CSP**)
 - Conexión segura y de gran ancho de banda con la región AWS matriz
 - Sin cargos adicionales ni acuerdos de servicio
+
+> [!TIP]
+> **Sugerencia de examen:** siempre que mencionen **5G** o **latencia ultrabaja en dispositivos móviles** (vehículos conectados, AR/VR, streaming interactivo), piensa en AWS Wavelength. Son zonas de AWS desplegadas **dentro de las redes 5G de las telcos**, para que el tráfico nunca salga de la red del operador.
 
 ![](./assets/aws-wavelength.png)
 
