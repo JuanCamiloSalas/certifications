@@ -4,13 +4,13 @@
 
 # Monitorización del Cloud
 ## [Amazon CloudWatch](https://aws.amazon.com/cloudwatch)
-### [Amazon CloudWatch Metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/working_with_metrics.html)
 - CloudWatch proporciona métricas para todos los servicios de AWS
 - La métrica es una variable a monitorizar (`CPU Utilization`, `Networking`...)
 - Las métricas tienen marcas de tiempo
 - Podemos crear dashboards de CloudWatch con las métricas
 
-#### Métricas importantes
+### [Métricas importantes](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/working_with_metrics.html)
+
 - **Instancias EC2:** Utilización de la CPU, Comprobaciones de estado, Red
 (no RAM)
     - Métricas por defecto cada 5 minutos
