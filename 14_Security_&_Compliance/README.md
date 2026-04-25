@@ -4,26 +4,26 @@
 
 # Seguridad y normativa
 ## Modelo de responsabilidad compartida de AWS
-#### Responsabilidad de AWS - Seguridad DEL Cloud
+***Responsabilidad de AWS - Seguridad DEL Cloud***
 
 - Proteger la infraestructura (hardware, software, instalaciones y redes) que ejecuta todos los servicios de AWS
 - Servicios gestionados como S3, DynamoDB, RDS, etc.
 
-#### Responsabilidad del cliente - Seguridad DENTRO DEL Cloud
+***Responsabilidad del cliente - Seguridad DENTRO DEL Cloud***
 - En el caso de la instancia EC2, el cliente es responsable de la gestión del sistema operativo invitado (incluidos los parches y actualizaciones de seguridad), la configuración del firewall y la red, el IAM
 - Encriptación de los datos de la aplicación
 
-#### Controles compartidos:
+***Controles compartidos:***
 - Gestión de parches, gestión de la configuración, concienciación y formación
 
 ### Ejemplo para RDS
-#### Responsabilidad de AWS:
+***Responsabilidad de AWS:***
 - Gestionar la instancia EC2 subyacente, desactivar el acceso SSH
 - Parcheo automatizado de la BD
 - Parcheo automatizado del SO
 - Auditar la instancia subyacente y los discos y garantizar su funcionamiento
 
-#### Tu responsabilidad:
+***Tu responsabilidad:***
 - Comprobar las reglas de entrada de puertos / IP / grupo de seguridad en el SG de la BD
 - Creación de usuarios en la base de datos y permisos
 - Crear una base de datos con o sin acceso público
@@ -31,21 +31,19 @@
 - Configuración del cifrado de la base de datos
 
 ### Ejemplo para S3
-#### Responsabilidad de AWS:
+***Responsabilidad de AWS:***
 - Garantizarte que obtienes almacenamiento ilimitado
 - Garantizarte la encriptación
 - Garantizar la separación de los datos entre diferentes clientes
 - Garantizar que los empleados de AWS no puedan acceder a nuestros datos
 
-#### Tu responsabilidad:
+***Tu responsabilidad:***
 - Configuración del bucket
 - Política de bucket / configuración pública
 - Usuario y roles IAM
 - Habilitar el cifrado
 
-## ¿Qué es un ataque DDoS*?
-*Distributed Denial-of-Service
-
+## ¿Qué es un ataque DDoS?
 Un **ataque DDoS (Distributed Denial of Service)** ocurre cuando **muchos equipos distribuidos (a menudo infectados o controlados por un atacante)** envían **grandes volúmenes de tráfico o peticiones** a un servidor, aplicación o red, con el objetivo de **agotarle los recursos** (CPU, memoria o ancho de banda).
 
 Como resultado, el sistema **se vuelve muy lento o deja de responder** para los usuarios legítimos.
@@ -84,6 +82,9 @@ Existen varios tipos, como:
 (DRP)
 - Protegerte contra las tarifas más altas durante los picos de uso debidos a los DDoS
 
+> [!TIP]
+> **Sugerencia de examen:** **Shield Standard** = **gratis y automático** para todos los clientes (capas 3/4: SYN flood, UDP flood). **Shield Advanced** = **$3.000/mes**, protección 24/7 con equipo dedicado (DRP) y créditos por picos de tráfico durante un ataque. Palabra clave: **"DDoS"**.
+
 ## [AWS WAF – Web Application Firewall](https://aws.amazon.com/waf/)
 - Protege nuestros aplicaciones web de las vulnerabilidades web más comunes (Capa 7)
 - La* **Capa 7 es HTTP** (frente a la Capa 4 que es TCP)
@@ -94,6 +95,9 @@ Existen varios tipos, como:
     - Protege de los ataques más comunes: **inyección SQL** y **Cross-Site Scripting (XSS)**
     - Restricciones de tamaño, **geo-match (bloquear países)**
     - **Reglas basadas en la tasa** (para contar las ocurrencias de los eventos) - **para la protección DDoS**
+
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por proteger una aplicación web a **nivel HTTP (Capa 7)** contra **inyección SQL, XSS, geo-bloqueo, IPs maliciosas o rate-limiting**, piensa en **AWS WAF**. Se despliega en **CloudFront, ALB y API Gateway**. No lo confundas con Shield (DDoS, capas 3/4).
 
 ## [AWS Network Firewall](https://aws.amazon.com/network-firewall/)
 - Protege toda tu Amazon VPC
@@ -106,8 +110,8 @@ Existen varios tipos, como:
 
 ![](./assets/network-firewall-ex.png)
 
-> [!IMPORTANT]
-> Si hay una pregunta que trate sobre proteger nuestra VPC en general piensa instantáneamente en AWS Network Firewall
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por **proteger una VPC entera** (filtrado de capa 3 a 7, tráfico VPC↔VPC, entrante/saliente a Internet, Direct Connect, VPN), piensa en **AWS Network Firewall**. No lo confundas con Security Groups (nivel de instancia) ni NACLs (nivel de subred): Network Firewall opera **a nivel de toda la VPC**.
 
 ## Pruebas de penetración en el Cloud de AWS
 [![aws-links](https://img.shields.io/badge/LEER_MAS-orange?style=for-the-badge)](https://aws.amazon.com/security/penetration-testing/)
@@ -154,8 +158,8 @@ Existen varios tipos, como:
     - S3 Glacier
     - Storage Gateway
 
-> [!IMPORTANT]
-> Cada vez que escuches "encriptación" para un servicio de AWS, lo más probable es que se trate de KMS
+> [!TIP]
+> **Sugerencia de examen:** cada vez que escuches **"encriptación"** o **"claves de cifrado"** para un servicio de AWS, lo más probable es que se trate de **AWS KMS** (Key Management Service). Si en cambio mencionan **hardware dedicado** o **FIPS 140-2 Nivel 3**, es **CloudHSM**.
 
 ## [CloudHSM](https://aws.amazon.com/cloudhsm/)
 - KMS => AWS gestiona el software de encriptación
@@ -207,6 +211,9 @@ Existen varios tipos, como:
 - Los secretos se encriptan mediante KMS
 - Principalmente pensado para la integración con RDS
 
+> [!TIP]
+> **Sugerencia de examen:** si la pregunta menciona **rotación automática de secretos** o **integración nativa con RDS**, la respuesta es **AWS Secrets Manager**. Si solo necesitan almacenar parámetros/configuración (sin rotación automática), es **SSM Parameter Store** — mucho más barato pero sin rotación. Ambos cifran con KMS.
+
 ## [AWS Artifact](https://aws.amazon.com/artifact/) (no es realmente un servicio)
 - **Portal que proporciona a los clientes acceso bajo demanda a la documentación de conformidad de AWS y a los acuerdos de AWS**
 
@@ -218,8 +225,8 @@ Te permite revisar, aceptar y hacer un seguimiento del estado de los acuerdos de
 
 - Puede utilizarse para **apoyar la auditoría interna o la normativa**
 
-> [!IMPORTANT]
-> Cada vez que salgan estas siglas y nos pidan dónde obtener esta información, reponde AWS Artifact
+> [!TIP]
+> **Sugerencia de examen:** siempre que la pregunta mencione obtener informes o certificaciones de cumplimiento como **ISO, PCI, SOC, HIPAA, BAA, GDPR, FedRAMP**, la respuesta es **AWS Artifact** — el portal de auditoría y conformidad oficial de AWS.
 
 ## [Amazon GuardDuty](https://aws.amazon.com/guardduty/)
 - Descubrimiento inteligente de amenazas para proteger la cuenta de AWS
@@ -237,6 +244,9 @@ Te permite revisar, aceptar y hacer un seguimiento del estado de los acuerdos de
 - **Puede proteger contra ataques de criptomonedas (tiene un "hallazgo" dedicado a ello)**
 
 ![](./assets/guardduty.png)
+
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por **detectar amenazas o actividad maliciosa** en una cuenta AWS usando **Machine Learning** sobre logs de **CloudTrail, VPC Flow Logs y DNS**, piensa en **Amazon GuardDuty**. Se activa con un clic, sin agentes, y detecta hasta **criptominería**.
 
 ## [Amazon Inspector](https://aws.amazon.com/inspector/)
 - **Evaluaciones de seguridad automatizadas**
@@ -262,6 +272,9 @@ Te permite revisar, aceptar y hacer un seguimiento del estado de los acuerdos de
 - Accesibilidad de la red (EC2)
 - Se asocia una puntuación de riesgo a todas las vulnerabilidades para priorizarlas
 
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por **escanear vulnerabilidades** en **EC2 (SO + paquetes), imágenes de contenedor en ECR, o funciones Lambda** (CVEs conocidas), piensa en **Amazon Inspector**. No lo confundas con GuardDuty: Inspector busca **CVEs en software**; GuardDuty detecta **comportamiento malicioso en logs**.
+
 ## [AWS Config](https://aws.amazon.com/config/)
 - Ayuda a **auditar y registrar la normativa de nuestros recursos de AWS**
 - Ayuda a **registrar las configuraciones y los cambios a lo largo del tiempo**
@@ -279,14 +292,17 @@ Recurso de AWS Config
 - Ver la configuración de un recurso a lo largo del tiempo 
 - Ver las llamadas a la API de CloudTrail si están activadas
 
+> [!TIP]
+> **Sugerencia de examen:** si la pregunta es **"¿está configurado correctamente mi recurso?"** o **"¿cómo cambió la configuración con el tiempo?"** (cumplimiento, historial), la respuesta es **AWS Config**. Recuerda el trío: **CloudWatch (qué pasa) / CloudTrail (quién hizo qué) / Config (¿está configurado bien?)**.
+
 ## [Amazon Macie](https://aws.amazon.com/macie/)
 - Amazon Macie es un servicio de seguridad y privacidad de datos totalmente gestionado que utiliza el **machine learning y la concordancia de patrones para descubrir y proteger nuestros datos sensibles en AWS.**
 - Macie nos ayuda a identificar y alertar sobre los **datos sensibles, como la información personal identificable (PII)**
 
 ![](./assets/aws-macie.png)
 
-> [!IMPORTANT]
-> Si nos preguntan algo que haga referencia a descubrir datos sensibles piensa en AWS Macie
+> [!TIP]
+> **Sugerencia de examen:** siempre que la pregunta mencione **descubrir, identificar o proteger datos sensibles** (PII — información personal identificable, datos financieros, etc.) almacenados en **S3** usando Machine Learning, piensa en **Amazon Macie**.
 
 ## [AWS Security Hub](https://aws.amazon.com/security-hub/)
 - Herramienta de seguridad central para gestionar la seguridad en varias cuentas de AWS y automatizar las comprobaciones de seguridad
@@ -302,10 +318,13 @@ Recurso de AWS Config
     - `AWS Health`
     - `AWS Partner Network Solutions`
 
-> ![NOTE]
+> [!NOTE]
 > Primero debemos habilitar el servicio de configuración de AWS!
 
 ![](./assets/aws-security-hub.png)
+
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por un **dashboard centralizado** que **agregue hallazgos de seguridad** de varios servicios (GuardDuty, Inspector, Macie, Config, IAM Access Analyzer...) en una sola vista a través de cuentas, piensa en **AWS Security Hub**. Requiere tener AWS Config habilitado primero.
 
 ## [Amazon Detective](https://aws.amazon.com/detective/)
 - GuardDuty, Macie y Security Hub se utilizan para identificar posibles problemas de seguridad, o hallazgos
@@ -313,6 +332,9 @@ Recurso de AWS Config
 - Amazon Detective **analiza, investiga e identifica rápidamente la causa raíz de los problemas de seguridad o las actividades sospechosas (mediante ML y grafos)**
 - **Recoge y procesa automáticamente los eventos** de Logs de flujo de la VPC, CloudTrail, GuardDuty y crea una vista unificada
 - Produce visualizaciones con detalles y contexto para llegar a la causa raíz
+
+> [!TIP]
+> **Sugerencia de examen:** Detective viene **después** de un hallazgo de GuardDuty/Macie/Security Hub. Cuando ya hay una alerta y necesitas **investigar la causa raíz** mediante **grafos y ML** sobre VPC Flow Logs + CloudTrail + GuardDuty, piensa en **Amazon Detective**.
 
 ## AWS Abuse
 - Informar de la sospecha de que los recursos de AWS se utilizan con fines abusivos o ilegales
@@ -353,6 +375,9 @@ Recurso de AWS Config
 - Acceso fuera de zona de confianza => hallazgos
 
 ![](./assets/aws-iam-access-analyzer.png)
+
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por **identificar recursos compartidos externamente** (fuera de tu cuenta o tu Organization) — buckets S3, roles IAM, claves KMS, funciones Lambda, colas SQS, Secrets Manager —, piensa en **IAM Access Analyzer**.
 
 ## Resumen - Seguridad y normativa
 - **Responsabilidad compartida en AWS**
