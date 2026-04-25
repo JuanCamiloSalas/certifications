@@ -113,6 +113,18 @@ Existen varios tipos, como:
 > [!TIP]
 > **Sugerencia de examen:** siempre que pregunten por **proteger una VPC entera** (filtrado de capa 3 a 7, tráfico VPC↔VPC, entrante/saliente a Internet, Direct Connect, VPN), piensa en **AWS Network Firewall**. No lo confundas con Security Groups (nivel de instancia) ni NACLs (nivel de subred): Network Firewall opera **a nivel de toda la VPC**.
 
+## [AWS Firewall Manager](https://aws.amazon.com/firewall-manager/)
+- **Administra las reglas de seguridad en todas las cuentas de una AWS Organization**
+- **Política de seguridad:** conjunto común de reglas de seguridad
+    - Grupos de seguridad de VPC para EC2, Application Load Balancer, etc.
+    - Reglas de WAF
+    - AWS Shield Advanced
+    - AWS Network Firewall
+- **Las reglas se aplican a los nuevos recursos** a medida que se crean (**útil para cumplimiento**) en todas las cuentas actuales y futuras de tu organización
+
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por **gestionar reglas de firewall de forma centralizada** (WAF, Shield Advanced, Network Firewall, Security Groups) en **múltiples cuentas de AWS Organizations**, con aplicación automática a recursos nuevos, piensa en **AWS Firewall Manager**. Es el **"meta-firewall"** que orquesta los demás a escala de organización.
+
 ## Pruebas de penetración en el Cloud de AWS
 [![aws-links](https://img.shields.io/badge/LEER_MAS-orange?style=for-the-badge)](https://aws.amazon.com/security/penetration-testing/)
 
@@ -390,6 +402,7 @@ Recurso de AWS Config
 - **GuardDuty:** Encuentra comportamientos maliciosos con los logs de VPC, DNS y CloudTrail
 - **Inspector:** Encuentra vulnerabilidades de software en EC2, Imágenes ECR y funciones Lambda
 - **Network Firewall:** Protege la VPC contra ataques de red
+- **Firewall Manager:** Gestiona reglas de WAF, Shield Advanced, Network Firewall y SGs centralizadamente en AWS Organizations
 ___
 - **Config:** Rastrea los cambios de configuración y el cumplimiento de la normativa
 - **Macie:** Encuentra datos sensibles (por ejemplo, datos PII) en buckets de Amazon S3
