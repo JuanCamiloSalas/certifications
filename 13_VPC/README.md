@@ -2,7 +2,7 @@
 [![](https://img.shields.io/badge/CONTENT_TABLE-175074?style=for-the-badge)](../README.md)
 [![](https://img.shields.io/badge/>-FF4859?style=for-the-badge)](../14_Security_&_Compliance/README.md)
 
-## Virtual Private Cloud (VPC)
+# Virtual Private Cloud (VPC)
 - La VPC es algo que se debe conocer en profundidad para el AWS Certified Solutions Architect Associate y el AWS Certified SysOps Administrator
 
 > [!TIP]
@@ -69,6 +69,13 @@
 |Evaluamos todas las normas antes de decidir si permitir el tráfico|Procesamos las reglas en orden, empezando por la regla numerada más baja, al decidir si permitir el tráfico|
 |Se aplica a una instancia únicamente si alguien especifica el grupo de seguridad al lanzar la instancia, o asocia el grupo de seguridad a la instancia más adelante|Se aplica automáticamente a todas las instancias de las subredes con las que se ha asociado (por lo tanto, proporciona una capa de defensa adicional si las reglas del grupo de seguridad son demasiado permisivas)|
 
+> [!TIP]
+> **Sugerencia de examen:** memoriza estas dos parejas de palabras clave:
+> - **Security Group:** *stateful* + sólo reglas **ALLOW** + nivel de **instancia/ENI**.
+> - **NACL:** *stateless* + reglas **ALLOW y DENY** + nivel de **subred**.
+>
+> Si la pregunta menciona **DENY explícito**, es NACL. Si menciona **respuesta automática del tráfico de retorno**, es Security Group.
+
 ## Logs de flujo de la VPC - [VPC Flow Logs](https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs.html)
 - Captura información sobre el tráfico IP que entra en tus interfaces:
     - Logs de flujo de **VPC**
@@ -89,11 +96,17 @@
 
 ![](./assets/vpc-peering.png)
 
-### [VPC Endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/create-interface-endpoint.html)
+> [!TIP]
+> **Sugerencia de examen:** la palabra mágica de VPC Peering es **"no transitivo"**: si A↔B y B↔C, A **no** habla con C automáticamente. Cuando la pregunta hable de **conectar muchas VPCs entre sí** (decenas/miles) o requiera **transitividad**, la respuesta es **Transit Gateway**, no VPC Peering.
+
+## [VPC Endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/create-interface-endpoint.html)
 - Los endpoints te permiten conectarte a los servicios de AWS **utilizando una red privada** en lugar de la red www pública
 - Esto te proporciona mayor seguridad y menor latencia para acceder a los servicios de AWS
 - VPC Endpoint **Gateway**: S3 y DynamoDB
 - VPC Endpoint **Interface**: el resto
+
+> [!TIP]
+> **Sugerencia de examen:** si te preguntan por acceder a **S3 o DynamoDB** desde una VPC sin salir a Internet → **VPC Endpoint Gateway**. Para **cualquier otro servicio AWS** → **VPC Endpoint Interface** (basado en PrivateLink + ENI). Regla rápida: **"Gateway = S3/DynamoDB, Interface = el resto"**.
 
 ![](./assets/vpc-endpoints.png)
 
@@ -112,6 +125,9 @@
 | Pasa por el Internet público            | Pasa por una **red privada**                                |
 | —                                       | Tarda al menos un mes en establecerse                       |
 
+> [!TIP]
+> **Sugerencia de examen:** si la pregunta menciona **conexión rápida y de pago, encriptada por Internet público** → **Site-to-Site VPN**. Si en cambio habla de **conexión privada, dedicada, física, alto rendimiento** (típico para grandes volúmenes de datos o requisitos de cumplimiento) y mencionan **semanas/meses para establecerse** → **Direct Connect (DX)**.
+
 ![](./assets/sitetosite-vs-directconnect.png)
 
 ### [Site to Site VPN](https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html)
@@ -125,12 +141,19 @@
 - Te permite conectarte a tus instancias EC2 a través de una IP privada (como si estuvieras en la red VPC privada)
 - Pasa por el **Internet público**
 
+![](./assets/client-vpn.png)
+
 ## [Transit Gateway](https://aws.amazon.com/transit-gateway/)
 > Las topologías de red pueden complicarse!!!
 
 - Para tener peering transitivo entre miles de VPC y locales, conexión hub-and-spoke (estrella)
 - Un único Gateway para proporcionar esta funcionalidad
 - Funciona con el Gateway de Direct Connect y las conexiones VPN
+
+> [!TIP]
+> **Sugerencia de examen:** las palabras clave son **"miles de VPCs"**, **"hub-and-spoke"** (estrella) y **"peering transitivo"** → Transit Gateway. Resuelve el límite del VPC Peering (no transitivo) usando un único hub central que conecta todo (VPCs, on-premises por VPN o Direct Connect).
+
+![](./assets/transit-gateway.png)
 
 ## Resumen - Virtual Private Cloud (VPC)
 - **VPC:** Virtual Private Cloud (nube privada virtual)
