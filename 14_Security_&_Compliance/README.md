@@ -258,7 +258,7 @@ Te permite revisar, aceptar y hacer un seguimiento del estado de los acuerdos de
 ![](./assets/guardduty.png)
 
 > [!TIP]
-> **Sugerencia de examen:** siempre que pregunten por **detectar amenazas o actividad maliciosa** en una cuenta AWS usando **Machine Learning** sobre logs de **CloudTrail, VPC Flow Logs y DNS**, piensa en **Amazon GuardDuty**. Se activa con un clic, sin agentes, y detecta hasta **criptominería**.
+> **Sugerencia de examen — rol: DETECTOR.** Siempre que pregunten por **detectar amenazas o actividad maliciosa** en una cuenta AWS usando **Machine Learning** sobre logs de **CloudTrail, VPC Flow Logs y DNS**, piensa en **Amazon GuardDuty**. Se activa con un clic, sin agentes, y detecta hasta **criptominería**.
 
 ## [Amazon Inspector](https://aws.amazon.com/inspector/)
 - **Evaluaciones de seguridad automatizadas**
@@ -285,7 +285,7 @@ Te permite revisar, aceptar y hacer un seguimiento del estado de los acuerdos de
 - Se asocia una puntuación de riesgo a todas las vulnerabilidades para priorizarlas
 
 > [!TIP]
-> **Sugerencia de examen:** siempre que pregunten por **escanear vulnerabilidades** en **EC2 (SO + paquetes), imágenes de contenedor en ECR, o funciones Lambda** (CVEs conocidas), piensa en **Amazon Inspector**. No lo confundas con GuardDuty: Inspector busca **CVEs en software**; GuardDuty detecta **comportamiento malicioso en logs**.
+> **Sugerencia de examen — rol: ESCÁNER de vulnerabilidades de software.** Siempre que pregunten por **escanear vulnerabilidades** en **EC2 (SO + paquetes), imágenes de contenedor en ECR, o funciones Lambda** (CVEs conocidas), piensa en **Amazon Inspector**. No lo confundas con GuardDuty: Inspector busca **CVEs en software**; GuardDuty detecta **comportamiento malicioso en logs**.
 
 ## [AWS Config](https://aws.amazon.com/config/)
 - Ayuda a **auditar y registrar la normativa de nuestros recursos de AWS**
@@ -314,7 +314,7 @@ Recurso de AWS Config
 ![](./assets/aws-macie.png)
 
 > [!TIP]
-> **Sugerencia de examen:** siempre que la pregunta mencione **descubrir, identificar o proteger datos sensibles** (PII — información personal identificable, datos financieros, etc.) almacenados en **S3** usando Machine Learning, piensa en **Amazon Macie**.
+> **Sugerencia de examen — rol: ESCÁNER de datos sensibles.** Siempre que la pregunta mencione **descubrir, identificar o proteger datos sensibles** (PII — información personal identificable, datos financieros, etc.) almacenados en **S3** usando Machine Learning, piensa en **Amazon Macie**.
 
 ## [AWS Security Hub](https://aws.amazon.com/security-hub/)
 - Herramienta de seguridad central para gestionar la seguridad en varias cuentas de AWS y automatizar las comprobaciones de seguridad
@@ -336,7 +336,7 @@ Recurso de AWS Config
 ![](./assets/aws-security-hub.png)
 
 > [!TIP]
-> **Sugerencia de examen:** siempre que pregunten por un **dashboard centralizado** que **agregue hallazgos de seguridad** de varios servicios (GuardDuty, Inspector, Macie, Config, IAM Access Analyzer...) en una sola vista a través de cuentas, piensa en **AWS Security Hub**. Requiere tener AWS Config habilitado primero.
+> **Sugerencia de examen — rol: AGREGADOR.** Siempre que pregunten por un **dashboard centralizado** que **agregue hallazgos de seguridad** de varios servicios (GuardDuty, Inspector, Macie, Config, IAM Access Analyzer...) en una sola vista a través de cuentas, piensa en **AWS Security Hub**. Requiere tener AWS Config habilitado primero.
 
 ## [Amazon Detective](https://aws.amazon.com/detective/)
 - GuardDuty, Macie y Security Hub se utilizan para identificar posibles problemas de seguridad, o hallazgos
@@ -346,7 +346,7 @@ Recurso de AWS Config
 - Produce visualizaciones con detalles y contexto para llegar a la causa raíz
 
 > [!TIP]
-> **Sugerencia de examen:** Detective viene **después** de un hallazgo de GuardDuty/Macie/Security Hub. Cuando ya hay una alerta y necesitas **investigar la causa raíz** mediante **grafos y ML** sobre VPC Flow Logs + CloudTrail + GuardDuty, piensa en **Amazon Detective**.
+> **Sugerencia de examen — rol: INVESTIGADOR.** Detective viene **después** de un hallazgo de GuardDuty/Macie/Security Hub. Cuando ya hay una alerta y necesitas **investigar la causa raíz** mediante **grafos y ML** sobre VPC Flow Logs + CloudTrail + GuardDuty, piensa en **Amazon Detective**.
 
 ## AWS Abuse
 - Informar de la sospecha de que los recursos de AWS se utilizan con fines abusivos o ilegales

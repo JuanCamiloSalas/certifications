@@ -17,6 +17,9 @@
 > - Reconocimiento de famosos
 > - Trayectoria (por ejemplo, para el análisis de juegos deportivos)
 
+> [!TIP]
+> **Sugerencia de examen:** siempre que la pregunta mencione analizar **imágenes, vídeos, caras, objetos, escenas, texto en imagen, moderación de contenido o reconocimiento de famosos**, piensa en **Amazon Rekognition**.
+
 ## [Amazon Transcribe](https://aws.amazon.com/transcribe/)
 - **Convierte** automáticamente **el habla en texto**
 - Utiliza un **proceso de deep learning** llamado **reconocimiento automático del habla (ASR)** para
@@ -31,17 +34,26 @@ convertir el habla en texto de forma rápida y precisa
 
 ![](./assets/aws-transcribe.png)
 
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por convertir **voz a texto** (transcribir llamadas, generar subtítulos), piensa en **Amazon Transcribe**. No lo confundas con Polly (que hace lo contrario: texto → voz).
+
 ## [Amazon Polly](https://aws.amazon.com/polly/)
 - Convierte el texto en voz real utilizando el aprendizaje profundo
 - Permitiendo crear aplicaciones que hablan
 
 ![](./assets/aws-polly.png)
 
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por convertir **texto a voz** (aplicaciones que hablan, audiolibros, voz sintética), piensa en **Amazon Polly**. No lo confundas con Transcribe (voz → texto).
+
 ## [Amazon Translate](https://aws.amazon.com/translate/)
 - **Traducción** natural y precisa de **idiomas**
 - Amazon Translate te permite **localizar contenidos** -como sitios web y aplicaciones- para **usuarios internacionales**, y traducir fácilmente grandes volúmenes de texto de forma eficiente.
 
 ![](./assets/aws-translate.png)
+
+> [!TIP]
+> **Sugerencia de examen:** siempre que la pregunta mencione **traducción de idiomas** (localizar contenido, traducir texto), piensa en **Amazon Translate**.
 
 ## [Amazon Lex](https://aws.amazon.com/lex/) & [Amazon Connect](https://aws.amazon.com/connect/)
 - **Amazon Lex:** (la misma tecnología que impulsa a Alexa)
@@ -55,8 +67,8 @@ convertir el habla en texto de forma rápida y precisa
 
 ![](./assets/aws-lex-&-connect.jpg)
 
-> [!IMPORTANT]
-> Cada vez que haya una pregunta enfocada a chatbots piensa en Amazon Lex!
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por **chatbots conversacionales** (la misma tecnología que **Alexa**, ASR + NLU para entender la intención), piensa en **Amazon Lex**. Si en cambio mencionan **call center / centro de contacto en la nube**, es **Amazon Connect**.
 
 ## [Amazon Comprehend](https://aws.amazon.com/comprehend/)
 - Para el **Natural Language Processing – NLP (Procesamiento del Lenguaje Natural - PNL)**
@@ -72,12 +84,18 @@ convertir el habla en texto de forma rápida y precisa
 > - Analiza las interacciones con los clientes (correos electrónicos) para encontrar lo que conduce a una experiencia positiva o negativa
 > - Crea y agrupa artículos por temas que Comprehend descubrirá
 
+> [!TIP]
+> **Sugerencia de examen:** siempre que la pregunta mencione **Procesamiento del Lenguaje Natural (NLP)**, **análisis de sentimiento** (texto positivo/negativo) o extracción de **entidades, frases clave o tópicos** desde texto, piensa en **Amazon Comprehend**.
+
 ## [Amazon SageMaker](https://aws.amazon.com/sagemaker/)
 - Servicio totalmente gestionado para que los desarrolladores/científicos de datos construyan modelos ML
 - Normalmente, es difícil hacer todos los procesos en un solo lugar + aprovisionar servidores
 - Proceso de Machine Learning (simplificado): predecir la nota de tu examen
 
 ![](./assets/aws-sage-maker.png)
+
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por **construir, entrenar y desplegar modelos de ML propios** (no por un caso de uso ya resuelto por otro servicio gestionado), piensa en **Amazon SageMaker**. Es la plataforma para data scientists y desarrolladores que necesitan **modelos personalizados de extremo a extremo**.
 
 ## [Amazon Forecast](https://aws.amazon.com/forecast/)
 - Servicio totalmente gestionado que utiliza el ML para ofrecer previsiones muy precisas
@@ -90,6 +108,9 @@ convertir el habla en texto de forma rápida y precisa
 
 ![](./assets/aws-forecast.png)
 
+> [!TIP]
+> **Sugerencia de examen:** siempre que la pregunta mencione **previsiones / forecasting de series temporales** (ventas futuras, demanda de productos, planificación financiera), piensa en **Amazon Forecast**.
+
 ## [Amazon Kendra](https://aws.amazon.com/kendra/)
 - **Servicio de búsqueda de documentos** totalmente gestionado y potenciado por Machine Learning
 - Extrae respuestas de un documento (texto, pdf, HTML, PowerPoint, MS Word, preguntas frecuentes...)
@@ -98,6 +119,9 @@ convertir el habla en texto de forma rápida y precisa
 - Capacidad de afinar manualmente los resultados de la búsqueda (importancia de los datos, frescura, personalización, ...)
 
 ![](./assets/aws-kendra.png)
+
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por **búsqueda inteligente en documentos** (PDFs, Word, FAQs, HTML, PowerPoint) con **lenguaje natural** y respuestas extraídas directamente del contenido, piensa en **Amazon Kendra**.
 
 ## [Amazon Personalize](https://aws.amazon.com/personalize/)
 - Servicio de ML totalmente gestionado para crear aplicaciones con recomendaciones personalizadas en tiempo real
@@ -112,8 +136,8 @@ convertir el habla en texto de forma rápida y precisa
 
 ![](./assets/aws-personalize.jpg)
 
-> [!IMPORTANT]
-> Cada vez que en el examen haya una mención a un servicio de recomendaciones personalizadas piensa en Amazon Personalize
+> [!TIP]
+> **Sugerencia de examen:** siempre que la pregunta mencione **recomendaciones personalizadas en tiempo real** (productos, contenido, marketing personalizado), piensa en **Amazon Personalize** — usa la misma tecnología que Amazon.com.
 
 ## [Amazon Textract](https://aws.amazon.com/textract/)
 - Extrae automáticamente el texto, la escritura y los datos de cualquier documento escaneado utilizando IA y ML
@@ -126,6 +150,9 @@ convertir el habla en texto de forma rápida y precisa
 > - Servicios financieros (por ejemplo, facturas, informes financieros)
 > - Sanidad (por ejemplo, historiales médicos, reclamaciones de seguros)
 > - Sector público (por ejemplo, formularios fiscales, documentos de identidad, pasaportes)
+
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por **extraer texto, datos, formularios o tablas de documentos escaneados** (PDFs, imágenes, facturas, IDs, formularios fiscales), piensa en **Amazon Textract**. Es OCR avanzado con ML.
 
 ## Resumen - Machine Learning
 - **Rekognition:** detección de caras, etiquetado, reconocimiento de famosos
