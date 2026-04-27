@@ -224,13 +224,13 @@ Servicios gratuitos pero que generan costos por los servicios que éstos crean:
 - La forma más fácil de establecer compromisos a largo plazo en AWS
 - Configuración desde la consola AWS Cost Explorer
 
-### Plan de ahorro EC2
+### Plan de ahorro EC2 (EC2 Instance Savings Plans)
 - Hasta un 72% de descuento en comparación con el plan bajo demanda
 - **Comprométete al uso de familias de instancias individuales en una región (por ejemplo, C5 o M5)**
 - Independientemente de la AZ, el tamaño (m5.xl a m5.4xl), el SO (Linux/Windows) o la tenencia
 - Todo por adelantado, parcialmente por adelantado, sin adelantado
 
-### Plan de ahorro de computación
+### Plan de ahorro de computación (Compute Savings Plans)
 - Hasta un 66% de descuento en comparación con el plan bajo demanda
 - Independientemente de la **familia**, **la región**, el tamaño, el sistema operativo, la tenencia y las **opciones de computación**
 - Opciones de computación: EC2, Fargate, Lambda
@@ -270,7 +270,23 @@ Servicios gratuitos pero que generan costos por los servicios que éstos crean:
 - Alarmas de facturación
 - Presupuestos
 
+## Total Cost of Ownership (TCO)
+- **Coste Total de Propiedad:** estimación financiera del **coste total** de usar una infraestructura **on-premises vs. el Cloud de AWS** a lo largo del tiempo
+- Compara los costes **directos e indirectos**:
+    - **On-premises:** hardware, licencias de software, energía, refrigeración, espacio físico, personal de IT, mantenimiento...
+    - **AWS:** uso de servicios bajo demanda, transferencia de datos, soporte... (sin CAPEX inicial)
+- AWS suele reducir el TCO al convertir gastos de capital (**CAPEX**) en gastos operativos (**OPEX**)
+- AWS proporciona la **AWS Pricing Calculator** para estimar y comparar el TCO
+
+> [!TIP]
+> **Sugerencia de examen:** si la pregunta menciona **comparar costes on-premises vs. AWS**, **CAPEX vs. OPEX** o **estimar el coste total de mover cargas de trabajo al Cloud**, está hablando de **TCO (Total Cost of Ownership)**. La herramienta para calcularlo es la **AWS Pricing Calculator**.
+
 ## AWS Pricing Calculator
+- Estima el **coste de tu arquitectura** en AWS antes de desplegarla
+- Sirve para **calcular el TCO** y comparar **on-premises vs AWS**
+- Sin necesidad de cuenta de AWS, accesible públicamente en [calculator.aws](https://calculator.aws)
+- Permite exportar las estimaciones (CSV, compartir enlace)
+
 ## Dashboards de facturación de AWS
 ## Etiquetas (tags) de asignación de costes
 - Utiliza las **etiquetas de asignación** de costes para hacer un seguimiento detallado de tus costes de AWS
