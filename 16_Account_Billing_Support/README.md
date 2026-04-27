@@ -34,6 +34,9 @@
 
 ![](./assets/aws-organizations.png)
 
+> [!TIP]
+> **Sugerencia de examen:** si la pregunta menciona **gestionar varias cuentas de AWS**, **facturación consolidada**, **descuentos por volumen agregado** o **compartir instancias reservadas entre cuentas**, la respuesta es **AWS Organizations**. La cuenta principal es la **master account** y no se ve afectada por SCPs.
+
 ## [Políticas de Control de Servicios (SCP)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html)
 
 - Lista blanca o negra de acciones IAM
@@ -47,6 +50,9 @@
 > *Casos de uso:*
 > - Restringir el acceso a determinados servicios (por ejemplo: no se puede utilizar EMR)
 > - Aplicar la normativa PCI deshabilitando explícitamente los servicios
+
+> [!TIP]
+> **Sugerencia de examen:** las **SCP** son el mecanismo de **AWS Organizations** para **restringir acciones IAM** a nivel de **OU o cuenta**. Recuerda: **no se aplican a la cuenta maestra**, requieren un **ALLOW explícito** (deny por defecto) y **no afectan a roles vinculados a servicios**. Palabras clave: **"restringir cuentas"** o **"lista blanca/negra de servicios"**.
 
 ## Jerarquía SCP
 [![aws-links](https://img.shields.io/badge/scp_examples-orange?style=for-the-badge)](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps_examples.html)
@@ -73,6 +79,9 @@ En este ejemplo podemos ver cómo una cuante que tiene 5 instancias reservadas y
 - La AWS Control Tower se ejecuta sobre las Organizaciones de AWS:
     - Configura automáticamente las AWS Organizations para organizar las cuentas e implementar las SCP (Políticas de Control de Servicios)
 
+> [!TIP]
+> **Sugerencia de examen:** si la pregunta menciona **configurar y gobernar un entorno multicuenta seguro** con **mejores prácticas automáticas**, **detección de infracciones** y **dashboard de cumplimiento**, la respuesta es **AWS Control Tower**. Se ejecuta **sobre AWS Organizations**.
+
 ## [AWS Resource Access Manager (AWS RAM)](https://aws.amazon.com/ram)
 - Comparte los recursos de AWS que poseas con otras cuentas de AWS
 - Comparte con cualquier cuenta o dentro de tu organización
@@ -83,6 +92,9 @@ En este ejemplo podemos ver cómo una cuante que tiene 5 instancias reservadas y
 <img src="./assets/aws-ram.png"/>
 <figcaption>Arquitectura multi-cuenta con AWS RAM: el propietario comparte una VPC y subred privada con dos cuentas independientes, permitiéndoles desplegar recursos (EC2, ALB) en una red común con acceso centralizado a Amazon RDS.</figcaption>
 
+> [!TIP]
+> **Sugerencia de examen:** siempre que la pregunta hable de **compartir recursos entre cuentas de AWS** (VPC, subredes, Transit Gateway, Route 53...) **sin duplicarlos**, la respuesta es **AWS RAM**.
+
 ## [AWS Service Catalog](https://aws.amazon.com/servicecatalog)
 
 - Los usuarios que son nuevos en AWS tienen demasiadas opciones, y pueden crear stacks que no sean conformes / estén en línea con el resto de la organización
@@ -91,6 +103,9 @@ En este ejemplo podemos ver cómo una cuante que tiene 5 instancias reservadas y
 
 <img src="./assets/aws-service-catalog.jpg"/>
 <figcaption>Ejemplo de uso del servicio Service Catalog</figcaption>
+
+> [!TIP]
+> **Sugerencia de examen:** si la pregunta menciona un **portal de autoservicio** con **productos predefinidos y autorizados por administradores** para que los usuarios desplieguen stacks conformes, la respuesta es **AWS Service Catalog**.
 
 ## Modelos de precios en AWS
 
@@ -222,6 +237,9 @@ Servicios gratuitos pero que generan costos por los servicios que éstos crean:
 
 ### Plan de ahorro de Machine Learning: SageMaker...
 
+> [!TIP]
+> **Sugerencia de examen:** los **Saving Plans** son la forma **más fácil y flexible** de comprometerse a un uso a largo plazo (1 o 3 años) en **EC2, Fargate y Lambda**. Si la pregunta dice **"forma simple de ahorrar comprometiéndose a $/hora"**, es **Saving Plans**. Si dice **"reservar capacidad de una instancia específica"** (familia + AZ + tamaño), son **Reserved Instances**.
+
 ## [AWS Compute Optimizer](https://aws.amazon.com/compute-optimizer)
 - **Reduce los costes** y **mejora el rendimiento** recomendando los recursos de AWS óptimos para tus cargas de trabajo
 - Te ayuda a elegir las configuraciones óptimas y a dimensionar correctamente tus cargas de trabajo (sobre/subprovisionamiento)
@@ -233,6 +251,9 @@ Servicios gratuitos pero que generan costos por los servicios que éstos crean:
     - Funciones Lambda
     - Reduce tus costes hasta un 25% 
 - Las recomendaciones se pueden exportar a S3
+
+> [!TIP]
+> **Sugerencia de examen:** si la pregunta menciona **recomendaciones basadas en Machine Learning** para **dimensionar correctamente recursos** (EC2, ASG, EBS, Lambda) y **reducir costes hasta un 25%**, la respuesta es **AWS Compute Optimizer**.
 
 ## Herramientas de facturación y cálculo de costes
 
@@ -260,6 +281,9 @@ Servicios gratuitos pero que generan costos por los servicios que éstos crean:
     - Definidas por el usuario
     - Comienza con el prefijo **user:**
 
+> [!TIP]
+> **Sugerencia de examen:** memoriza los dos prefijos: **`aws:`** = etiquetas generadas automáticamente por AWS; **`user:`** = etiquetas definidas por el usuario. Las **etiquetas de asignación de costes** son la base para informes detallados de facturación.
+
 ### Etiquetado y grupos de recursos
 - Los **Tags** o **etiquetas** se utilizan para organizar los recursos:
     - EC2: instancias, imágenes, load balancers, grupos de seguridad...
@@ -275,6 +299,9 @@ Servicios gratuitos pero que generan costos por los servicios que éstos crean:
 - El Informe de Costes y Uso de AWS contiene el **conjunto más completo de datos de costes y uso de AWS disponible**, incluyendo metadatos adicionales sobre los servicios de AWS, los precios y las reservas (**por ejemplo, las instancias reservadas (RIs) de Amazon EC2**).
 - El AWS Cost & Usage Report (AWS CUR) enumera el uso de AWS para cada categoría de servicio utilizada por una cuenta y sus usuarios de IAM en partidas horarias o diarias, así como cualquier etiqueta que hayas activado con fines de asignación de costes.
 - Puede integrarse con Athena, Redshift o QuickSight
+
+> [!TIP]
+> **Sugerencia de examen:** si la pregunta busca el **conjunto de datos de facturación más completo y detallado** (con metadatos de servicios, precios y reservas) para integrarse con **Athena, Redshift o QuickSight**, la respuesta es **AWS Cost & Usage Report (CUR)**.
 
 ## [Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer)
 - Visualiza, entiende y gestiona tus costes y uso de AWS a lo largo del tiempo
@@ -296,6 +323,9 @@ Servicios gratuitos pero que generan costos por los servicios que éstos crean:
 ### Cost Explorer – Previsión de uso
 ![](./assets/aws-cost-exp-usg-forecast.png)
 
+> [!TIP]
+> **Sugerencia de examen:** **Cost Explorer** sirve para **visualizar y analizar** costes históricos y **prever uso hasta 12 meses** basándose en datos previos. Si la pregunta menciona **previsión/forecast de costes** o **elegir el plan de ahorro óptimo**, la respuesta es **Cost Explorer**.
+
 ## Alarmas de facturación en CloudWatch
 - **La métrica de los datos de facturación se almacena en CloudWatch us-east-1**
 - Los datos de facturación son para los costes **globales** de AWS en todo el mundo
@@ -303,6 +333,9 @@ Servicios gratuitos pero que generan costos por los servicios que éstos crean:
 - Pretende ser una simple alarma (no tan potente como AWS Budgets)
 
 ![](./assets/cloudwatch-billing-alarms.png)
+
+> [!TIP]
+> **Sugerencia de examen:** las **alarmas de facturación de CloudWatch** se almacenan en **`us-east-1`** y rastrean **costes globales reales** (no proyectados). Recuerda: para algo más avanzado (uso, reservas, planes de ahorro, alertas SNS) → **AWS Budgets**.
 
 ## [AWS Budgets](https://aws.amazon.com/es/aws-cost-management/aws-budgets)
 - Crea un presupuesto y envía alarmas cuando los costes superen el presupuesto
@@ -314,6 +347,9 @@ Servicios gratuitos pero que generan costos por los servicios que éstos crean:
 - Puedes filtrar por: servicio, cuenta vinculada, etiqueta, opción de compra, tipo de instancia, región, zona de disponibilidad, operación API, etc.
 - Las mismas opciones que el AWS Cost Explorer
 - 2 presupuestos son gratuitos, luego 0,02$/día/presupuesto
+
+> [!TIP]
+> **Sugerencia de examen:** **AWS Budgets** = crear un **presupuesto** y recibir **alertas** cuando se supera. **4 tipos**: Uso, Coste, Reserva, Saving Plans. Si en cambio la pregunta habla de **detectar gastos inusuales con Machine Learning** (sin definir umbrales), la respuesta es **AWS Cost Anomaly Detection**.
 
 ## [AWS Cost Anomaly Detection](https://aws.amazon.com/aws-cost-management/aws-cost-anomaly-detection)
 - **Monitorización continua de tus costes y uso mediante ML para detectar gastos inusuales**
@@ -332,6 +368,9 @@ Servicios gratuitos pero que generan costos por los servicios que éstos crean:
 
 ![](./assets/aws-service-quota.png)
 
+> [!TIP]
+> **Sugerencia de examen:** si la pregunta menciona **acercarse al límite de un servicio** (ej. ejecuciones concurrentes de Lambda) o **solicitar un aumento de cuota**, la respuesta es **AWS Service Quotas**.
+
 ## [Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/?nc1=h_ls)
 - Sin necesidad de instalar nada - evaluación de
 alto nivel de la cuenta de AWS
@@ -348,6 +387,9 @@ recomendaciones en 5 categorías
 |---------------------------------------|----------------------------------------|
 | **Plan de soporte:** Basic y Developer | **Plan de soporte:** Business y Enterprise |
 | - Permisos de buckets S3 <br> - Grupos de seguridad – Puertos específicos sin restricciones <br> - Uso de IAM (un usuario IAM como mínimo) <br> - MFA en la cuenta root <br> - Snapshots de EBS públicos <br> - Snapshots públicos de RDS <br> - Service Quotas | - Comprobaciones completas disponibles en las 5 categorías <br> - Posibilidad de establecer alarmas de CloudWatch cuando se alcanzan los límites <br> - **Acceso programado mediante la AWS Support API** |
+
+> [!TIP]
+> **Sugerencia de examen:** **Trusted Advisor** evalúa la cuenta en **5 categorías**: **Coste, Rendimiento, Seguridad, Tolerancia a fallos y Límites de servicio**. Recuerda: **7 Core Checks** en planes **Basic/Developer**; **Full Checks + AWS Support API** en planes **Business/Enterprise**.
 
 ## [Precios de los planes de soporte de AWS](https://aws.amazon.com/premiumsupport/pricing)
 [![aws-links](https://img.shields.io/badge/AWS_SUPPORT_PLAN_PRICING-orange?style=for-the-badge)](https://aws.amazon.com/premiumsupport/pricing)
@@ -404,7 +446,7 @@ recomendaciones en 5 categorías
     - Sistema de producción averiado: < 1 hora
     - **Sistema crítico de negocio caído**: < 15 minutos
 
-> [!IMPORTANT]
+> [!TIP]
 > Siempre que salga el acceso a un TAM seleccionar en el examen un plan **Enterprise**!
 
 ## Resumen - Mejores prácticas para las cuentas
