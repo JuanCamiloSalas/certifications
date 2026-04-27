@@ -225,6 +225,16 @@ Cifra objetos en Amazon S3 utilizando claves de cifrado
 - *Archive Access tier (opcional):* configurable de 90 a más de 700 días
 - *Deep Archive Access tier (opcional):* configurable de 180 días a 700+ días
 
+> [!TIP]
+> **Sugerencia de examen — qué clase elegir:**
+> - **Acceso frecuente, latencia baja** → **S3 Standard**.
+> - **Acceso poco frecuente** pero latencia inmediata → **S3 Standard-IA**.
+> - **Datos no críticos / recreables** poco accedidos → **S3 One Zone-IA** (más barato, sólo 1 AZ).
+> - **Patrón de acceso desconocido o cambiante** → **S3 Intelligent-Tiering** (mueve objetos automáticamente).
+> - **Archivado con recuperación instantánea** (~1/trimestre) → **Glacier Instant Retrieval**.
+> - **Archivado tolerante a esperar minutos/horas** → **Glacier Flexible Retrieval**.
+> - **Archivado a muy largo plazo, recuperación 12-48h** → **Glacier Deep Archive** (el más barato).
+
 ## Comparación de clases S3
 [![aws-links](https://img.shields.io/badge/Storage_Classes-orange?style=for-the-badge)](https://aws.amazon.com/es/s3/storage-classes/)
 
@@ -308,9 +318,8 @@ Dispositivos portátiles de alta seguridad para **recopilar, procesar datos, y m
 - Ancho de banda compartido (no se puede maximizar la línea)
 - Estabilidad de la conexión
 
-> [!IMPORTANT]
-> Familia AWS Snow: dispositivos sin conexión para realizar migraciones de datos
-> Si la transferencia a través de la red tarda más de una semana, ¡utiliza los dispositivos Snowball!
+> [!TIP]
+> **Sugerencia de examen:** la familia **AWS Snow** son dispositivos físicos para migraciones **offline** (sin red). Regla de oro: **si la transferencia por red tomaría más de una semana, usa Snow**. Para volúmenes mayores a **10 PB**, usa **Snowmobile**; para entornos pequeños/edge, **Snowcone**; el resto, **Snowball Edge**.
 
 ### Diagramas
 ![](./assets/s3-diagramas.png)

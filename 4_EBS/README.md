@@ -98,8 +98,8 @@ paquetes, etc...)
 - Riesgo de pérdida de datos si el hardware falla
 - Las copias de seguridad y la replicación son responsabilidad tuya
 
-> [!IMPORTANT]
-> Si necesitas un disco de hardware de alto rendimiento, utilizas EC2 Instance Store
+> [!TIP]
+> **Sugerencia de examen:** si la pregunta menciona **disco de hardware de muy alto rendimiento (mayor IOPS)** unido directamente a la instancia EC2, piensa en **EC2 Instance Store**. Recuerda: **es efímero** — los datos se pierden si la instancia se detiene/termina.
 
 ## EFS - Elastic File System
 - NFS (network file system / sistema de archivos de red) gestionado que **puede montarse en 100 EC2s**
@@ -110,6 +110,12 @@ paquetes, etc...)
 
 ### EBS vs EFS
 ![](./assets/ebs-vs-efs.png)
+
+> [!TIP]
+> **Sugerencia de examen — almacenamiento de EC2:**
+> - **EBS:** disco **de bloques en red**, ligado a **una sola AZ** y montado en **una sola EC2** (a nivel CCP). Persistente.
+> - **EFS:** sistema de archivos **NFS multi-AZ**, montable en **cientos de EC2 a la vez** — sólo Linux.
+> - **Instance Store:** disco **físico local** de máximo rendimiento, **efímero** (se pierde al parar la instancia).
 
 ### EFS Infrequent Access (EFS-IA)
 - **Clase de almacenamiento** con costes optimizados para los archivos a los que no se accedes a diario
@@ -156,6 +162,11 @@ paquetes, etc...)
 - Escala hasta 100s GB/s, millones de IOPS, latencias sub-ms
 
 ![](./assets/aws-fsx-lustre.png)
+
+> [!TIP]
+> **Sugerencia de examen — FSx:**
+> - **FSx for Windows File Server:** sistema de archivos **Windows / SMB / Active Directory / NTFS** gestionado.
+> - **FSx for Lustre:** sistema de archivos **Linux** de **alto rendimiento (HPC)** — Machine Learning, análisis científico, modelado financiero. *Lustre = Linux + cluster*.
 
 ## Resumen - Almacenamiento de instancias EC2
 - **Volúmenes EBS**:

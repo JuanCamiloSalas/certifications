@@ -49,6 +49,12 @@
 - **Elasticidad**: una vez que un sistema es escalable, la elasticidad significa que habrá cierto "autoescalado" para que el sistema pueda escalar en función de la carga. Esto es "amigable con el Cloud": pago por uso, adecuación a la demanda, optimización de costes
 - **Agilidad**: (no relacionado con la escalabilidad - distractor) los nuevos recursos de IT están a un clic de distancia, lo que significa que se reduce el tiempo para poner esos recursos a disposición de los desarrolladores de semanas a sólo minutos
 
+> [!TIP]
+> **Sugerencia de examen — terminología trampa:**
+> - **Escalabilidad** = *capacidad* de crecer (manualmente o no).
+> - **Elasticidad** = *escalar automáticamente* en función de la carga (concepto Cloud puro: pay-per-use).
+> - **Agilidad** = velocidad de **provisionar recursos** (de semanas a minutos). **NO tiene que ver con escalado** — es un distractor que el examen pone a propósito.
+
 ## ¿Qué es el load balancing?
 Los Load Balancers (equilibradores de carga) son servidores que reenvían el tráfico de Internet a múltiples servidores (Instancias EC2) en sentido descendente
 
@@ -76,6 +82,12 @@ Los Load Balancers (equilibradores de carga) son servidores que reenvían el tr�
 - Classic Load Balancer (retirado en 2023) - Capa 4 y 7
 
 ![](./assets/aws-load-balancers.png)
+
+> [!TIP]
+> **Sugerencia de examen — confusión clásica de ELB:**
+> - **ALB (Application Load Balancer):** **HTTP/HTTPS** y rutas/hostnames — **Capa 7**. Apps web, microservicios, contenedores.
+> - **NLB (Network Load Balancer):** **TCP/UDP**, latencia ultrabaja, millones de conexiones — **Capa 4**. Apps de alto rendimiento, gaming, IoT.
+> - **GWLB (Gateway Load Balancer):** despliega **appliances de red de terceros** (firewalls, IDS/IPS) — **Capa 3**.
 
 ## ¿Qué es un Auto Scaling Group?
 - En la vida real, la carga de tus sitios web y aplicaciones puede cambiar

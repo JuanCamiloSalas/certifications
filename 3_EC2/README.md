@@ -205,6 +205,11 @@ Sirve para conectarnos a las instancias por medio de ssh desde el mismo navegado
 - Puedes compartir el hardware con otras instancias de la misma cuenta.
 - No hay control sobre la ubicación de las instancias (se puede mover el hardware después de la parada/arranque).
 
+> [!TIP]
+> **Sugerencia de examen:** confusión clásica del CCP — **Dedicated Hosts** vs **Dedicated Instances**:
+> - **Dedicated Hosts** = servidor físico **completo y visible** para ti (ves cores/sockets). Útil para **BYOL** (licencias por servidor) y **cumplimiento estricto**.
+> - **Dedicated Instances** = hardware aislado de otros clientes pero **gestionado por AWS** (no ves el hardware). Útil cuando solo quieres aislamiento, no licencias BYOL.
+
 ### 7. Reservas de Capacidad (Capacity Reservations)
 - Reserva la capacidad de las instancias **bajo demanda** en una AZ específica para cualquier duración.
 - Siempre tendrás acceso a la capacidad de EC2 cuando la necesites.
@@ -227,6 +232,15 @@ Sirve para conectarnos a las instancias por medio de ssh desde el mismo navegado
 | Host dedicado (Dedicated host)                | Precio bajo demanda (On-demand)             |
 | Reserva de host dedicado (Dedicated host reservation) | Hasta el 70% de descuento         |
 | Reservas de capacidad (Capacity reservation)  | Precio bajo demanda (On-demand)             |
+
+> [!TIP]
+> **Sugerencia de examen — guía rápida de opciones de compra:**
+> - **On-Demand:** carga **corta e impredecible**, sin compromiso, precio más alto.
+> - **Reserved (1/3 años):** carga **constante y predecible** (ej. base de datos), hasta -72%.
+> - **Savings Plan (1/3 años):** compromiso de **$/hora**, más flexible que Reserved.
+> - **Spot:** carga **interrumpible / fault-tolerant** (batch, análisis), hasta -90%.
+> - **Dedicated Host:** licencias **BYOL** o cumplimiento estricto.
+> - **Capacity Reservation:** garantizar **capacidad en una AZ específica**, sin descuento.
 
 ## Modelo de responsabilidad compartida para EC2
 ### AWS se encarga de:

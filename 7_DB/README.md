@@ -68,6 +68,9 @@
 > [!WARNING]
 > PERO no puedes acceder por SSH a tus instancias\*\*
 
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por una **base de datos relacional gestionada con SQL** (MySQL, PostgreSQL, MariaDB, Oracle, SQL Server) para cargas **OLTP** (transaccionales), piensa en **Amazon RDS**. Si en la pregunta mencionan **Aurora**, es una variante propia de AWS más rápida (5x MySQL, 3x PostgreSQL) y más cara.
+
 ## Arquitectura RDS
 
 ![](./assets/rds-architecture.png)
@@ -143,6 +146,9 @@
 - Bajo coste y capacidad de autoescalado
 - Clase de tabla de acceso estándar e infrecuente (IA)
 
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por una base de datos **NoSQL clave-valor**, **serverless**, con **latencia de milisegundos** y escalado automático masivo, piensa en **Amazon DynamoDB**. Palabras clave: *NoSQL, key-value, serverless, escalable*.
+
 ### DynamoDB - Tipos de Datos
 
 [![aws-links](https://img.shields.io/badge/WHAT_IS_A_KEY_VALUE_DB-blue?style=for-the-badge)](https://aws.amazon.com/nosql/key-value)
@@ -179,6 +185,9 @@
 - Paga a medida que avanzas en función de las instancias aprovisionadas
 - Tiene una interfaz SQL para realizar las consultas
 - Las herramientas de BI, como AWS Quicksight o Tableau, se integran con ella
+
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por **data warehouse / OLAP / análisis SQL a escala de PB** sobre datos estructurados, piensa en **Amazon Redshift**. Palabras clave: *OLAP, data warehouse, SQL, columnar, BI*. **No es para OLTP** (transacciones en tiempo real); para eso es RDS/Aurora.
 
 ## [Amazon EMR](https://aws.amazon.com/emr)
 
@@ -300,6 +309,9 @@ Así como Aurora es una "implementación de AWS" de PostgreSQL, MySQL, etc. Docu
 - Catálogo de datos Glue: catálogo de conjuntos de datos
 - puede ser utilizado por Athena, Redshift, EMR
 
+> [!TIP]
+> **Sugerencia de examen:** siempre que mencionen **ETL (Extract-Transform-Load)** serverless o **catálogo de datos** que alimenta a Athena/Redshift/EMR, piensa en **AWS Glue**.
+
 ## [DMS – Database Migration Service](https://aws.amazon.com/dms)
 
 - Migra de forma rápida y segura las bases de datos a AWS, con capacidad de recuperación y autocuración
@@ -309,6 +321,9 @@ Soporta:
 
 - **Migraciones homogéneas:** por ejemplo, de Oracle a Oracle
 - **Migraciones heterogéneas:** por ejemplo, de Microsoft SQL Server a Aurora
+
+> [!TIP]
+> **Sugerencia de examen:** siempre que pregunten por **migrar bases de datos hacia AWS** (homogéneas como Oracle→Oracle, o heterogéneas como SQL Server→Aurora) **manteniendo la BD de origen disponible**, piensa en **AWS DMS** (Database Migration Service).
 
 ![](./assets/dms-example.png)
 
