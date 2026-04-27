@@ -65,6 +65,9 @@ conectarse a una VDI)
 - Sincronización de datos sin conexión (sustituye a Cognito Sync)
 - AWS Amplify puede aprovechar AWS AppSync en segundo plano
 
+> [!TIP]
+> **Sugerencia de examen:** **GraphQL** gestionado en AWS con sincronización en tiempo real → **AWS AppSync**.
+
 ## [AWS Amplify](https://aws.amazon.com/amplify)
 - Un conjunto de herramientas y servicios que te ayudan a **desarrollar y desplegar aplicaciones web y móviles escalables**
 - Autenticación, almacenamiento, API (REST, GraphQL), CI/CD, PubSub, análisis, predicciones de IA/ML, monitorización, código fuente de AWS, GitHub, etc.
@@ -83,12 +86,18 @@ conectarse a una VDI)
 
 ![](./assets/aws-infra-composer.png)
 
+> [!TIP]
+> **Sugerencia de examen:** **diseñar visualmente** infraestructura serverless con drag-and-drop que genera **CloudFormation/SAM** → **AWS Infrastructure Composer**.
+
 ## [AWS Device Farm](https://aws.amazon.com/device-farm)
 - Servicio totalmente gestionado que prueba tus aplicaciones web y móviles en navegadores de escritorio, dispositivos móviles reales y tabletas
 - Ejecuta pruebas simultáneamente en varios dispositivos (acelera la ejecución)
 - Posibilidad de configurar los ajustes del dispositivo (GPS, idioma, Wi-Fi, Bluetooth, ...)
 
 ![](./assets/aws-device-farm.png)
+
+> [!TIP]
+> **Sugerencia de examen:** probar apps web/móviles en **dispositivos físicos reales** (iOS/Android, tablets) → **AWS Device Farm**.
 
 ## [AWS Backup](https://aws.amazon.com/backup)
 - Servicio totalmente gestionado para administrar y automatizar centralmente las copias de seguridad en todos los servicios de AWS
@@ -99,6 +108,9 @@ conectarse a una VDI)
 - Copia de seguridad entre cuentas (usando AWS Organizations)
 
 ![](./assets/aws-backup.png)
+
+> [!TIP]
+> **Sugerencia de examen:** **gestión centralizada y automatizada de copias de seguridad** entre servicios AWS y cuentas (vía AWS Organizations) → **AWS Backup**.
 
 ## Estrategias de recuperación de desastres
 
