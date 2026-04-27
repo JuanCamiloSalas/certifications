@@ -375,8 +375,13 @@ Servicios gratuitos pero que generan costos por los servicios que éstos crean:
 - Sin necesidad de instalar nada - evaluación de
 alto nivel de la cuenta de AWS
 - Analiza tus cuentas de AWS y proporciona
-recomendaciones en 5 categorías
-- Optimización de costes - Rendimiento - Seguridad - Tolerancia a los fallos - Límites del servicio
+recomendaciones en 5 categorías:
+
+1. Optimización de costes
+2. Rendimiento
+3. Seguridad
+4. Tolerancia a los fallos
+5. Límites del servicio
 
 ![](./assets/aws-trusted-advisor.png)
 
