@@ -93,6 +93,9 @@
 - Pago por segundo, por lo que puede ser más rentable
 - Casos de uso: ideal para cargas de trabajo infrecuentes, intermitentes o impredecibles
 
+> [!TIP]
+> **Sugerencia de examen:** si la pregunta menciona **cargas intermitentes, infrecuentes o impredecibles**, **sin planificación de capacidad** o **pago por segundo**, piensa en **Amazon Aurora Serverless**.
+
 ## Despliegues RDS: Réplicas de lectura, Multi-AZ
 
 ### Réplicas de lectura
@@ -235,6 +238,9 @@
 > - Realizar análisis ad-hoc
 > - Obtener información empresarial con los datos
 
+> [!TIP]
+> **Sugerencia de examen:** **dashboards interactivos / visualizaciones / Business Intelligence (BI) serverless** sobre datos de RDS, Aurora, Athena, Redshift o S3 → **Amazon QuickSight**.
+
 ## [DocumentDB](https://aws.amazon.com/documentdb)
 
 Así como Aurora es una "implementación de AWS" de PostgreSQL, MySQL, etc. DocumentDB es lo mismo que MongoDB (que es una base de datos NoSQL)
@@ -268,22 +274,6 @@ Así como Aurora es una "implementación de AWS" de PostgreSQL, MySQL, etc. Docu
 - Alta disponibilidad con réplicas a través de múltiples AZs
 - Excelente para grafos de conocimiento (Wikipedia), detección de fraudes, motores de recomendación, redes sociales
 
-## Amazon QLDB
-
-- QLDB significa "Quantum Ledger Database" (base de datos de libros contables)
-- Un libro de contabilidad es un libro que registra las transacciones financieras
-- Totalmente gestionada, sin servidor, de alta disponibilidad, con replicación en 3 AZ
-- Se utiliza para revisar el historial de todos los cambios realizados en los datos de tu aplicación a lo largo del tiempo
-- Sistema inmutable: ninguna entrada puede ser eliminada o modificada, verificable criptográficamente
-
-![](./assets/QLDB-journal.png)
-
-- Rendimiento 2-3 veces mejor que los marcos de blockchain de libro mayor común
-- Diferencia con Amazon Managed Blockchain: no hay componente de descentralización, de acuerdo con las normas de regulación financiera
-
-> [!WARNING]
-> QLDB fue descontinuado el 31/07/2025 y ya no está en el temario oficial del CLF-C02. Ignorar preguntas sobre este servicio en material antiguo.
-
 ## [Amazon Timestream](https://aws.amazon.com/timestream)
 
 - Base de datos de series temporales totalmente administrada, rápida, escalable y serverless
@@ -292,6 +282,9 @@ Así como Aurora es una "implementación de AWS" de PostgreSQL, MySQL, etc. Docu
 - Hasta 1000 veces más rápida y a 1/10 del costo de las bases de datos relacionales
 - Incluye funciones integradas de análisis de series temporales (te ayudan a identificar patrones en tus datos casi en tiempo real)
 
+> [!TIP]
+> **Sugerencia de examen:** siempre que la pregunta mencione **series temporales / time-series** (datos de IoT, sensores, métricas, eventos en el tiempo) → **Amazon Timestream**.
+
 ## [Amazon Managed Blockchain](https://aws.amazon.com/managed-blockchain)
 
 - Blockchain permite crear aplicaciones en las que varias partes pueden ejecutar transacciones **sin necesidad de una autoridad central de confianza**.
@@ -299,6 +292,9 @@ Así como Aurora es una "implementación de AWS" de PostgreSQL, MySQL, etc. Docu
   - Unirte a redes públicas de blockchain
   - O crear tu propia red privada escalable
 - Compatible con los marcos Hyperledger Fabric y Ethereum
+
+> [!TIP]
+> **Sugerencia de examen:** siempre que mencionen **blockchain, Hyperledger Fabric, Ethereum** o **transacciones sin autoridad central de confianza** → **Amazon Managed Blockchain**.
 
 ## [AWS Glue](https://aws.amazon.com/glue)
 
@@ -338,7 +334,6 @@ Soporta:
 - **Athena:** consulta de datos en Amazon S3 (sin servidor y SQL)
 - **QuickSight:** dashboards sobre tus datos (sin servidor)
 - **DocumentDB:** "Aurora para MongoDB" (JSON - base de datos NoSQL)
-- **Amazon QLDB:** Libro de transacciones financieras (libro inmutable, verificable criptográficamente)
 - **Amazon Timestream:** base de datos de series temporales serverless (almacena y analiza billones de eventos por día)
 - **Amazon Managed Blockchain:** cadenas de bloques Hyperledger Fabric y Ethereum gestionadas
 - **Glue:** Servicio gestionado de ETL (Extract-Transform-Load) y Catálogo de Datos

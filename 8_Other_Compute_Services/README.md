@@ -43,6 +43,13 @@
 
 ![](./assets/eks.png)
 
+> [!TIP]
+> **Sugerencia de examen — familia de contenedores (confusión clásica):**
+> - **ECS:** ejecutar contenedores Docker — **tú aprovisionas las EC2** subyacentes.
+> - **Fargate:** ejecutar contenedores Docker **sin gestionar EC2** (serverless).
+> - **ECR:** **registro privado** de imágenes Docker (el "Docker Hub" de AWS).
+> - **EKS:** **Kubernetes** gestionado — palabra gatillo: *Kubernetes* o *agnóstico de la nube*.
+
 ## [Lambda](https://aws.amazon.com/lambda)
 ### ¿Por qué Lambda?
 **EC2:**
@@ -104,6 +111,9 @@ Pago por **duración**: (en incrementos de 1 ms)
 
 ***Suele ser muy barato ejecutar AWS Lambda, por lo que es muy popular***
 
+> [!TIP]
+> **Sugerencia de examen:** siempre que la pregunta mencione **funciones serverless dirigidas por eventos**, **ejecuciones cortas (máx. 15 min)** o **pago por invocación + duración**, piensa en **AWS Lambda**. Palabras gatillo: *event-driven, FaaS, sin servidores que gestionar*.
+
 ## [Amazon API Gateway](https://aws.amazon.com/api-gateway)
 - Servicio totalmente gestionado para que los desarrolladores puedan crear, publicar, mantener, supervisar y asegurar fácilmente las API
 - **Serverless** y **escalable**
@@ -111,7 +121,7 @@ Pago por **duración**: (en incrementos de 1 ms)
 - Soporta seguridad, autenticación de usuarios, claves de la API, monitorización...
 
 > [!TIP]
-> **Sugerencia de examen:** siempre que pregunten sobre la creación de APIs piensa en Amazon API Gateway
+> **Sugerencia de examen:** siempre que pregunten por **crear, publicar o gestionar APIs REST/WebSocket** de forma **serverless** (típicamente exponiendo Lambdas como HTTP), piensa en **Amazon API Gateway**.
 
 ### Ejemplo: construir una API serverless
 ![](./assets/api-gtw-ex.png)
@@ -142,6 +152,11 @@ Pago por **duración**: (en incrementos de 1 ms)
 - Depende de EBS / almacén de instancias para el espacio en disco
 - Depende de EC2 (puede ser gestionado por AWS)
 
+> [!TIP]
+> **Sugerencia de examen — Batch vs Lambda:**
+> - **Lambda:** ejecuciones **cortas (≤15 min)**, **serverless**, sin Docker arbitrario, ideal para event-driven.
+> - **AWS Batch:** **trabajos por lotes** con inicio y fin definidos, **sin límite de tiempo**, corre en **EC2/Spot** y se definen como **imágenes Docker en ECS**. Palabra gatillo: *batch jobs, procesamiento por lotes a gran escala*.
+
 ## [Amazon Lightsail](https://aws.amazon.com/lightsail)
 - Servidores virtuales, almacenamiento, bases de datos y redes
 - Precios bajos y predecibles
@@ -154,6 +169,9 @@ Pago por **duración**: (en incrementos de 1 ms)
 > - Aplicaciones web sencillas (tiene plantillas para LAMP, Nginx, MEAN, Node.js...)
 > - Sitios web (plantillas para WordPress, Magento, Plesk, Joomla)
 > - Entorno de desarrollo/prueba
+
+> [!TIP]
+> **Sugerencia de examen:** si la pregunta menciona **principiantes en el Cloud**, **precios bajos y predecibles** o plantillas listas (WordPress, LAMP, Magento), piensa en **Amazon Lightsail** — alternativa simplificada a EC2/RDS/ELB sin autoescalado.
 
 ## Resumen
 - **Docker:** tecnología de contenedores para ejecutar aplicaciones
