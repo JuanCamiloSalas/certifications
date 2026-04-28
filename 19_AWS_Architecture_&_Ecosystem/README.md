@@ -39,7 +39,24 @@
 > *No son algo a equilibrar, ni a compensar, son una sinergia*
 
 > [!TIP]
-> **Sugerencia de examen:** memoriza los **6 pilares** (Excelencia operativa, Seguridad, Fiabilidad, Eficiencia del rendimiento, Optimización de costes, **Sostenibilidad**). El de **Sostenibilidad** se añadió en 2021 y es el que más sale en preguntas trampa para distractores como "Escalabilidad" o "Disponibilidad" (que NO son pilares).
+> **Sugerencia de examen:** memoriza los **6 pilares** (Excelencia operativa, Seguridad, Fiabilidad, Eficiencia del rendimiento, Optimización de costes, **Sostenibilidad**). El de **Sostenibilidad** se añadió en 2021 y es el que más sale en preguntas trampa.
+>
+> **Palabras-gatillo para distinguir cada pilar:**
+>
+> | Pilar | Palabras gatillo |
+> |---|---|
+> | **Excelencia operativa** | IaC, runbooks, automatización de procesos, monitorización proactiva, *cómo operas* |
+> | **Seguridad** | IAM, cifrado, KMS, mínimo privilegio, protección contra **amenazas/ataques** |
+> | **Fiabilidad** | multi-AZ, failover, backups, restore, replicación, **recuperarse de fallos** |
+> | **Eficiencia del rendimiento** | tipo de instancia adecuado, serverless, latencia, CDN, caché, **right-sizing técnico** |
+> | **Optimización de costes** | pago por uso, instancias reservadas/spot, etiquetas, ROI, **el menor coste** |
+> | **Sostenibilidad** | impacto ambiental, eficiencia energética, reducir recursos ociosos |
+>
+> **Trampa más común — Fiabilidad vs Eficiencia del rendimiento:** ambos usan Auto Scaling, pero:
+> - "**Reemplazar instancias en mal estado**" → Fiabilidad.
+> - "**Adaptarse a la demanda / no aprovisionar de más**" → Eficiencia del rendimiento.
+>
+> **Distractores que NO son pilares** (los ponen como respuestas falsas): Disponibilidad, Escalabilidad, Agilidad, Elasticidad, Manejabilidad, Recuperabilidad.
 
 ## 1) Excelencia operativa
 
@@ -250,6 +267,9 @@ dashboards
 - **Socios de formación de APN**: encuentra quién puede ayudarte a aprender AWS
 - **Programa de competencias de AWS**: las competencias de AWS se conceden a los socios de APN que han demostrado su competencia técnica y el éxito probado de sus clientes en áreas de soluciones especializadas
 - **AWS Navigate Program**: ayuda a los socios a convertirse en mejores partners
+
+> [!TIP]
+> **Sugerencia de examen:** si la pregunta menciona un **equipo experto de AWS que trabaja contigo en un proyecto grande/enterprise** (migraciones complejas, arquitecturas a medida) → **AWS Professional Services**. Si menciona **socios externos certificados** (consultoras, fabricantes de hardware/software, formadores) → **APN (AWS Partner Network)**.
 
 ## [AWS IQ](https://aws.amazon.com/iq/)
 - Encuentra rápidamente ayuda profesional para tus proyectos de AWS
