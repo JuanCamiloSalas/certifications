@@ -38,6 +38,9 @@
 
 > *No son algo a equilibrar, ni a compensar, son una sinergia*
 
+> [!TIP]
+> **Sugerencia de examen:** memoriza los **6 pilares** (Excelencia operativa, Seguridad, Fiabilidad, Eficiencia del rendimiento, Optimización de costes, **Sostenibilidad**). El de **Sostenibilidad** se añadió en 2021 y es el que más sale en preguntas trampa para distractores como "Escalabilidad" o "Disponibilidad" (que NO son pilares).
+
 ## 1) Excelencia operativa
 
 - Incluye la capacidad de **ejecutar y supervisar los sistemas** para aportar valor al negocio y **mejorar continuamente los procesos y procedimientos de soporte**.
@@ -131,7 +134,7 @@ dashboards
 
 ![](./assets/aws-footprint.png)
 
-## AWS Cloud Adoption Framework (AWS CAF)
+## [AWS Cloud Adoption Framework (AWS CAF)](https://aws.amazon.com/cloud-adoption-framework/)
 - Te ayuda a construir y luego ejecutar un plan integral para tu transformación digital mediante el uso innovador de AWS
 - Creado por profesionales de AWS aprovechando las mejores prácticas de AWS y las lecciones aprendidas de miles de clientes
 - AWS CAF identifica las capacidades organizativas específicas que apuntalan el éxito de las transformaciones en el Cloud
@@ -197,7 +200,7 @@ dashboards
     - [https://aws.amazon.com/solutions/implementations/aws-landing-zone/](https://aws.amazon.com/solutions/implementations/aws-landing-zone/)
     - "Sustituido" por AWS Control Tower
 
-## Ecosistema AWS - AWS Support
+## Ecosistema AWS - [AWS Support](https://aws.amazon.com/premiumsupport/)
 - **DEVELOPER**
   - Acceso por correo electrónico en horario laboral a los asociados de soporte de Cloud
   - Orientación general: < 24 horas laborables
@@ -211,7 +214,13 @@ dashboards
   - Equipo de soporte de atención (para la facturación y las mejores prácticas de la cuenta)
   - Caída del sistema crítico para el negocio < 15 minutos
 
-## AWS Marketplace
+> [!TIP]
+> **Sugerencia de examen:** las dos pistas clave para distinguir los planes:
+> - **TAM (Technical Account Manager)** → solo en **Enterprise** (y Enterprise On-Ramp).
+> - **Tiempos de respuesta para sistema crítico caído:** Business **< 1h**, Enterprise **< 15 min**.
+> - Si la pregunta menciona **acceso 24/7 por teléfono/chat**, ya descarta Developer.
+
+## [AWS Marketplace](https://aws.amazon.com/marketplace)
 - Catálogo digital con miles de listados de software de **proveedores de software independientes** (3ª parte)
 - Ejemplo:
   - AMI personalizada (SO personalizado, firewalls, soluciones técnicas...)
@@ -221,7 +230,10 @@ dashboards
 - Si compras a través de AWS Marketplace, se incluye en tu factura de AWS
 - Puedes **vender tus propias soluciones** en AWS Marketplace
 
-## AWS Training
+> [!TIP]
+> **Sugerencia de examen:** **software de terceros** (AMIs, contenedores, SaaS, plantillas CFN) en una sola factura junto con AWS → **AWS Marketplace**.
+
+## [AWS Training](https://aws.amazon.com/training/)
 - Formación digital (online) y presencial de AWS (presencial o virtual)
 - Formación privada de AWS (para tu organización)
 - Formación y certificación para el Gobierno de EE.UU.
@@ -229,7 +241,7 @@ dashboards
 - Academia AWS: ayuda a las universidades a enseñar AWS
 - Y tu profesor online favorito… enseñándote todo sobre las certificaciones de AWS y mucho más!! :)
 
-## AWS Professional Services y Partner Network
+## [AWS Professional Services](https://aws.amazon.com/professional-services/) y Partner Network
 - La organización de servicios profesionales de AWS es un equipo global de expertos
 - Trabajan junto a tu equipo y a un miembro elegido de la APN
 - APN = AWS Partner Network (Red de Socios de AWS)
@@ -239,12 +251,15 @@ dashboards
 - **Programa de competencias de AWS**: las competencias de AWS se conceden a los socios de APN que han demostrado su competencia técnica y el éxito probado de sus clientes en áreas de soluciones especializadas
 - **AWS Navigate Program**: ayuda a los socios a convertirse en mejores partners
 
-## AWS IQ
+## [AWS IQ](https://aws.amazon.com/iq/)
 - Encuentra rápidamente ayuda profesional para tus proyectos de AWS
 - Contrata y paga a expertos de terceros certificados por AWS para trabajar en proyectos bajo demanda
 - Videoconferencia, gestión de contratos, colaboración segura, facturación integrada
 
 ![](./assets/aws-iq.png)
+
+> [!TIP]
+> **Sugerencia de examen:** contratar **expertos certificados de AWS bajo demanda** (proyectos cortos, pago integrado en factura) → **AWS IQ**. No lo confundas con **AWS Professional Services** (equipo grande de AWS para proyectos enterprise) ni con **APN Partners** (red de socios consultores).
 
 ## [AWS re:Post](https://repost.aws/es/knowledge-center)
 - **Servicio de preguntas y respuestas gestionado por AWS** que ofrece respuestas a tus preguntas técnicas sobre AWS, revisadas por expertos y que sustituye a los foros originales de AWS
@@ -253,7 +268,10 @@ dashboards
 - **Las preguntas de los clientes de AWS Premium Support que no reciben respuesta de la comunidad se transmiten a los ingenieros de AWS Support**
 - AWS re:Post no está destinado a ser utilizado para preguntas que son sensibles al tiempo o que impliquen cualquier información de propiedad
 
-## AWS Managed Services (AMS)
+> [!TIP]
+> **Sugerencia de examen:** comunidad **Q&A** revisada por expertos AWS, **gratuita**, sustituye a los foros antiguos → **AWS re:Post**. No es para preguntas urgentes ni información sensible.
+
+## [AWS Managed Services (AMS)](https://aws.amazon.com/managed-services/)
 - Proporciona soporte de infraestructuras y aplicaciones en AWS.
 - **AMS ofrece un equipo de expertos en AWS** que gestionan y operan tu infraestructura para garantizar la seguridad, fiabilidad y disponibilidad.
 - Ayuda a las organizaciones a descargar las tareas rutinarias de gestión y centrarse en sus objetivos empresariales.
@@ -262,6 +280,9 @@ dashboards
 - El horario comercial de AMS es 24/365
 
 ![](./assets/aws-ams.png)
+
+> [!TIP]
+> **Sugerencia de examen:** **AWS opera y gestiona tu infraestructura en producción** (parches, monitorización, backups, cambios) para que te enfoques en tu negocio → **AWS Managed Services (AMS)**. Distinción: AMS *opera*, ProServ *construye/migra*, AWS IQ *contrata expertos sueltos*.
 
 [![](https://img.shields.io/badge/<-FF4859?style=for-the-badge)](../18_Other_Services/README.md)
 [![](https://img.shields.io/badge/CONTENT_TABLE-175074?style=for-the-badge)](../README.md)

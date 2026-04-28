@@ -388,10 +388,8 @@ Servicios gratuitos pero que generan costos por los servicios que éstos crean:
 > **Sugerencia de examen:** si la pregunta menciona **acercarse al límite de un servicio** (ej. ejecuciones concurrentes de Lambda) o **solicitar un aumento de cuota**, la respuesta es **AWS Service Quotas**.
 
 ## [Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/?nc1=h_ls)
-- Sin necesidad de instalar nada - evaluación de
-alto nivel de la cuenta de AWS
-- Analiza tus cuentas de AWS y proporciona
-recomendaciones en 5 categorías:
+- Sin necesidad de instalar nada - evaluación de alto nivel de la cuenta de AWS
+- Analiza tus cuentas de AWS y proporciona recomendaciones en 5 categorías:
 
 1. Optimización de costes
 2. Rendimiento
@@ -402,8 +400,6 @@ recomendaciones en 5 categorías:
 ![](./assets/aws-trusted-advisor.png)
 
 ### [Planes de soporte de Trusted Advisor](https://aws.amazon.com/premiumsupport/plans)
-
-
 | **7 Core Checks (7 controles básicos)** | **Full Checks (Controles completos)** |
 |---------------------------------------|----------------------------------------|
 | **Plan de soporte:** Basic y Developer | **Plan de soporte:** Business y Enterprise |
