@@ -108,7 +108,10 @@
 - ❌ **CLB** — legacy, don't use
 
 > [!TIP]
-> **Exam tip:** **path/host routing + WebSockets + HTTP** → **ALB**. **TCP/UDP + millions of req/s + static IP** → **NLB**. **Network appliances** → **Gateway LB**.
+> **Exam tip:**
+> - **ALB** → path/host routing + WebSockets + HTTP
+> - **NLB** → TCP/UDP + millions of req/s + static IP
+> - **Gateway LB** → network appliances (firewalls, IDS/IPS)
 
 ---
 
@@ -257,3 +260,249 @@ The **5 categories** are:
 | Consolidated Billing | **1 bill + volume pricing + share RI/SP** |
 | Specialty paid consulting | **AWS Professional Services** |
 | 5 Trusted Advisor categories | **C**ost · **P**erformance · **S**ecurity · **F**ault Tolerance · service **L**imits |
+
+---
+
+# CCP Practice Exam 2 Review — Weak Points
+
+**Result:** 86% (56/65) — Passed (70% threshold)
+
+| Domain | AWS Weight | Score | Wrong impact (W × error%) | Priority |
+|---------|----------|---------|---------|-----------|
+| **Cloud Concepts** | 24% | 79% | **5.04** | 🔴 **HIGHEST** |
+| **Security and Compliance** | 30% | 87% | 3.90 | 🟡 Medium |
+| **Billing, Pricing, and Support** | 12% | 78% | 2.64 | 🟡 Medium |
+| **Cloud Technology and Services** | 34% | 96% | 1.36 | 🟢 Low |
+
+> [!IMPORTANT]
+> Despite Cloud Tech having the highest weight (34%), it scored 96%, so its weighted error impact is the lowest. Focus first on **Cloud Concepts** and **Security**.
+
+---
+
+## 🔴 1. Cloud Concepts (24%)
+
+### 1.1 ❌ AWS CAF Security perspective — capabilities
+
+**Q33 (failed):** *"Startup wants to protect all applications against unintended/unauthorized access and potential vulnerabilities. Which AWS CAF Security perspective capability is most relevant?"*
+
+- ✅ **Infrastructure Protection** — protects systems, networks, and applications **at the host, network and edge layer** (covers "unintended access + vulnerabilities" against infra).
+- ❌ **Threat Detection** — *detect* threats (GuardDuty-style), not prevent the access in the first place.
+- ❌ **Identity and Access Management** — focuses on **identity**, not network/app/host protection.
+- ❌ **Data Protection** — focuses on **encryption / data classification**, not access protection of apps.
+
+**The 9 capabilities of CAF's Security perspective** (memorize):
+1. **Security Governance**
+2. **Security Assurance**
+3. **Identity and Access Management**
+4. **Threat Detection**
+5. **Vulnerability Management**
+6. **Infrastructure Protection** ← *protect networks, hosts, and apps*
+7. **Data Protection**
+8. **Application Security**
+9. **Incident Response**
+
+> [!TIP]
+> **Exam tip:** if the question mentions **"protecting applications/networks against unintended access or vulnerabilities"** → **Infrastructure Protection**. If it says **"detecting"** suspicious activity → **Threat Detection**. If it says **"identity"** → **IAM**.
+
+### 1.2 ❌ Cloud benefits beyond CAPEX → OPEX — *Reduce Time to Market*
+
+**Q58 (failed):** *"When a company decouples from their on-premises data center, which TWO benefits do they get?"*
+
+- ✅ **Reduce time to market** — provision in minutes vs weeks/months on-prem
+- ✅ **Decrease your TCO** (Total Cost of Ownership)
+- ❌ "Replace low variable costs with upfront CAPEX" — **inverted**: cloud goes from CAPEX → OPEX, not the other way
+- ❌ "Massive discounts for bare metal from Amazon.com" — fake distractor
+- ❌ "**Deferred payments** to operational expenditures" — wrong wording. OPEX is **immediate variable** spend, not "deferred". Common trap.
+
+> [!TIP]
+> **Exam tip:** when listing cloud benefits, the typical TWO are **agility (faster time to market)** + **lower TCO**. **"Deferred payments"** is a trap — OPEX is immediate variable cost, not deferred.
+
+### 1.3 ⚠️ AWS CAF Operations perspective (passed but doubt)
+
+**Q48 (correct, doubt):** *"Which CAF Operations capability is most helpful to consistently deliver cloud services at the agreed level?"*
+
+- ✅ **Performance and Capacity Management** — ensures the **agreed-upon service level** (SLA) is met by sizing and monitoring capacity.
+
+**The capabilities of CAF's Operations perspective** (less obvious, memorize):
+1. Observability
+2. Event Management (AIOps)
+3. Incident and Problem Management
+4. Change and Release Management
+5. **Performance and Capacity Management** ← *match capacity to demand at agreed SLA*
+6. Configuration Management
+7. Patch Management
+8. Availability and Continuity Management
+9. Application Performance Monitoring
+
+> [!TIP]
+> **Exam tip:** **"deliver consistently at the agreed level / SLA / capacity"** → **Performance and Capacity Management** (Operations perspective). **"Identity and Access Management"** is a Security capability, not Operations — common distractor in these questions.
+
+---
+
+## 🟡 2. Security and Compliance (30%)
+
+### 2.1 ❌ Shared Responsibility — Host OS patching is **AWS** alone
+
+**Q15 (failed):** *"In the Shared Responsibility Model, whose responsibility is it to patch the host OS of an EC2 instance?"*
+
+- ✅ **AWS** — the **host** OS (the hypervisor) is patched by AWS.
+- ❌ Customer — the customer patches the **guest** OS (inside the EC2 VM).
+- ❌ Both — common trap: it sounds shared but **host vs guest** are clearly separated.
+
+**Memorize:**
+| Layer | Who patches |
+|---|---|
+| **Host OS / hypervisor** | **AWS** (only) |
+| **Guest OS (inside EC2)** | **Customer** (only) |
+| Managed services (RDS, Lambda) OS | **AWS** |
+
+> [!TIP]
+> **Exam tip:** **host = hypervisor → AWS**. **Guest = inside the EC2 → customer**. If the wording is "host", the answer is **AWS, NOT both**. Don't fall for the "shared" distractor when the question is specific about the host.
+
+### 2.2 ❌ Prevent unauthorized S3 deletion → **MFA Delete**
+
+**Q30 (failed):** *"How to prevent unauthorized deletion of S3 objects?"*
+
+- ✅ **MFA Delete** — requires **MFA token** to permanently delete object versions or to disable versioning.
+- ❌ Stricter IAM policies — can mitigate but a compromised IAM still has the listed permissions; doesn't add a separate factor.
+- ❌ Set bucket private — controls **public access**, not internal account deletion.
+- ❌ Access control policies — same issue: doesn't require MFA at delete time.
+
+**Conditions for MFA Delete:**
+- Versioning **must be enabled**.
+- Only the **bucket owner (root account)** can enable/disable MFA Delete (not regular IAM users).
+- Requires **AWS CLI/SDK** (cannot enable from console).
+
+> [!TIP]
+> **Exam tip:** **"prevent accidental/unauthorized deletion of S3 objects"** → **MFA Delete** (with versioning). Bucket policies and IAM are about *access*, not about adding a *second factor* at delete time.
+
+---
+
+## 🟡 3. Billing, Pricing, and Support (12%)
+
+### 3.1 ❌ Support plans — Infrastructure Event Management, Well-Architected & Operations Reviews
+
+**Q28 (failed):** *"Customer has Basic plan and wants to use Infrastructure Event Management, Well-Architected Reviews and Operations Reviews features. Cheapest plan to upgrade to?"*
+
+- ✅ **Enterprise** — these features are **Enterprise-only** (and Enterprise On-Ramp partially).
+- ❌ Developer / Business — do **not** include IEM, WAR or Ops Reviews as standard.
+
+**Plan-level features cheat sheet:**
+| Feature | Plan |
+|---|---|
+| **TAM (Technical Account Manager)** | **Enterprise** (and Enterprise On-Ramp) |
+| **Infrastructure Event Management (IEM)** | **Enterprise** (paid add-on for Business) |
+| **Well-Architected Reviews** | **Enterprise** |
+| **Operations Reviews** | **Enterprise** |
+| **Concierge (billing assistance)** | Business and Enterprise |
+| **24/7 phone/chat** | Business and Enterprise |
+| **Trusted Advisor — full checks** | Business and Enterprise |
+
+> [!TIP]
+> **Exam tip:** if the question lists **Infrastructure Event Management, WAR, Ops Reviews, or TAM**, you need **Enterprise** (rarely Enterprise On-Ramp). Nothing below Business gives you any of these.
+
+---
+
+## 🟢 4. Cloud Technology and Services (34%)
+
+### 4.1 ❌ Serverless platform components — **API Gateway + Lambda@Edge** (not ElastiCache)
+
+**Q8 (failed):** *"Which TWO services are part of the AWS serverless platform that doesn't require provisioning or maintaining servers?"*
+
+- ✅ **Amazon API Gateway** — fully serverless API management.
+- ✅ **Lambda@Edge** — runs Lambda functions at CloudFront edge locations, serverless.
+- ❌ **Amazon ElastiCache** — managed cache (Redis/Memcached) but **runs on EC2-style nodes**, you choose instance type/size — **NOT serverless**.
+- ❌ **Amazon EMR** — Hadoop cluster, requires EC2 cluster, **NOT serverless**.
+- ❌ **Amazon OpenSearch** — runs on managed instances, not serverless (OpenSearch Serverless is a separate variant).
+
+> [!TIP]
+> **Exam tip:** **ElastiCache is NOT serverless** — it requires choosing node types and clusters. The classic serverless suite for the exam: **Lambda, Lambda@Edge, API Gateway, DynamoDB, Aurora Serverless, S3, SNS, SQS, EventBridge, Step Functions, Fargate**.
+
+### 4.2 ❌ Speed up global content delivery → **CloudFront** (not S3 Transfer Acceleration)
+
+**Q10 (failed):** *"Which service speeds up content delivery to your customers?"*
+
+- ✅ **Amazon CloudFront** — global CDN that **delivers cached content** (images, videos, HTML) to users with low latency.
+- ❌ **S3 Transfer Acceleration** — speeds up **uploads/downloads to/from S3** through edge locations. It's about **data transfer to S3**, not **content delivery to users**.
+- ❌ CloudWatch / CloudTrail — monitoring/audit, unrelated.
+
+> [!TIP]
+> **Exam tip:** **delivering content to end-users globally** → **CloudFront**. **Uploading large files to an S3 bucket from far away** → **S3 Transfer Acceleration**. They're *both* edge-based but with **opposite directions of the data flow**.
+
+### 4.3 ❌ SQL Server with cost-flexibility + RDP → **Bundled AMI** (not RDS)
+
+**Q18 (failed):** *"Company wants SQL Server in AWS, managed by their DBA, accessible via RDP, with a Standard license, but unsure how much CPU/RAM to allocate. Which option is most flexible and cost-effective?"*
+
+- ✅ **Use a Windows Server with SQL Server Standard bundled AMI** — license is **included in the EC2 hourly price**, you pick **any EC2 size** (flexibility for sizing), and DBA gets **RDP access**.
+- ❌ **RDS for SQL Server** — managed by AWS, **not by the company's DBA**, and **no RDP access** to the underlying host. Disqualified by the requirements.
+- ❌ EC2 + buy your own MSSQL license — you have to **manage the license**, less convenient.
+- ❌ Aurora MS SQL Server — **doesn't exist** (Aurora supports only MySQL and PostgreSQL).
+
+> [!TIP]
+> **Exam tip:** keywords **"managed by company DBA" + "RDP access"** rule out RDS (RDS doesn't give SSH/RDP). Keywords **"unsure of CPU/RAM" + "cost-effective"** favor a **bundled AMI** so you can resize EC2 freely without buying a license.
+
+### 4.4 ❌ EC2 for **3-month** uninterruptible job → **On-Demand**
+
+**Q35 (failed):** *"Best EC2 purchasing option for a 3-month uninterruptible job?"*
+
+- ✅ **On-Demand** — no commitment, pay per hour/second, perfect for **short-term workloads (≤ 1 year)**.
+- ❌ **Reserved Instance** — minimum commitment is **1 year** (or 3 years), not worth it for 3 months.
+- ❌ **Spot Instance** — can be **interrupted** by AWS; question explicitly says "uninterruptible".
+- ❌ **Dedicated Instance** — about **isolation/licensing**, not about commitment length.
+
+> [!TIP]
+> **Exam tip:** for **short-term + uninterruptible** → **On-Demand**. RIs and Savings Plans require **1-year minimum**, so any workload **shorter than a year** is On-Demand. Spot is for **interruptible** jobs only.
+
+### 4.5 ⚠️ NLB use case (passed but doubt)
+
+**Q6 (correct, doubt):** *"Best load balancer for TCP/UDP/TLS, millions of req/s with ultra-low latency?"*
+
+- ✅ **Network Load Balancer (NLB)** — Layer 4 (TCP/UDP/TLS), **millions of req/s**, **ultra-low latency**, static IP per AZ.
+
+| ELB type | When |
+|---|---|
+| **ALB** | Layer 7 — HTTP/HTTPS, path/host routing, WebSockets |
+| **NLB** | **Layer 4 — TCP/UDP/TLS, ultra-low latency, millions of req/s, static IP** |
+| **GWLB** | Layer 3 — deploy network appliances (firewalls, IDS/IPS) |
+| CLB | Legacy, do not use |
+
+> [!TIP]
+> **Exam tip:** the trio of keywords **TCP / UDP / TLS** + **millions of req/s** + **ultra-low latency** = **NLB**. If you also see **static IP**, even more sure.
+
+### 4.6 ⚠️ Snowball Edge for petabyte transport (passed but doubt)
+
+**Q7 (correct, doubt):** *"Data transport solution that accelerates moving terabytes to petabytes of data into and out of AWS using appliances with on-board storage and compute?"*
+
+- ✅ **AWS Snowball Edge** — physical appliances with **storage AND compute** (run EC2/Lambda offline). Up to ~80 TB usable per device, multiple devices for petabyte transfers.
+- ❌ **AWS Snowcone** — smaller (8–14 TB), portable; not for **petabyte** scale on its own.
+- ❌ **AWS DataSync** — online sync over the **network**, not a physical appliance.
+- ❌ **Lambda@Edge** — totally unrelated (CDN code execution).
+
+| Service | Capacity | Online/Offline |
+|---|---|---|
+| **Snowcone** | 8 TB HDD / 14 TB SSD | Online or offline |
+| **Snowball Edge** | up to ~80 TB | **Offline (physical)** |
+| **Snowmobile** | up to ~100 PB | **Offline (truck!)** |
+| **DataSync** | n/a | **Online (over network)** |
+
+> [!TIP]
+> **Exam tip:** **physical device with storage + compute + offline** → **Snowball Edge**. If the question mentions an order of magnitude in **exabytes**, it's **Snowmobile**. **Online network sync** = **DataSync**.
+
+---
+
+# Summary — exam 2 — what to memorize
+
+| Common confusion | Correct answer |
+|---|---|
+| CAF Security: protect apps from unintended access + vulnerabilities | **Infrastructure Protection** (not Threat Detection) |
+| CAF Operations: deliver consistently at agreed SLA | **Performance and Capacity Management** |
+| Cloud benefit beyond CAPEX→OPEX | **Reduce time to market** + lower TCO (NOT "deferred payments") |
+| Host OS patching | **AWS only** (not "both") |
+| Prevent unauthorized S3 deletion | **MFA Delete** (with versioning) |
+| Get IEM, WAR, Ops Reviews features | **Enterprise** support plan |
+| Serverless platform examples | **API Gateway + Lambda@Edge** (NOT ElastiCache) |
+| Speed up content delivery to users | **CloudFront** (NOT S3 Transfer Acceleration) |
+| SQL Server, DBA-managed, RDP access, flexible size | **Windows + SQL Server bundled AMI** (NOT RDS, NOT Aurora) |
+| 3-month uninterruptible EC2 job | **On-Demand** (RI minimum is 1 year) |
+| TCP/UDP/TLS + millions req/s + ultra-low latency | **NLB** |
+| TB-PB physical data transfer with compute | **Snowball Edge** |
