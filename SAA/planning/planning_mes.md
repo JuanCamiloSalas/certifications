@@ -1,7 +1,8 @@
 # Plan de Estudio - AWS Solutions Architect Associate (SAA-C03)
 
-> Plan de preparación de 4 semanas para presentar el examen el **viernes 29 de mayo de 2026**
-> Plan B: lunes 1 de junio de 2026
+> Plan de preparación para presentar el examen el **viernes 5 de junio de 2026**
+> Plan B: martes 9 de junio de 2026
+> *Plan reagendado una semana por enfermedad (12-16 mayo)*
 
 ## 📋 Contexto
 
@@ -25,7 +26,11 @@ Estas secciones se omiten porque ya fueron estudiadas y dominadas en la preparac
 
 **Total liberado: ~4h 50min de video** (~6h reales con apuntes)
 
-> ⚠️ **Importante:** revisar brevemente el índice de cada sección saltada para confirmar que no hay subtemas nuevos relevantes para SAA. Si aparece algo desconocido, ver solo ese subtema puntual.
+## 📊 Estado actual del avance (al 20 de mayo)
+
+✅ **Secciones completadas:** 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17 (11 de 30 a estudiar)
+🔄 **En curso:** Sec 18 (Decoupling) — se retoma el miércoles 20
+📅 **Pendientes:** Sec 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34
 
 ## ⏱️ Disponibilidad de tiempo
 
@@ -36,34 +41,36 @@ Estas secciones se omiten porque ya fueron estudiadas y dominadas en la preparac
 | Domingo | Descanso (0-1h opcional) |
 
 **Total semanal:** 30-34h
-**Total mes:** ~120-136h disponibles vs ~77h proyectadas → margen cómodo
+**Total proyectado en lo que queda:** ~55-65h disponibles vs ~50h necesarias → margen cómodo
 
-## 🎯 Estructura general
+## 🎯 Estructura general actualizada
 
 | Semana | Fechas | Foco | Hito |
 |---|---|---|---|
-| **1** | 5-10 may | EC2-SAA + Storage + ELB/ASG + RDS + Route 53 | Bloques A, B, C completados con holgura |
-| **2** | 12-17 may | S3 avanzado + CDN + Decoupling/Serverless + BD avanzadas | 75% del curso visto + primer Dojo SAA |
-| **3** | 19-24 may | Monitoring + Security + VPC + DR | TODO el contenido visto + 3 Dojo SAA |
-| **4** | 26-29 may | Solo simulacros y refinamiento | 3 Dojo SAA finales + examen |
+| ~~1~~ | ~~5-10 may~~ | ~~EC2-SAA + Storage + ELB/ASG + RDS + Route 53~~ | ✅ Completada |
+| ~~Pausa~~ | ~~12-16 may~~ | ~~Enfermedad~~ | Recuperación |
+| **2** | 18-23 may | Decoupling/Serverless + BD avanzadas + **Dojo SAA #1** | ~75% del curso |
+| **3** | 25-30 may | Monitoring + Security + VPC + DR + 2-3 Dojo SAA | 100% del curso |
+| **4** | 1-5 jun | Solo simulacros y refinamiento | 3 Dojo SAA finales + examen |
 
 ## 📚 Distribución del temario (secciones a estudiar)
 
-| Bloque | Secciones | Horas | Prioridad |
-|---|---|---|---|
-| **A. Fundamentos avanzados** | ~~3, 4, 5~~, 6, 7, 8 | ~3h 56min | CRÍTICA |
-| **B. Bases de datos básicas** | 9 | ~1h 31min | CRÍTICA |
-| **C. Route 53 + arquitecturas** | 10, 11 | ~2h 31min | ALTA |
-| **D. S3 avanzado** | ~~12~~, 13, 14, 15 | ~2h | CRÍTICA |
-| **E. CDN + Storage extras** | 16, 17 | ~1h 22min | ALTA |
-| **F. Decoupling + Serverless** | 18, 19, 20, 21 | ~4h 21min | CRÍTICA |
-| **G. BD avanzadas + Data + ML** | 22, 23, 24 | ~1h 41min | MEDIA |
-| **H. Monitoring + Security** | 25, 26, 27 | ~4h 22min | ALTA |
-| **I. Networking VPC** | 28 | ~3h 31min | **CRÍTICA — el más grande** |
-| **J. DR + Migration** | 29 | ~54min | ALTA |
-| **K. Cierre** | 30, 31, 32, 33, 34 | ~2h 5min | MEDIA |
+| Bloque | Secciones | Estado | Horas | Prioridad |
+|---|---|---|---|---|
+| **A. Fundamentos avanzados** | 6, 7, 8 | ✅ | ~3h 56min | CRÍTICA |
+| **B. Bases de datos básicas** | 9 | ✅ | ~1h 31min | CRÍTICA |
+| **C. Route 53 + arquitecturas** | 10, 11 | ✅ | ~2h 31min | ALTA |
+| **D. S3 avanzado** | 13, 14, 15 | ✅ | ~2h | CRÍTICA |
+| **E. CDN + Storage extras** | 16, 17 | ✅ | ~1h 22min | ALTA |
+| **F. Decoupling + Serverless** | 18, 19, 20, 21 | 🔄 Esta semana | ~4h 21min | CRÍTICA |
+| **G. BD avanzadas + Data + ML** | 22, 23, 24 | 🔄 Esta semana | ~1h 41min | MEDIA |
+| **H. Monitoring + Security** | 25, 26, 27 | 📅 Sem 3 | ~4h 22min | ALTA |
+| **I. Networking VPC** | 28 | 📅 Sem 3 | ~3h 31min | **CRÍTICA — el más grande** |
+| **J. DR + Migration** | 29 | 📅 Sem 3 | ~54min | ALTA |
+| **K. Cierre** | 30, 31, 32, 33, 34 | 📅 Sem 3-4 | ~2h 5min | MEDIA |
 
-**Total a estudiar: ~28h de video** (vs 34h originales)
+**Total estudiado a la fecha:** ~11h 20min de video
+**Total pendiente:** ~17h de video
 
 ## 🔑 Reglas no negociables
 
@@ -73,6 +80,7 @@ Estas secciones se omiten porque ya fueron estudiadas y dominadas en la preparac
 4. **Domingos sagrados:** descanso real para sostener el mes.
 5. **Time-boxing por sección:** si te excedes al doble del tiempo estimado, marca para revisión y avanza.
 6. **Regla de oro de apuntes:** si ya lo sabías del CCP y lo recuerdas, NO lo apuntes.
+7. **Post-enfermedad:** si el cuerpo dice basta, parar. Mejor sesiones cortas enfocadas que largas dispersas.
 
 ## 📝 Sistema de apuntes (3 capas)
 
@@ -105,10 +113,10 @@ Estas secciones se omiten porque ya fueron estudiadas y dominadas en la preparac
 saa-prep/
 ├── README.md                    ← Plan general (este archivo)
 ├── planning/
-│   ├── SEMANA-1.md
-│   ├── SEMANA-2.md
-│   ├── SEMANA-3.md
-│   └── SEMANA-4.md
+│   ├── SEMANA-1.md             ✅ Completada
+│   ├── SEMANA-2.md             🔄 En curso (18-23 may)
+│   ├── SEMANA-3.md             📅 Próxima (25-30 may)
+│   └── SEMANA-4.md             📅 Final (1-5 jun)
 ├── notes/
 │   ├── 01-ec2-saa.md           ← Sección 6
 │   ├── 02-storage-ec2.md       ← Sección 7
@@ -140,28 +148,30 @@ saa-prep/
 
 | Tipo | Cuándo | Frecuencia |
 |---|---|---|
-| **Dojo Topic-based** (preguntas sueltas por tema) | Semanas 1-2 | Después de cada bloque grande |
+| **Dojo Topic-based** (preguntas sueltas por tema) | Cada día | Después de cada bloque grande |
 | **Dojo Simulacro completo SAA** | Semana 2 final → Semana 4 | 6 simulacros en total |
 
-### Distribución de los 6 Dojo SAA
+### Distribución de los 6 Dojo SAA (fechas actualizadas)
 
-| # | Fecha sugerida |
-|---|---|
-| 1 | Sábado 17 mayo |
-| 2 | Viernes 23 mayo |
-| 3 | Sábado 24 mayo |
-| 4 | Lunes 26 mayo |
-| 5 | Martes 27 mayo |
-| 6 | Miércoles 28 mayo |
+| # | Fecha | Notas |
+|---|---|---|
+| 1 | Sábado 23 mayo | Primer simulacro - calibración (esperar 50-60%) |
+| 2 | Viernes 29 mayo | Semana 3 |
+| 3 | Sábado 30 mayo | Semana 3 |
+| 4 | Lunes 1 junio | Semana 4 |
+| 5 | Martes 2 junio | Semana 4 |
+| 6 | Miércoles 3 junio | Semana 4 - último antes del examen |
 
 ### Tabla de decisión GO/NO-GO
 
+Evaluación final el **miércoles 3 de junio en la noche** después del Dojo #6:
+
 | Promedio últimos 3 Dojo | Decisión |
 |---|---|
-| ≥ 78% | GO el 29 con confianza |
-| 72-77% | GO con repaso intensivo el 28 |
-| 65-71% | Considera mover al 1 de junio |
-| < 65% | Mueve mínimo 1 semana |
+| ≥ 78% | GO el 5 con confianza |
+| 72-77% | GO con repaso intensivo el jueves 4 |
+| 65-71% | Considera mover al martes 9 de junio (Plan B) |
+| < 65% | Mueve mínimo 1 semana más |
 
 ## 🛠️ Recursos y herramientas
 
@@ -211,30 +221,36 @@ saa-prep/
 | Primer Dojo esperable | 70-80% | **50-60%** (normal, no asustarse) |
 | Foco crítico | Servicios y modelo nube | **VPC/Networking + arquitecturas** |
 
-## 📅 Calendario macro
+## 📅 Calendario macro actualizado
 
 ```
 MAYO 2026
 Lu Ma Mi Ju Vi Sá Do
             1  2  3   ← descanso post-CCP
- 4  5  6  7  8  9 10  ← Semana 1: EC2-SAA + Storage + ELB + RDS + Route 53
-11 12 13 14 15 16 17  ← Semana 2: S3 + Serverless + Dojo #1
-18 19 20 21 22 23 24  ← Semana 3: Security + VPC + DR
-25 26 27 28 29        ← Semana 4: Solo simulacros + EXAMEN 29
+ 4  5  6  7  8  9 10  ← ✅ Semana 1: EC2-SAA + Storage + ELB + RDS + Route 53
+11 12 13 14 15 16 17  ← 🤒 Enfermedad (parcial: Sec 13-17 vistas)
+18 19 20 21 22 23 24  ← 🔄 Semana 2: Decoupling + Serverless + Dojo #1
+25 26 27 28 29 30 31  ← Semana 3: Security + VPC + DR + Dojo #2 y #3
+
+JUNIO 2026
+Lu Ma Mi Ju Vi Sá Do
+ 1  2  3  4  5        ← Semana 4: Dojo #4-6 + EXAMEN 5 jun 🎯
+                      ← Plan B: 9 jun
 ```
 
 ## 🚀 Acción inmediata
 
-**Sábado 3 - Domingo 4 mayo:** descanso real, cero AWS.
+**Hoy miércoles 20 de mayo:**
+- [ ] Retomar con Sección 18 (Decoupling - SQS/SNS/Kinesis)
+- [ ] Confirmar que las notas de Sec 13-17 están en orden
+- [ ] Reagendar el examen en Pearson VUE para viernes 5 de junio
+- [ ] Verificar que el +30 min ESL siga activo
 
-**Domingo 4 PM (1h máximo):**
-- [ ] Comprar Tutorials Dojo SAA Practice Exams
-- [ ] Crear estructura de carpetas en repo
-- [ ] Verificar acceso al curso de Stephane SAA
-- [ ] Revisar índice de secciones 3, 4, 5 y 12 (confirmar que se pueden saltar)
-
-**Lunes 5 mayo, 9:00 AM:** arranque oficial 🎯
+**Antes del sábado 23 (Dojo SAA #1):**
+- [ ] Tener completas las Sec 18-24
+- [ ] Tener actualizado `tips/tips-examen.md` con mínimo 25 tips
+- [ ] Doc maestro con comparativas críticas listas
 
 ---
 
-*Última actualización: 3 de mayo de 2026*
+*Última actualización: 20 de mayo de 2026 (post-enfermedad, examen reagendado al 5 de junio)*
