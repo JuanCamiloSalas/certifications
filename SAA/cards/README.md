@@ -1,50 +1,50 @@
 [![](https://img.shields.io/badge/<_SAA-FF4859?style=for-the-badge)](../README.md)
 
-# 🃏 Mazo SAA
+# 🃏 SAA Deck
 
-> Flashcards de estudio para el SAA-C03. Cada archivo es una card autocontenida. Navega con los botones **Anterior / Siguiente** dentro de cada card.
+> Flashcards for the SAA-C03 exam. Each file is a self-contained card. Use the **Prev / Next** buttons inside every card to navigate.
 
-## 📚 Bloques
+## 📚 Blocks
 
-| # | Bloque | Sec. curso | Estado |
+| # | Block | Course sec. | Status |
 |---|---|---|---|
-| 01 | [EC2 SAA-level](./01-ec2-saa/) | 6 | ✅ visto |
-| 02 | [Storage EC2 (EBS, EFS, Instance Store)](./02-storage-ec2/) | 7 | ✅ visto |
-| 03 | [ELB & ASG](./03-elb-asg/) | 8 | ✅ visto |
-| 04 | [RDS & Aurora](./04-rds-aurora/) | 9 | ✅ visto |
-| 05 | [Route 53](./05-route53/) | 10-11 | ✅ visto |
-| 06 | [S3 avanzado](./06-s3-avanzado/) | 13-15 | ✅ visto |
-| 07 | [CDN & Edge (CloudFront, Global Accelerator)](./07-cdn/) | 16-17 | ✅ visto |
-| 08 | [Decoupling (SQS, SNS, Kinesis, MQ)](./08-decoupling/) | 18 | 🔄 en curso |
+| 01 | [EC2 (SAA-level)](./01-ec2-saa/) | 6 | ✅ done |
+| 02 | [Storage for EC2 (EBS, EFS, Instance Store)](./02-storage-ec2/) | 7 | ✅ done |
+| 03 | [ELB & ASG](./03-elb-asg/) | 8 | ✅ done |
+| 04 | [RDS & Aurora](./04-rds-aurora/) | 9 | ✅ done |
+| 05 | [Route 53](./05-route53/) | 10-11 | ✅ done |
+| 06 | [S3 advanced](./06-s3-avanzado/) | 13-15 | ✅ done |
+| 07 | [CDN & Edge (CloudFront, Global Accelerator)](./07-cdn/) | 16-17 | ✅ done |
+| 08 | [Decoupling (SQS, SNS, Kinesis, MQ)](./08-decoupling/) | 18 | 🔄 in progress |
 | 09 | [Containers (ECS, EKS, Fargate, ECR)](./09-containers/) | 19 | 📅 |
 | 10 | [Serverless (Lambda, API GW, Step Functions)](./10-serverless/) | 20-21 | 📅 |
-| 11 | [BD avanzadas + Data + ML](./11-bd-data-ml/) | 22-24 | 📅 |
+| 11 | [Advanced DB + Data + ML](./11-bd-data-ml/) | 22-24 | 📅 |
 | 12 | [Monitoring (CloudWatch, CloudTrail, X-Ray)](./12-monitoring/) | 25 | 📅 |
-| 13 | [IAM avanzado](./13-iam-avanzado/) | 26 | 📅 |
-| 14 | [Security & Cifrado (KMS, Secrets, WAF, Shield)](./14-security-cifrado/) | 27 | 📅 |
+| 13 | [IAM advanced](./13-iam-avanzado/) | 26 | 📅 |
+| 14 | [Security & Encryption (KMS, Secrets, WAF, Shield)](./14-security-cifrado/) | 27 | 📅 |
 | 15 | [VPC & Networking](./15-vpc/) | 28 | 📅 |
 | 16 | [DR & Migration](./16-dr-migration/) | 29 | 📅 |
 
-## 🧭 Cómo navegar
+## 🧭 How to navigate
 
-- **Mobile (GitHub app):** entra a un bloque, abre cualquier card, y usa los botones `Anterior` / `Siguiente` para recorrer el bloque entero.
-- **Desktop:** además puedes ir al README de un bloque para ver todas sus cards listadas.
-- **Búsqueda rápida:** usa el buscador de GitHub (`t` en desktop) y escribe el servicio.
+- **Mobile (GitHub app):** open a block, pick any card, and use the `Prev` / `Next` buttons to walk through the whole block.
+- **Desktop:** you can also open the block's README to see all its cards listed.
+- **Quick search:** GitHub's file finder (`t` on desktop) — type the service name.
 
-## ➕ Cómo crear una nueva card
+## ➕ How to add a new card
 
-1. Copia [`_TEMPLATE.md`](./_TEMPLATE.md) dentro de la carpeta del bloque.
-2. Renombra: `NN-nombre-corto.md` (NN = siguiente número en el bloque).
-3. Ajusta los botones de navegación arriba y abajo (prev / next).
-4. Actualiza el `README.md` del bloque añadiendo el link.
-5. Si introduces una card en medio, también actualiza el `next` de la card anterior y el `prev` de la siguiente.
+1. Copy [`_TEMPLATE.md`](./_TEMPLATE.md) into the matching block folder.
+2. Rename: `NN-short-name.md` (NN = next number in the block).
+3. Update the prev/next buttons at the top and bottom of the new card.
+4. Add the new card to the block's `README.md` table.
+5. If the card is inserted in the middle, also update the `next` of the previous card and the `prev` of the following card.
 
-## 📏 Reglas de calidad
+## 📏 Quality rules
 
-- Una card debe entrar sin scroll en celular. Si pasa de ~120 líneas → dividir.
-- Sin transcribir slides. Solo lo no obvio o lo que ya confundió en un Dojo.
-- Los versus largos viven en [`../comparativas/`](../comparativas/), no aquí.
-- Si una card menciona números (límites, timeouts, tamaños), van en una sección dedicada para que sean fáciles de cazar en el repaso final.
+- A card must fit without scroll on mobile. If it grows past ~120 lines → split it.
+- No transcribing slides. Only non-obvious facts or things that already tricked you in a Dojo.
+- Long versus comparisons live in [`../comparativas/`](../comparativas/), not here.
+- When a card mentions numbers (limits, timeouts, sizes), keep them in a dedicated section so they're easy to find in the final review.
 
 ---
 

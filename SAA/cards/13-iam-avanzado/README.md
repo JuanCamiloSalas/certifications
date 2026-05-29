@@ -1,35 +1,35 @@
-[![](https://img.shields.io/badge/<_Bloque_anterior-FF4859?style=for-the-badge)](../12-monitoring/README.md)
-[![](https://img.shields.io/badge/Mazo-175074?style=for-the-badge)](../README.md)
-[![](https://img.shields.io/badge/Siguiente_bloque_>-FF4859?style=for-the-badge)](../14-security-cifrado/README.md)
+[![](https://img.shields.io/badge/<_Prev_block-FF4859?style=for-the-badge)](../12-monitoring/README.md)
+[![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](../README.md)
+[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../14-security-cifrado/README.md)
 
-# Bloque 13 — IAM avanzado
+# Block 13 — IAM advanced
 
-> Sobre lo ya cubierto en [CCP IAM](../../../CCP/2_IAM/README.md): **STS, federation, Organizations + SCPs, condiciones avanzadas, identity providers, Cognito**.
+> What SAA adds on top of [CCP IAM](../../../CCP/2_IAM/README.md): **STS, federation, Organizations + SCPs, advanced conditions, identity providers, Cognito**.
 
-## 🃏 Cards de este bloque
+## 🃏 Cards in this block
 
-_Sin cards aún. Copia [`_TEMPLATE.md`](../_TEMPLATE.md) aquí para empezar._
+_No cards yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here to start._
 
-| # | Card | Concepto |
+| # | Card | Concept |
 |---|---|---|
 
-## 🎯 Conceptos sugeridos a cubrir
+## 🎯 Suggested concepts to cover
 
-- IAM roles para servicios AWS
-- Cross-account access vía roles
+- IAM roles for AWS services
+- Cross-account access via roles
 - STS: AssumeRole, AssumeRoleWithSAML, AssumeRoleWithWebIdentity
 - Identity Federation: SAML 2.0, Web Identity (OIDC)
 - AWS Organizations: OUs, SCPs (allow/deny lists), consolidated billing
-- SCP: solo afectan a IAM users/roles dentro de cuentas, NO al root account de la org
+- SCP: only affects IAM users/roles inside member accounts; does NOT affect the org's root account
 - IAM Conditions (aws:SourceIp, aws:MultiFactorAuthPresent, aws:RequestTag, etc.)
 - Permission Boundaries vs SCP vs Identity Policy vs Resource Policy
 - IAM Access Analyzer
-- AWS Control Tower (vista alto nivel)
-- IAM Identity Center (antes AWS SSO)
-- Cognito User Pools vs Identity Pools (otra vez, vital)
+- AWS Control Tower (high-level)
+- IAM Identity Center (formerly AWS SSO)
+- Cognito User Pools vs Identity Pools (again — critical)
 - Cross-account S3 / KMS
 
-## 🔗 Comparativas relacionadas
+## 🔗 Related comparisons
 
 - Permission Boundary vs SCP vs Identity Policy vs Resource Policy
 - IAM User vs IAM Role
@@ -38,6 +38,6 @@ _Sin cards aún. Copia [`_TEMPLATE.md`](../_TEMPLATE.md) aquí para empezar._
 
 ---
 
-[![](https://img.shields.io/badge/<_Bloque_anterior-FF4859?style=for-the-badge)](../12-monitoring/README.md)
-[![](https://img.shields.io/badge/Mazo-175074?style=for-the-badge)](../README.md)
-[![](https://img.shields.io/badge/Siguiente_bloque_>-FF4859?style=for-the-badge)](../14-security-cifrado/README.md)
+[![](https://img.shields.io/badge/<_Prev_block-FF4859?style=for-the-badge)](../12-monitoring/README.md)
+[![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](../README.md)
+[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../14-security-cifrado/README.md)

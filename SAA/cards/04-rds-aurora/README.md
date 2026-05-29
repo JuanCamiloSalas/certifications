@@ -1,26 +1,26 @@
-[![](https://img.shields.io/badge/<_Bloque_anterior-FF4859?style=for-the-badge)](../03-elb-asg/README.md)
-[![](https://img.shields.io/badge/Mazo-175074?style=for-the-badge)](../README.md)
-[![](https://img.shields.io/badge/Siguiente_bloque_>-FF4859?style=for-the-badge)](../05-route53/README.md)
+[![](https://img.shields.io/badge/<_Prev_block-FF4859?style=for-the-badge)](../03-elb-asg/README.md)
+[![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](../README.md)
+[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../05-route53/README.md)
 
-# Bloque 04 — RDS, Aurora & ElastiCache
+# Block 04 — RDS, Aurora & ElastiCache
 
-> Bases de datos relacionales gestionadas y cacheo en memoria. **Aurora es la estrella** del bloque y la que más cae.
+> Managed relational databases and in-memory caching. **Aurora is the star** of the block and the highest-frequency topic.
 
-## 🃏 Cards de este bloque
+## 🃏 Cards in this block
 
-_Sin cards aún. Copia [`_TEMPLATE.md`](../_TEMPLATE.md) aquí para empezar._
+_No cards yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here to start._
 
-| # | Card | Concepto |
+| # | Card | Concept |
 |---|---|---|
 
-## 🎯 Conceptos sugeridos a cubrir
+## 🎯 Suggested concepts to cover
 
-- RDS read replicas (hasta 15, sync async, cross-region)
-- RDS Multi-AZ (HA, NO escalado)
-- RDS backup automático vs manual snapshots
-- RDS encryption: en reposo (KMS) y en tránsito (SSL)
-- RDS Proxy: caso de uso (Lambda + RDS, failover rápido)
-- Aurora: arquitectura (1 writer + hasta 15 readers, storage compartido)
+- RDS read replicas (up to 15, sync/async, cross-region)
+- RDS Multi-AZ (HA, NOT scaling)
+- RDS automatic backups vs manual snapshots
+- RDS encryption: at rest (KMS) and in transit (SSL)
+- RDS Proxy: use case (Lambda + RDS, fast failover)
+- Aurora architecture (1 writer + up to 15 readers, shared storage)
 - Aurora endpoints: writer / reader / custom
 - Aurora Serverless v1 vs v2
 - Aurora Global Database (cross-region, < 1s replication, < 1 min DR failover)
@@ -28,9 +28,9 @@ _Sin cards aún. Copia [`_TEMPLATE.md`](../_TEMPLATE.md) aquí para empezar._
 - ElastiCache Redis vs Memcached
 - ElastiCache patterns: lazy loading vs write-through, TTL
 
-## 🔗 Comparativas relacionadas
+## 🔗 Related comparisons
 
-- RDS vs Aurora (cuándo cada uno)
+- RDS vs Aurora (when each)
 - RDS Multi-AZ vs Read Replica
 - Aurora endpoints: writer vs reader vs custom
 - ElastiCache Redis vs Memcached
@@ -38,6 +38,6 @@ _Sin cards aún. Copia [`_TEMPLATE.md`](../_TEMPLATE.md) aquí para empezar._
 
 ---
 
-[![](https://img.shields.io/badge/<_Bloque_anterior-FF4859?style=for-the-badge)](../03-elb-asg/README.md)
-[![](https://img.shields.io/badge/Mazo-175074?style=for-the-badge)](../README.md)
-[![](https://img.shields.io/badge/Siguiente_bloque_>-FF4859?style=for-the-badge)](../05-route53/README.md)
+[![](https://img.shields.io/badge/<_Prev_block-FF4859?style=for-the-badge)](../03-elb-asg/README.md)
+[![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](../README.md)
+[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../05-route53/README.md)

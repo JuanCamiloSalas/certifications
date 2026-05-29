@@ -1,62 +1,62 @@
 <!--
-PLANTILLA DE CARD - SAA
-========================
-Cómo usar:
-1. Copia este archivo dentro de la carpeta del bloque correspondiente.
-2. Renombra con el formato: NN-nombre-corto.md (NN = orden dentro del bloque).
-3. Actualiza los 3 botones de navegación (arriba y abajo) con los archivos prev/next reales.
-4. Si la card es la primera o única del bloque, apunta prev/next al README del bloque.
-5. Borra todas las secciones que no apliquen — una card vacía es mejor que una rellena con paja.
+CARD TEMPLATE - SAA
+====================
+How to use:
+1. Copy this file into the matching block folder.
+2. Rename using: NN-short-name.md (NN = order within the block).
+3. Update the 3 navigation buttons (top and bottom) with the real prev/next files.
+4. If the card is the first/only one in the block, point prev/next to the block's README.
+5. Delete any section that doesn't apply — an empty section is worse than no section.
 
-REGLAS DE FORMATO:
-- Una card debe verse sin scroll en mobile. Si pasa de ~120 líneas, divídela.
-- No transcribir slides. Solo lo no obvio o lo que confunde.
-- Los versus largos van a /comparativas, no aquí. Aquí solo se enlazan.
+FORMATTING RULES:
+- A card must fit without scroll on mobile. If it exceeds ~120 lines, split it.
+- Do not transcribe slides. Only what is non-obvious or what already tricked you.
+- Long versus comparisons live in /comparativas, not here. Link to them.
 -->
 
-[![](https://img.shields.io/badge/<_Anterior-FF4859?style=for-the-badge)](./PREV.md)
-[![](https://img.shields.io/badge/Mazo-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Siguiente_>-FF4859?style=for-the-badge)](./NEXT.md)
+[![](https://img.shields.io/badge/<_Prev-FF4859?style=for-the-badge)](./PREV.md)
+[![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](./README.md)
+[![](https://img.shields.io/badge/Next_>-FF4859?style=for-the-badge)](./NEXT.md)
 
-# <Servicio o concepto>
+# <Service or concept>
 
-> **Pitch (1 frase):** lo que es, en una línea.
+> **Pitch (1 line):** what it is, in a single sentence.
 
-## 🎯 Cuándo lo eligen en el examen
+## 🎯 When the exam picks this
 
-Frases gatillo que disparan este servicio:
-- "frase 1"
-- "frase 2"
+Trigger phrases that point to this service:
+- "phrase 1"
+- "phrase 2"
 
-## 🧠 Núcleo (lo no obvio)
+## 🧠 Core (non-obvious bits)
 
-- Bullet con algo que NO es evidente del nombre del servicio.
-- Otro bullet con un detalle técnico que sí cae.
-- Máximo 4-6 bullets. Si necesitas más, divide la card.
+- Bullet for something that is NOT evident from the service name.
+- A technical detail that shows up in exam questions.
+- Cap at 4-6 bullets. If you need more, split the card.
 
-## 🔢 Números a memorizar
+## 🔢 Numbers to memorize
 
-- Límite X: valor
-- Límite Y: valor
+- Limit X: value
+- Limit Y: value
 
-## ⚠️ Trampas típicas
+## ⚠️ Common traps
 
-- "Si dicen X..." → respuesta correcta.
-- "Si dicen Y..." → NO es este servicio, es otro.
+- "If they say X..." → correct answer.
+- "If they say Y..." → NOT this service, use the other one.
 
-## 🔄 Confunde con
+## 🔄 Easily confused with
 
-- → [vs <Servicio A>](../../comparativas/este-vs-A.md)
-- → [vs <Servicio B>](../../comparativas/este-vs-B.md)
+- → [vs <Service A>](../../comparativas/this-vs-A.md)
+- → [vs <Service B>](../../comparativas/this-vs-B.md)
 
-## 🖼️ Diagrama
+## 🖼️ Diagram
 
-Solo si aporta. Si no, borra esta sección.
+Only if it actually helps. Otherwise delete this section.
 
-![alt text](../../assets/nombre.png)
+![alt text](../../assets/name.png)
 
 ---
 
-[![](https://img.shields.io/badge/<_Anterior-FF4859?style=for-the-badge)](./PREV.md)
-[![](https://img.shields.io/badge/Mazo-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Siguiente_>-FF4859?style=for-the-badge)](./NEXT.md)
+[![](https://img.shields.io/badge/<_Prev-FF4859?style=for-the-badge)](./PREV.md)
+[![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](./README.md)
+[![](https://img.shields.io/badge/Next_>-FF4859?style=for-the-badge)](./NEXT.md)

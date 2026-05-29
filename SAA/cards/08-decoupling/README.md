@@ -1,51 +1,51 @@
-[![](https://img.shields.io/badge/<_Bloque_anterior-FF4859?style=for-the-badge)](../07-cdn/README.md)
-[![](https://img.shields.io/badge/Mazo-175074?style=for-the-badge)](../README.md)
-[![](https://img.shields.io/badge/Siguiente_bloque_>-FF4859?style=for-the-badge)](../09-containers/README.md)
+[![](https://img.shields.io/badge/<_Prev_block-FF4859?style=for-the-badge)](../07-cdn/README.md)
+[![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](../README.md)
+[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../09-containers/README.md)
 
-# Bloque 08 — Decoupling
+# Block 08 — Decoupling
 
-> **SQS, SNS, Kinesis, Amazon MQ.** El examen ama preguntas del tipo "¿queue, pub-sub o stream?". Aprende a clasificar.
+> **SQS, SNS, Kinesis, Amazon MQ.** The exam loves "queue, pub-sub, or stream?" questions. Learn to classify fast.
 
-## 🃏 Cards de este bloque
+## 🃏 Cards in this block
 
-| # | Card | Concepto |
+| # | Card | Concept |
 |---|---|---|
-| 01 | [SQS Standard](./01-sqs-standard.md) | Cola de mensajes desacoplada, throughput ilimitado, orden best-effort |
+| 01 | [SQS Standard](./01-sqs-standard.md) | Decoupling queue, unlimited throughput, best-effort ordering |
 
-_Siguientes a crear: SQS FIFO, SNS, Kinesis Data Streams, Kinesis Firehose, Amazon MQ, patrón Fan-out._
+_Next to create: SQS FIFO, SNS, Kinesis Data Streams, Kinesis Firehose, Amazon MQ, Fan-out pattern._
 
-## 🎯 Conceptos sugeridos a cubrir
+## 🎯 Suggested concepts to cover
 
-- SQS Standard: throughput ilimitado, best-effort ordering, at-least-once delivery
-- SQS FIFO: orden + dedupe, throughput 300 msg/s (3000 batch, 70k high-throughput)
+- SQS Standard: unlimited throughput, best-effort ordering, at-least-once delivery
+- SQS FIFO: ordering + deduplication, 300 msg/s (3000 batched, 70k high-throughput)
 - SQS: visibility timeout, long polling, DLQ, redrive policy
-- SNS: pub/sub, topics, suscripciones (HTTP, email, Lambda, SQS, mobile)
+- SNS: pub/sub, topics, subscriptions (HTTP, email, Lambda, SQS, mobile)
 - SNS FIFO topics
-- Fan-out pattern: SNS → múltiples SQS
+- Fan-out pattern: SNS → multiple SQS
 - Kinesis Data Streams: shards, retention, producer/consumer
-- Kinesis Data Firehose: hacia S3 / Redshift / OpenSearch (near real-time)
+- Kinesis Data Firehose: to S3 / Redshift / OpenSearch (near real-time)
 - Kinesis Data Analytics
 - Kinesis Video Streams
-- Amazon MQ: ActiveMQ y RabbitMQ (lift & shift de apps con JMS/AMQP/MQTT)
+- Amazon MQ: ActiveMQ and RabbitMQ (lift & shift apps using JMS/AMQP/MQTT)
 
-## 🔗 Comparativas relacionadas
+## 🔗 Related comparisons
 
-- **SQS vs SNS vs Kinesis vs Amazon MQ** (la más crítica del bloque)
+- **SQS vs SNS vs Kinesis vs Amazon MQ** (the most critical in this block)
 - SQS Standard vs FIFO
 - Kinesis Data Streams vs Firehose vs Data Analytics
-- SNS vs SQS (cuándo añadir SQS detrás de SNS)
+- SNS vs SQS (when to add SQS behind SNS)
 
-## 💡 Frases gatillo del bloque
+## 💡 Trigger phrases for this block
 
 - "decouple components" → **SQS**
-- "fan-out / publish-subscribe" → **SNS** (o SNS + SQS)
+- "fan-out / publish-subscribe" → **SNS** (or SNS + SQS)
 - "real-time analytics on streaming data" → **Kinesis Data Streams**
 - "ordering matters / no duplicates" → **SQS FIFO**
-- "lift and shift con JMS/AMQP" → **Amazon MQ**
+- "lift and shift with JMS/AMQP" → **Amazon MQ**
 - "process data and deliver to S3 near real-time" → **Kinesis Firehose**
 
 ---
 
-[![](https://img.shields.io/badge/<_Bloque_anterior-FF4859?style=for-the-badge)](../07-cdn/README.md)
-[![](https://img.shields.io/badge/Mazo-175074?style=for-the-badge)](../README.md)
-[![](https://img.shields.io/badge/Siguiente_bloque_>-FF4859?style=for-the-badge)](../09-containers/README.md)
+[![](https://img.shields.io/badge/<_Prev_block-FF4859?style=for-the-badge)](../07-cdn/README.md)
+[![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](../README.md)
+[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../09-containers/README.md)

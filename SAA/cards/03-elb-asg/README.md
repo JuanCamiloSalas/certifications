@@ -1,41 +1,41 @@
-[![](https://img.shields.io/badge/<_Bloque_anterior-FF4859?style=for-the-badge)](../02-storage-ec2/README.md)
-[![](https://img.shields.io/badge/Mazo-175074?style=for-the-badge)](../README.md)
-[![](https://img.shields.io/badge/Siguiente_bloque_>-FF4859?style=for-the-badge)](../04-rds-aurora/README.md)
+[![](https://img.shields.io/badge/<_Prev_block-FF4859?style=for-the-badge)](../02-storage-ec2/README.md)
+[![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](../README.md)
+[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../04-rds-aurora/README.md)
 
-# Bloque 03 — ELB & Auto Scaling Group
+# Block 03 — ELB & Auto Scaling Group
 
-> **Cuál load balancer en qué escenario** + **políticas de escalado**. El SAA exige tener interiorizada la diferencia ALB / NLB / GLB.
+> **Which load balancer for which scenario** + **scaling policies**. SAA requires the ALB / NLB / GLB difference to be second nature.
 
-## 🃏 Cards de este bloque
+## 🃏 Cards in this block
 
-_Sin cards aún. Copia [`_TEMPLATE.md`](../_TEMPLATE.md) aquí para empezar._
+_No cards yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here to start._
 
-| # | Card | Concepto |
+| # | Card | Concept |
 |---|---|---|
 
-## 🎯 Conceptos sugeridos a cubrir
+## 🎯 Suggested concepts to cover
 
 - ALB: HTTP/HTTPS, path/host-based routing, redirects, target groups
-- NLB: TCP/UDP/TLS, IP estática por AZ, ultra baja latencia
-- GLB (Gateway LB): tráfico para appliances de terceros (firewalls)
-- CLB: legacy, casi nunca correcta en el examen
-- Sticky sessions (cookies application vs duration based)
-- Cross-Zone Load Balancing (default por LB)
+- NLB: TCP/UDP/TLS, static IP per AZ, ultra-low latency
+- GLB (Gateway LB): traffic to third-party appliances (firewalls)
+- CLB: legacy, almost never the right answer
+- Sticky sessions (application-based cookies vs duration-based)
+- Cross-Zone Load Balancing (default per LB)
 - SSL/TLS termination, SNI
 - Connection draining / Deregistration delay
-- ASG: scaling policies (target tracking, step, simple)
+- ASG scaling policies (target tracking, step, simple)
 - ASG: launch templates vs launch configurations
 - ASG lifecycle hooks
-- ASG con múltiples AZ
+- Multi-AZ ASG behavior
 
-## 🔗 Comparativas relacionadas
+## 🔗 Related comparisons
 
 - ALB vs NLB vs GLB vs CLB
 - Target tracking vs Step vs Simple scaling
-- Sticky sessions: dónde se manejan en ALB vs NLB
+- Sticky sessions: handling in ALB vs NLB
 
 ---
 
-[![](https://img.shields.io/badge/<_Bloque_anterior-FF4859?style=for-the-badge)](../02-storage-ec2/README.md)
-[![](https://img.shields.io/badge/Mazo-175074?style=for-the-badge)](../README.md)
-[![](https://img.shields.io/badge/Siguiente_bloque_>-FF4859?style=for-the-badge)](../04-rds-aurora/README.md)
+[![](https://img.shields.io/badge/<_Prev_block-FF4859?style=for-the-badge)](../02-storage-ec2/README.md)
+[![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](../README.md)
+[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../04-rds-aurora/README.md)

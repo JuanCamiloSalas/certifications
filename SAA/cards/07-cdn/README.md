@@ -1,39 +1,39 @@
-[![](https://img.shields.io/badge/<_Bloque_anterior-FF4859?style=for-the-badge)](../06-s3-avanzado/README.md)
-[![](https://img.shields.io/badge/Mazo-175074?style=for-the-badge)](../README.md)
-[![](https://img.shields.io/badge/Siguiente_bloque_>-FF4859?style=for-the-badge)](../08-decoupling/README.md)
+[![](https://img.shields.io/badge/<_Prev_block-FF4859?style=for-the-badge)](../06-s3-avanzado/README.md)
+[![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](../README.md)
+[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../08-decoupling/README.md)
 
-# Bloque 07 — CDN & Edge
+# Block 07 — CDN & Edge
 
-> **CloudFront vs Global Accelerator** es una de las preguntas más repetidas del SAA. Bloque pequeño pero con alta probabilidad de salir.
+> **CloudFront vs Global Accelerator** is one of the most repeated SAA questions. Small block, high frequency.
 
-## 🃏 Cards de este bloque
+## 🃏 Cards in this block
 
-_Sin cards aún. Copia [`_TEMPLATE.md`](../_TEMPLATE.md) aquí para empezar._
+_No cards yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here to start._
 
-| # | Card | Concepto |
+| # | Card | Concept |
 |---|---|---|
 
-## 🎯 Conceptos sugeridos a cubrir
+## 🎯 Suggested concepts to cover
 
-- CloudFront: distribuciones, origins, behaviors
+- CloudFront: distributions, origins, behaviors
 - CloudFront cache: TTL, invalidations
 - CloudFront geo restriction
 - CloudFront signed URLs vs signed cookies
-- Origin Access Control (OAC) — el reemplazo de OAI
-- CloudFront Functions vs Lambda@Edge (cuándo cada uno)
+- Origin Access Control (OAC) — the replacement for OAI
+- CloudFront Functions vs Lambda@Edge (when each)
 - CloudFront Origin Failover
 - AWS Global Accelerator: anycast IPs, health checks, traffic dials
-- CloudFront vs Global Accelerator (el versus crítico)
+- CloudFront vs Global Accelerator (the critical versus)
 
-## 🔗 Comparativas relacionadas
+## 🔗 Related comparisons
 
-- **CloudFront vs Global Accelerator** (crítica)
+- **CloudFront vs Global Accelerator** (critical)
 - CloudFront Functions vs Lambda@Edge
 - Signed URL vs Signed Cookie
 - OAC vs OAI (legacy)
 
 ---
 
-[![](https://img.shields.io/badge/<_Bloque_anterior-FF4859?style=for-the-badge)](../06-s3-avanzado/README.md)
-[![](https://img.shields.io/badge/Mazo-175074?style=for-the-badge)](../README.md)
-[![](https://img.shields.io/badge/Siguiente_bloque_>-FF4859?style=for-the-badge)](../08-decoupling/README.md)
+[![](https://img.shields.io/badge/<_Prev_block-FF4859?style=for-the-badge)](../06-s3-avanzado/README.md)
+[![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](../README.md)
+[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../08-decoupling/README.md)

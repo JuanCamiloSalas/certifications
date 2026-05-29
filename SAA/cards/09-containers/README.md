@@ -1,33 +1,33 @@
-[![](https://img.shields.io/badge/<_Bloque_anterior-FF4859?style=for-the-badge)](../08-decoupling/README.md)
-[![](https://img.shields.io/badge/Mazo-175074?style=for-the-badge)](../README.md)
-[![](https://img.shields.io/badge/Siguiente_bloque_>-FF4859?style=for-the-badge)](../10-serverless/README.md)
+[![](https://img.shields.io/badge/<_Prev_block-FF4859?style=for-the-badge)](../08-decoupling/README.md)
+[![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](../README.md)
+[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../10-serverless/README.md)
 
-# Bloque 09 — Containers
+# Block 09 — Containers
 
-> **ECS, EKS, Fargate, ECR.** El examen pregunta por las decisiones launch type, no por la sintaxis de la task definition.
+> **ECS, EKS, Fargate, ECR.** The exam tests launch-type decisions, not task-definition syntax.
 
-## 🃏 Cards de este bloque
+## 🃏 Cards in this block
 
-_Sin cards aún. Copia [`_TEMPLATE.md`](../_TEMPLATE.md) aquí para empezar._
+_No cards yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here to start._
 
-| # | Card | Concepto |
+| # | Card | Concept |
 |---|---|---|
 
-## 🎯 Conceptos sugeridos a cubrir
+## 🎯 Suggested concepts to cover
 
 - ECS: cluster, task definition, service, task
 - ECS launch types: EC2 vs Fargate
 - ECS task placement strategies (binpack, random, spread)
 - ECS task placement constraints
-- ECS service Auto Scaling (CPU, memoria, ALB request count)
-- IAM roles para tasks (Task Role vs Task Execution Role)
-- ECS y ALB: dynamic port mapping
-- EKS: Kubernetes managed, casos de uso (lift & shift K8s)
+- ECS service auto scaling (CPU, memory, ALB request count)
+- IAM roles for tasks (Task Role vs Task Execution Role)
+- ECS + ALB: dynamic port mapping
+- EKS: managed Kubernetes, use case (K8s lift & shift)
 - EKS launch types: managed node groups, self-managed nodes, Fargate
-- ECR: registry de imágenes Docker, integración con IAM
-- Fargate: serverless containers, sin manejo de EC2
+- ECR: Docker image registry, IAM integration
+- Fargate: serverless containers, no EC2 management
 
-## 🔗 Comparativas relacionadas
+## 🔗 Related comparisons
 
 - ECS vs EKS vs Fargate
 - ECS EC2 launch type vs Fargate launch type
@@ -36,6 +36,6 @@ _Sin cards aún. Copia [`_TEMPLATE.md`](../_TEMPLATE.md) aquí para empezar._
 
 ---
 
-[![](https://img.shields.io/badge/<_Bloque_anterior-FF4859?style=for-the-badge)](../08-decoupling/README.md)
-[![](https://img.shields.io/badge/Mazo-175074?style=for-the-badge)](../README.md)
-[![](https://img.shields.io/badge/Siguiente_bloque_>-FF4859?style=for-the-badge)](../10-serverless/README.md)
+[![](https://img.shields.io/badge/<_Prev_block-FF4859?style=for-the-badge)](../08-decoupling/README.md)
+[![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](../README.md)
+[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../10-serverless/README.md)

@@ -1,72 +1,72 @@
-[![](https://img.shields.io/badge/<_Bloque_anterior-FF4859?style=for-the-badge)](../10-serverless/README.md)
-[![](https://img.shields.io/badge/Mazo-175074?style=for-the-badge)](../README.md)
-[![](https://img.shields.io/badge/Siguiente_bloque_>-FF4859?style=for-the-badge)](../12-monitoring/README.md)
+[![](https://img.shields.io/badge/<_Prev_block-FF4859?style=for-the-badge)](../10-serverless/README.md)
+[![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](../README.md)
+[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../12-monitoring/README.md)
 
-# Bloque 11 — BD avanzadas + Data + ML
+# Block 11 — Advanced DB + Data + ML
 
-> **DynamoDB, NoSQL avanzado, Athena, Redshift, Glue, EMR, servicios de ML.** Bloque ancho. DynamoDB es el más cargado de detalles tramperos.
+> **DynamoDB, advanced NoSQL, Athena, Redshift, Glue, EMR, ML services.** Wide block. DynamoDB packs the most trap details.
 
-## 🃏 Cards de este bloque
+## 🃏 Cards in this block
 
-_Sin cards aún. Copia [`_TEMPLATE.md`](../_TEMPLATE.md) aquí para empezar._
+_No cards yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here to start._
 
-| # | Card | Concepto |
+| # | Card | Concept |
 |---|---|---|
 
-## 🎯 Conceptos sugeridos a cubrir
+## 🎯 Suggested concepts to cover
 
 ### DynamoDB
-- Tablas, primary key (partition key, partition + sort key)
+- Tables, primary key (partition key, partition + sort key)
 - Capacity modes: provisioned vs on-demand
-- Read capacity (RCU) y Write capacity (WCU) — cálculo
+- Read capacity (RCU) and Write capacity (WCU) — how to calculate
 - Strongly consistent vs eventually consistent reads
 - DynamoDB Streams + Lambda triggers
-- Global tables (multi-region active-active)
-- DAX (caching in-memory)
+- Global Tables (multi-region active-active)
+- DAX (in-memory caching)
 - TTL
 - DynamoDB Indexes: LSI vs GSI
 - Optimistic locking (conditional writes)
-- DynamoDB transactions
+- DynamoDB Transactions
 
-### Otras BD
+### Other DBs
 - DocumentDB (MongoDB-compatible)
 - Keyspaces (Cassandra-compatible)
 - Neptune (graph)
 - Timestream (time-series)
 - QLDB (ledger)
-- MemoryDB for Redis (Redis con durabilidad)
+- MemoryDB for Redis (Redis with durability)
 
 ### Data & Analytics
-- Athena: SQL sobre S3, serverless, formato Parquet/ORC para coste
+- Athena: SQL over S3, serverless, Parquet/ORC formats for cost
 - Redshift: data warehouse, columnar, OLAP
-- Redshift Spectrum (query S3 desde Redshift)
-- EMR: Hadoop/Spark managed
-- Glue: ETL serverless, Glue Data Catalog
-- OpenSearch (antes Elasticsearch)
+- Redshift Spectrum (query S3 from Redshift)
+- EMR: managed Hadoop/Spark
+- Glue: serverless ETL, Glue Data Catalog
+- OpenSearch (formerly Elasticsearch)
 - QuickSight: BI
-- MSK (Kafka managed)
+- MSK (managed Kafka)
 
 ### Machine Learning
-- Rekognition (imágenes/video)
-- Transcribe (voz → texto)
-- Polly (texto → voz)
+- Rekognition (image/video)
+- Transcribe (speech → text)
+- Polly (text → speech)
 - Translate
 - Comprehend (NLP)
 - Lex (chatbots)
-- SageMaker (ML completo)
+- SageMaker (full ML)
 - Forecast, Personalize, Textract, Kendra
 
-## 🔗 Comparativas relacionadas
+## 🔗 Related comparisons
 
 - DynamoDB vs RDS vs DocumentDB
 - LSI vs GSI
 - DynamoDB provisioned vs on-demand
 - Athena vs Redshift vs Redshift Spectrum
-- EMR vs Glue (ETL Hadoop vs ETL serverless)
-- Servicios ML por tarea (texto, voz, visión)
+- EMR vs Glue (Hadoop ETL vs serverless ETL)
+- ML services by task (text, voice, vision)
 
 ---
 
-[![](https://img.shields.io/badge/<_Bloque_anterior-FF4859?style=for-the-badge)](../10-serverless/README.md)
-[![](https://img.shields.io/badge/Mazo-175074?style=for-the-badge)](../README.md)
-[![](https://img.shields.io/badge/Siguiente_bloque_>-FF4859?style=for-the-badge)](../12-monitoring/README.md)
+[![](https://img.shields.io/badge/<_Prev_block-FF4859?style=for-the-badge)](../10-serverless/README.md)
+[![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](../README.md)
+[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../12-monitoring/README.md)

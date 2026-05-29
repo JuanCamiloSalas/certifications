@@ -1,34 +1,34 @@
-[![](https://img.shields.io/badge/<_Mazo-FF4859?style=for-the-badge)](../README.md)
-[![](https://img.shields.io/badge/Siguiente_bloque_>-FF4859?style=for-the-badge)](../02-storage-ec2/README.md)
+[![](https://img.shields.io/badge/<_Deck-FF4859?style=for-the-badge)](../README.md)
+[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../02-storage-ec2/README.md)
 
-# Bloque 01 — EC2 SAA-level
+# Block 01 — EC2 (SAA-level)
 
-> Lo que el SAA añade sobre EC2 a lo ya visto en CCP: **placement groups, hibernación, AMI lifecycle, EC2 user data avanzado, spot fleets**.
+> What SAA adds on top of CCP-level EC2: **placement groups, hibernation, AMI lifecycle, advanced user data, Spot fleets**.
 
-## 🃏 Cards de este bloque
+## 🃏 Cards in this block
 
-_Sin cards aún. Copia [`_TEMPLATE.md`](../_TEMPLATE.md) aquí para empezar._
+_No cards yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here to start._
 
-| # | Card | Concepto |
+| # | Card | Concept |
 |---|---|---|
 
-## 🎯 Conceptos sugeridos a cubrir
+## 🎯 Suggested concepts to cover
 
 - Placement groups (Cluster / Spread / Partition)
-- Hibernation: requisitos y casos
-- AMI: copia entre regiones, encryption
-- EC2 user data y EC2 instance metadata service (IMDSv2)
+- Hibernation: requirements and use cases
+- AMI: copy across regions, encryption
+- EC2 user data and EC2 instance metadata service (IMDSv2)
 - Spot instances + Spot fleets + Spot blocks
 - EC2 Image Builder
 
-## 🔗 Comparativas relacionadas
+## 🔗 Related comparisons
 
-_(crear cuando aparezcan en el mazo)_
+_(create when they appear in the deck)_
 
 - Cluster vs Spread vs Partition placement groups
 - Spot vs Reserved vs On-Demand vs Savings Plan
 
 ---
 
-[![](https://img.shields.io/badge/<_Mazo-FF4859?style=for-the-badge)](../README.md)
-[![](https://img.shields.io/badge/Siguiente_bloque_>-FF4859?style=for-the-badge)](../02-storage-ec2/README.md)
+[![](https://img.shields.io/badge/<_Deck-FF4859?style=for-the-badge)](../README.md)
+[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../02-storage-ec2/README.md)
