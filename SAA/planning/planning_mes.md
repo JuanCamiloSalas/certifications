@@ -1,8 +1,8 @@
 # Plan de Estudio - AWS Solutions Architect Associate (SAA-C03)
 
-> Plan de preparación para presentar el examen el **viernes 5 de junio de 2026**
-> Plan B: martes 9 de junio de 2026
-> *Plan reagendado una semana por enfermedad (12-16 mayo)*
+> 🎯 **Fecha final del examen: lunes 15 de junio de 2026**
+> *Reagendado desde el 5 de junio. Recta final detallada en [`planning_semana_final.md`](./planning_semana_final.md).*
+> *Plan reagendado por enfermedad (12-16 mayo).*
 
 ## 📋 Contexto
 
