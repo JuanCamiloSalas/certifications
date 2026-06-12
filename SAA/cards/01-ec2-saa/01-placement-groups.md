@@ -1,6 +1,6 @@
 [![](https://img.shields.io/badge/<_Deck-FF4859?style=for-the-badge)](./README.md)
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Next_>-FF4859?style=for-the-badge)](./README.md)
+[![](https://img.shields.io/badge/Next_>-FF4859?style=for-the-badge)](./02-instance-lifecycle.md)
 
 # EC2 Placement Groups
 
@@ -68,4 +68,4 @@ flowchart LR
 
 [![](https://img.shields.io/badge/<_Deck-FF4859?style=for-the-badge)](./README.md)
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Next_>-FF4859?style=for-the-badge)](./README.md)
+[![](https://img.shields.io/badge/Next_>-FF4859?style=for-the-badge)](./02-instance-lifecycle.md)

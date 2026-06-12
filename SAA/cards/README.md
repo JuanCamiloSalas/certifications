@@ -41,7 +41,7 @@
 
 ## 📏 Quality rules
 
-- A card must fit without scroll on mobile. If it grows past ~120 lines → split it.
+- One topic = one card. Never split a single topic across two cards just for length — keep it together even if the card runs long. Split only when it's genuinely two topics.
 - No transcribing slides. Only non-obvious facts or things that already tricked you in a Dojo.
 - Long versus comparisons live in [`../comparativas/`](../comparativas/), not here.
 - When a card mentions numbers (limits, timeouts, sizes), keep them in a dedicated section so they're easy to find in the final review.

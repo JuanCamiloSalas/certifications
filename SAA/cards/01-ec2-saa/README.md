@@ -10,10 +10,14 @@
 | # | Card | Concept |
 |---|---|---|
 | 01 | [Placement Groups](./01-placement-groups.md) | Cluster / Spread / Partition |
+| 02 | [Instance Lifecycle & Data Persistence](./02-instance-lifecycle.md) | reboot/stop/terminate · EBS vs Instance Store |
+| 03 | [Burstable (T family) & CPU Credits](./03-burstable-cpu-credits.md) | baseline/burst · Standard vs Unlimited |
 
 ## 🎯 Suggested concepts to cover
 
-- Placement groups (Cluster / Spread / Partition)
+- ✅ Placement groups (Cluster / Spread / Partition)
+- ✅ Instance lifecycle & data persistence (reboot/stop/terminate, EBS vs Instance Store)
+- ✅ Burstable T family & CPU credits (Standard vs Unlimited)
 - Hibernation: requirements and use cases
 - AMI: copy across regions, encryption
 - EC2 user data and EC2 instance metadata service (IMDSv2)

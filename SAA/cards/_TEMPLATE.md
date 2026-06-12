@@ -9,7 +9,10 @@ How to use:
 5. Delete any section that doesn't apply — an empty section is worse than no section.
 
 FORMATTING RULES:
-- A card must fit without scroll on mobile. If it exceeds ~120 lines, split it.
+- One topic = one card. NEVER split a single topic across two cards just to hit a
+  line count — that breaks the mental unit when reviewing. Prefer one longer card.
+- Keep it as tight as the topic allows (a short card is easier to review), but
+  length is a nudge, not a hard limit. Split only if it's genuinely two topics.
 - Do not transcribe slides. Only what is non-obvious or what already tricked you.
 - Long versus comparisons live in /comparativas, not here. Link to them.
 -->
