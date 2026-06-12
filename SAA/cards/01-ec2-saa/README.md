@@ -7,10 +7,9 @@
 
 ## 🃏 Cards in this block
 
-_No cards yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here to start._
-
 | # | Card | Concept |
 |---|---|---|
+| 01 | [Placement Groups](./01-placement-groups.md) | Cluster / Spread / Partition |
 
 ## 🎯 Suggested concepts to cover
 
