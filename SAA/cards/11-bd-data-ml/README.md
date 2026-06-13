@@ -8,10 +8,14 @@
 
 ## 🃏 Cards in this block
 
-_No cards yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here to start._
-
 | # | Card | Concept |
 |---|---|---|
+| 01 | [DynamoDB Fundamentals](./01-dynamodb.md) | Table/item/attribute, partition + sort key, RCU/WCU, capacity modes |
+| 02 | [DynamoDB Advanced](./02-dynamodb-advanced.md) | Streams, Global Tables, DAX, TTL, Transactions |
+| 03 | [DynamoDB Indexes](./03-dynamodb-indexes.md) | LSI vs GSI, creation timing, consistency, throughput |
+| 04 | [Other AWS Databases](./04-other-dbs.md) | DocumentDB, Neptune, QLDB, Keyspaces, Timestream, MemoryDB |
+| 05 | [Data & Analytics](./05-data-analytics.md) | Athena, Redshift, EMR, Glue, OpenSearch, QuickSight, MSK |
+| 06 | [ML Services](./06-ml-services.md) | Rekognition, Transcribe, Polly, Comprehend, Lex, Textract, SageMaker |
 
 ## 🎯 Suggested concepts to cover
 

@@ -11,8 +11,10 @@
 | # | Card | Concept |
 |---|---|---|
 | 01 | [SQS Standard](./01-sqs-standard.md) | Decoupling queue, unlimited throughput, best-effort ordering |
-
-_Next to create: SQS FIFO, SNS, Kinesis Data Streams, Kinesis Firehose, Amazon MQ, Fan-out pattern._
+| 02 | [SQS FIFO & Advanced](./02-sqs-fifo-advanced.md) | Ordering, deduplication, visibility timeout, DLQ, long polling |
+| 03 | [SNS & Fan-out](./03-sns-fanout.md) | Pub/sub, FIFO topics, fan-out pattern, message filtering |
+| 04 | [Kinesis](./04-kinesis.md) | Data Streams (shards), Firehose (delivery), Data Analytics |
+| 05 | [Amazon MQ](./05-amazon-mq.md) | ActiveMQ/RabbitMQ, MQTT/AMQP lift-and-shift |
 
 ## 🎯 Suggested concepts to cover
 

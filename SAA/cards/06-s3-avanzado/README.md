@@ -8,10 +8,14 @@
 
 ## 🃏 Cards in this block
 
-_No cards yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here to start._
-
 | # | Card | Concept |
 |---|---|---|
+| 01 | [Lifecycle & Replication](./01-lifecycle-replication.md) | Transition rules, CRR vs SRR, delete marker replication |
+| 02 | [S3 Encryption](./02-s3-encryption.md) | SSE-S3, SSE-KMS, SSE-C, DSSE-KMS, client-side, bucket keys |
+| 03 | [S3 Object Lock](./03-s3-object-lock.md) | WORM, Compliance vs Governance, Glacier Vault Lock |
+| 04 | [S3 Access Points](./04-s3-access-points.md) | Per-prefix/per-team policies, Multi-Region Access Points, Object Lambda |
+| 05 | [S3 Performance](./05-s3-performance.md) | Multipart upload, Transfer Acceleration, byte-range fetches |
+| 06 | [S3 Events & Pre-signed URLs](./06-s3-events-presigned.md) | Event notifications, EventBridge integration, pre-signed URLs |
 
 ## 🎯 Suggested concepts to cover
 

@@ -8,10 +8,14 @@
 
 ## 🃏 Cards in this block
 
-_No cards yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here to start._
-
 | # | Card | Concept |
 |---|---|---|
+| 01 | [Lambda Fundamentals](./01-lambda-fundamentals.md) | Invocation types, limits, layers, destinations, Lambda@Edge |
+| 02 | [Lambda Concurrency](./02-lambda-concurrency.md) | Reserved vs provisioned, throttling, cold starts |
+| 03 | [Lambda + VPC](./03-lambda-vpc.md) | ENI provisioning, internet access pattern, RDS Proxy |
+| 04 | [API Gateway](./04-api-gateway.md) | REST vs HTTP vs WebSocket, endpoints, auth, throttling |
+| 05 | [Step Functions](./05-step-functions.md) | Standard vs Express, states, error handling, use cases |
+| 06 | [Cognito & AppSync](./06-cognito-appsync.md) | User Pools vs Identity Pools, GraphQL managed service |
 
 ## 🎯 Suggested concepts to cover
 

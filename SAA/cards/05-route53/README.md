@@ -8,10 +8,12 @@
 
 ## 🃏 Cards in this block
 
-_No cards yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here to start._
-
 | # | Card | Concept |
 |---|---|---|
+| 01 | [Records, Alias & TTL](./01-records-alias-ttl.md) | A/AAAA/CNAME/Alias, zone apex, hosted zones, TTL trade-offs |
+| 02 | [Routing Policies — Part 1](./02-routing-policies-1.md) | Simple, Weighted, Latency, Failover |
+| 03 | [Routing Policies — Part 2](./03-routing-policies-2.md) | Geolocation, Geoproximity, Multi-Value Answer |
+| 04 | [Health Checks](./04-health-checks.md) | Endpoint, calculated, CloudWatch alarm checks |
 
 ## 🎯 Suggested concepts to cover
 

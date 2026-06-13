@@ -8,10 +8,12 @@
 
 ## 🃏 Cards in this block
 
-_No cards yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here to start._
-
 | # | Card | Concept |
 |---|---|---|
+| 01 | [ECS Fundamentals](./01-ecs.md) | Cluster, task definition, service, launch types, IAM roles |
+| 02 | [ECS Advanced](./02-ecs-advanced.md) | Placement strategies, auto scaling, dynamic port mapping, Fargate storage |
+| 03 | [EKS](./03-eks.md) | Managed Kubernetes, node groups, Fargate on EKS, use cases |
+| 04 | [ECR & Fargate](./04-ecr-fargate.md) | Image registry, vulnerability scanning, serverless containers |
 
 ## 🎯 Suggested concepts to cover
 

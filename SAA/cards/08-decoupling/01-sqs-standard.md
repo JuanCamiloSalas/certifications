@@ -1,6 +1,6 @@
-[![](https://img.shields.io/badge/<_Prev-FF4859?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Next_>-FF4859?style=for-the-badge)](./README.md)
+[![](https://img.shields.io/badge/<_Prev_block-FF4859?style=for-the-badge)](../07-cdn/README.md)
+[![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
+[![](https://img.shields.io/badge/Next_>-FF4859?style=for-the-badge)](./02-sqs-fifo-advanced.md)
 
 # SQS Standard
 
@@ -50,6 +50,6 @@
 
 ---
 
-[![](https://img.shields.io/badge/<_Prev-FF4859?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Next_>-FF4859?style=for-the-badge)](./README.md)
+[![](https://img.shields.io/badge/<_Prev_block-FF4859?style=for-the-badge)](../07-cdn/README.md)
+[![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
+[![](https://img.shields.io/badge/Next_>-FF4859?style=for-the-badge)](./02-sqs-fifo-advanced.md)

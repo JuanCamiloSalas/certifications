@@ -3,44 +3,17 @@
 
 # Block 16 — Disaster Recovery & Migration
 
-> **DR strategies, DMS, DataSync, Storage Gateway, Snow family.** Closing block of the course. Watch for the RTO/RPO trade-off questions.
+> **DR strategies, DMS, DataSync, MGN, Snow family, Storage Gateway.** Closing block of the course. Know the RTO/RPO trade-off chart cold.
 
 ## 🃏 Cards in this block
 
-_No cards yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here to start._
-
 | # | Card | Concept |
 |---|---|---|
-
-## 🎯 Suggested concepts to cover
-
-### DR strategies (by RTO/RPO)
-- Backup & Restore (highest RTO/RPO, lowest cost)
-- Pilot Light
-- Warm Standby
-- Multi-Site / Hot Site (lowest RTO/RPO, highest cost)
-- RTO vs RPO definitions (the basic exam trap)
-
-### Migration tools
-- AWS DMS: homogeneous and heterogeneous DB migration
-- SCT (Schema Conversion Tool): paired with DMS
-- AWS DataSync: large-scale data transfer (on-prem ↔ AWS, S3 ↔ EFS ↔ FSx)
-- AWS Application Migration Service (MGN) — replaces SMS
-- AWS Database Migration: replication continuous + change data capture
-- AWS Snow family (Snowcone, Snowball Edge, Snowmobile)
-- AWS Storage Gateway: File, Volume, Tape
-
-### Other DR-related
-- Aurora Global Database (already in Block 04)
-- DynamoDB Global Tables (already in Block 11)
-- Cross-region replication: S3 CRR, RDS Read Replicas, EBS snapshot copy
-
-## 🔗 Related comparisons
-
-- DR strategies side-by-side (RTO/RPO/cost)
-- DMS vs DataSync vs Storage Gateway (when to use which)
-- Snow family devices
-- Storage Gateway: File vs Volume vs Tape
+| 01 | [DR Strategies](./01-dr-strategies.md) | Backup/Restore, Pilot Light, Warm Standby, Multi-Site — cost vs RTO/RPO |
+| 02 | [DMS & SCT](./02-dms-sct.md) | Homogeneous vs heterogeneous, CDC for live migration |
+| 03 | [DataSync & MGN](./03-datasync-mgn.md) | File/object bulk transfer vs server lift-and-shift |
+| 04 | [Snow Family](./04-snow-family.md) | Snowcone / Snowball Edge / Snowmobile — capacity + use case |
+| 05 | [Storage Gateway](./05-storage-gateway.md) | S3 File, FSx File, Volume (Cached/Stored), Tape — hybrid storage |
 
 ---
 

@@ -1,6 +1,6 @@
 [![](https://img.shields.io/badge/<_Prev_block-FF4859?style=for-the-badge)](../11-bd-data-ml/README.md)
 [![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](../README.md)
-[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../13-iam-avanzado/README.md)
+[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../13-iam-advanced/README.md)
 
 # Block 12 — Monitoring & Auditing
 
@@ -8,10 +8,12 @@
 
 ## 🃏 Cards in this block
 
-_No cards yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here to start._
-
 | # | Card | Concept |
 |---|---|---|
+| 01 | [CloudWatch](./01-cloudwatch.md) | Metrics, Logs, Alarms, Dashboards, CloudWatch Agent |
+| 02 | [EventBridge](./02-eventbridge.md) | Event buses, rules, scheduled rules, schema registry |
+| 03 | [CloudTrail](./03-cloudtrail.md) | API audit, management vs data events, trails, log integrity |
+| 04 | [Config & X-Ray](./04-config-xray.md) | Compliance recorder, Config rules, remediation; distributed tracing |
 
 ## 🎯 Suggested concepts to cover
 
@@ -38,4 +40,4 @@ _No cards yet. Copy [`_TEMPLATE.md`](../_TEMPLATE.md) here to start._
 
 [![](https://img.shields.io/badge/<_Prev_block-FF4859?style=for-the-badge)](../11-bd-data-ml/README.md)
 [![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](../README.md)
-[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../13-iam-avanzado/README.md)
+[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../13-iam-advanced/README.md)
