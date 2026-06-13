@@ -48,6 +48,12 @@
 - Dedicated: **1 / 10 / 100 Gbps**
 - Hosted (partner): **50 Mbps – 10 Gbps**
 
+## 📊 Diagram
+
+![Direct Connect VIFs](../../assets/diagrams/direct-connect-vifs.png)
+
+*Private VIF → VGW → VPC. Public VIF → AWS public services (S3, etc.). Transit VIF → TGW → múltiples VPCs.*
+
 ## ⚠️ Common traps
 
 - DX is NOT encrypted by default — add VPN or MACsec if encryption over the wire is required.

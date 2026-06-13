@@ -48,28 +48,9 @@
 
 ## 📊 Diagram
 
-| | AZ-a | AZ-b |
-|:---:|:---:|:---:|
-| **Internet** | ↕ IGW | |
-| **Public subnet** | EC2 🌐 | EC2 🌐 |
-| **Private subnet** | EC2 🔒 | EC2 🔒 |
-| | ↑ route table | ↑ route table |
+![VPC Architecture](../../assets/diagrams/vpc-how-it-works.png)
 
-```
-Internet
-    │
-    ▼
-[Internet Gateway]  ← attached to VPC
-    │
-    ▼
-Public Subnet (AZ-a)          Public Subnet (AZ-b)
-  Route: 0.0.0.0/0 → IGW       Route: 0.0.0.0/0 → IGW
-  Route: 10.0.0.0/16 → local   Route: 10.0.0.0/16 → local
-    │
-Private Subnet (AZ-a)         Private Subnet (AZ-b)
-  Route: 10.0.0.0/16 → local   Route: 10.0.0.0/16 → local
-  (no IGW route = private)
-```
+*VPC con subnets públicas y privadas en múltiples AZs. El IGW conecta las subnets públicas al internet; las privadas no tienen ruta directa.*
 
 ## ⚠️ Common traps
 

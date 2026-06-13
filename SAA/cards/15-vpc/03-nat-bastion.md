@@ -41,6 +41,12 @@
 - SG on private instances: allow inbound 22 from the bastion's SG (not the public internet).
 - Modern alternative: **AWS Systems Manager Session Manager** — SSH into private EC2 with no bastion, no open port 22 needed.
 
+## 📊 Diagram
+
+![NAT Gateway Flow](../../assets/diagrams/nat-gateway-flow.png)
+
+*Private subnet instances → NAT GW (public subnet, Elastic IP) → IGW → internet. Inbound connections from internet are blocked.*
+
 ## ⚠️ Common traps
 
 - NAT Gateway is AZ-scoped — deploy one per AZ to avoid single point of failure and cross-AZ data transfer charges.

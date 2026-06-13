@@ -40,6 +40,12 @@
 - Failover time: **~30s**
 - Replication lag: **< 10ms** (much lower than RDS async replicas)
 
+## 📊 Diagram
+
+![Aurora Architecture](../../assets/diagrams/aurora-architecture.png)
+
+*Shared distributed storage — 6 copies across 3 AZs. All compute instances (writer + up to 15 replicas) read/write to the same storage layer.*
+
 ## ⚠️ Common traps
 
 - "cross-region replication with low lag" → Aurora replicas are in-region; for cross-region → **Aurora Global Database** (next card).
