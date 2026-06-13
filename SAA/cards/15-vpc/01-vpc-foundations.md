@@ -4,6 +4,8 @@
 
 # VPC Foundations — Subnets, Route Tables, IGW, AZs
 
+<img src="../../assets/icons/vpc.png" width="64">
+
 > **Pitch (1 line):** a VPC is your isolated virtual network in AWS — subnets carve it into public/private zones across AZs, route tables control traffic flow, and an Internet Gateway enables internet access.
 
 ## 🎯 When the exam picks this
@@ -43,6 +45,31 @@
 - Max VPC CIDR: **/16** (65,536 IPs), min: **/28** (16 IPs)
 - Reserved IPs per subnet: **5**
 - Max VPCs per region: **5** (soft limit, can increase)
+
+## 📊 Diagram
+
+| | AZ-a | AZ-b |
+|:---:|:---:|:---:|
+| **Internet** | ↕ IGW | |
+| **Public subnet** | EC2 🌐 | EC2 🌐 |
+| **Private subnet** | EC2 🔒 | EC2 🔒 |
+| | ↑ route table | ↑ route table |
+
+```
+Internet
+    │
+    ▼
+[Internet Gateway]  ← attached to VPC
+    │
+    ▼
+Public Subnet (AZ-a)          Public Subnet (AZ-b)
+  Route: 0.0.0.0/0 → IGW       Route: 0.0.0.0/0 → IGW
+  Route: 10.0.0.0/16 → local   Route: 10.0.0.0/16 → local
+    │
+Private Subnet (AZ-a)         Private Subnet (AZ-b)
+  Route: 10.0.0.0/16 → local   Route: 10.0.0.0/16 → local
+  (no IGW route = private)
+```
 
 ## ⚠️ Common traps
 

@@ -4,6 +4,8 @@
 
 # NAT Gateway, NAT Instance & Bastion Host
 
+<img src="../../assets/icons/vpc.png" width="64">
+
 > **Pitch (1 line):** NAT Gateway lets private subnet instances initiate outbound internet traffic (e.g., to download patches) without exposing them inbound; Bastion Host provides SSH jump access into private instances.
 
 ## 🎯 When the exam picks this

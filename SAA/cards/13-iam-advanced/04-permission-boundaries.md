@@ -4,6 +4,8 @@
 
 # IAM Permission Boundaries & Advanced Policy Evaluation
 
+<img src="../../assets/icons/iam.png" width="64">
+
 > **Pitch (1 line):** permission boundaries cap what an IAM principal can do (even if their identity policy allows more) — used to safely delegate IAM permission management without privilege escalation.
 
 ## 🎯 When the exam picks this

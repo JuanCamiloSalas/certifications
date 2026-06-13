@@ -4,6 +4,8 @@
 
 # KMS Multi-Region Keys & CloudHSM
 
+<img src="../../assets/icons/kms.png" width="64">
+
 > **Pitch (1 line):** multi-region KMS keys let you encrypt in one region and decrypt in another without re-encrypting; CloudHSM gives you dedicated, FIPS-validated hardware you control.
 
 ## 🎯 When the exam picks this

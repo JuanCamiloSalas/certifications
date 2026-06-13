@@ -4,6 +4,8 @@
 
 # S3 Events, Pre-Signed URLs & Requester Pays
 
+<img src="../../assets/icons/s3.png" width="64">
+
 > **Pitch (1 line):** three S3 features that appear in integration and cost-control questions — events trigger downstream processing, pre-signed URLs grant temporary access, Requester Pays shifts data transfer cost.
 
 ## 🎯 When the exam picks this

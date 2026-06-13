@@ -4,6 +4,8 @@
 
 # Amazon MQ
 
+<img src="../../assets/icons/amazon-mq.png" width="64">
+
 > **Pitch (1 line):** managed message broker for **existing apps using industry-standard protocols** (AMQP, MQTT, STOMP, JMS) — lift-and-shift without rewriting to SQS/SNS.
 
 ## 🎯 When the exam picks this

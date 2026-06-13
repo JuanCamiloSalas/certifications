@@ -4,6 +4,8 @@
 
 # SNS & Fan-Out Pattern
 
+<img src="../../assets/icons/sns.png" width="64">
+
 > **Pitch (1 line):** SNS is a pub/sub service — one message published to a topic is delivered to all subscribers simultaneously; combining SNS → SQS is the canonical fan-out pattern.
 
 ## 🎯 When the exam picks this

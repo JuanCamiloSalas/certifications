@@ -4,6 +4,8 @@
 
 # ECS — Fundamentals & Launch Types
 
+<img src="../../assets/icons/ecs.png" width="64">
+
 > **Pitch (1 line):** AWS's container orchestrator — define tasks, run them on EC2 (you manage servers) or Fargate (serverless, AWS manages the host) in a cluster.
 
 ## 🎯 When the exam picks this

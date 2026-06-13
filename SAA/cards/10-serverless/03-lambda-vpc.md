@@ -4,6 +4,8 @@
 
 # Lambda in a VPC
 
+<img src="../../assets/icons/lambda.png" width="64">
+
 > **Pitch (1 line):** by default Lambda runs outside your VPC and can't reach private resources — attaching it to a VPC gives private access at the cost of ENI provisioning and internet access loss.
 
 ## 🎯 When the exam picks this

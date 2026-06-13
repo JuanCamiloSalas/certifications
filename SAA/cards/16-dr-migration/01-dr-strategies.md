@@ -4,6 +4,8 @@
 
 # Disaster Recovery Strategies
 
+<img src="../../assets/icons/autoscaling.png" width="64">
+
 > **Pitch (1 line):** four DR tiers — Backup & Restore, Pilot Light, Warm Standby, Multi-Site — trade cost vs RPO/RTO: cheaper = slower recovery; more expensive = faster.
 
 ## 🎯 When the exam picks this

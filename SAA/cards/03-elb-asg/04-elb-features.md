@@ -4,6 +4,8 @@
 
 # ELB Cross-Features (Cross-Zone LB, SSL/SNI, Sticky Sessions, Connection Draining)
 
+<img src="../../assets/icons/elb.png" width="64">
+
 > **Pitch (1 line):** shared ELB behaviors that appear in scenario questions regardless of LB type — know the defaults and the gotchas.
 
 ## 🎯 When the exam picks this

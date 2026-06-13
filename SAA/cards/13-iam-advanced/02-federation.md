@@ -4,6 +4,8 @@
 
 # Identity Federation — SAML, Web Identity & Cognito
 
+<img src="../../assets/icons/cognito.png" width="64">
+
 > **Pitch (1 line):** federation lets external identities (corporate AD, Google, Facebook) access AWS without creating IAM users — map external tokens to IAM roles via STS.
 
 ## 🎯 When the exam picks this

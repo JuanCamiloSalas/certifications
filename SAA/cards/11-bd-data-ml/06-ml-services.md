@@ -4,6 +4,8 @@
 
 # AWS ML Services — Cheat Sheet
 
+<img src="../../assets/icons/sagemaker.png" width="64">
+
 > **Pitch (1 line):** purpose-built ML APIs — each one answers a specific "which service does X" question; match the keyword to the service without needing to understand the ML internals.
 
 ## 🎯 When the exam picks this

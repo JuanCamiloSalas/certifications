@@ -4,6 +4,8 @@
 
 # IAM Identity Center & AWS Control Tower
 
+<img src="../../assets/icons/iam-identity-center.png" width="64">
+
 > **Pitch (1 line):** Identity Center = single-sign-on for all your AWS accounts and SAML apps from one place; Control Tower = automated multi-account setup with landing zones and guardrails.
 
 ## 🎯 When the exam picks this

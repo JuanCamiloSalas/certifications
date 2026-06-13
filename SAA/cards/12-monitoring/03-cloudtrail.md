@@ -4,6 +4,8 @@
 
 # CloudTrail — API Audit Log
 
+<img src="../../assets/icons/cloudtrail.png" width="64">
+
 > **Pitch (1 line):** records every AWS API call (who did what, when, from where) — the compliance and forensics log for your account.
 
 ## 🎯 When the exam picks this

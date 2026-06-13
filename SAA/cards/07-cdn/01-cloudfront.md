@@ -4,6 +4,8 @@
 
 # CloudFront — Distributions, Cache & Origins
 
+<img src="../../assets/icons/cloudfront.png" width="64">
+
 > **Pitch (1 line):** AWS CDN that caches content at 400+ edge locations globally, reducing latency for end users and reducing load on your origin.
 
 ## 🎯 When the exam picks this

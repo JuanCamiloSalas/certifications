@@ -4,6 +4,8 @@
 
 # Security Groups vs NACLs
 
+<img src="../../assets/icons/vpc.png" width="64">
+
 > **Pitch (1 line):** Security Groups are stateful instance-level firewalls; NACLs are stateless subnet-level firewalls — both control traffic but work at different layers and with different logic.
 
 ## 🎯 When the exam picks this

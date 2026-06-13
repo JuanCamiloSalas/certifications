@@ -4,6 +4,8 @@
 
 # EventBridge — Event-Driven Automation
 
+<img src="../../assets/icons/eventbridge.png" width="64">
+
 > **Pitch (1 line):** serverless event bus that routes events from AWS services, custom apps, and SaaS partners to targets like Lambda, SQS, SNS, Step Functions — the backbone of event-driven architectures.
 
 ## 🎯 When the exam picks this

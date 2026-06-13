@@ -4,6 +4,8 @@
 
 # Aurora Advanced — Serverless, Global DB & Backtrack
 
+<img src="../../assets/icons/aurora.png" width="64">
+
 > **Pitch (1 line):** three Aurora capabilities that appear frequently in SAA scenario questions — Serverless for intermittent workloads, Global Database for cross-region DR, and Backtrack for point-in-time rewind without a restore.
 
 ## 🎯 When the exam picks this

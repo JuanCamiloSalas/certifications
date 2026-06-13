@@ -4,6 +4,8 @@
 
 # Route 53 — Records, Alias vs CNAME, TTL & Hosted Zones
 
+<img src="../../assets/icons/route53.png" width="64">
+
 > **Pitch (1 line):** AWS-managed authoritative DNS — choose Alias records (not CNAME) for AWS targets, manage TTL trade-offs, and separate public from private hosted zones.
 
 ## 🎯 When the exam picks this

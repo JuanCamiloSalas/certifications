@@ -4,6 +4,8 @@
 
 # AWS Snow Family
 
+<img src="../../assets/icons/snow-family.png" width="64">
+
 > **Pitch (1 line):** physical devices AWS ships to you for offline data transfer when the internet is too slow or unavailable — Snowcone (small), Snowball Edge (rugged/compute), Snowmobile (exabyte truck).
 
 ## 🎯 When the exam picks this

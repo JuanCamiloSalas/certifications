@@ -4,6 +4,8 @@
 
 # S3 Access Points & Object Lambda
 
+<img src="../../assets/icons/s3.png" width="64">
+
 > **Pitch (1 line):** Access Points simplify per-team/per-app access control on shared buckets; Object Lambda lets you transform objects on-the-fly as they are retrieved — no copies needed.
 
 ## 🎯 When the exam picks this

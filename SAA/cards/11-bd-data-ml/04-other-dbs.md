@@ -4,6 +4,8 @@
 
 # Other AWS Databases
 
+<img src="../../assets/icons/documentdb.png" width="64">
+
 > **Pitch (1 line):** six purpose-built DBs — pick by the **data model** the question describes: documents, graph, ledger, time-series, Cassandra-compatible, or Redis with durability.
 
 ## 🎯 When the exam picks this

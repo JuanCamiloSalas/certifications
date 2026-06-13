@@ -4,6 +4,8 @@
 
 # Aurora — Architecture & Endpoints
 
+<img src="../../assets/icons/aurora.png" width="64">
+
 > **Pitch (1 line):** AWS-proprietary MySQL/PostgreSQL-compatible DB with a shared distributed storage layer across 6 replicas in 3 AZs — up to 5× faster than MySQL, 3× faster than PostgreSQL.
 
 ## 🎯 When the exam picks this

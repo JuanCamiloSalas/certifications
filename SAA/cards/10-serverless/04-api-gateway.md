@@ -4,6 +4,8 @@
 
 # API Gateway
 
+<img src="../../assets/icons/api-gateway.png" width="64">
+
 > **Pitch (1 line):** managed API front-door that handles auth, throttling, caching, and routing for REST, HTTP, and WebSocket APIs — the standard front-end for serverless back-ends.
 
 ## 🎯 When the exam picks this

@@ -4,6 +4,8 @@
 
 # CloudFront Functions vs Lambda@Edge
 
+<img src="../../assets/icons/cloudfront.png" width="64">
+
 > **Pitch (1 line):** two ways to run code at the edge — CloudFront Functions for lightweight, sub-ms request/response manipulation; Lambda@Edge for heavier logic that needs more time, memory, or external calls.
 
 ## 🎯 When the exam picks this

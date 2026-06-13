@@ -2,7 +2,9 @@
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
 [![](https://img.shields.io/badge/Next_>-FF4859?style=for-the-badge)](./04-s3-access-points.md)
 
-# S3 Object Lock & Glacier Vault Lock (WORM)
+# S3 Object Lock & Glacier Vault Lock
+
+<img src="../../assets/icons/s3.png" width="64"> (WORM)
 
 > **Pitch (1 line):** Write-Once-Read-Many (WORM) protection — Object Lock prevents S3 objects from being deleted or overwritten for a retention period; Glacier Vault Lock does the same for Glacier archives.
 

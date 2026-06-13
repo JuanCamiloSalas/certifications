@@ -4,6 +4,8 @@
 
 # AWS Organizations & SCPs
 
+<img src="../../assets/icons/organizations.png" width="64">
+
 > **Pitch (1 line):** Organizations groups multiple AWS accounts under one management structure; SCPs are guardrails that cap the maximum permissions of every identity in an account — even root.
 
 ## 🎯 When the exam picks this

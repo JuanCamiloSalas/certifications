@@ -4,6 +4,8 @@
 
 # RDS Proxy
 
+<img src="../../assets/icons/rds.png" width="64">
+
 > **Pitch (1 line):** a fully managed connection pooler that sits between your app and RDS/Aurora, dramatically reducing connection overhead — critical for serverless workloads (Lambda + RDS).
 
 ## 🎯 When the exam picks this

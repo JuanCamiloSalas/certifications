@@ -2,7 +2,9 @@
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
 [![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../08-decoupling/README.md)
 
-# AWS Global Accelerator & CloudFront vs GA
+# AWS Global Accelerator
+
+<img src="../../assets/icons/global-accelerator.png" width="64"> & CloudFront vs GA
 
 > **Pitch (1 line):** Global Accelerator gives you **2 static Anycast IPs** and routes TCP/UDP traffic over AWS's private backbone from the nearest edge to your regional endpoints — NOT a CDN, no caching.
 

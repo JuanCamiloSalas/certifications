@@ -4,6 +4,8 @@
 
 # DMS & SCT — Database Migration Service
 
+<img src="../../assets/icons/dms.png" width="64">
+
 > **Pitch (1 line):** DMS migrates databases to AWS with minimal downtime (including live cutover via CDC); SCT converts the schema from one engine to another when the source and target DB engines differ.
 
 ## 🎯 When the exam picks this

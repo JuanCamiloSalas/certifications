@@ -4,6 +4,8 @@
 
 # DynamoDB Advanced — Streams, Global Tables, DAX, TTL & Transactions
 
+<img src="../../assets/icons/dynamodb.png" width="64">
+
 > **Pitch (1 line):** five DynamoDB features that each answer a specific scenario question — know the trigger phrase for each.
 
 ## 🎯 When the exam picks this

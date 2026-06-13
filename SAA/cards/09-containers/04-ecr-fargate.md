@@ -4,6 +4,8 @@
 
 # ECR & Fargate
 
+<img src="../../assets/icons/ecr.png" width="64">
+
 > **Pitch (1 line):** ECR is the managed Docker registry integrated with IAM; Fargate is the serverless compute engine that removes the need to manage any host for ECS or EKS tasks.
 
 ## 🎯 When the exam picks this

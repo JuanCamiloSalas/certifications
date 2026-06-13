@@ -4,6 +4,8 @@
 
 # VPC Flow Logs & IPv6
 
+<img src="../../assets/icons/vpc.png" width="64">
+
 > **Pitch (1 line):** Flow Logs capture IP traffic metadata at VPC/subnet/ENI level for troubleshooting and security analysis; IPv6 in VPC uses Egress-Only IGWs for outbound-only private IPv6 access.
 
 ## 🎯 When the exam picks this

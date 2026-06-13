@@ -4,6 +4,8 @@
 
 # Cognito (User Pools vs Identity Pools) & AppSync
 
+<img src="../../assets/icons/cognito.png" width="64">
+
 > **Pitch (1 line):** Cognito User Pools handle **authentication** (who are you?); Identity Pools handle **authorization** (what AWS resources can you access?). AppSync is managed GraphQL.
 
 ## 🎯 When the exam picks this

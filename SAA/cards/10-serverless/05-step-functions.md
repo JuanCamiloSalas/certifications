@@ -4,6 +4,8 @@
 
 # Step Functions
 
+<img src="../../assets/icons/step-functions.png" width="64">
+
 > **Pitch (1 line):** orchestrate Lambda functions and AWS services into **visual state machine workflows** — handles sequencing, branching, retries, and error handling without writing glue code.
 
 ## 🎯 When the exam picks this

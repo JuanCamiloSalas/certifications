@@ -4,6 +4,8 @@
 
 # AWS Config + X-Ray
 
+<img src="../../assets/icons/config.png" width="64">
+
 > **Pitch (1 line):** Config = continuous compliance recorder ("is my resource config correct?"); X-Ray = distributed tracing ("why is my app slow?").
 
 ## 🎯 When the exam picks this

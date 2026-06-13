@@ -4,6 +4,8 @@
 
 # VPC Peering & Transit Gateway
 
+<img src="../../assets/icons/transit-gateway.png" width="64">
+
 > **Pitch (1 line):** VPC Peering connects two VPCs directly (non-transitive); Transit Gateway is a managed hub that connects many VPCs and on-premises networks via a single attachment point.
 
 ## 🎯 When the exam picks this

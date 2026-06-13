@@ -2,7 +2,9 @@
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
 [![](https://img.shields.io/badge/Next_>-FF4859?style=for-the-badge)](./03-s3-object-lock.md)
 
-# S3 Encryption & Bucket Keys
+# S3 Encryption
+
+<img src="../../assets/icons/s3.png" width="64"> & Bucket Keys
 
 > **Pitch (1 line):** five encryption options for S3 at rest — pick based on who manages the keys; Bucket Keys cut KMS API costs dramatically.
 

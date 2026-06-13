@@ -4,6 +4,8 @@
 
 # Load Balancers — ALB vs NLB vs GLB vs CLB
 
+<img src="../../assets/icons/elb.png" width="64">
+
 > **Pitch (1 line):** pick the LB by **what layer and protocol the scenario describes** — ALB (HTTP), NLB (TCP/UDP), GLB (third-party appliances), CLB (legacy, never the right answer).
 
 ## 🎯 When the exam picks this

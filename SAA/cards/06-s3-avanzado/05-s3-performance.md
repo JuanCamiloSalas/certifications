@@ -4,6 +4,8 @@
 
 # S3 Performance — Multipart, Byte-Range & Transfer Acceleration
 
+<img src="../../assets/icons/s3.png" width="64">
+
 > **Pitch (1 line):** three upload/download optimizations — multipart breaks large uploads into parallel chunks, byte-range fetches parallelize downloads, and Transfer Acceleration routes uploads through CloudFront edge locations.
 
 ## 🎯 When the exam picks this

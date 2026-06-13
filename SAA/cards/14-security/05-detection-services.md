@@ -4,6 +4,8 @@
 
 # Detection & Threat Security Services
 
+<img src="../../assets/icons/guardduty.png" width="64">
+
 > **Pitch (1 line):** four services that watch for threats without you writing queries — GuardDuty (account-level threats), Inspector (EC2/container vulnerabilities), Macie (S3 sensitive data), Detective (investigation).
 
 ## 🎯 When the exam picks this

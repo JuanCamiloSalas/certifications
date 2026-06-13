@@ -4,6 +4,8 @@
 
 # IAM Roles & STS — Cross-Account and Temporary Credentials
 
+<img src="../../assets/icons/iam.png" width="64">
+
 > **Pitch (1 line):** roles + STS provide short-lived credentials that replace long-term access keys — the foundation for secure cross-account access, EC2 instance profiles, and federated identity.
 
 ## 🎯 When the exam picks this

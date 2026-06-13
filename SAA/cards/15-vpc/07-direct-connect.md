@@ -4,6 +4,8 @@
 
 # Direct Connect (DX)
 
+<img src="../../assets/icons/direct-connect.png" width="64">
+
 > **Pitch (1 line):** a dedicated private physical network connection from your data center to AWS — consistent bandwidth, low latency, no public internet, ideal for high-throughput or compliance workloads.
 
 ## 🎯 When the exam picks this

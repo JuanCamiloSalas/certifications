@@ -4,6 +4,8 @@
 
 # ECS Advanced — IAM Roles, Task Placement & ALB Integration
 
+<img src="../../assets/icons/ecs.png" width="64">
+
 > **Pitch (1 line):** two IAM roles (Task Role vs Execution Role), task placement strategies, and dynamic port mapping with ALB are the SAA-level details that trip up candidates.
 
 ## 🎯 When the exam picks this

@@ -4,6 +4,8 @@
 
 # ElastiCache — Redis vs Memcached & Caching Patterns
 
+<img src="../../assets/icons/elasticache.png" width="64">
+
 > **Pitch (1 line):** in-memory cache to offload DB reads and speed up responses; Redis adds persistence, replication, and data structures — Memcached is simpler and purely ephemeral.
 
 ## 🎯 When the exam picks this

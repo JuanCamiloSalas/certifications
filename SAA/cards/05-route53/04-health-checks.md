@@ -4,6 +4,8 @@
 
 # Route 53 Health Checks
 
+<img src="../../assets/icons/route53.png" width="64">
+
 > **Pitch (1 line):** Route 53 health checkers continuously probe your endpoints and automatically remove unhealthy records from DNS responses in supported routing policies.
 
 ## 🎯 When the exam picks this

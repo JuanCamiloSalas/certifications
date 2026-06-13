@@ -4,6 +4,8 @@
 
 # Secrets Manager, SSM Parameter Store & ACM
 
+<img src="../../assets/icons/secrets-manager.png" width="64">
+
 > **Pitch (1 line):** three services for managing secrets and certificates — Secrets Manager for auto-rotating credentials, SSM Parameter Store for config/secrets at lower cost, ACM for TLS certificates.
 
 ## 🎯 When the exam picks this

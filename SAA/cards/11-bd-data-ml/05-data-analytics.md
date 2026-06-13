@@ -4,6 +4,8 @@
 
 # Data & Analytics Services
 
+<img src="../../assets/icons/athena.png" width="64">
+
 > **Pitch (1 line):** eight data services — pick by the keyword: SQL-on-S3 (Athena), data warehouse (Redshift), big data (EMR), serverless ETL (Glue), search (OpenSearch), BI (QuickSight), managed Kafka (MSK).
 
 ## 🎯 When the exam picks this

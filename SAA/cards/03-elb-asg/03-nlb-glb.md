@@ -4,6 +4,8 @@
 
 # NLB & Gateway Load Balancer
 
+<img src="../../assets/icons/elb.png" width="64">
+
 > **Pitch (1 line):** NLB = Layer 4 ultra-performance with static IPs; GLB = transparent bump-in-the-wire to send traffic through third-party network appliances before reaching your app.
 
 ## 🎯 When the exam picks this

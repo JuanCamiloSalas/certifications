@@ -4,6 +4,8 @@
 
 # RDS — Managed Relational DB
 
+<img src="../../assets/icons/rds.png" width="64">
+
 > **Pitch (1 line):** managed SQL DB (MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, Db2) with automated backups, Multi-AZ for HA, and Read Replicas for read scaling.
 
 ## 🎯 When the exam picks this

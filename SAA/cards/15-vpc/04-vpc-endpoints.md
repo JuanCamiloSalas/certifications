@@ -4,6 +4,8 @@
 
 # VPC Endpoints — Gateway & Interface
 
+<img src="../../assets/icons/privatelink.png" width="64">
+
 > **Pitch (1 line):** VPC endpoints let EC2 and other resources access AWS services (S3, DynamoDB, etc.) privately — without traversing the internet or needing a NAT Gateway.
 
 ## 🎯 When the exam picks this

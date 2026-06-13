@@ -4,6 +4,8 @@
 
 # SQS Standard
 
+<img src="../../assets/icons/sqs.png" width="64">
+
 > **Pitch:** Fully managed queue to decouple producers from consumers, with unlimited throughput and best-effort ordering.
 
 ## 🎯 When the exam picks this

@@ -4,6 +4,8 @@
 
 # Auto Scaling Group (ASG)
 
+<img src="../../assets/icons/autoscaling.png" width="64">
+
 > **Pitch (1 line):** automatically add or remove EC2 instances to match demand — defined by a launch template, min/desired/max counts, and scaling policies.
 
 ## 🎯 When the exam picks this

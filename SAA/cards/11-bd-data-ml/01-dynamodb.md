@@ -4,6 +4,8 @@
 
 # DynamoDB — Fundamentals
 
+<img src="../../assets/icons/dynamodb.png" width="64">
+
 > **Pitch (1 line):** serverless, fully managed key-value / document NoSQL database — single-digit millisecond performance at any scale with no capacity planning in on-demand mode.
 
 ## 🎯 When the exam picks this

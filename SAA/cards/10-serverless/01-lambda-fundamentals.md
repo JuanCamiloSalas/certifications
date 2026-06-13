@@ -4,6 +4,8 @@
 
 # Lambda — Fundamentals, Limits & Triggers
 
+<img src="../../assets/icons/lambda.png" width="64">
+
 > **Pitch (1 line):** run code without servers — Lambda executes your function in response to events, bills per ms of execution, and scales automatically up to account-level concurrency limits.
 
 ## 🎯 When the exam picks this

@@ -4,6 +4,8 @@
 
 # CloudFront Security — OAC, Signed URLs/Cookies & Geo Restriction
 
+<img src="../../assets/icons/cloudfront.png" width="64">
+
 > **Pitch (1 line):** lock down who can access your CloudFront distribution — OAC restricts origin access, signed URLs/cookies gate individual files or whole sites, geo restriction blocks countries.
 
 ## 🎯 When the exam picks this

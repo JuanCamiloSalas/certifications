@@ -4,6 +4,8 @@
 
 # SQS FIFO & Advanced SQS Features
 
+<img src="../../assets/icons/sqs.png" width="64">
+
 > **Pitch (1 line):** SQS FIFO guarantees strict order and exactly-once delivery at the cost of lower throughput; visibility timeout, long polling, and DLQs are the operational knobs for Standard too.
 
 ## 🎯 When the exam picks this

@@ -4,6 +4,8 @@
 
 # KMS — Key Management Service
 
+<img src="../../assets/icons/kms.png" width="64">
+
 > **Pitch (1 line):** AWS-managed encryption key store — create, control, and audit cryptographic keys used by virtually every AWS service for encryption at rest.
 
 ## 🎯 When the exam picks this

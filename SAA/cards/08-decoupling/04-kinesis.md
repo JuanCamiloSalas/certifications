@@ -4,6 +4,8 @@
 
 # Kinesis — Data Streams, Firehose & Analytics
 
+<img src="../../assets/icons/kinesis.png" width="64">
+
 > **Pitch (1 line):** Kinesis is the streaming platform — Data Streams for real-time processing with replay, Firehose for near-real-time delivery to data stores, Analytics for real-time SQL on streams.
 
 ## 🎯 When the exam picks this

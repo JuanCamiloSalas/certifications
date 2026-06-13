@@ -4,6 +4,8 @@
 
 # ALB — Application Load Balancer
 
+<img src="../../assets/icons/elb.png" width="64">
+
 > **Pitch (1 line):** Layer 7 LB that routes HTTP/HTTPS by **path, host, headers, or query string** to typed target groups — the default choice for web applications.
 
 ## 🎯 When the exam picks this

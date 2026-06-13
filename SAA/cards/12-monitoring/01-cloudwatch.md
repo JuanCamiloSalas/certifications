@@ -4,6 +4,8 @@
 
 # CloudWatch — Metrics, Logs, Alarms & Dashboards
 
+<img src="../../assets/icons/cloudwatch.png" width="64">
+
 > **Pitch (1 line):** AWS's native observability platform — collects metrics and logs from every service, fires alarms, and visualizes everything in dashboards.
 
 ## 🎯 When the exam picks this

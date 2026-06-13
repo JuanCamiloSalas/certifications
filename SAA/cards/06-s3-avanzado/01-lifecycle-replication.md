@@ -4,6 +4,8 @@
 
 # S3 Lifecycle Rules & Replication
 
+<img src="../../assets/icons/s3.png" width="64">
+
 > **Pitch (1 line):** Lifecycle rules automate transitioning objects to cheaper storage classes or deleting them on a schedule; replication (CRR/SRR) copies objects across buckets automatically.
 
 ## 🎯 When the exam picks this

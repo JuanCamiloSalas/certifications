@@ -4,6 +4,8 @@
 
 # Route 53 Routing Policies — Simple, Weighted, Latency, Failover
 
+<img src="../../assets/icons/route53.png" width="64">
+
 > **Pitch (1 line):** each routing policy answers a different question — which one is implied by the scenario keywords.
 
 ## 🎯 When the exam picks this

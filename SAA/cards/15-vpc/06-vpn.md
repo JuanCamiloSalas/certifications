@@ -4,6 +4,8 @@
 
 # Site-to-Site VPN & Client VPN
 
+<img src="../../assets/icons/direct-connect.png" width="64">
+
 > **Pitch (1 line):** Site-to-Site VPN connects your on-premises data center to AWS over encrypted IPSec tunnels in minutes; Client VPN lets individual users connect to AWS resources from any device.
 
 ## 🎯 When the exam picks this

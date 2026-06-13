@@ -4,6 +4,8 @@
 
 # Route 53 Routing Policies — Geolocation, Geoproximity, Multi-Value
 
+<img src="../../assets/icons/route53.png" width="64">
+
 > **Pitch (1 line):** three policies with easy name-confusion — Geolocation routes by WHERE the user is, Geoproximity biases by distance with a dial, Multi-Value is NOT a replacement for a load balancer.
 
 ## 🎯 When the exam picks this

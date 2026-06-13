@@ -4,6 +4,8 @@
 
 # Amazon EKS — Managed Kubernetes
 
+<img src="../../assets/icons/eks.png" width="64">
+
 > **Pitch (1 line):** managed **Kubernetes** control plane on AWS — use when you already run Kubernetes on-premises or need Kubernetes-native ecosystem (Helm, operators, multi-cloud portability).
 
 ## 🎯 When the exam picks this

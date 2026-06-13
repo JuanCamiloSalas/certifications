@@ -4,6 +4,8 @@
 
 # Lambda Concurrency, Cold Starts, Destinations & Layers
 
+<img src="../../assets/icons/lambda.png" width="64">
+
 > **Pitch (1 line):** concurrency governs how many Lambda instances run simultaneously — reserved limits neighbors, provisioned eliminates cold starts; layers share code across functions.
 
 ## 🎯 When the exam picks this

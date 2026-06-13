@@ -4,6 +4,8 @@
 
 # WAF, Shield & Firewall Manager
 
+<img src="../../assets/icons/waf.png" width="64">
+
 > **Pitch (1 line):** WAF filters malicious HTTP(S) traffic at Layer 7; Shield protects against DDoS at Layers 3/4/7; Firewall Manager centrally manages both across accounts.
 
 ## 🎯 When the exam picks this

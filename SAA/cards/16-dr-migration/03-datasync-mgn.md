@@ -4,6 +4,8 @@
 
 # DataSync & Application Migration Service (MGN)
 
+<img src="../../assets/icons/datasync.png" width="64">
+
 > **Pitch (1 line):** DataSync moves file/object data (NFS/SMB/S3) at high speed with scheduling and integrity checks; MGN lifts-and-shifts servers to EC2 with continuous block-level replication.
 
 ## 🎯 When the exam picks this

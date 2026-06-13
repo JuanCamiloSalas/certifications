@@ -4,6 +4,8 @@
 
 # DynamoDB Indexes — LSI vs GSI
 
+<img src="../../assets/icons/dynamodb.png" width="64">
+
 > **Pitch (1 line):** indexes let you query DynamoDB on attributes other than the primary key — LSI adds a sort key alternative at table creation; GSI adds a completely new partition/sort key at any time.
 
 ## 🎯 When the exam picks this
