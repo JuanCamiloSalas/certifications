@@ -4,33 +4,33 @@
 
 # EC2 Instance Lifecycle & Data Persistence
 
-> **Pitch (1 line):** qué le pasa a tus **datos e IP** según hagas **reboot / stop / hibernate / terminate** — el origen de la trampa clásica "se reinició y perdió los datos".
+> **Pitch (1 line):** what happens to your **data and IP** across **reboot / stop / hibernate / terminate** — the source of the classic "it restarted and lost the data" trap.
 
 ## 🎯 When the exam picks this
 
-- "la instancia se detuvo/terminó y se perdieron los datos" → era **Instance Store** (efímero)
-- "evitar terminación accidental" → **Termination Protection**
-- "al hacer stop/start cambió la IP pública" → IPv4 pública NO es fija (usa **Elastic IP**)
+- "the instance stopped/terminated and the data was lost" → it was **Instance Store** (ephemeral)
+- "prevent accidental termination" → **Termination Protection**
+- "the public IP changed after stop/start" → public IPv4 is NOT static (use an **Elastic IP**)
 
 ## 🧠 Core (non-obvious bits)
 
-- **Reboot ≠ Stop.** Reboot mantiene la MISMA instancia: conserva IP pública, datos de EBS **y** de Instance Store. No es un stop+start.
-- **Stop/Start:** la IPv4 **pública cambia** (salvo Elastic IP); la **privada se mantiene**. No pagas cómputo mientras está `stopped`, pero **sí sigues pagando los volúmenes EBS**.
-- **Terminate:** el volumen **root EBS** se borra por defecto (`DeleteOnTermination = true`); los **volúmenes EBS adicionales** sobreviven por defecto (`false`).
-- **Instance Store** es efímero: sobrevive un **reboot**, pero se pierde en **stop, hibernate, terminate** o fallo del host físico. Nunca lo uses para datos que deban persistir.
-- **Hibernate** = variante de stop que guarda la RAM en el EBS root (preserva estado en memoria, arranque rápido). Requisitos y casos → ver card de Hibernation.
-- **Termination Protection** bloquea el `terminate` accidental desde consola/CLI (no afecta a stop).
+- **Reboot ≠ Stop.** Reboot keeps the SAME instance: it keeps the public IP, the EBS data **and** the Instance Store data. It is not a stop+start.
+- **Stop/Start:** the **public IPv4 changes** (unless Elastic IP); the **private IP stays**. You don't pay for compute while `stopped`, but you **still pay for the EBS volumes**.
+- **Terminate:** the **root EBS** volume is deleted by default (`DeleteOnTermination = true`); **additional EBS** volumes survive by default (`false`).
+- **Instance Store** is ephemeral: it survives a **reboot**, but is lost on **stop, hibernate, terminate** or physical host failure. Never use it for data that must persist.
+- **Hibernate** = a stop variant that saves RAM to the root EBS volume (preserves in-memory state, fast restart). Requirements and use cases → see the Hibernation card.
+- **Termination Protection** blocks accidental `terminate` from console/CLI (does not affect stop).
 
 ## 🔢 Numbers to memorize
 
-- `DeleteOnTermination`: **true** en el root, **false** en volúmenes adicionales (por defecto).
-- Instance Store: **0 persistencia** ante stop/terminate/host failure (solo sobrevive reboot).
+- `DeleteOnTermination`: **true** on the root, **false** on additional volumes (defaults).
+- Instance Store: **0 persistence** across stop/terminate/host failure (survives reboot only).
 
 ## ⚠️ Common traps
 
-- "perdió datos tras stop/start pero NO tras reboot" → **Instance Store** (clave para distinguirlo de EBS).
-- "necesito conservar el volumen de datos al terminar la instancia" → poner `DeleteOnTermination = false` en ese volumen.
-- "la IP pública cambió y rompió la config" → no era Elastic IP; la IPv4 pública se reasigna en cada start.
+- "lost data after stop/start but NOT after reboot" → **Instance Store** (the key tell vs EBS).
+- "I need to keep the data volume when the instance is terminated" → set `DeleteOnTermination = false` on that volume.
+- "the public IP changed and broke the config" → it wasn't an Elastic IP; public IPv4 is reassigned on every start.
 
 ## 🖼️ Diagram
 
@@ -38,19 +38,19 @@
 stateDiagram-v2
     [*] --> pending
     pending --> running
-    running --> running: reboot · conserva IP + datos
+    running --> running: reboot · keeps IP + data
     running --> stopping: stop / hibernate
     stopping --> stopped
-    stopped --> pending: start · nueva IP pública
+    stopped --> pending: start · new public IP
     running --> shutting_down: terminate
     shutting_down --> terminated
-    terminated --> [*]: root EBS borrado · Instance Store perdido
+    terminated --> [*]: root EBS deleted · Instance Store lost
 ```
 
 ## 🔄 Easily confused with
 
-- → [Hibernation (requisitos y casos)](./04-hibernation.md) *(card del bloque, crear)*
-- Persistencia de almacenamiento a fondo → ver bloque [02 — Storage for EC2](../02-storage-ec2/README.md)
+- → [Hibernation (requirements & use cases)](./04-hibernation.md) *(block card, to be created)*
+- Storage persistence in depth → see block [02 — Storage for EC2](../02-storage-ec2/README.md)
 
 ---
 

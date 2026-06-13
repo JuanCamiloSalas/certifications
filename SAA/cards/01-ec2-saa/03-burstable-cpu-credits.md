@@ -4,46 +4,46 @@
 
 # Burstable Instances (T family) & CPU Credits
 
-> **Pitch (1 line):** las instancias **T** (T2/T3/T3a/T4g) son baratas y dan un rendimiento **baseline** con capacidad de **burst** por encima usando **créditos de CPU** — ideales para cargas con picos esporádicos.
+> **Pitch (1 line):** **T** instances (T2/T3/T3a/T4g) are cheap and deliver a **baseline** performance with the ability to **burst** above it using **CPU credits** — ideal for workloads with occasional spikes.
 
 ## 🎯 When the exam picks this
 
-- "carga con picos esporádicos, CPU baja de media, sensible al costo" → **familia T (burstable)**
-- "que pueda superar picos sin throttle aunque se acaben los créditos" → **T Unlimited mode**
-- "CPU alta y sostenida" → ⚠️ NO uses T → **Compute Optimized (familia C)**
+- "spiky/bursty workload, low average CPU, cost-sensitive" → **T family (burstable)**
+- "must sustain bursts even when credits run out" → **T Unlimited mode**
+- "high, sustained CPU" → ⚠️ NOT T → **Compute Optimized (C family)**
 
 ## 🧠 Core (non-obvious bits)
 
-- Cada instancia T tiene un **baseline** de CPU (un % fijo). Por debajo del baseline **gana** créditos; al hacer burst por encima **gasta** créditos.
-- **Standard mode:** si el saldo de créditos llega a 0 → la instancia queda **throttled al baseline** (la app se ralentiza).
-- **Unlimited mode:** puede seguir en burst aunque se agoten los créditos, pero **se factura un extra** si el uso medio supera el baseline.
-- Defaults importantes: **T2 = Standard** por defecto; **T3/T3a/T4g = Unlimited** por defecto.
-- Caso de uso típico: servidores web, dev/test, microservicios, BD pequeñas — todo lo de **CPU media baja con picos puntuales**.
+- Each T instance has a CPU **baseline** (a fixed %). Below baseline it **earns** credits; bursting above baseline **spends** credits.
+- **Standard mode:** when the credit balance hits 0 → the instance is **throttled to baseline** (the app slows down).
+- **Unlimited mode:** can keep bursting even with no credits, but you're **charged extra** if average usage exceeds the baseline.
+- Key defaults: **T2 = Standard** by default; **T3/T3a/T4g = Unlimited** by default.
+- Typical use cases: web servers, dev/test, microservices, small DBs — anything with **low average CPU and occasional spikes**.
 
 ## 🔢 Numbers to memorize
 
-- Métrica de CloudWatch a vigilar: **`CPUCreditBalance`** (si tiende a 0 bajo carga → te quedas sin créditos).
-- El baseline depende del tamaño (ej. `t3.micro` ≈ 10% × 2 vCPU). No memorices los %; memoriza el **concepto** baseline/burst.
+- CloudWatch metric to watch: **`CPUCreditBalance`** (trending to 0 under load → you're out of credits).
+- Baseline depends on size (e.g. `t3.micro` ≈ 10% × 2 vCPU). Don't memorize the %; memorize the **baseline/burst concept**.
 
 ## ⚠️ Common traps
 
-- "la app T2/T3 se vuelve lenta bajo carga sostenida" → se **agotaron los créditos** de CPU → activar **Unlimited** o migrar a **C** (compute optimized).
-- "más barato para una carga CPU-intensiva constante" → ❌ T no; el throttle o el extra de Unlimited lo encarecen. Es para picos, no para carga plana alta.
+- "the T2/T3 app slows down under sustained load" → it **ran out of CPU credits** → enable **Unlimited** or move to **C** (compute optimized).
+- "cheapest option for a constant CPU-intensive workload" → ❌ not T; throttling or the Unlimited surcharge makes it costly. T is for spikes, not flat high load.
 
 ## 🖼️ Diagram
 
 ```mermaid
 flowchart LR
-    A["CPU &lt; baseline"] -->|gana créditos| B[("Saldo de<br/>créditos CPU")]
-    C["Pico: CPU &gt; baseline"] -->|gasta créditos| B
-    B -->|saldo = 0| D{Modo}
-    D -->|Standard| E["Throttle al baseline"]
-    D -->|Unlimited| F["Sigue en burst<br/>+ cargo extra"]
+    A["CPU &lt; baseline"] -->|earns credits| B[("CPU credit<br/>balance")]
+    C["Spike: CPU &gt; baseline"] -->|spends credits| B
+    B -->|balance = 0| D{Mode}
+    D -->|Standard| E["Throttle to baseline"]
+    D -->|Unlimited| F["Keep bursting<br/>+ extra charge"]
 ```
 
 ## 🔄 Easily confused with
 
-- → [Tipos de instancia / familias (CCP)](../../../CCP/3_EC2/README.md) — General Purpose vs Compute Optimized vs Memory/Storage.
+- → [Instance families / types (CCP)](../../../CCP/3_EC2/README.md) — General Purpose vs Compute Optimized vs Memory/Storage.
 
 ---
 

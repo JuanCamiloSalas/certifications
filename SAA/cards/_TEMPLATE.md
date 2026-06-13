@@ -8,13 +8,25 @@ How to use:
 4. If the card is the first/only one in the block, point prev/next to the block's README.
 5. Delete any section that doesn't apply — an empty section is worse than no section.
 
-FORMATTING RULES:
-- One topic = one card. NEVER split a single topic across two cards just to hit a
+CONVENTIONS (locked — do not deviate without asking):
+- LANGUAGE: English only. The exam is English-only, so cards mirror it for immersion.
+- ONE TOPIC = ONE CARD. NEVER split a single topic across two cards just to hit a
   line count — that breaks the mental unit when reviewing. Prefer one longer card.
-- Keep it as tight as the topic allows (a short card is easier to review), but
-  length is a nudge, not a hard limit. Split only if it's genuinely two topics.
-- Do not transcribe slides. Only what is non-obvious or what already tricked you.
-- Long versus comparisons live in /comparativas, not here. Link to them.
+  Keep it as tight as the topic allows; length is a nudge, not a hard limit.
+- CONTENT: do not transcribe slides. Only what is non-obvious or what already
+  tricked you. Long versus comparisons live in /comparativas, not here — link them.
+- IMAGES (mixed model):
+    * Conceptual flows / topologies / state machines -> Mermaid (inline, no file).
+    * A real AWS architecture diagram adds more -> download it into ../../assets/
+      and link the LOCAL file. Never link fragile external URLs; never link a file
+      that doesn't exist yet.
+
+SECTIONS — which are required:
+- ALWAYS: nav buttons, title, Pitch, "When the exam picks this", "Core".
+- IF APPLICABLE: "Numbers to memorize" (only if the topic has memorizable numbers),
+  "Easily confused with" (only if there's a real comparison with another service).
+- OPTIONAL (include only when it genuinely adds value): "Common traps", "Diagram".
+  Do NOT force a diagram into every card.
 -->
 
 [![](https://img.shields.io/badge/<_Prev-FF4859?style=for-the-badge)](./PREV.md)
@@ -23,38 +35,44 @@ FORMATTING RULES:
 
 # <Service or concept>
 
+<!-- ALWAYS -->
 > **Pitch (1 line):** what it is, in a single sentence.
 
+<!-- ALWAYS -->
 ## 🎯 When the exam picks this
 
 Trigger phrases that point to this service:
 - "phrase 1"
 - "phrase 2"
 
+<!-- ALWAYS -->
 ## 🧠 Core (non-obvious bits)
 
 - Bullet for something that is NOT evident from the service name.
 - A technical detail that shows up in exam questions.
-- Cap at 4-6 bullets. If you need more, split the card.
+- Cap at 4-6 bullets.
 
+<!-- IF APPLICABLE: only if the topic has memorizable numbers -->
 ## 🔢 Numbers to memorize
 
 - Limit X: value
 - Limit Y: value
 
+<!-- OPTIONAL: only if there's a real trap worth flagging -->
 ## ⚠️ Common traps
 
 - "If they say X..." → correct answer.
 - "If they say Y..." → NOT this service, use the other one.
 
+<!-- IF APPLICABLE: only if there's a real comparison with another service -->
 ## 🔄 Easily confused with
 
 - → [vs <Service A>](../../comparativas/this-vs-A.md)
 - → [vs <Service B>](../../comparativas/this-vs-B.md)
 
+<!-- OPTIONAL: only when a visual genuinely clarifies. Mermaid for concepts;
+     a downloaded local image (../../assets/name.png) for real AWS diagrams. -->
 ## 🖼️ Diagram
-
-Only if it actually helps. Otherwise delete this section.
 
 ![alt text](../../assets/name.png)
 

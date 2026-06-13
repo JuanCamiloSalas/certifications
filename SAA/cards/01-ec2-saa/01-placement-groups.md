@@ -4,37 +4,37 @@
 
 # EC2 Placement Groups
 
-> **Pitch (1 line):** controlas *dónde* coloca AWS tus instancias en el hardware para optimizar **latencia** (Cluster), **aislamiento** (Spread) o **tolerancia a fallos de apps distribuidas** (Partition).
+> **Pitch (1 line):** you control *where* AWS places your instances on the hardware to optimize **latency** (Cluster), **isolation** (Spread), or **fault tolerance for distributed apps** (Partition).
 
 ## 🎯 When the exam picks this
 
 - "lowest latency / highest network throughput between instances" → **Cluster**
-- "instancias críticas que NO deben compartir hardware" → **Spread**
-- "app distribuida grande tipo HDFS / HBase / Cassandra / Kafka" → **Partition**
+- "critical instances that must NOT share hardware" → **Spread**
+- "large distributed app like HDFS / HBase / Cassandra / Kafka" → **Partition**
 
 ## 🧠 Core (non-obvious bits)
 
-- **Cluster** = misma AZ, mismo rack. 10 Gbps entre instancias, pero si cae el rack → caen todas. Riesgo concentrado a cambio de rendimiento.
-- **Spread** = cada instancia en hardware (rack) distinto. Máximo **aislamiento** de fallos, pero límite duro de instancias.
-- **Partition** = grupos de racks ("particiones") aislados entre sí; AWS expone en qué partición está cada instancia (partition-aware). Escala a cientos de instancias.
-- Puedes **mover** una instancia dentro/fuera de un placement group, pero debe estar **detenida** (vía CLI/SDK).
-- Para Cluster, lanza todas las instancias del **mismo tipo y de una vez** para evitar errores de capacidad insuficiente.
+- **Cluster** = same AZ, same rack. 10 Gbps between instances, but if the rack fails → they ALL go down. Concentrated risk in exchange for performance.
+- **Spread** = each instance on distinct hardware (rack). Maximum fault **isolation**, but a hard cap on instance count.
+- **Partition** = groups of racks ("partitions") isolated from each other; AWS exposes which partition each instance is in (partition-aware). Scales to hundreds of instances.
+- You can **move** an instance in/out of a placement group, but it must be **stopped** (via CLI/SDK).
+- For Cluster, launch all instances of the **same type and all at once** to avoid insufficient-capacity errors.
 
 ## 🔢 Numbers to memorize
 
-- **Spread:** máximo **7 instancias por AZ** por placement group.
-- **Partition:** máximo **7 particiones por AZ**.
-- Cluster: recomendado tipos que soporten **Enhanced Networking** para alcanzar el ancho de banda alto.
+- **Spread:** max **7 instances per AZ** per placement group.
+- **Partition:** max **7 partitions per AZ**.
+- Cluster: use instance types that support **Enhanced Networking** to reach the high bandwidth.
 
 ## ⚠️ Common traps
 
-- "necesito baja latencia Y alta disponibilidad" → ⚠️ Cluster da latencia pero NO HA (single rack). Si exigen ambas, repártelo en varias AZ (no es Cluster puro).
-- "pocas instancias críticas, cada una aislada" → **Spread** (no Partition).
-- "muchas instancias, app que ya replica datos" → **Partition** (Spread se queda corto por el límite de 7).
+- "low latency AND high availability" → ⚠️ Cluster gives latency but NOT HA (single rack). If they require both, spread across AZs (not a pure Cluster group).
+- "few critical instances, each isolated" → **Spread** (not Partition).
+- "many instances, app that already replicates data" → **Partition** (Spread falls short due to the 7-instance cap).
 
 ## 🔄 Easily confused with
 
-- → [Cluster vs Spread vs Partition](../../comparativas/cluster-spread-partition.md) *(crear si aún no existe)*
+- → [Cluster vs Spread vs Partition](../../comparativas/cluster-spread-partition.md) *(create if it doesn't exist yet)*
 
 ## 🖼️ Diagram
 
@@ -46,22 +46,22 @@ flowchart LR
         cb["EC2"]
         cc["EC2"]
     end
-    subgraph SPREAD["🟩 Spread · racks distintos · ≤7/AZ"]
+    subgraph SPREAD["🟩 Spread · distinct racks · ≤7/AZ"]
         direction TB
         sa["EC2 — rack A"]
         sb["EC2 — rack B"]
         sc["EC2 — rack C"]
     end
-    subgraph PARTITION["🟦 Partition · ≤7 particiones/AZ"]
+    subgraph PARTITION["🟦 Partition · ≤7 partitions/AZ"]
         direction TB
-        pa["Partición 1: EC2 · EC2"]
-        pb["Partición 2: EC2 · EC2"]
-        pc["Partición 3: EC2 · EC2"]
+        pa["Partition 1: EC2 · EC2"]
+        pb["Partition 2: EC2 · EC2"]
+        pc["Partition 3: EC2 · EC2"]
     end
 ```
 
-<!-- ¿Prefieres el slide del curso? Guarda el screenshot en ../../assets/placement-groups.png
-     y reemplaza el bloque mermaid de arriba por:
+<!-- Prefer the course slide? Save the screenshot to ../../assets/placement-groups.png
+     and replace the mermaid block above with:
      ![Placement groups](../../assets/placement-groups.png) -->
 
 ---

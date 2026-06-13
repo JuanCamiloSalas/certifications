@@ -41,8 +41,11 @@
 
 ## 📏 Quality rules
 
+- **Language: English only** (the exam is English-only — cards mirror it).
 - One topic = one card. Never split a single topic across two cards just for length — keep it together even if the card runs long. Split only when it's genuinely two topics.
 - No transcribing slides. Only non-obvious facts or things that already tricked you in a Dojo.
+- **Required sections:** Pitch, "When the exam picks this", "Core" — always. Numbers / "Easily confused with" only if applicable. Traps and Diagram are optional; don't force a diagram into every card.
+- **Images:** Mermaid for conceptual diagrams; for real AWS diagrams, download the file into [`../assets/`](../assets/) and link locally (no fragile external URLs).
 - Long versus comparisons live in [`../comparativas/`](../comparativas/), not here.
 - When a card mentions numbers (limits, timeouts, sizes), keep them in a dedicated section so they're easy to find in the final review.
 
