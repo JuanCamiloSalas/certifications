@@ -45,7 +45,7 @@
 
 ## 🔄 Easily confused with
 
-- → [DAX — DynamoDB Accelerator](../11-bd-data-ml/01-dynamodb.md) — microsecond latency cache, purpose-built for DynamoDB only
+- → [DAX — DynamoDB Accelerator](../11-bd-data-ml/02-dynamodb-advanced.md) — microsecond latency cache, purpose-built for DynamoDB only
 
 ---
 
