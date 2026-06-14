@@ -20,14 +20,11 @@ El estudio principal vive en [`cards/`](./cards/) — una flashcard por concepto
 | [`tips/`](./tips/) | Frases gatillo y trampas de examen acumuladas. Repaso final. |
 | [`errors/`](./errors/) | Doc maestro de errores de los simulacros Dojo. |
 | [`assets/`](./assets/) | Imágenes de soporte (diagramas, screenshots). |
-| [`planning/`](./planning/) | Plan de estudio semana a semana. |
+| [`planning/`](./planning/) | Plan de estudio de la recta final. |
 
 ## 📅 Planning de estudio
 
-- [Plan de estudio del mes](./planning/planning_mes.md)
-- [Semana 1 (5-10 mayo) — Fundamentos + RDS + Route 53](./planning/planning_semana1.md)
-- [Semana 2 (18-23 mayo) — Decoupling/Serverless + BD avanzadas + Primer Dojo SAA](./planning/planning_semana2.md)
-- [**Semana Final (8-15 junio) — Security + VPC + Cierre + Simulacros + EXAMEN 🎯**](./planning/planning_semana_final.md)
+- [**Recta Final (14-18 junio) — Repaso + Simulacros + EXAMEN 🎯**](./planning/planning_semana_final.md)
 
 ## 🎯 Filosofía de estos apuntes
 

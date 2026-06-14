@@ -1,3 +1,5 @@
+[![](https://img.shields.io/badge/<_SAA-FF4859?style=for-the-badge)](../README.md)
+
 # Recta Final (14-18 junio) — Repaso + Simulacros + EXAMEN
 
 > **Foco:** temario cerrado al 100%. Fase de **repaso general (flashcards + quices) + simulacros diarios + repaso de puntos débiles**.
@@ -150,3 +152,7 @@ Promedio de los **3 simulacros completos** (dom + lun + mar):
 ---
 
 *Actualizado el 14 de junio de 2026. Examen el jueves 18 de junio. Recta final: repaso + 3 simulacros (dom-lun-mar), GO/NO-GO el martes, consolidación en practice mode el miércoles, examen el jueves.*
+
+---
+
+[![](https://img.shields.io/badge/<_SAA-FF4859?style=for-the-badge)](../README.md)
