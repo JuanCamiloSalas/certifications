@@ -1,109 +1,102 @@
-# Semana Final (12-16 junio) — Cierre de contenido + Simulacros + EXAMEN
+# Recta Final (14-18 junio) — Repaso + Simulacros + EXAMEN
 
-> **Foco:** cerrar el 100% del temario (Sec 29 DR + 30-34) HOY y entrar en fase intensiva de simulacros.
-> **Hito al cierre:** curso completo + 2 Dojo SAA completos revisados + decisión GO/NO-GO.
-> **🎯 EXAMEN: martes 16 de junio (AM)** — Inglés + 30 min ESL.
+> **Foco:** temario cerrado al 100%. Fase de **repaso general (flashcards + quices) + simulacros diarios + repaso de puntos débiles**.
+> **Hito al cierre:** 3 simulacros completos revisados + decisión GO/NO-GO + 1 simulacro de consolidación.
+> **🎯 EXAMEN: jueves 18 de junio (AM)** — Inglés + 30 min ESL.
 
-## 📍 Punto de partida real (viernes 12 de junio)
+## 📍 Punto de partida real (domingo 14 de junio)
 
-- ✅ Completado: Sec 6-11, 13-28 — **incluido VPC (Sec 28), el bloque más pesado del SAA**.
-- ❌ **Pendiente de temario:** Sec 29 (DR/Migraciones) + Sec 30-34 (cierre) ≈ 2-3h de video / ~3-4h reales.
-- ❌ Aún sin Dojo SAA completo esta semana.
+- ✅ **Temario al 100%** (todas las secciones cerradas, incluido VPC y DR).
+- ✅ Flashcards del repo completas (bloques 01-16).
+- ▶️ Hoy arranca el **repaso general**: pasar las flashcards + **quiz cada 3 bloques** de cards.
+- 🎯 Examen reagendado al **jueves 18** → 2 días extra que dan margen para 3-4 simulacros sin agobio.
 
-> **Lectura honesta:** el contenido se deslizó (debías cerrar el curso el jueves 11), PERO pasaron dos cosas a tu favor: (1) ya tienes VPC dominado, que es lo que de verdad pesa, y (2) el examen se movió al **martes 16**, lo que te da un día extra que absorbe casi exacto el atraso. El plan vuelve a estar holgado **si cierras el temario hoy sin excepción**.
+> **Lectura honesta:** ya no hay contenido nuevo que cerrar. Lo único que mueve la aguja ahora es **practicar preguntas, registrar errores y cerrar gaps**. La disciplina clave de esta semana: **un simulacro completo por día, por la mañana, descansado** — tus mejores Dojos siempre fueron AM.
 
 ## ⏱️ Disponibilidad restante
 
-| Día | Horas | Misión |
-|---|---|---|
-| Vie 12 | 4-5h | Cerrar contenido (Sec 29 + 30-34) → **100% del curso** |
-| Sáb 13 | 6-8h | Dojo SAA completo #1 + revisión |
-| Dom 14 | 4-5h | Dojo SAA completo #2 + revisión enfocada |
-| Lun 15 | Descanso + repaso ligero (día previo al examen) | |
-| Mar 16 | **EXAMEN** 🎯 | |
+| Día | Misión |
+|---|---|
+| Dom 14 | Repaso general (flashcards) + quices cada 3 bloques + **Simulacro #1** (exam mode) + repaso de errores |
+| Lun 15 | **Simulacro #2** (exam mode) + quices restantes + repaso de errores |
+| Mar 16 | **Simulacro #3** (exam mode) + repaso profundo + 🌙 **GO/NO-GO** |
+| Mié 17 | **Simulacro en practice mode** (AM, repaso guiado) + cierre ligero. Estudio cerrado a las 5-6 PM |
+| Jue 18 | **EXAMEN** 🎯 |
 
-**Necesario:** ~3-4h de contenido + 2 simulacros → **holgado si cierras el temario hoy**.
+## 🎯 Objetivos de la recta final
 
-## 🎯 Objetivos de la semana
-
-- ✅ Cerrar Sec 29 + 30-34 → **100% del curso** HOY viernes 12.
-- ✅ Hacer **2 Dojo SAA completos** (sáb + dom) + topic-based de DR.
-- ✅ Comparativas críticas de DR y migración de datos en `comparativas/`.
-- ✅ Decisión **GO/NO-GO** el domingo por la noche.
+- ✅ Repaso completo de las 16 cards con **quices cada 3 bloques** (1-3, 4-6, 7-9, 10-12, 13-15, 16).
+- ✅ **3 simulacros completos** (dom + lun + mar) en exam mode + 1 de consolidación en practice mode (mié).
+- ✅ Tras **cada** simulacro: repaso de puntos débiles → [`errors/doc-maestro.md`](../errors/doc-maestro.md).
+- ✅ Decisión **GO/NO-GO** el martes 16 por la noche.
 
 ---
 
 ## 📅 Plan día por día
 
-### 🟦 Viernes 12 — Sec 29 (DR) + Sec 30-34 (cierre) → **100% del curso** (4-5h)
+### 🟦 Domingo 14 — Repaso general + Simulacro #1
 
-**Contenido (prioridad absoluta — no se recorta):**
-- [ ] Sección 29: Disaster Recovery y Migraciones (Backup/Restore, Pilot Light, Warm Standby, Multi-Site; DMS, SMS, DataSync, Snowball, Storage Gateway).
-- [ ] Secciones 30-34: cierre (white papers / Well-Architected / temas finales del curso).
+**Mañana — Repaso activo:**
+- [ ] Pasar las flashcards de todos los bloques (lectura activa, no pasiva: tapar la respuesta).
+- [ ] **Quices cada 3 bloques:** 01-03, 04-06, 07-09, 10-12, 13-15, 16. Empieza hoy y reparte los que falten al lunes.
+- [ ] Anotar en `errors/doc-maestro.md` cualquier card que falles o dudes.
 
-**Apuntes — `cards/16-dr-migration` + `comparativas/`:**
-- Tabla CRÍTICA: **estrategias DR** (RTO/RPO/costo ascendente): Backup&Restore → Pilot Light → Warm Standby → Multi-Site.
-- Tabla: **migración de datos**: DataSync vs DMS vs Snowball/Snowmobile vs Storage Gateway.
-- Tips para `tips/`:
-  - "RPO/RTO bajísimos, costo no importa" → Multi-Site (active-active).
-  - "el más barato, RTO de horas aceptable" → Backup & Restore.
-  - "migrar BD con downtime mínimo" → DMS.
-  - "transferir TB/PB sin red suficiente" → Snowball.
-  - "transferencia continua on-prem ↔ AWS por red" → DataSync.
-
-**Cierre de contenido (30 min):**
-- [ ] ✅ Marcar curso al 100%.
-- [ ] Lectura horizontal de TODAS las comparativas: detectar las 3 que aún confunden (apuntar para repaso de Lun).
-
-**Si sobra tiempo (no obligatorio):**
-- [ ] Dojo topic-based (15-20 preg — DR/Migración) → anotar errores en `errors/doc-maestro.md`.
-
-> 🎯 **Hito innegociable:** al cerrar hoy, el temario está COMPLETO. Sábado y domingo son solo simulacros.
-
----
-
-### 🟦 Sábado 13 — Dojo SAA completo #1 + repaso (6-8h)
-
-**Mañana — Dojo SAA completo (90 min cronometrados):**
-- [ ] Exam mode, en inglés, sin pausas. Aplicar regla "select N".
+**Simulacro #1 (90 min cronometrados, exam mode):**
+- [ ] En inglés, sin pausas. Aplicar regla "select N" (contar marcas antes de avanzar).
 - [ ] Anotar solo números: DUDAS / ADIVINÉ / SERVICIO DESCONOCIDO.
 
-**Tarde — Revisión (2.5-3h):**
-- [ ] Ver puntaje, descansar 5 min, NO leer explicaciones al instante.
+**Repaso de puntos débiles:**
 - [ ] Revisar TODOS los errores + las DUDAS aunque acertaras → `errors/doc-maestro.md`.
-- [ ] Identificar el dominio más débil del desglose.
-- [ ] 15-20 preguntas topic-based del dominio más flojo.
-
-> Llega descansado: duerme bien el viernes. Tus mejores Dojo del CCP fueron AM y descansado.
+- [ ] Identificar el **dominio más débil** del desglose.
 
 ---
 
-### 🟦 Domingo 14 — Dojo SAA completo #2 + repaso intensivo (4-5h) + GO/NO-GO
+### 🟦 Lunes 15 — Simulacro #2 + repaso
 
-**Mañana — Dojo SAA completo (90 min):** mismo protocolo.
+**Mañana — Simulacro #2 (90 min, exam mode):** mismo protocolo.
 
 **Tarde:**
-- [ ] Revisión completa pregunta por pregunta → doc maestro.
-- [ ] Repaso profundo de los 2 dominios más débiles de los 2 simulacros.
+- [ ] Terminar los **quices** de los bloques que falten.
+- [ ] Repaso completo de errores pregunta por pregunta → doc-maestro.
+- [ ] 15-20 preguntas topic-based del **dominio más flojo** de los simulacros #1 y #2.
+
+> Llega descansado a cada simulacro: duerme bien. El cansancio cuesta puntos.
+
+---
+
+### 🟦 Martes 16 — Simulacro #3 + repaso intensivo + GO/NO-GO
+
+**Mañana — Simulacro #3 (90 min, exam mode):** mismo protocolo.
+
+**Tarde:**
+- [ ] Revisión completa pregunta por pregunta → doc-maestro.
+- [ ] Repaso profundo de los **2 dominios más débiles** de los 3 simulacros.
 - [ ] Repasar las comparativas que sigas fallando (sobre todo VPC, Security y DR).
 
-**🌙 Noche — Decisión GO/NO-GO** (ver tabla abajo).
+**🌙 Noche — Decisión GO/NO-GO** (ver tabla abajo, promedio de los 3 simulacros).
 
-> 🚫 **Regla de oro:** un solo simulacro completo por día. Sábado uno, domingo uno. El cansancio cuesta puntos.
-
----
-
-### 🟦 Lunes 15 — Descanso + repaso ligero (día previo al examen)
-
-- ❌ **CERO simulacros.** ❌ Nada de contenido nuevo.
-- ✅ Lectura tranquila de `tips/tips-examen.md`, comparativas y doc maestro de errores.
-- ✅ Repasar VPC, Security y DR una última vez si quedaron dudas (solo notas, no videos).
-- ✅ **Cerrar el estudio a las 5-6 PM.** Cena ligera, dormir temprano.
-- ✅ Logística: confirmar hora del examen, +30 min ESL activo, documento de identidad, llegar/conectar con margen.
+> 🚫 **Regla de oro:** un solo simulacro completo por día. El cansancio acumulado cuesta más que la práctica extra.
 
 ---
 
-### 🟦 Martes 16 — 🎯 EXAMEN
+### 🟦 Miércoles 17 — Simulacro practice mode (repaso guiado) + cierre ligero
+
+**Mañana — Simulacro en PRACTICE MODE (no exam mode):**
+- [ ] Feedback inmediato por pregunta: leer la explicación en el momento, reforzar el porqué.
+- [ ] Sin cronómetro estricto. Es **repaso activo**, no un test de rendimiento — no anotes "puntaje".
+- [ ] Foco en los dominios más débiles detectados el martes.
+
+**Tarde — Cierre ligero (sin esfuerzo):**
+- [ ] Lectura tranquila de `tips/tips-examen.md`, comparativas y `errors/doc-maestro.md` front-to-back.
+- [ ] ❌ Nada de contenido nuevo. ❌ Nada de exam mode.
+- [ ] **Cerrar el estudio a las 5-6 PM.** Cena ligera, dormir temprano.
+- [ ] Logística: confirmar hora del examen, +30 min ESL activo, documento de identidad, conectar/llegar con margen.
+
+> El GO/NO-GO ya está decidido (martes). El miércoles no busca un número: busca **consolidar y llegar fresco**.
+
+---
+
+### 🟦 Jueves 18 — 🎯 EXAMEN
 
 - ✅ Desayuno bueno, llegar fresco (tus mejores Dojo fueron AM y descansado).
 - ✅ Regla "select N": contar marcas antes de avanzar.
@@ -112,15 +105,15 @@
 
 ---
 
-## 🧭 Decisión GO / NO-GO (domingo 14 por la noche)
+## 🧭 Decisión GO / NO-GO (martes 16 por la noche)
 
-Promedio de los **2 Dojo completos** del sáb + dom (más los previos si los tienes):
+Promedio de los **3 simulacros completos** (dom + lun + mar):
 
 | Promedio | Decisión |
 |---|---|
-| ≥ 78% | **GO** el martes 16 con confianza. |
-| 72-77% | **GO** con repaso enfocado el lunes (solo notas, sin agotarte). |
-| 65-71% | GO ajustado: el examen perdona ~72%. Refuerza el dominio más flojo el lunes. Reagendar solo si te sientes muy inseguro. |
+| ≥ 78% | **GO** el jueves 18 con confianza. |
+| 72-77% | **GO** con repaso enfocado (mié practice mode + notas, sin agotarte). |
+| 65-71% | GO ajustado: el examen perdona ~72%. Refuerza el dominio más flojo el miércoles. Reagendar solo si te sientes muy inseguro. |
 | < 65% | Considera mover la fecha. Hay gap real que un día no cierra. |
 
 > El SAA-C03 se aprueba con **720/1000 (~72%)**. Los Dojo son más duros que el examen real: un 70% sostenido en Dojo suele traducirse en aprobado.
@@ -129,30 +122,31 @@ Promedio de los **2 Dojo completos** del sáb + dom (más los previos si los tie
 
 ## 🚨 Señales de alarma
 
-- **Si hoy viernes 12 no cierras el temario:** usa la mañana del sábado para terminarlo y mueve el primer simulacro completo a la tarde del sábado. NO sacrifiques tener el contenido al 100%.
-- **Si un Dojo te da < 60%:** no entres en pánico, pero el lunes deja de ser descanso puro y se vuelve repaso del dominio más débil (excepción justificada).
-- **Si llegas agotado al domingo:** prioriza el simulacro de la mañana y dormir bien. El descanso del lunes es innegociable.
+- **Si un simulacro te da < 60%:** no entres en pánico, pero el repaso de la tarde se vuelve obligatorio y enfocado en el dominio más débil.
+- **Si llegas agotado al martes:** prioriza el simulacro de la mañana y dormir bien. El miércoles ligero es innegociable.
+- **Si el miércoles te tienta hacer exam mode:** no. Practice mode + descanso. Un mal puntaje la víspera solo añade ruido.
 
-## 📊 Métricas de control (cierre del domingo 14)
+## 📊 Métricas de control (cierre del martes 16)
 
 | Métrica | Meta |
 |---|---|
-| Curso completo | ✅ 100% (Sec 29-34 cerradas) |
-| Comparativas nuevas (DR + Migración) | +2 tablas |
-| Dojo SAA completos esta semana | 2 (sáb + dom) |
-| Tips acumulados en `tips/` | 35+ |
+| Flashcards repasadas (16 bloques) | ✅ 100% |
+| Quices por tramo de 3 bloques | 6 quices hechos |
+| Simulacros completos (exam mode) | 3 (dom + lun + mar) |
+| Errores registrados en doc-maestro | ✅ tras cada simulacro |
 | Recursos AWS apagados/eliminados | ✅ |
 | Decisión GO/NO-GO tomada | ✅ |
 
-## ✅ Checklist final (lunes 15 noche)
+## ✅ Checklist final (miércoles 17 noche)
 
-- [ ] Curso al 100% y comparativas críticas repasadas.
-- [ ] 2 Dojo completos hechos y revisados; errores en doc maestro.
-- [ ] Promedio Dojo ≥ 72% (o plan de contingencia claro).
+- [ ] 16 bloques de flashcards repasados + 6 quices hechos.
+- [ ] 3 simulacros completos hechos y revisados; errores en doc-maestro.
+- [ ] Promedio simulacros ≥ 72% (o plan de contingencia claro).
+- [ ] Simulacro de consolidación en practice mode (mié AM) hecho.
 - [ ] VPC, Security y DR dominados a nivel escenario.
 - [ ] Logística del examen confirmada (+30 min ESL, identidad, hora).
 - [ ] Estudio cerrado antes de las 6 PM. A dormir temprano.
 
 ---
 
-*Actualizado el 12 de junio de 2026. Examen el martes 16 de junio. Recta final: cierre de contenido viernes, simulacros sáb-dom, descanso lunes, examen martes.*
+*Actualizado el 14 de junio de 2026. Examen el jueves 18 de junio. Recta final: repaso + 3 simulacros (dom-lun-mar), GO/NO-GO el martes, consolidación en practice mode el miércoles, examen el jueves.*
