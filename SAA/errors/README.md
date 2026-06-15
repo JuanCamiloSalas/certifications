@@ -6,7 +6,8 @@
 
 ## Files
 
-- [`doc-maestro.md`](./doc-maestro.md) — running log of mistakes from Dojo simulators.
+- [`review.md`](./review.md) — priority review: distilled, ordered by exam-weight × weakness. Read this first.
+- [`doc-maestro.md`](./doc-maestro.md) — running log of mistakes from Dojo simulators (full detail).
 
 ## Rules
 
