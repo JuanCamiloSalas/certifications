@@ -53,10 +53,9 @@
 
 ## Index of comparisons
 
-_(populate as you create them)_
-
 | File | Topic | Block |
 |---|---|---|
+| [sqs-vs-sns-vs-kinesis.md](./sqs-vs-sns-vs-kinesis.md) | SQS vs SNS vs Kinesis vs Amazon MQ | 08 – Decoupling |
 
 ---
 
