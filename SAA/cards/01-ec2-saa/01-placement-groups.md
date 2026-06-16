@@ -34,7 +34,7 @@
 
 ## 🔄 Easily confused with
 
-- → [Cluster vs Spread vs Partition](../../comparativas/cluster-spread-partition.md) *(create if it doesn't exist yet)*
+- → [Cluster vs Spread vs Partition](../../comparativas/cluster-spread-partition.md)
 
 ## 🖼️ Diagram
 

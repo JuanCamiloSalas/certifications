@@ -55,6 +55,7 @@
 
 | File | Topic | Block |
 |---|---|---|
+| [cluster-spread-partition.md](./cluster-spread-partition.md) | EC2 Placement Groups: Cluster vs Spread vs Partition | 01 – EC2 |
 | [sqs-vs-sns-vs-kinesis.md](./sqs-vs-sns-vs-kinesis.md) | SQS vs SNS vs Kinesis vs Amazon MQ | 08 – Decoupling |
 
 ---
