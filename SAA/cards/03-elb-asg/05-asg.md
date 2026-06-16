@@ -33,6 +33,10 @@
 
 **Multi-AZ behavior:**
 - ASG spans multiple AZs. If an AZ becomes unhealthy, ASG re-launches instances in healthy AZs. This is how ASG provides HA.
+- **HA capacity math:** if the app needs **N** instances to function, set `min = N × (number of AZs)`. Need 2 with 2 AZs → `min=4` (2 per AZ), so one AZ failure still leaves the required 2.
+
+**Default termination policy (scale-in):**
+- (1) Pick the AZ with the **most** instances; (2) within it, terminate the one using the **oldest launch template/configuration**. Not random, not longest-running.
 
 ## 🔢 Numbers to memorize
 
@@ -44,6 +48,8 @@
 - "scale in policies won't terminate instances being drained by the ELB" — ASG respects Connection Draining (Deregistration Delay) before terminating.
 - "predictive scaling" ≠ scheduled — predictive uses ML and actual historical data; scheduled is manual cron.
 - ASG does NOT auto-balance perfectly if Cross-Zone LB is off on the attached NLB.
+- "which instance is terminated on scale-in?" → AZ with most instances, then oldest launch template. NOT random.
+- "min N to function across M AZs" → set `min = N × M`, not just N.
 
 ---
 

@@ -22,7 +22,8 @@
 - **Identity sources:**
   - **IAM Identity Center built-in directory** — manage users/groups here directly.
   - **AWS Managed Microsoft AD** — full managed AD in AWS.
-  - **AD Connector** — proxy to on-premises AD (no sync).
+  - **AD Connector** — proxy auth to an **existing on-prem AD** (no sync, no migration). Use when the AD already exists.
+  - **Simple AD** — standalone, low-cost LDAP-compatible managed directory with **no link to on-prem AD**. Use when there's no existing directory.
   - **External IdP (SAML 2.0)** — any SAML-compliant IdP (Okta, Azure AD).
 - Works natively with **AWS Organizations** — assign access to OUs or individual accounts.
 - Replaces the old "manual IAM role in each account" pattern for cross-account access.
@@ -42,6 +43,7 @@
 - IAM Identity Center ≠ Cognito: Identity Center = workforce SSO for employees accessing AWS/SaaS; Cognito = customer-facing app authentication.
 - Control Tower ≠ Organizations: Organizations is the primitive (account grouping, billing, SCPs); Control Tower is an opinionated setup layer on top.
 - Control Tower guardrails ≠ SCPs directly: preventive guardrails use SCPs, but detective ones use Config — don't confuse the enforcement mechanism.
+- AD Connector ≠ Simple AD: "existing on-prem AD" → AD Connector (proxy); "no existing directory, just need one" → Simple AD (standalone).
 
 ---
 

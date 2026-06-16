@@ -14,6 +14,7 @@
 - "scale read traffic, reporting queries" → **RDS Read Replicas**
 - "automatic failover, high availability" → **RDS Multi-AZ**
 - "encrypt data at rest in the DB" → **RDS encryption with KMS**
+- "auth token from the instance's IAM profile, no password" → **IAM DB Authentication**
 
 ## 🧠 Core (non-obvious bits)
 
@@ -38,6 +39,10 @@
 - **At rest:** KMS (CMK or AWS-managed). Must be enabled at **creation time** — to encrypt an existing unencrypted DB, snapshot → copy with encryption → restore.
 - **In transit:** SSL/TLS always available; enforce with `rds.force_ssl` parameter.
 - Read Replicas of an encrypted DB are **automatically encrypted**.
+
+**IAM DB Authentication (MySQL/PostgreSQL):**
+- Connect with a **short-lived token** (15 min) generated from the EC2 instance's IAM role — no DB password stored. Uses STS under the hood; SSL/TLS required.
+- Trigger phrase: "authentication token from instance profile credentials" → enable **IAM DB Authentication**.
 
 ## 🔢 Numbers to memorize
 

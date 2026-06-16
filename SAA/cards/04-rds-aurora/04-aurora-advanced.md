@@ -13,6 +13,7 @@
 - "database that scales to zero when idle" → **Aurora Serverless**
 - "cross-region DR, < 1s replication, < 1 min failover" → **Aurora Global Database**
 - "undo an accidental DELETE without a full restore" → **Aurora Backtrack**
+- "trigger a workflow on a row-level change (INSERT/UPDATE/DELETE)" → **Aurora native Lambda invoke**
 
 ## 🧠 Core (non-obvious bits)
 
@@ -33,6 +34,10 @@
 - Available for **Aurora MySQL** only (not PostgreSQL).
 - Backtrack window: up to **72 hours**.
 - Use case: accidental large-scale DELETE or schema change — rewind in seconds.
+
+**Native Lambda invoke (Aurora MySQL):**
+- A **row-level trigger** can call `lambda_sync` / `lambda_async` to invoke a Lambda on INSERT/UPDATE/DELETE — the canonical way to start a workflow from a data change.
+- ⚠️ Not the same as **RDS event subscriptions**, which fire on *instance-level* events (failover, backup, maintenance) — never on row data.
 
 ## 🔢 Numbers to memorize
 
