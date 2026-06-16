@@ -36,6 +36,7 @@
 - Question: ASG needs minimum 2 EC2 instances for normal load, up to 6 at peak; highly available + fault-tolerant
 - Trap: Set min=2 with 2 AZs (1 per AZ) — "at least 2" seemed satisfied
 - Rule: If the app needs N instances minimum to function, set ASG min to N × (number of AZs). With min=2 needed and 2 AZs → set min=4 (2 per AZ). One AZ failure still leaves the required 2 running.
+- Card: [03 · Auto Scaling Group](../cards/03-elb-asg/05-asg.md)
 
 ---
 
@@ -44,6 +45,7 @@
 - Question: SSO from corporate AD/LDAP to S3 with per-user folder restriction (Select TWO)
 - Trap: Selected "3rd party SSO (OKTA, Atlassian)" instead of "IAM Role + IAM Policy"
 - Rule: Federation = Identity Provider + STS for temp tokens + IAM Role + IAM Policy. The IAM Role/Policy is always required to grant actual resource access. 3rd party SSO tools (OKTA etc.) don't replace IAM roles in AWS.
+- Card: [13 · Federation](../cards/13-iam-advanced/02-federation.md)
 
 ---
 
@@ -52,6 +54,7 @@
 - Question: DynamoDB WCUs unevenly consumed due to poor key distribution — fix the partition key
 - Trap: Chose low-cardinality partition keys (few distinct values)
 - Rule: DynamoDB partition key must have HIGH cardinality (many distinct values) to spread writes evenly across partitions. Low cardinality = hot partitions = uneven WCU consumption.
+- Card: [11 · DynamoDB](../cards/11-bd-data-ml/01-dynamodb.md)
 
 ---
 
@@ -60,6 +63,7 @@
 - Question: Aurora MySQL — when a row is deleted (vehicle sold), trigger a distributed processing workflow
 - Trap: Used RDS event subscription → SNS → SQS; thought RDS events fire on data changes
 - Rule: RDS/Aurora event subscriptions fire on INSTANCE-level events (failover, backup, maintenance), NOT row-level data changes. For row-level triggers in Aurora MySQL → Aurora native Lambda invoke function (lambda_sync / lambda_async).
+- Card: [04 · Aurora Advanced](../cards/04-rds-aurora/04-aurora-advanced.md)
 
 ---
 
@@ -68,6 +72,7 @@
 - Question: Static website behind CloudFront getting HTTP 504 errors under millions of requests
 - Trap: Chose multi-region routing or Lambda@Edge instead of fixing the cache
 - Rule: 504 on CloudFront = origin is timing out / overloaded. Fix = increase cache hit ratio via Cache-Control max-age at the origin. Fewer cache misses = fewer origin requests = fewer 504s.
+- Card: [07 · CloudFront](../cards/07-cdn/01-cloudfront.md)
 
 ---
 
@@ -76,6 +81,7 @@
 - Question: Social network app on DynamoDB — react to data changes for the follow/notification feature
 - Trap: Chose Kinesis or SNS instead of DynamoDB Streams
 - Rule: DynamoDB Streams captures item-level changes (INSERT, MODIFY, REMOVE) as an ordered stream. DynamoDB Streams + Lambda is the canonical pattern for reactive workflows triggered by data changes.
+- Card: [11 · DynamoDB Advanced](../cards/11-bd-data-ml/02-dynamodb-advanced.md)
 
 ---
 
@@ -84,6 +90,7 @@
 - Question: Deploy new API version on API Gateway with zero downtime
 - Trap: Updated existing API without using canary/stage routing
 - Rule: API Gateway zero-downtime deployment = blue-green via canary release (stage variables + % traffic routing). Gradually shift traffic from old stage to new, validate, then cut over 100%.
+- Card: [10 · API Gateway](../cards/10-serverless/04-api-gateway.md)
 
 ---
 
@@ -92,6 +99,7 @@
 - Question: ASG with default settings, scale-in triggered — which instance is terminated first?
 - Trap: Assumed random selection
 - Rule: ASG default termination policy: (1) find the AZ with the most instances; (2) within that AZ, terminate the instance from the OLDEST launch template/configuration. Not random. Not the longest-running.
+- Card: [03 · Auto Scaling Group](../cards/03-elb-asg/05-asg.md)
 
 ---
 
@@ -100,6 +108,7 @@
 - Question: RDS must be accessed only via auth tokens derived from the EC2 instance's IAM profile credentials
 - Trap: Answered "use IAM + STS combination for temp auth token" — describes the mechanism but not the feature
 - Rule: The feature is Enable IAM DB Authentication. It generates short-lived tokens via the instance's IAM role (STS under the hood). Trigger phrase: "authentication token from instance profile credentials" → IAM DB Authentication.
+- Card: [04 · RDS](../cards/04-rds-aurora/01-rds.md)
 
 ---
 
@@ -108,6 +117,7 @@
 - Question: EKS cluster — encrypt sensitive data stored in the cluster's etcd key-value store
 - Trap: Chose Secrets Manager + KMS (Secrets Manager stores secrets externally, not inside etcd)
 - Rule: To encrypt EKS etcd secrets → enable envelope encryption on the EKS cluster using a KMS key. Secrets Manager is for external secret storage; it does NOT encrypt the etcd store itself.
+- Card: [09 · EKS](../cards/09-containers/03-eks.md)
 
 ---
 
@@ -116,6 +126,7 @@
 - Question: ML training needs high-performance parallel hot storage + cost-effective cold archive
 - Trap: Chose FSx for Lustre + EBS io1 (EBS is per-instance block storage, not cold/archive)
 - Rule: ML cold/archive = S3 (not EBS). FSx for Lustre integrates natively with S3 as a backing cold store. EBS is per-instance block storage with no archive semantics.
+- Card: [02 · FSx](../cards/02-storage-ec2/07-fsx.md)
 
 ---
 
@@ -124,6 +135,7 @@
 - Question: Which CloudWatch metric for EC2 requires manual/custom setup?
 - Trap: Chose "Network packets out" (it's a standard hypervisor-visible metric)
 - Rule: EC2 standard CW metrics (no agent): CPUUtilization, NetworkIn/Out, DiskReadOps/WriteOps, NetworkPacketsIn/Out. Custom metrics (CW Agent required): Memory utilization, disk space / swap (OS-level, not visible to the hypervisor).
+- Card: [12 · CloudWatch](../cards/12-monitoring/01-cloudwatch.md)
 
 ---
 
@@ -132,6 +144,7 @@
 - Question: Relational DB — RPO = 1 s, RTO < 1 min, automatic cross-region failover (beyond RDS Multi-AZ)
 - Trap: Chose RDS cross-region read replicas (require manual promotion, RTO >> 1 min)
 - Rule: Cross-region RPO ~1 s + RTO < 1 min = Aurora Global Database (automated cross-region failover < 1 min). RDS cross-region read replicas require manual promotion — not automatic, not sub-minute.
+- Card: [04 · Aurora Advanced](../cards/04-rds-aurora/04-aurora-advanced.md)
 
 ---
 
@@ -140,6 +153,7 @@
 - Question: Migrate .NET ML app (Windows Server) + Oracle DB backend to AWS with minimal refactoring
 - Trap: Chose ECS containers or AWS MGN instead of DMS + Beanstalk
 - Rule: Homogeneous DB migration (Oracle → RDS Oracle) = AWS DMS. .NET app on Windows = Elastic Beanstalk (managed Windows platform, minimal refactoring). DMS handles the DB; Beanstalk handles the app.
+- Card: [16 · DMS & SCT](../cards/16-dr-migration/02-dms-sct.md) _(Elastic Beanstalk: sin card aún)_
 
 ---
 
@@ -148,6 +162,7 @@
 - Question: Route production traffic to high-capacity Aurora instances, reporting queries to low-capacity instances
 - Trap: Used instance endpoint for production + cluster endpoint for reporting
 - Rule: Aurora endpoints: Cluster = primary writer. Reader = load-balance across ALL readers. Custom endpoint = specific subset of instances you define. Use custom endpoints to route by instance size or workload type.
+- Card: [04 · Aurora](../cards/04-rds-aurora/03-aurora.md)
 
 ---
 
@@ -156,6 +171,7 @@
 - Question: Federation from existing corporate Active Directory to AWS Console — roles already in corporate AD (Select TWO)
 - Trap: Chose Simple AD instead of AD Connector
 - Rule: Existing on-prem AD → AWS access = AD Connector (proxies auth requests to the existing AD, no sync, no migration). Simple AD = standalone LDAP-compatible managed directory with NO connection to on-prem AD.
+- Card: [13 · Identity Center](../cards/13-iam-advanced/05-identity-center.md)
 
 ---
 
@@ -164,6 +180,7 @@
 - Question: Multi-account S3 data lake — query centrally with role-based access control
 - Trap: Chose AWS Control Tower (Control Tower = account governance, not data access management)
 - Rule: Multi-account data lake + role-based access = AWS Lake Formation (manages data lake permissions, cross-account data sharing, column/row-level security). Control Tower manages account guardrails, not data permissions.
+- Card: _(Lake Formation: sin card aún)_
 
 ---
 
@@ -172,6 +189,7 @@
 - Question: RDS database loses access during AZ outages — prevent it with a simpler same-region solution
 - Trap: Chose "Create a read replica" (async replication, manual promotion required)
 - Rule: AZ failure protection for RDS = Multi-AZ (synchronous standby, automatic failover). Read replicas = read scaling via async replication, NOT automatic failover. Read replicas must be manually promoted.
+- Card: [04 · RDS](../cards/04-rds-aurora/01-rds.md)
 
 ---
 
@@ -180,6 +198,7 @@
 - Question: Hybrid company — on-prem documents need immediate access + cost-effective archiving of older data
 - Trap: Chose DataSync or direct S3 upload (no local cache for immediate access)
 - Rule: Hybrid file access + automatic tiering to Glacier = Storage Gateway File Gateway + S3 lifecycle policy. File Gateway caches recently accessed files on-prem; lifecycle rules tier older S3 objects to Glacier automatically.
+- Card: [16 · Storage Gateway](../cards/16-dr-migration/05-storage-gateway.md)
 
 ---
 
@@ -188,6 +207,7 @@
 - Question: MySQL RDS in single AZ — improve HA using synchronous replication to another instance
 - Trap: Chose RDS Read Replica (Read Replicas use ASYNCHRONOUS replication)
 - Rule: "Synchronous replication" in RDS = Multi-AZ deployment. Read Replicas = asynchronous. The word "synchronous" is the exact trigger phrase for Multi-AZ. Never confuse the two.
+- Card: [04 · RDS](../cards/04-rds-aurora/01-rds.md)
 
 ---
 
