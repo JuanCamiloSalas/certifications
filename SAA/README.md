@@ -17,6 +17,7 @@ El estudio principal vive en [`cards/`](./cards/) — una flashcard por concepto
 |---|---|
 | [`cards/`](./cards/) | Mazo de flashcards (1 archivo = 1 concepto). Estudio diario. |
 | [`comparativas/`](./comparativas/) | Tablas servicio-vs-servicio. Consulta puntual cuando dos servicios se confunden. |
+| [`glosario.md`](./glosario.md) | Vocabulario EN→ES (inglés de enunciado + jerga cloud) que aparece en los simulacros. |
 | [`tips/`](./tips/) | Frases gatillo y trampas de examen acumuladas. Repaso final. |
 | [`errors/`](./errors/) | Doc maestro de errores de los simulacros Dojo. |
 | [`assets/`](./assets/) | Imágenes de soporte (diagramas, screenshots). |
