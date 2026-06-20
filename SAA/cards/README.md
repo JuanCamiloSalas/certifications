@@ -24,6 +24,7 @@
 | 14 | [Security & Encryption (KMS, Secrets, WAF, Shield)](./14-security-cifrado/) | 27 |
 | 15 | [VPC & Networking](./15-vpc/) | 28 |
 | 16 | [DR & Migration](./16-dr-migration/) | 29 |
+| 17 | [Billing & Cost Management](./17-billing-cost/) | — |
 
 ## 🧭 How to navigate
 

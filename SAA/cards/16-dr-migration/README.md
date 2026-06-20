@@ -1,5 +1,6 @@
 [![](https://img.shields.io/badge/<_Prev_block-FF4859?style=for-the-badge)](../15-vpc/README.md)
 [![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](../README.md)
+[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../17-billing-cost/README.md)
 
 # Block 16 — Disaster Recovery & Migration
 
@@ -19,3 +20,4 @@
 
 [![](https://img.shields.io/badge/<_Prev_block-FF4859?style=for-the-badge)](../15-vpc/README.md)
 [![](https://img.shields.io/badge/Deck-175074?style=for-the-badge)](../README.md)
+[![](https://img.shields.io/badge/Next_block_>-FF4859?style=for-the-badge)](../17-billing-cost/README.md)
