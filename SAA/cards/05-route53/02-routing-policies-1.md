@@ -38,11 +38,22 @@
 - **Health check is mandatory** on the primary.
 - Common pattern: primary = production region, secondary = static S3 website as fallback.
 
+## 🔀 Active-Active vs Active-Passive
+
+These are **architecture patterns**, not policies — the policy is just how you implement them.
+
+- **Active-Passive** (primary serves, secondary on standby) → only **Failover** does this natively.
+- **Active-Active** (all resources serve at once, unhealthy ones dropped) → any multi-record policy **+ health checks**: Weighted, Latency, Multi-Value, Geolocation/Geoproximity.
+- **Simple** does neither (no health checks).
+
+> Rule of thumb: **Failover = active-passive**; any other policy with health checks = active-active.
+
 ## ⚠️ Common traps
 
 - Simple policy does NOT do health checks — if the resource is down, Route 53 still returns it.
 - Latency ≠ Geolocation: latency picks the lowest RTT, not the physically closest region.
 - Failover requires a health check — without one, Route 53 never switches to secondary.
+- "Active-active" is not a policy: if the question wants ALL regions serving traffic, rule out Failover and pick Weighted/Latency/Multi-Value with health checks.
 
 ---
 
