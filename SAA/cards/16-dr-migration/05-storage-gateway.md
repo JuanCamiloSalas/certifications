@@ -8,6 +8,8 @@
 
 > **Pitch (1 line):** hybrid storage bridge that lets on-premises applications use AWS storage (S3, EBS, Glacier) as if it were local — available as a VM appliance or hardware device.
 
+![AWS Storage Gateway architecture](../../assets/diagrams/storage-gateway-architecture.png)
+
 ## 🎯 When the exam picks this
 
 - "on-prem file server backed by S3 (NFS/SMB interface)" → **S3 File Gateway**
