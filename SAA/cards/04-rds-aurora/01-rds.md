@@ -31,6 +31,11 @@
 - Standby is **NOT readable** — it only serves as failover. Zero read scaling benefit.
 - Backups are taken from the standby — no I/O impact on primary.
 
+**Storage Autoscaling:**
+- RDS grows allocated storage **automatically** when free space runs low — no downtime, no performance impact.
+- You set a **maximum storage threshold** (cap); RDS scales up to it as needed.
+- Trigger phrase: "DB running out of disk, add space with least effort / no impact" → **enable storage autoscaling** (not manual resize, not Provisioned IOPS).
+
 **Backups:**
 - **Automated backups**: enabled by default, 1–35 day retention, stored in S3. Enables point-in-time restore.
 - **Manual snapshots**: user-initiated, no expiry, survive even after DB deletion.
