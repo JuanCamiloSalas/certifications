@@ -22,6 +22,12 @@
 - Can apply to a **prefix** or **object tags** — not just the whole bucket.
 - **Minimum days in a class before transitioning**: Standard-IA requires 30 days in Standard; Glacier requires 30 days in Standard-IA (or 90 days directly from Standard if skipping IA).
 
+**Glacier retrieval tiers (how fast you get archived data back):**
+- **Glacier Instant Retrieval:** milliseconds (it's a storage class, not a retrieval job).
+- **Glacier Flexible Retrieval:** **Expedited 1–5 min** · Standard 3–5 h · Bulk 5–12 h (free).
+- **Glacier Deep Archive:** Standard ~12 h · Bulk ~48 h (no Expedited).
+- **Provisioned retrieval capacity:** pre-purchase to **guarantee Expedited capacity** is available on demand (high, steady throughput) — the answer when you need sub-15-min retrieval *anytime* at scale.
+
 **Replication (CRR / SRR):**
 - **Versioning must be enabled** on both source and destination buckets.
 - Replication is **asynchronous** — not instant.
