@@ -1,8 +1,84 @@
 [![](https://img.shields.io/badge/<_SAA-FF4859?style=for-the-badge)](./README.md)
 
-# Glosario — vocabulario de examen (EN → ES)
+# Glosario — vocabulario y siglas de examen
 
-> Inglés y jerga cloud que aparece en los enunciados del SAA. El término va en inglés; la explicación en español + una definición breve en inglés para **interiorizar el concepto, no solo traducirlo**. Búscalo con Ctrl+F durante el repaso.
+> Referencia lingüística única del SAA: **siglas** (para no confundirlas), **jerga cloud** e **inglés de enunciado**. Búscalo con Ctrl+F durante el repaso.
+
+## 🔤 Siglas / Acronyms
+
+### ⚠️ Las que más se confunden (pares clave)
+
+| Sigla A | Sigla B | Diferencia en una línea |
+|---|---|---|
+| **SG** (Security Group) | **NACL** (Network ACL) | SG = **stateful**, a nivel ENI/instancia, solo ALLOW · NACL = **stateless**, a nivel subred, ALLOW + DENY (abre puertos efímeros) |
+| **CRR** (Cross-Region Replication) | **SRR** (Same-Region Replication) | CRR = entre regiones (DR/compliance) · SRR = misma región (agregación de logs) |
+| **OAC** (Origin Access Control) | **OAI** (Origin Access Identity) | Ambos restringen S3 a CloudFront · **OAC = el nuevo/recomendado** · OAI = legado |
+| **RTO** (Recovery Time Objective) | **RPO** (Recovery Point Objective) | RTO = cuánto **tiempo** tardas en recuperarte · RPO = cuántos **datos** (tiempo) puedes perder |
+| **DX** (Direct Connect) | **DXGW** / **TGW** | DX = conexión física dedicada · DXGW = conecta DX a varias VPCs/regiones · TGW = hub-and-spoke entre miles de VPCs (peering transitivo) |
+| **CGW** (Customer Gateway) | **VGW** (Virtual Private Gateway) | CGW = lado **on-prem** del VPN · VGW = lado **AWS** del VPN |
+| **SSE-S3** / **SSE-KMS** | **SSE-C** | SSE-S3 = claves de S3 (AES-256) · SSE-KMS = claves KMS · SSE-C = claves **del cliente** (header `-customer-*`) |
+| **ALB** | **NLB** | ALB = L7 (HTTP, path/host routing) · NLB = L4 (TCP/UDP, **IP estática**, ultra-baja latencia) |
+| **Multi-AZ** | **Read Replica** | Multi-AZ = HA (standby síncrono, failover) · Read Replica = escalar lecturas (async) |
+| **GSI** | **LSI** | GSI = índice con otra partition key (se crea cuando sea) · LSI = misma partition key, otra sort key (solo al crear la tabla) |
+
+### Networking & VPC
+
+| Sigla | Nombre completo | Qué es |
+|---|---|---|
+| **VPC** | Virtual Private Cloud | red privada aislada en AWS |
+| **CIDR** | Classless Inter-Domain Routing | notación de rangos de IP (/16 → /28 en VPC) |
+| **ENI** | Elastic Network Interface | tarjeta de red virtual; la IP privada/secundaria vive aquí |
+| **EIP** | Elastic IP | IP pública fija que puedes mover entre instancias |
+| **IGW** | Internet Gateway | da acceso a Internet a la VPC |
+| **NAT** | Network Address Translation | salida a Internet para subredes privadas (NAT Gateway) |
+| **EIGW** | Egress-Only Internet Gateway | salida solo **IPv6** |
+| **SNI** | Server Name Indication | permite varios certs TLS en un mismo ALB/listener |
+| **TGW** | Transit Gateway | hub central que conecta miles de VPCs (transitivo) |
+| **DXGW** | Direct Connect Gateway | conecta un DX a VPCs en varias regiones |
+
+### Seguridad & identidad
+
+| Sigla | Nombre completo | Qué es |
+|---|---|---|
+| **IAM** | Identity and Access Management | usuarios, grupos, roles, políticas |
+| **STS** | Security Token Service | credenciales temporales (assume role, federación) |
+| **MFA** | Multi-Factor Authentication | segundo factor de autenticación |
+| **SCP** | Service Control Policy | límites de permisos a nivel de Organization/cuenta |
+| **KMS** | Key Management Service | gestión de claves de cifrado |
+| **CMK** | Customer Master Key | (hoy "KMS key") la clave maestra en KMS |
+| **HSM** | Hardware Security Module | CloudHSM — hardware dedicado, FIPS 140-2 L3 |
+| **ACM** | AWS Certificate Manager | certificados SSL/TLS gestionados |
+| **WAF** | Web Application Firewall | protección L7 (SQLi, XSS, rate limiting) |
+| **SAML / OIDC** | — | protocolos de federación de identidad |
+
+### Bases de datos & migración
+
+| Sigla | Nombre completo | Qué es |
+|---|---|---|
+| **RDS** | Relational Database Service | BD SQL gestionada |
+| **DAX** | DynamoDB Accelerator | caché en memoria (microsegundos) para DynamoDB |
+| **OLTP / OLAP** | Transaction / Analytical Processing | transaccional (RDS) vs analítico/data warehouse (Redshift) |
+| **WCU / RCU** | Write / Read Capacity Units | unidades de capacidad de DynamoDB |
+| **DMS** | Database Migration Service | migrar BDs (homogénea/heterogénea) |
+| **SCT** | Schema Conversion Tool | convierte el esquema en migración heterogénea |
+| **CDC** | Change Data Capture | replicación continua de cambios (DMS) |
+| **PITR** | Point-In-Time Recovery | restaurar a un instante exacto |
+
+### Cómputo, storage & DR
+
+| Sigla | Nombre completo | Qué es |
+|---|---|---|
+| **AMI** | Amazon Machine Image | plantilla para lanzar EC2 |
+| **ASG** | Auto Scaling Group | escala instancias y reemplaza las no sanas |
+| **RI / SP** | Reserved Instance / Savings Plan | descuento por compromiso 1-3 años |
+| **IMDS** | Instance Metadata Service | metadatos de la instancia (usa **IMDSv2**) |
+| **EBS / EFS** | Elastic Block Store / File System | disco de bloque (1 AZ) / NFS compartido (multi-AZ) |
+| **DLM** | Data Lifecycle Manager | automatiza snapshots de EBS |
+| **VTL** | Virtual Tape Library | Tape Gateway — reemplaza cintas físicas |
+| **DR** | Disaster Recovery | recuperación ante desastres |
+| **MGN / DRS** | Application Migration / Elastic DR | lift-and-shift / replicación continua para DR |
+| **IaC / CFN** | Infrastructure as Code / CloudFormation | infraestructura declarativa (JSON/YAML) |
+| **TTL** | Time To Live | cuánto se cachea un registro DNS (Route 53) |
 
 ## Jerga cloud / AWS
 
