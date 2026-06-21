@@ -173,11 +173,11 @@
 
 **Q20.** A company hosts many distinct domains (different root domains) behind a single Application Load Balancer and wants to add new domains over time without re-issuing one certificate each time. What should they do?
 - A) Use one wildcard certificate on the listener
-- B) Upload multiple ACM certificates bound to the same HTTPS listener; the ALB selects the cert per client using SNI
+- B) Put CloudFront with a dedicated IP in front
 - C) Use a single SAN certificate and re-issue it whenever a domain is added
-- D) Put CloudFront with a dedicated IP in front
+- D) Upload multiple ACM certificates bound to the same HTTPS listener; the ALB selects the cert per client using SNI
 
-> **Answer: B** — SNI lets one ALB listener host multiple certs and pick per hostname; wildcard only covers sub-domains of one domain, SAN needs re-issuing.
+> **Answer: D** — SNI lets one ALB listener host multiple certs and pick per hostname; wildcard only covers sub-domains of one domain, SAN needs re-issuing.
 
 ---
 
@@ -338,12 +338,12 @@
 > **Answer: A** — ElastiCache provides managed in-memory caching to offload repeated reads from the database.
 
 **Q40.** An HPC workload needs a high-throughput, low-latency parallel file system for compute, with the underlying data set durably stored in S3 and processed at scale. Which storage fits best?
-- A) Amazon EFS
-- B) Amazon FSx for Lustre linked to an S3 bucket
-- C) Amazon FSx for Windows File Server
-- D) EBS gp3 volumes
+- A) Amazon FSx for Windows File Server
+- B) EBS gp3 volumes
+- C) Amazon EFS
+- D) Amazon FSx for Lustre linked to an S3 bucket
 
-> **Answer: B** — FSx for Lustre is the HPC parallel file system and integrates with S3 for the data set.
+> **Answer: D** — FSx for Lustre is the HPC parallel file system and integrates with S3 for the data set.
 
 ---
 
