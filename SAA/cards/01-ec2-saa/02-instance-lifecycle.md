@@ -49,7 +49,7 @@ stateDiagram-v2
 
 ## 🔄 Easily confused with
 
-- → [Hibernation (requirements & use cases)](./04-hibernation.md) *(block card, to be created)*
+- → [Hibernation (requirements & use cases)](./04-hibernation.md)
 - Storage persistence in depth → see block [02 — Storage for EC2](../02-storage-ec2/README.md)
 
 ---
