@@ -50,7 +50,7 @@
 
 > [!TIP]
 > **Exam tip:** **all resources serving + auto-drop unhealthy** = **Active-Active** (weighted/multivalue). Active-Passive keeps the secondary idle until failover. *(Route 53 also missed in Test 2 — chronic.)*
-> 📇 [Card: Routing Policies 2](../cards/05-route53/03-routing-policies-2.md)
+> 📇 [Card: Routing Policies 1](../cards/05-route53/02-routing-policies-1.md)
 
 ## 1.4 Direct Connect to multiple accounts → DX Gateway + Transit Gateway
 
