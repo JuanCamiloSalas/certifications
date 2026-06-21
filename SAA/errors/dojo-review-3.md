@@ -105,7 +105,7 @@
 
 > [!TIP]
 > **Exam tip:** stop/start = **new host + instance-store wiped**. EBS persists; **instance store does not**. EIP stays attached.
-> 📇 [Card: Instance Store](../cards/02-storage-ec2/06-instance-store.md)
+> 📇 [Card: Instance Store](../cards/02-storage-ec2/06-instance-store.md) (data loss) · [Card: Instance Lifecycle](../cards/01-ec2-saa/02-instance-lifecycle.md) (host change · EIP/ENI stay)
 
 ## 1.9 CloudFormation success signal → CreationPolicy + cfn-signal
 

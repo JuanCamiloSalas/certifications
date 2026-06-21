@@ -15,7 +15,7 @@
 ## 🧠 Core (non-obvious bits)
 
 - **Reboot ≠ Stop.** Reboot keeps the SAME instance: it keeps the public IP, the EBS data **and** the Instance Store data. It is not a stop+start.
-- **Stop/Start:** the **public IPv4 changes** (unless Elastic IP); the **private IP stays**. You don't pay for compute while `stopped`, but you **still pay for the EBS volumes**.
+- **Stop/Start:** the instance may move to a **different physical host** (that's why Instance Store data is wiped — the local disks live on the old host). The **public IPv4 changes** (unless Elastic IP); the **private IP, Elastic IP and ENI all stay attached**. You don't pay for compute while `stopped`, but you **still pay for the EBS volumes**.
 - **Terminate:** the **root EBS** volume is deleted by default (`DeleteOnTermination = true`); **additional EBS** volumes survive by default (`false`).
 - **Instance Store** is ephemeral: it survives a **reboot**, but is lost on **stop, hibernate, terminate** or physical host failure. Never use it for data that must persist.
 - **Hibernate** = a stop variant that saves RAM to the root EBS volume (preserves in-memory state, fast restart). Requirements and use cases → see the Hibernation card.
