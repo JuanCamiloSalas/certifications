@@ -13,7 +13,7 @@
 | **Design High-Performing Architectures** | 24% | 81% | 4.6 | 🟢 Low |
 
 > [!IMPORTANT]
-> Ordered by **highest weight × lowest score**. Networking/VPC dominates the Resilient & Secure misses — and **Route 53 + Direct Connect repeat from Test 2** (chronic). Cost stays low and has no study material in the repo.
+> Ordered by **highest weight × lowest score**. Networking/VPC dominates the Resilient & Secure misses — and **Route 53 + Direct Connect repeat from Test 2** (chronic). Cost stays low — block 17 (Billing & Cost) cards now exist; review them.
 
 ---
 
@@ -182,7 +182,7 @@
 # 🟡 3. Design Cost-Optimized Architectures (20%)
 
 > [!NOTE]
-> Still **no billing/cost card block** in the repo — 3 of these 4 have no card to review. Biggest content gap.
+> Block 17 (Billing & Cost) cards now exist — review [Pricing Models](../cards/17-billing-cost/01-pricing-models.md) and [Cost Management Tools](../cards/17-billing-cost/02-cost-management-tools.md).
 
 ## 3.1 EC2 billing per instance state · *(Select TWO)*
 
@@ -204,7 +204,7 @@
 
 > [!TIP]
 > **Exam tip:** **programmatic cost data + forecast** = **Cost Explorer API**. Budgets = alerts; CUR = raw dataset.
-> 📇 Card: _none yet (no billing block)_
+> 📇 [Card: Cost Management Tools](../cards/17-billing-cost/02-cost-management-tools.md)
 
 ## 3.3 Stop charges for decommissioned Reserved Instances · *(Select TWO)*
 
@@ -215,7 +215,7 @@
 
 > [!TIP]
 > **Exam tip:** stopping doesn't end RI billing. **Terminate + sell on the RI Marketplace** to recover cost.
-> 📇 Card: _none yet (no billing block)_
+> 📇 [Card: Pricing Models](../cards/17-billing-cost/01-pricing-models.md)
 
 ## 3.4 Glacier retrieval < 15 min + throughput → Expedited + provisioned capacity · *(Select TWO)*
 
