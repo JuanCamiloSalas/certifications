@@ -33,6 +33,7 @@
 ## ⚠️ Common traps
 
 - "static IP for whitelisting" → NOT ALB → NLB (or NLB in front of ALB).
+- "many SSL domains, add more freely" → **SNI** (multiple certs on one listener). **Wildcard** only covers sub-domains of one domain; **SAN cert** must be re-issued to add a domain.
 - "WebSocket or gRPC" → ALB supports both natively.
 - Sticky sessions break even distribution — only use when the app truly requires session affinity.
 
