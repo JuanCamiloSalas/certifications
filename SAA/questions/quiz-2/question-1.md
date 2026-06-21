@@ -6,12 +6,12 @@
 
 > Domain: **Secure**
 
-A security team must guarantee that no one in specific member accounts of an AWS Organization can disable CloudTrail or leave the organization, even with full administrator IAM permissions in those accounts. What should they use?
+A holding company manages 60 AWS accounts under AWS Organizations, grouped into OUs by business unit. Auditors require that, in every account within the "Regulated" OU, no principal — including users who hold the `AdministratorAccess` managed policy — can disable AWS CloudTrail, delete the central log bucket, or remove the account from the organization. The control must be enforced centrally and keep working for IAM roles created in the future. Which approach meets the requirement with the least ongoing effort?
 
-- **A)** An IAM policy in each account denying the actions
-- **B)** A Service Control Policy (SCP) attached to the relevant OU
-- **C)** A permissions boundary on every role
-- **D)** AWS Config rules that re-enable CloudTrail
+- **A)** Attach an IAM permissions boundary that denies those actions to every role in each account
+- **B)** Create a Service Control Policy denying those actions and attach it to the "Regulated" OU
+- **C)** Add an explicit `Deny` in an IAM policy attached to every user and role in those accounts
+- **D)** Enable AWS Config rules that automatically re-enable CloudTrail whenever it is turned off
 
 *Anota tu respuesta y pásamela en el chat como `2.1: X`. Avanza con **Next >**.*
 

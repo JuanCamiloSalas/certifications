@@ -6,13 +6,13 @@
 
 > Domain: **Cost** · **(Select TWO)**
 
-Which two statements about EC2 billing are correct?
+A FinOps analyst is reviewing EC2 charges across the organization. Which TWO of the following statements about EC2 billing are correct?
 
-- **A)** You are billed for a Reserved Instance during its term even if the instance is terminated
-- **B)** An On-Demand instance preparing to hibernate (`stopping`) is billed during that period
-- **C)** A stopped On-Demand instance is billed for compute
-- **D)** A Spot instance in the `stopping` state is always billed
-- **E)** Reserved Instances are free once purchased
+- **A)** You continue to pay for a Reserved Instance for its entire term even if the associated instance is terminated
+- **B)** An On-Demand instance is billed while it is in the `stopping` state because it is preparing to hibernate
+- **C)** A stopped On-Demand instance continues to incur compute charges
+- **D)** A Spot Instance is billed while it is in the `stopping` state
+- **E)** Once a Reserved Instance is purchased there are no further charges of any kind
 
 *Anota tu respuesta y pásamela en el chat como `2.15: X, Y`. Avanza con **Next >**.*
 

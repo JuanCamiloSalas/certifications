@@ -6,12 +6,12 @@
 
 > Domain: **Cost**
 
-A company wants to reduce compute costs by committing to a consistent amount of spend per hour for 1 year, while keeping flexibility to change instance families, sizes, and regions. Which pricing model fits best?
+A company has a steady baseline of compute usage but frequently changes EC2 instance families and sizes across multiple regions as it refactors services, and it also runs a growing amount of AWS Fargate. It wants to commit for 1 year to reduce cost while preserving maximum flexibility. Which purchasing option is the BEST fit?
 
-- **A)** Standard Reserved Instances locked to one instance type
+- **A)** Standard Reserved Instances for a specific instance family and region
 - **B)** Compute Savings Plans
-- **C)** Spot Instances
-- **D)** On-Demand
+- **C)** On-Demand Instances
+- **D)** Spot Instances
 
 *Anota tu respuesta y pásamela en el chat como `2.16: X`. Avanza con **Next >**.*
 

@@ -6,12 +6,12 @@
 
 > Domain: **Secure**
 
-A team needs a cross-region read replica of an encrypted RDS database for disaster recovery. What is true about encryption for the replica?
+A company runs an encrypted Amazon RDS for PostgreSQL database in `us-east-1` using a customer managed KMS key. For disaster recovery they create a cross-region read replica in `eu-west-1`. The security team asks how encryption is handled for the replica. Which statement is correct?
 
-- **A)** The replica cannot be encrypted in another region
-- **B)** The cross-region replica is encrypted, using a KMS key in the destination region
-- **C)** Encryption must be disabled on the source first
-- **D)** The replica shares the exact same key ARN as the source region
+- **A)** The replica is created unencrypted unless encryption is enabled after it is provisioned
+- **B)** The replica is encrypted using a KMS key in `eu-west-1`, because KMS keys are region-specific
+- **C)** The replica uses the exact same key ARN as the source database in `us-east-1`
+- **D)** Encryption must be disabled on the source before a cross-region replica can be created
 
 *Anota tu respuesta y pásamela en el chat como `2.7: X`. Avanza con **Next >**.*
 

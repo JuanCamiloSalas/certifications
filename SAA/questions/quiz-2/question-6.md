@@ -6,12 +6,12 @@
 
 > Domain: **Secure**
 
-A company running Amazon EKS must encrypt Kubernetes secrets stored in etcd using envelope encryption with keys they control, to meet a compliance audit. What should they configure?
+A healthcare company runs sensitive workloads on Amazon EKS. An audit requires that Kubernetes Secrets be encrypted in **etcd** using envelope encryption, with the data encryption keys protected by a key the company owns and can audit. They want the most native AWS integration with the least custom tooling. Which configuration meets the requirement?
 
-- **A)** Enable EKS secrets envelope encryption using a customer managed KMS key
-- **B)** Store secrets in plaintext ConfigMaps
-- **C)** Use SSE-S3 on the cluster
-- **D)** Enable CloudHSM for the worker nodes
+- **A)** Rely on the EBS volume encryption of the worker nodes to protect Secrets
+- **B)** Enable EKS secrets encryption (envelope encryption) using a customer managed AWS KMS key
+- **C)** Store all Secrets in AWS Secrets Manager and mount them via the CSI driver
+- **D)** Enable SSE-S3 on the cluster's associated S3 buckets
 
 *Anota tu respuesta y pásamela en el chat como `2.6: X`. Avanza con **Next >**.*
 

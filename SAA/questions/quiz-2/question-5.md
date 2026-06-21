@@ -6,12 +6,12 @@
 
 > Domain: **Secure**
 
-An EC2 instance's security group allows inbound TCP 443 from the internet but has no outbound rules except the default allow-all. A client makes an HTTPS request. Will the response reach the client, and why?
+An EC2-hosted API sits behind a security group that allows inbound TCP 443 from `0.0.0.0/0`. An engineer then tightened the security group's outbound rules to deny all egress except TCP 443 to a single partner CIDR. A penetration tester reports that external clients can still complete HTTPS requests and receive responses. The team asks why responses still succeed even though there is no outbound rule allowing the clients' ephemeral ports. What is the correct explanation?
 
-- **A)** No — an outbound rule for the ephemeral port is required
-- **B)** Yes — security groups are stateful, so return traffic for an allowed inbound connection is automatically permitted
-- **C)** No — security groups are stateless
-- **D)** Yes — but only if a NACL ephemeral rule exists
+- **A)** Security groups are stateful, so response traffic for an allowed inbound connection is automatically permitted regardless of outbound rules
+- **B)** The default outbound allow-all rule is still in effect and overrides the tightened rules
+- **C)** Security groups are stateless, so a matching ephemeral-port outbound rule must already exist
+- **D)** The subnet's network ACL is what permits the ephemeral response traffic
 
 *Anota tu respuesta y pásamela en el chat como `2.5: X`. Avanza con **Next >**.*
 

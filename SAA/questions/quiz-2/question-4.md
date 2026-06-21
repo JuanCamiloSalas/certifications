@@ -6,12 +6,12 @@
 
 > Domain: **Secure**
 
-A compliance requirement mandates that the KMS key material for data at rest be rotated automatically every year while keeping older data decryptable. What should the team enable?
+A financial services company encrypts data at rest using a customer managed AWS KMS key. A new compliance mandate requires the cryptographic key material to be rotated at least once per year, while all previously encrypted data must remain decryptable with no manual re-encryption and no application changes. What is the simplest way to satisfy this?
 
-- **A)** Manually create a new key every year and re-encrypt all data
+- **A)** Schedule a Lambda to create a brand-new KMS key every year and re-encrypt all existing objects
 - **B)** Enable automatic key rotation on the customer managed KMS key
-- **C)** Delete and recreate the key annually
-- **D)** Switch to SSE-C
+- **C)** Import new key material annually and delete the previous version
+- **D)** Switch the workload to server-side encryption with customer-provided keys (SSE-C)
 
 *Anota tu respuesta y pásamela en el chat como `2.4: X`. Avanza con **Next >**.*
 

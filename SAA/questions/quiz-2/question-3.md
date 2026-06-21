@@ -6,11 +6,11 @@
 
 > Domain: **Secure**
 
-A client uploads objects to S3 and wants S3 to manage the encryption keys (no customer-supplied keys). Which request header indicates server-side encryption with S3-managed or KMS keys?
+An application uploads objects to Amazon S3 and must use server-side encryption where AWS manages the encryption keys (either S3-managed keys or AWS KMS keys), without the client supplying any key material. During a security review the team must confirm the correct request header is being sent on each `PUT`. Which header indicates this type of server-side encryption?
 
-- **A)** `x-amz-server-side-encryption`
-- **B)** `x-amz-server-side-encryption-customer-key`
-- **C)** `x-amz-server-side-encryption-customer-algorithm`
+- **A)** `x-amz-server-side-encryption-customer-key`
+- **B)** `x-amz-server-side-encryption-customer-algorithm`
+- **C)** `x-amz-server-side-encryption`
 - **D)** `x-amz-acl`
 
 *Anota tu respuesta y pásamela en el chat como `2.3: X`. Avanza con **Next >**.*

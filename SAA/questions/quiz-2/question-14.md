@@ -6,12 +6,12 @@
 
 > Domain: **Cost**
 
-A company must move 50 TB of rarely accessed on-prem archive files to the cheapest S3 storage for long-term retention, transferring over the network. What is the most cost-effective approach?
+A media company must transfer 60 TB of rarely accessed archival footage from an on-premises NAS to AWS over its existing, well-provisioned 10 Gbps link. The data will almost never be read again but must be retained for 10 years at the absolute lowest storage cost, and the team wants to avoid paying for any higher-cost storage tier even temporarily. What is the most cost-effective approach?
 
-- **A)** Use DataSync to write directly to S3 Glacier Deep Archive
-- **B)** Upload to S3 Standard, then add a lifecycle rule to Deep Archive later
-- **C)** Use S3 Transfer Acceleration to S3 Standard
-- **D)** Ship the files on physical media
+- **A)** Use AWS DataSync to transfer the data directly into S3 Glacier Deep Archive
+- **B)** Use AWS DataSync into S3 Standard, then a lifecycle rule transitions objects to Deep Archive after 30 days
+- **C)** Order an AWS Snowball Edge device and import the data into S3 Standard
+- **D)** Use S3 Transfer Acceleration to upload the data into S3 Standard-IA
 
 *Anota tu respuesta y pásamela en el chat como `2.14: X`. Avanza con **Next >**.*
 

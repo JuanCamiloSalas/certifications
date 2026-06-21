@@ -6,12 +6,12 @@
 
 > Domain: **High-Performing**
 
-A partner must whitelist a fixed set of static IP addresses to reach an application, which requires ultra-low-latency Layer 4 handling of millions of TCP connections. Which load balancer fits?
+A regulated partner can only connect to allow-listed static IP addresses. The application must terminate millions of concurrent TCP connections with ultra-low latency, and the backend needs to see the original client source IP. Which load-balancing solution meets all of these requirements?
 
-- **A)** Application Load Balancer
-- **B)** Network Load Balancer with Elastic IPs
-- **C)** Classic Load Balancer
-- **D)** Gateway Load Balancer
+- **A)** An Application Load Balancer with a Lambda that publishes its current IPs to the partner
+- **B)** A Network Load Balancer with assigned Elastic IPs
+- **C)** A Classic Load Balancer
+- **D)** An Application Load Balancer behind Amazon CloudFront
 
 *Anota tu respuesta y pásamela en el chat como `2.18: X`. Avanza con **Next >**.*
 

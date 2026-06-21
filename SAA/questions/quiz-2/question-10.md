@@ -6,12 +6,12 @@
 
 > Domain: **Resilient**
 
-An application must remain fully available even if one Availability Zone fails, requiring at least 6 healthy instances at all times across 3 AZs. How should the Auto Scaling Group be configured for HA at the lowest risk?
+An application must keep a minimum of 6 healthy EC2 instances serving traffic at all times, even during the complete loss of a single Availability Zone. The team deploys the Auto Scaling Group evenly across 3 Availability Zones and wants to minimize cost while still guaranteeing the requirement. What desired capacity should they configure?
 
-- **A)** Desired 6 across 1 AZ
-- **B)** Desired 9 spread across 3 AZs so 6 remain if one AZ fails
-- **C)** Desired 6 across 2 AZs
-- **D)** Desired 3 across 3 AZs
+- **A)** 6 instances, balanced across the 3 AZs
+- **B)** 12 instances, balanced across the 3 AZs
+- **C)** 9 instances, balanced across the 3 AZs
+- **D)** 6 instances placed in a single AZ
 
 *Anota tu respuesta y pásamela en el chat como `2.10: X`. Avanza con **Next >**.*
 

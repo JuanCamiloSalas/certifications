@@ -6,12 +6,12 @@
 
 > Domain: **Resilient**
 
-A multi-region application must serve traffic from all regions simultaneously and automatically stop sending traffic to a region that becomes unhealthy, maximizing fault tolerance. Which Route 53 configuration fits best?
+A SaaS provider runs identical application stacks in three regions behind regional endpoints. They want all three regions to serve user traffic simultaneously to maximize utilization, and Route 53 must automatically stop routing to any region whose health check fails and resume once it recovers. Which Route 53 configuration provides the most fault-tolerant active-active design?
 
-- **A)** Active-passive failover routing
-- **B)** Active-active using a weighted routing policy with health checks
-- **C)** Simple routing with multiple values
-- **D)** Geolocation routing with a single default record
+- **A)** Failover routing with one primary record and two secondary records
+- **B)** Weighted routing across the three regional endpoints, each associated with a health check
+- **C)** Geolocation routing with a single default record pointing to one region
+- **D)** Simple routing that returns all three IP addresses with no health checks
 
 *Anota tu respuesta y pásamela en el chat como `2.8: X`. Avanza con **Next >**.*
 

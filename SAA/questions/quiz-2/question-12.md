@@ -6,12 +6,12 @@
 
 > Domain: **Resilient**
 
-Two EC2 instances run a custom active-passive service inside a VPC. On failure of the active node, the private IP must move to the standby so clients using that private IP keep working. What mechanism achieves this?
+Two EC2 instances form an active-passive pair for a licensed legacy application in a private subnet. Client systems are hard-coded to connect to one specific private IP address and cannot be changed. On failure of the active node, that private IP must move to the standby node within seconds so clients keep connecting without any reconfiguration. Which mechanism achieves this?
 
-- **A)** Reassign an Elastic IP between the instances
-- **B)** Move a secondary Elastic Network Interface (ENI) holding the private IP to the standby instance
-- **C)** Use Route 53 failover with public records
-- **D)** Change the subnet route table
+- **A)** Associate an Elastic IP and remap it to the standby instance on failure
+- **B)** Detach the secondary Elastic Network Interface (ENI) that holds the private IP and attach it to the standby instance
+- **C)** Update the subnet route table to direct the IP to the standby instance
+- **D)** Create Route 53 failover records that resolve to the private IP
 
 *Anota tu respuesta y pásamela en el chat como `2.12: X`. Avanza con **Next >**.*
 

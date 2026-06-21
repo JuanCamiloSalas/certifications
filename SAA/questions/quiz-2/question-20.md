@@ -6,12 +6,12 @@
 
 > Domain: **High-Performing**
 
-An HPC workload needs a high-throughput, low-latency parallel file system for compute, with the underlying data set durably stored in S3 and processed at scale. Which storage fits best?
+A genomics research team runs HPC compute clusters that need a shared file system delivering hundreds of GB/s of aggregate throughput and sub-millisecond latency. The source datasets already live in an Amazon S3 bucket, and results must be written back to S3 after processing. Which storage solution is purpose-built for this workload?
 
-- **A)** Amazon FSx for Windows File Server
-- **B)** EBS gp3 volumes
-- **C)** Amazon EFS
-- **D)** Amazon FSx for Lustre linked to an S3 bucket
+- **A)** Amazon EFS with provisioned throughput mode
+- **B)** Amazon FSx for Windows File Server
+- **C)** Amazon FSx for Lustre linked to the S3 bucket
+- **D)** Multiple Amazon EBS gp3 volumes striped with RAID 0
 
 *Anota tu respuesta y pásamela en el chat como `2.20: X`. ¡Fin del Quiz 2! Pásame tus respuestas y te evalúo.*
 

@@ -6,12 +6,12 @@
 
 > Domain: **High-Performing**
 
-A read-heavy web application repeatedly runs the same expensive database queries, driving up latency. The team wants a managed in-memory cache to store query results and reduce DB load. Which service fits?
+A read-heavy application repeatedly executes the same expensive aggregation queries against an RDS database, and read latency spikes under load. The team wants to add a managed, in-memory caching layer to serve these repeated reads with sub-millisecond latency and reduce database load, with minimal application redesign. Which service is the BEST fit?
 
-- **A)** Amazon ElastiCache (Redis/Memcached)
-- **B)** Amazon DynamoDB
-- **C)** Amazon Athena
-- **D)** AWS Glue
+- **A)** Amazon ElastiCache for Redis
+- **B)** Vertically scale the RDS instance to a larger class
+- **C)** Add an RDS read replica and route reads to it
+- **D)** Amazon Athena
 
 *Anota tu respuesta y pásamela en el chat como `2.19: X`. Avanza con **Next >**.*
 

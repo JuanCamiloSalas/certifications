@@ -1,8 +1,8 @@
 [![](https://img.shields.io/badge/<_Quizzes-FF4859?style=for-the-badge)](../README.md)
 
-# Quiz 2 — 20 preguntas
+# Quiz 2 — 20 preguntas · nivel Dojo 🔥
 
-> Estilo TutorialsDojo, inglés. Navega con los botones. Anota tu respuesta y pásamela como **`2.N: X`** (ej. `2.5: B`).
+> Dificultad TutorialsDojo: enunciados largos con contexto y constraints, distractores cercanos, framing "BEST / MOST cost-effective / LEAST overhead". Lee cada opción con cuidado y valida las "Select TWO" por separado. Pásame tu respuesta como **`2.N: X`** (ej. `2.5: B`).
 
 [![](https://img.shields.io/badge/▶_EMPEZAR_(Pregunta_1)-175074?style=for-the-badge)](./question-1.md)
 

@@ -6,12 +6,12 @@
 
 > Domain: **Cost**
 
-EC2 instances in private subnets download large volumes of data from S3, and the company wants to avoid NAT Gateway data-processing charges for this S3 traffic. What should be configured?
+EC2 instances in private subnets pull several terabytes per day from Amazon S3. All outbound traffic currently flows through a NAT gateway, and the team notices high NAT gateway data-processing charges driven almost entirely by this S3 traffic. They want to eliminate those charges for S3 access at the lowest cost. What should they implement?
 
-- **A)** An S3 interface endpoint (PrivateLink) with hourly + data charges
-- **B)** An S3 gateway VPC endpoint, which has no additional charge and keeps traffic off the NAT Gateway
-- **C)** A second NAT Gateway
-- **D)** A VPC peering connection to S3
+- **A)** Deploy a second NAT gateway in another AZ to spread the load
+- **B)** Create an S3 gateway VPC endpoint, which has no hourly or data-processing charges and bypasses the NAT gateway
+- **C)** Create an S3 interface (PrivateLink) endpoint, which adds hourly and per-GB charges
+- **D)** Establish a Direct Connect link dedicated to S3 traffic
 
 *Anota tu respuesta y pásamela en el chat como `2.17: X`. Avanza con **Next >**.*
 

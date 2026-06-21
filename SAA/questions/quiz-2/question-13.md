@@ -6,13 +6,13 @@
 
 > Domain: **Resilient** · **(Select TWO)**
 
-Which two statements about VPC subnets and CIDR are correct?
+A network engineer is validating addressing facts before a large VPC deployment. Which TWO of the following statements are correct?
 
-- **A)** Each subnet resides in exactly one Availability Zone
-- **B)** A VPC CIDR block can range from /16 to /28
-- **C)** A VPC CIDR block can range from /16 to /27
-- **D)** A subnet can span multiple AZs for high availability
-- **E)** New subnets never associate with any route table
+- **A)** A subnet must reside entirely within a single Availability Zone
+- **B)** The allowed CIDR block size for a VPC ranges from /16 to /28
+- **C)** The allowed CIDR block size for a VPC ranges from /16 to /27
+- **D)** A single subnet can span two Availability Zones for resilience
+- **E)** Newly created subnets are never associated with any route table
 
 *Anota tu respuesta y pásamela en el chat como `2.13: X, Y`. Avanza con **Next >**.*
 
