@@ -6,12 +6,12 @@
 
 > Domain: **High-Performing**
 
-A company hosts many distinct domains (different root domains) behind a single Application Load Balancer and wants to add new domains over time without re-issuing one certificate each time. What should they do?
+A company serves static assets (images, CSS, JS) from a single-region S3 bucket. A globally distributed user base experiences high latency loading them. The company wants to cache the content close to users and reduce latency at the lowest cost. What should they implement?
 
-- **A)** Use one wildcard certificate on the listener
-- **B)** Put CloudFront with a dedicated IP in front
-- **C)** Use a single SAN certificate and re-issue it whenever a domain is added
-- **D)** Upload multiple ACM certificates bound to the same HTTPS listener; the ALB selects the cert per client using SNI
+- **A)** AWS Global Accelerator in front of the S3 bucket
+- **B)** S3 Transfer Acceleration on the bucket
+- **C)** Amazon CloudFront with the S3 bucket as the origin
+- **D)** Cross-Region Replication of the bucket to every region
 
 *Anota tu respuesta y pásamela en el chat como `1.20: X`. ¡Fin del Quiz 1! Pásame tus respuestas y sigue al **Quiz 2 >**.*
 
