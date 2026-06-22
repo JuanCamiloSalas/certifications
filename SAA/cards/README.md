@@ -8,23 +8,23 @@
 
 | # | Block | Course sec. |
 |---|---|---|
-| 01 | [EC2 (SAA-level)](./01-ec2-saa/) | 6 |
-| 02 | [Storage for EC2 (EBS, EFS, Instance Store)](./02-storage-ec2/) | 7 |
-| 03 | [ELB & ASG](./03-elb-asg/) | 8 |
-| 04 | [RDS & Aurora](./04-rds-aurora/) | 9 |
-| 05 | [Route 53](./05-route53/) | 10-11 |
-| 06 | [S3 advanced](./06-s3-avanzado/) | 13-15 |
-| 07 | [CDN & Edge (CloudFront, Global Accelerator)](./07-cdn/) | 16-17 |
-| 08 | [Decoupling (SQS, SNS, Kinesis, MQ)](./08-decoupling/) | 18 |
-| 09 | [Containers (ECS, EKS, Fargate, ECR)](./09-containers/) | 19 |
-| 10 | [Serverless (Lambda, API GW, Step Functions)](./10-serverless/) | 20-21 |
-| 11 | [Advanced DB + Data + ML](./11-bd-data-ml/) | 22-24 |
-| 12 | [Monitoring (CloudWatch, CloudTrail, X-Ray)](./12-monitoring/) | 25 |
-| 13 | [IAM advanced](./13-iam-avanzado/) | 26 |
-| 14 | [Security & Encryption (KMS, Secrets, WAF, Shield)](./14-security-cifrado/) | 27 |
-| 15 | [VPC & Networking](./15-vpc/) | 28 |
-| 16 | [DR & Migration](./16-dr-migration/) | 29 |
-| 17 | [Billing & Cost Management](./17-billing-cost/) | — |
+| 01 | [EC2 (SAA-level)](./01-ec2-saa/README.md) | 6 |
+| 02 | [Storage for EC2 (EBS, EFS, Instance Store)](./02-storage-ec2/README.md) | 7 |
+| 03 | [ELB & ASG](./03-elb-asg/README.md) | 8 |
+| 04 | [RDS & Aurora](./04-rds-aurora/README.md) | 9 |
+| 05 | [Route 53](./05-route53/README.md) | 10-11 |
+| 06 | [S3 advanced](./06-s3-avanzado/README.md) | 13-15 |
+| 07 | [CDN & Edge (CloudFront, Global Accelerator)](./07-cdn/README.md) | 16-17 |
+| 08 | [Decoupling (SQS, SNS, Kinesis, MQ)](./08-decoupling/README.md) | 18 |
+| 09 | [Containers (ECS, EKS, Fargate, ECR)](./09-containers/README.md) | 19 |
+| 10 | [Serverless (Lambda, API GW, Step Functions)](./10-serverless/README.md) | 20-21 |
+| 11 | [Advanced DB + Data + ML](./11-bd-data-ml/README.md) | 22-24 |
+| 12 | [Monitoring (CloudWatch, CloudTrail, X-Ray)](./12-monitoring/README.md) | 25 |
+| 13 | [IAM advanced](./13-iam-advanced/README.md) | 26 |
+| 14 | [Security & Encryption (KMS, Secrets, WAF, Shield)](./14-security/README.md) | 27 |
+| 15 | [VPC & Networking](./15-vpc/README.md) | 28 |
+| 16 | [DR & Migration](./16-dr-migration/README.md) | 29 |
+| 17 | [Billing & Cost Management](./17-billing-cost/README.md) | — |
 
 ## 🧭 How to navigate
 
