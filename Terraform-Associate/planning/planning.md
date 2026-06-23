@@ -1,8 +1,8 @@
 [![](https://img.shields.io/badge/<_Terraform-7B42BC?style=for-the-badge)](../README.md)
 
-# Plan de estudio — Terraform Associate (003)
+# Plan de estudio — Terraform Associate (004)
 
-> **🎯 EXAMEN: viernes 31 de julio de 2026.** Online proctored, ~57 preguntas, 60 min.
+> **🎯 EXAMEN: viernes 31 de julio de 2026.** Online proctored, opción múltiple, 1 hora. Versión **004** (evalúa Terraform 1.12).
 > **Punto de partida:** estudio arranca el **miércoles 24 de junio de 2026** (recién aprobado el SAA con 845; lun 22 – mar 23 de descanso). ~5 semanas → ritmo cómodo.
 
 ## 🧭 Filosofía para ESTE examen
@@ -16,10 +16,10 @@ A diferencia del SAA (escenarios), el Terraform Associate es **práctico y preci
 | Semana | Fechas | Foco |
 |---|---|---|
 | **0** | Lun 22 – mar 23 jun | 🛌 Descanso post-SAA. Opcional: instalar Terraform + montar el sandbox. |
-| **1** | Mié 24 – dom 28 jun | Dominios **1, 2, 3**: IaC, propósito de Terraform, basics (providers, `init/plan/apply/destroy`). |
-| **2** | Lun 29 jun – dom 5 jul | Dominio **6** (core workflow a fondo) + Dominio **8** (configuración: variables, outputs, data sources, expresiones, funciones). |
-| **3** | Lun 6 – dom 12 jul | Dominio **7** (state: backends remotos, locking, comandos de state, datos sensibles) + Dominio **5** (módulos). |
-| **4** | Lun 13 – dom 19 jul | Dominio **4** (fuera del core workflow: import, `-replace`, console, fmt, validate, provisioners, workspaces) + Dominio **9** (HCP Terraform / Terraform Cloud). |
+| **1** | Mié 24 – dom 28 jun | Dominios **1, 2, 3**: IaC, fundamentos de Terraform, e inicio del core workflow (providers, `init/plan/apply/destroy`). |
+| **2** | Lun 29 jun – dom 5 jul | Dominio **3** (core workflow a fondo) + Dominio **4** (read & write configuration: variables, outputs, data sources, expresiones, funciones). |
+| **3** | Lun 6 – dom 12 jul | Dominio **6** (state management: backends remotos, locking, comandos de state, datos sensibles) + Dominio **5** (use & create modules). |
+| **4** | Lun 13 – dom 19 jul | Dominio **7** (maintain infrastructure: import, `-replace`, workspaces, `console/fmt/validate`, provisioners) + Dominio **8** (HCP Terraform). |
 | **5** | Lun 20 – dom 26 jul | **Repaso dirigido + Simulacro #1**. Cerrar los temas flojos que salgan. |
 | **6** | Lun 27 – jue 30 jul | **Simulacro #2** + cheat-sheet + repaso final ligero. Jue 30: cierre temprano. |
 | **🎯** | **Vie 31 jul** | **EXAMEN.** |
@@ -61,13 +61,13 @@ Estos son los puntos que el examen 003 explota con preguntas precisas — fíjal
 
 ## 📚 Recursos
 
-- Ruta oficial de tutoriales (003) y guía de objetivos — ver [README](../README.md).
+- Ruta oficial de tutoriales (004) y guía de objetivos — ver [README](../README.md).
 - Doc oficial de Terraform (registry, CLI, language).
 - Simulacros: busca bancos de preguntas estilo examen (similar a lo que hiciste con Dojo en el SAA).
 
 ## ✅ Checklist final (jueves 30 jul)
 
-- [ ] Los 9 dominios cubiertos con al menos un lab práctico cada uno.
+- [ ] Los 8 dominios cubiertos con al menos un lab práctico cada uno.
 - [ ] 2 simulacros hechos y revisados; temas flojos cerrados.
 - [ ] Cheat-sheet de gotchas (precedencia de variables, comandos de state, meta-argumentos) repasada.
 - [ ] Logística del examen confirmada (proctoring, ID, conexión, espacio despejado).

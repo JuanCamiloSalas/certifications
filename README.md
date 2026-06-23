@@ -16,4 +16,4 @@ Repositorio de apuntes y recursos de estudio para certificaciones AWS.
 |---|---|---|---|
 | **AWS Certified Cloud Practitioner (CCP)** | Foundational | ✅ Aprobada | [Ver apuntes](./CCP/README.md) |
 | **AWS Certified Solutions Architect – Associate (SAA)** | Associate | ✅ Aprobada — 845/1000 (22-jun-2026) | [Ver apuntes](./SAA/README.md) |
-| **HashiCorp Certified: Terraform Associate (003)** | Associate | 🔜 En curso | [Ver apuntes](./Terraform-Associate/README.md) |
+| **HashiCorp Certified: Terraform Associate (004)** | Associate | 🔜 En curso | [Ver apuntes](./Terraform-Associate/README.md) |
