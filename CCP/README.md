@@ -2,6 +2,9 @@
 
 # AWS Certified Cloud Practitioner (CCP)
 
+> [!TIP]
+> ✅ **Certificación aprobada.**
+
 ## 🔗 Links
 [![aws-links](https://img.shields.io/badge/Links_del_curso-orange?style=for-the-badge)](https://learn.blockstellart.com/aws-cloud-practitioner-zvb)
 [![aws-links](https://img.shields.io/badge/Examen_de_práctica-orange?style=for-the-badge)](https://d1.awsstatic.com/es_ES/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Sample-Questions.pdf)

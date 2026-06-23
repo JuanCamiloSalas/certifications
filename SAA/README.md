@@ -2,8 +2,11 @@
 
 # AWS Certified Solutions Architect – Associate (SAA)
 
+> [!TIP]
+> ✅ **Certificación aprobada el 22 de junio de 2026 — Score 845/1000** (umbral 720).
+
 > [!NOTE]
-> Apuntes en construcción. Formato **flashcard**: cada concepto en su propio archivo, navegable con prev/next. Ver [`cards/`](./cards/).
+> Formato **flashcard**: cada concepto en su propio archivo, navegable con prev/next. Ver [`cards/`](./cards/).
 
 ## 🃏 Mazo de estudio
 
