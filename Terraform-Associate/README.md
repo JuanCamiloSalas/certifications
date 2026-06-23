@@ -35,11 +35,11 @@
 | 8 | Read, generate, and modify configuration | _pendiente_ |
 | 9 | Understand HCP Terraform capabilities | _pendiente_ |
 
-## 🗂️ Estructura (a medida que avance)
+## 🗂️ Estructura
 
-- `cards/` — flashcards por concepto (como en SAA)
-- `errors/` — repaso de simulacros
-- `planning/` — plan de estudio
+- [`planning/`](./planning/planning.md) — **plan de estudio (examen: 31 jul 2026)** ✅
+- `cards/` — flashcards por concepto (como en SAA) _(pendiente)_
+- `errors/` — repaso de simulacros _(pendiente)_
 
 ---
 
