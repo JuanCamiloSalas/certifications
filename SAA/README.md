@@ -15,7 +15,7 @@ El estudio principal vive en [`cards/`](./cards/) — una flashcard por concepto
 
 | Carpeta | Para qué sirve |
 |---|---|
-| [`cards/`](./cards/) | Mazo de flashcards (1 archivo = 1 concepto). Estudio diario. |
+| [`cards/`](./cards/README.md) | Mazo de flashcards (1 archivo = 1 concepto). Estudio diario. |
 | [`comparativas/`](./comparativas/) | Tablas servicio-vs-servicio. Consulta puntual cuando dos servicios se confunden. |
 | [`glosario.md`](./glosario.md) | Vocabulario EN→ES (inglés de enunciado + jerga cloud) que aparece en los simulacros. |
 | [`tips/`](./tips/) | Frases gatillo y trampas de examen acumuladas. Repaso final. |
