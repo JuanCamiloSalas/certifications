@@ -3,7 +3,7 @@
 # Plan de estudio — Terraform Associate (003)
 
 > **🎯 EXAMEN: viernes 31 de julio de 2026.** Online proctored, ~57 preguntas, 60 min.
-> **Punto de partida:** lunes 22 de junio de 2026 (recién aprobado el SAA con 845). ~5,5 semanas → ritmo cómodo.
+> **Punto de partida:** estudio arranca el **miércoles 24 de junio de 2026** (recién aprobado el SAA con 845; lun 22 – mar 23 de descanso). ~5 semanas → ritmo cómodo.
 
 ## 🧭 Filosofía para ESTE examen
 
@@ -15,8 +15,8 @@ A diferencia del SAA (escenarios), el Terraform Associate es **práctico y preci
 
 | Semana | Fechas | Foco |
 |---|---|---|
-| **0** | Lun 22 jun | 🛌 Descanso post-SAA. Solo: instalar Terraform + montar el sandbox. |
-| **1** | Mar 23 – dom 28 jun | Dominios **1, 2, 3**: IaC, propósito de Terraform, basics (providers, `init/plan/apply/destroy`). |
+| **0** | Lun 22 – mar 23 jun | 🛌 Descanso post-SAA. Opcional: instalar Terraform + montar el sandbox. |
+| **1** | Mié 24 – dom 28 jun | Dominios **1, 2, 3**: IaC, propósito de Terraform, basics (providers, `init/plan/apply/destroy`). |
 | **2** | Lun 29 jun – dom 5 jul | Dominio **6** (core workflow a fondo) + Dominio **8** (configuración: variables, outputs, data sources, expresiones, funciones). |
 | **3** | Lun 6 – dom 12 jul | Dominio **7** (state: backends remotos, locking, comandos de state, datos sensibles) + Dominio **5** (módulos). |
 | **4** | Lun 13 – dom 19 jul | Dominio **4** (fuera del core workflow: import, `-replace`, console, fmt, validate, provisioners, workspaces) + Dominio **9** (HCP Terraform / Terraform Cloud). |
