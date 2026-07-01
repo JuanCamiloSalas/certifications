@@ -1,0 +1,3 @@
+# Ignorar todo el contenido de slides (mantiene la carpeta versionada)
+*
+!.gitignore
