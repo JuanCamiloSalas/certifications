@@ -3,7 +3,7 @@
 # Plan de estudio — Terraform Associate (004)
 
 > **🎯 EXAMEN: viernes 31 de julio de 2026.** Online proctored, opción múltiple, 1 hora. Versión **004** (evalúa Terraform 1.12).
-> **Punto de partida:** estudio arranca el **miércoles 24 de junio de 2026** (recién aprobado el SAA con 845; lun 22 – mar 23 de descanso). ~5 semanas → ritmo cómodo.
+> **Punto de partida:** estudio arranca el **miércoles 1 de julio de 2026**. ~4,5 semanas → ritmo ágil pero alcanzable (recién aprobado el SAA con 845, vienes en forma).
 
 ## 🧭 Filosofía para ESTE examen
 
@@ -13,20 +13,22 @@ A diferencia del SAA (escenarios), el Terraform Associate es **práctico y preci
 
 ## ⏱️ Disponibilidad y ritmo
 
-| Semana | Fechas | Foco |
-|---|---|---|
-| **0** | Lun 22 – mar 23 jun | 🛌 Descanso post-SAA. Opcional: instalar Terraform + montar el sandbox. |
-| **1** | Mié 24 – dom 28 jun | Dominios **1, 2, 3**: IaC, fundamentos de Terraform, e inicio del core workflow (providers, `init/plan/apply/destroy`). |
-| **2** | Lun 29 jun – dom 5 jul | Dominio **3** (core workflow a fondo) + Dominio **4** (read & write configuration: variables, outputs, data sources, expresiones, funciones). |
-| **3** | Lun 6 – dom 12 jul | Dominio **6** (state management: backends remotos, locking, comandos de state, datos sensibles) + Dominio **5** (use & create modules). |
-| **4** | Lun 13 – dom 19 jul | Dominio **7** (maintain infrastructure: import, `-replace`, workspaces, `console/fmt/validate`, provisioners) + Dominio **8** (HCP Terraform). |
-| **5** | Lun 20 – dom 26 jul | **Repaso dirigido + Simulacro #1**. Cerrar los temas flojos que salgan. |
-| **6** | Lun 27 – jue 30 jul | **Simulacro #2** + cheat-sheet + repaso final ligero. Jue 30: cierre temprano. |
-| **🎯** | **Vie 31 jul** | **EXAMEN.** |
+> **Eje = el orden real del curso (secciones), no el orden de objetivos.** El curso interleava los temas con criterio pedagógico; seguirlo en orden es lo más eficiente. La columna "Objetivos" indica qué objetivo del examen cubre cada tramo, para que sepas dónde estás respecto al blueprint. Carga total: ~20 h de vídeo (S3-S17) + 9 labs → ~5 h/semana.
+
+| Semana | Fechas | Secciones del curso | Objetivos | Vídeo |
+|---|---|---|---|---|
+| **1** | Mié 1 – dom 5 jul | Setup (S1-2: instalar Terraform + sandbox) · **S3** Foundations · **S4** Core Workflow · **S5** CLI · **S6** File Structure | 1, 2, 3 | ~3,4 h |
+| **2** | Lun 6 – dom 12 jul | **S7** Configuration Fundamentals · **S8** Hands-On Labs · **S9** Managing State | 4, 6 | ~5,3 h |
+| **3** | Lun 13 – dom 19 jul | **S10** Making Code Reusable · **S11** Refactoring State · **S12** Modules · **S13** Resource Behavior & Dependencies | 5, 6, 7 | ~5,2 h |
+| **4** | Lun 20 – dom 26 jul | **S14** Securing Configs · **S15** Troubleshooting · **S16** HCP Terraform + **Simulacro #1** | 4, 7, 8 | ~4,5 h |
+| **5** | Lun 27 – jue 30 jul | **S17** Exam Prep (repaso por objetivo) + **Simulacro #2** + cheat-sheet. Cerrar temas flojos. Jue 30: cierre temprano. | todos | ~1,8 h |
+| **🎯** | **Vie 31 jul** | **EXAMEN.** | — | — |
+
+> ⚠️ **Time-box en S16 (HCP Terraform):** es la sección más larga del curso (3 h 7 min / 18 clases) pero HCP es solo 1 de 8 objetivos y pesa modesto. No te claves; cubre lo esencial (remote runs, remote state, private registry, Sentinel, workspaces HCP vs CLI) y sigue.
 
 ## 🔑 Temas clave / gotchas del examen (donde caen las preguntas)
 
-Estos son los puntos que el examen 003 explota con preguntas precisas — fíjalos especialmente:
+Estos son los puntos que el examen 004 explota con preguntas precisas — fíjalos especialmente:
 
 **Workflow & CLI**
 - `terraform init` → descarga providers/módulos e inicializa el backend. Obligatorio antes de plan/apply.
