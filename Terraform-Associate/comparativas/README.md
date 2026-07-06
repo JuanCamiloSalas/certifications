@@ -55,7 +55,7 @@
 
 | File | Topic | Block |
 |---|---|---|
-| _(none yet)_ | — | — |
+| [terraform-vs-other-tools.md](./terraform-vs-other-tools.md) | Terraform vs IaC peers vs config management | 02 |
 
 ---
 

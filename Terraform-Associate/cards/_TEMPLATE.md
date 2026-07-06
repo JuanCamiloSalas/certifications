@@ -28,7 +28,13 @@ CONVENTIONS (locked — do not deviate without asking):
       Never link fragile external URLs; never link a file that doesn't exist yet.
 
 SECTIONS — which are required:
-- ALWAYS: nav buttons, title, Pitch, "What the exam tests", "Core", "Syntax / Example".
+- ALWAYS: nav buttons, title, Pitch, "What the exam tests", "Core".
+- "💻 Syntax / Example":
+    * PRACTICAL cards (CLI command, HCL block, state behavior) -> REQUIRED. This is the
+      heart of the card — show the code/command, don't describe it.
+    * CONCEPTUAL cards (IaC & fundamentals: "what is X", "why", "vs") -> OPTIONAL. Omit it
+      rather than inventing filler HCL that adds nothing. A one-line snippet is fine only
+      if it genuinely illustrates the idea.
 - IF APPLICABLE: "Flags & values to memorize" (precedences, default values, version
   operators), "Easily confused with" (real comparison → link /comparativas).
 - OPTIONAL (only when it genuinely adds value): "Common traps", "Diagram".
@@ -56,7 +62,8 @@ SECTIONS — which are required:
 - A behavior that shows up in exam questions.
 - Cap at 4-6 bullets.
 
-<!-- ALWAYS for Terraform: show the code or the command -->
+<!-- REQUIRED for practical cards (CLI/HCL/state): show the code/command.
+     OPTIONAL for conceptual cards (IaC/fundamentals): omit if there's no real syntax. -->
 ## 💻 Syntax / Example
 
 ```hcl

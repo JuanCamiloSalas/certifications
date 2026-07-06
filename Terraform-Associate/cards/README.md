@@ -35,6 +35,8 @@
 - ⚡ **Rápido** — solo `cards S7`. Claude genera las cards de los temas estándar de esa sección.
 - 🎯 **Fiel (recomendado)** — `cards S7` + la **lista de clases** de la sección y/o **lo que se te hizo no-obvio**. Cards calcadas a tu curso, sin inventar cobertura. Encaja con la regla de "solo lo no obvio".
 
+> **Input de slides:** normalmente **basta un screenshot del índice de clases** (da el orden y los títulos → suficiente para el modo fiel). El **PDF/screenshots de las slides solo hace falta** cuando una slide trae algo no obvio que no se reconstruye del título (un flag, una precedencia, un default) — típico en secciones densas de sintaxis/CLI/state, no en las conceptuales.
+
 **Qué hace Claude:** mapea la sección → bloque correcto (tabla abajo) · redacta con el template · numera · cablea prev/next · actualiza la tabla del block README. Tú solo revisas.
 
 **Mapeo sección del curso → bloque de cards** (el curso interleava, así que el nº no siempre coincide):
@@ -62,10 +64,11 @@
 ## 📏 Quality rules
 
 - **Language: English only** (the exam is English-only — cards mirror it).
-- **Show the code.** Unlike SAA (scenario → service), this exam is syntax/CLI/state. Every card carries a real HCL snippet or the CLI command + the flags that matter. A card with no `💻 Syntax / Example` is usually incomplete.
+- **Show the code — when there IS code.** This exam is syntax/CLI/state, so **practical** cards must carry a real HCL snippet or the CLI command + the flags that matter. **Conceptual** cards (IaC & fundamentals: "what is X", "why", "vs") may skip `💻 Syntax / Example` — don't invent filler HCL to fill the slot.
+- **Keep conceptual blocks (01-02) lean.** Not every slide becomes a card. Collapse the obvious into fewer, denser cards; a card earns its place only with something non-obvious.
 - One topic = one card. Keep a topic together even if the card runs long.
 - No transcribing docs. Only non-obvious facts, precise flags/precedences, or things that already tricked you in a practice test.
-- **Required sections:** Pitch, "What the exam tests", "Core", "Syntax / Example" — always. "Flags & values to memorize" and "Easily confused with" only if applicable. Traps and Diagram are optional.
+- **Required sections:** Pitch, "What the exam tests", "Core" — always. "Syntax / Example" is required for practical cards, optional for conceptual ones. "Flags & values to memorize" and "Easily confused with" only if applicable. Traps and Diagram are optional.
 - **Images:** Mermaid for conceptual flows (workflow, state locking, dependency graph). For a real diagram, download it into [`../assets/`](../assets/) and link locally (no fragile external URLs).
 - Long versus comparisons live in [`../comparativas/`](../comparativas/), not here.
 

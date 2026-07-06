@@ -8,11 +8,11 @@
 
 ## 🃏 Cards in this block
 
-_(none yet — copy [`../_TEMPLATE.md`](../_TEMPLATE.md) to start)_
-
 | # | Card | Concept |
 |---|---|---|
-| — | — | — |
+| 01 | [Resource referencing](./01-resource-referencing.md) | Attribute references → implicit dependencies _(seen in S3)_ |
+
+> Más cards al cursar **S6 · S7 · S14** (file structure, config fundamentals, securing).
 
 ## 🎯 Suggested concepts to cover
 
@@ -21,7 +21,7 @@ _(none yet — copy [`../_TEMPLATE.md`](../_TEMPLATE.md) to start)_
 - ⬜ **Outputs**: `value`, `sensitive`, `description`; how they're consumed by parent modules / remote state.
 - ⬜ **Data sources** (`data` blocks) — read existing/external info without managing it.
 - ⬜ **Local values** (`locals`) and when to use them vs variables.
-- ⬜ Resource addressing & **references** (`resource.name.attr`), implicit dependencies.
+- ✅ Resource addressing & **references** (`resource.name.attr`), implicit dependencies. → card 01
 - ⬜ **Built-in functions** (`element`, `lookup`, `for`, `length`, `merge`, `templatefile`, …) — test with `terraform console`.
 - ⬜ **Types & complex structures**: string/number/bool, list, map, set, object, tuple.
 - ⬜ Dynamic blocks; expressions (conditionals `? :`, `for` expressions, splat `[*]`).

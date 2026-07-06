@@ -27,8 +27,8 @@
 
 | # | Dominio | Apuntes |
 |---|---|---|
-| 1 | Learn about Infrastructure as Code (IaC) | _pendiente_ |
-| 2 | Review Terraform fundamentals | _pendiente_ |
+| 1 | Learn about Infrastructure as Code (IaC) | [Bloque 01](./cards/01-iac/README.md) ✅ |
+| 2 | Review Terraform fundamentals | [Bloque 02](./cards/02-fundamentals/README.md) ✅ |
 | 3 | Use the core Terraform workflow | _pendiente_ |
 | 4 | Read and write configuration | _pendiente_ |
 | 5 | Use and create modules | _pendiente_ |

@@ -7,18 +7,18 @@
 
 ## 🃏 Cards in this block
 
-_(none yet — copy [`../_TEMPLATE.md`](../_TEMPLATE.md) to start)_
-
 | # | Card | Concept |
 |---|---|---|
-| — | — | — |
+| 01 | [What is IaC?](./01-what-is-iac.md) | Codify infra in versioned files, not console clicks |
+| 02 | [Benefits of IaC / Terraform](./02-iac-benefits.md) | Version control, automation, collaboration, consistency, drift |
+| 03 | [Declarative vs imperative](./03-declarative-vs-imperative.md) | Describe *what* (Terraform) vs script *how* |
 
 ## 🎯 Suggested concepts to cover
 
-- ⬜ What IaC is (manage infra in config files, not by hand / console).
-- ⬜ Advantages of IaC: versioning, repeatability, automation, peer review.
-- ⬜ Declarative vs imperative (Terraform is **declarative** — you describe the desired end state).
-- ⬜ How IaC reduces **configuration drift** and enables reproducible environments.
+- ✅ What IaC is (manage infra in config files, not by hand / console). → card 01
+- ✅ Advantages of IaC: versioning, repeatability, automation, peer review. → card 02
+- ✅ Declarative vs imperative (Terraform is **declarative** — you describe the desired end state). → card 03
+- ✅ How IaC reduces **configuration drift** and enables reproducible environments. → cards 02/03
 
 ## 🔗 Related comparisons
 

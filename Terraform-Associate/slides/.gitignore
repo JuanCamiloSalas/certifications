@@ -1,3 +1,5 @@
-# Ignorar todo el contenido de slides (mantiene la carpeta versionada)
+# Ignorar los PDFs de slides (pesados / "DO NOT DISTRIBUTE"), pero
+# versionar los resúmenes en markdown derivados (contexto para futuras sesiones)
 *
 !.gitignore
+!*.md
