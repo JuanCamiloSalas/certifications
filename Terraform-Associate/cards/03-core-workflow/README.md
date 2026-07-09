@@ -17,6 +17,8 @@
 | 05 | [`terraform apply`](./05-terraform-apply.md) | Executes plan; prompt vs `-auto-approve`; saved plan; `-replace` |
 | 06 | [`terraform destroy`](./06-terraform-destroy.md) | `apply -destroy`; reverse graph; only affects tracked state |
 | 07 | [`terraform validate`](./07-terraform-validate.md) | Offline syntax/consistency; needs init; vs fmt vs plan |
+| 08 | [The Terraform CLI](./08-terraform-cli.md) | Command anatomy; `-help`; `-install-autocomplete`; `-chdir`; single-dash flags |
+| 09 | [Environment variables](./09-environment-variables.md) | `TF_VAR_*` (low precedence); `TF_LOG`/`TF_LOG_PATH`; provider creds |
 
 ## 🎯 Suggested concepts to cover
 
@@ -27,8 +29,10 @@
 - ✅ Resource graph: DAG, implicit vs explicit (`depends_on`) deps, `-parallelism`. → card 04 _(S4 lecture 30)_
 - ✅ `.terraform.lock.hcl` (dependency lock file) — what it pins and why to commit it. → card 02
 - ✅ `terraform validate` (syntax/consistency, **does not** contact providers). → card 07 _(S4 lecture 35)_
-- ⬜ **Providers**: `required_providers`, version constraints (`~>`, `>=`, `=`), `alias` for multiple configs. _(S5 CLI)_
-- ⬜ `terraform fmt` (format) — already introduced in [02/06 HCL basics](../02-fundamentals/06-hcl-basics.md); revisit in S5 if needed.
+- ✅ CLI anatomy (`terraform <subcommand> [options]`), `-help`, `-install-autocomplete`, `-chdir`. → card 08 _(S5 CLI)_
+- ✅ Environment variables: `TF_VAR_*`, `TF_LOG`/`TF_LOG_PATH`, provider creds. → card 09 _(S5 CLI)_
+- ✅ `terraform fmt` (format) — lives in [02/06 HCL basics](../02-fundamentals/06-hcl-basics.md); re-shown in S5, not re-carded.
+- ⬜ **Providers**: `required_providers`, version constraints (`~>`, `>=`, `=`), `alias` for multiple configs. _(not in S5 slides — expected later, likely S6/S7)_
 
 ## 🔗 Related comparisons
 

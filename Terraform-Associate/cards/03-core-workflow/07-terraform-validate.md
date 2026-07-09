@@ -1,6 +1,6 @@
 [![](https://img.shields.io/badge/<_Prev-7B42BC?style=for-the-badge)](./06-terraform-destroy.md)
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Next_block_>-7B42BC?style=for-the-badge)](../04-configuration/README.md)
+[![](https://img.shields.io/badge/Next_>-7B42BC?style=for-the-badge)](./08-terraform-cli.md)
 
 # `terraform validate`
 
@@ -47,4 +47,4 @@ terraform validate -json   # machine-readable output (CI)
 
 [![](https://img.shields.io/badge/<_Prev-7B42BC?style=for-the-badge)](./06-terraform-destroy.md)
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Next_block_>-7B42BC?style=for-the-badge)](../04-configuration/README.md)
+[![](https://img.shields.io/badge/Next_>-7B42BC?style=for-the-badge)](./08-terraform-cli.md)
