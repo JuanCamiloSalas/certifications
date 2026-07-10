@@ -29,8 +29,8 @@
 |---|---|---|
 | 1 | Learn about Infrastructure as Code (IaC) | [Bloque 01](./cards/01-iac/README.md) ✅ |
 | 2 | Review Terraform fundamentals | [Bloque 02](./cards/02-fundamentals/README.md) ✅ |
-| 3 | Use the core Terraform workflow | _pendiente_ |
-| 4 | Read and write configuration | _pendiente_ |
+| 3 | Use the core Terraform workflow | [Bloque 03](./cards/03-core-workflow/README.md) ✅ _(S4·S5)_ |
+| 4 | Read and write configuration | [Bloque 04](./cards/04-configuration/README.md) 🟡 _(S6·S7 hechos; falta S14 securing)_ |
 | 5 | Use and create modules | _pendiente_ |
 | 6 | Learn about Terraform state management | _pendiente_ |
 | 7 | Maintain infrastructure with Terraform | _pendiente_ |
