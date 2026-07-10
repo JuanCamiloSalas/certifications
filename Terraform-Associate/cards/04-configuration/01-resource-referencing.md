@@ -1,6 +1,6 @@
 [![](https://img.shields.io/badge/<_Block-7B42BC?style=for-the-badge)](./README.md)
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Block_>-7B42BC?style=for-the-badge)](./README.md)
+[![](https://img.shields.io/badge/Next_>-7B42BC?style=for-the-badge)](./02-file-structure.md)
 
 # Resource Referencing
 
@@ -48,5 +48,5 @@ resource "aws_instance" "web" {
 
 [![](https://img.shields.io/badge/<_Block-7B42BC?style=for-the-badge)](./README.md)
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Block_>-7B42BC?style=for-the-badge)](./README.md)
+[![](https://img.shields.io/badge/Next_>-7B42BC?style=for-the-badge)](./02-file-structure.md)
 </content>
