@@ -40,8 +40,8 @@ Estos son los puntos que el examen 004 explota con preguntas precisas — fíjal
 
 **State**
 - El `.tfstate` guarda **secretos en texto plano** → nunca al control de versiones; usa backend remoto.
-- Backend remoto típico: **S3 + DynamoDB** (locking) o **Terraform Cloud**. El **state locking** evita ejecuciones concurrentes.
-- Comandos: `state list`, `state show`, `state mv`, `state rm`, `terraform refresh`.
+- Backend remoto típico: **S3** (locking nativo con `use_lockfile = true` — ⚠️ **DynamoDB deprecated** en 004) o **HCP Terraform**. El **state locking** evita ejecuciones concurrentes.
+- Comandos: `state list`, `terraform show`, `state show`, `state mv`, `state rm`; drift con `plan/apply -refresh-only`. Workspaces (CLI) con `terraform workspace`.
 - `terraform_remote_state` (data source) = leer outputs de otro state.
 
 **Módulos**

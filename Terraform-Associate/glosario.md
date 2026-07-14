@@ -12,7 +12,7 @@
 | **`plan`** | **`apply`** | `plan` = previsualiza cambios, no toca infra · `apply` = ejecuta los cambios |
 | **`validate`** | **`plan`** | `validate` = sintaxis/consistencia, **no** contacta providers · `plan` = sí consulta el estado real y los providers |
 | **`refresh`** | **`plan`** | `refresh` = reconcilia state con la infra real (drift) · `plan` = calcula el diff hacia el estado deseado |
-| **Backend local** | **Backend remoto** | local = `.tfstate` en disco (solo tú) · remoto (S3+DynamoDB / HCP) = compartido + **locking** + cifrado |
+| **Backend local** | **Backend remoto** | local = `.tfstate` en disco (solo tú) · remoto (S3 con `use_lockfile` / HCP) = compartido + **locking** + cifrado. ⚠️ DynamoDB locking **deprecated** |
 | **CLI workspaces** | **HCP workspaces** | CLI = varios states de **una misma config** (`terraform workspace`) · HCP = unidad de trabajo en la nube (state + variables + runs propios) |
 | **Root module** | **Child module** | root = el directorio actual donde corres Terraform · child = el que invocas con un bloque `module` |
 | **Input variable** | **Local value** | variable = entrada parametrizable (desde fuera) · local = valor calculado **dentro** de la config, no se pasa desde fuera |
@@ -44,6 +44,10 @@
 | **Backend** | Dónde vive el state y cómo se opera (local / remoto) |
 | **State locking** | Bloqueo que impide ejecuciones concurrentes sobre el mismo state |
 | **Drift** | Diferencia entre el state y la infra real (cambios fuera de Terraform) |
+| **Refresh-only mode** | `plan -refresh-only` (preview) / `apply -refresh-only` (actualiza **state**, no infra) — para **aceptar** drift |
+| **Workspace (CLI)** | Contenedor con nombre para un state aislado dentro de una misma config (`terraform workspace`) |
+| **`terraform.tfstate.d/`** | Directorio donde viven los states de los workspaces no-`default` (`<name>/terraform.tfstate`) |
+| **`use_lockfile`** | State locking nativo de S3 (`= true`); reemplaza el locking por DynamoDB (deprecated) |
 | **Lock file (`.terraform.lock.hcl`)** | Fija versiones de providers; se commitea |
 | **Plan file (`-out`)** | Plan guardado para aplicar exactamente lo previsto |
 | **Provisioner** | Ejecuta scripts al crear/destruir un recurso (**último recurso**) |
