@@ -1,6 +1,6 @@
 [![](https://img.shields.io/badge/<_Prev-7B42BC?style=for-the-badge)](./07-output-block.md)
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Next_block_>-7B42BC?style=for-the-badge)](../05-modules/README.md)
+[![](https://img.shields.io/badge/Next_>-7B42BC?style=for-the-badge)](./09-built-in-functions.md)
 
 # Terraform Block & Version Constraints
 
@@ -59,4 +59,4 @@ terraform {
 
 [![](https://img.shields.io/badge/<_Prev-7B42BC?style=for-the-badge)](./07-output-block.md)
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Next_block_>-7B42BC?style=for-the-badge)](../05-modules/README.md)
+[![](https://img.shields.io/badge/Next_>-7B42BC?style=for-the-badge)](./09-built-in-functions.md)

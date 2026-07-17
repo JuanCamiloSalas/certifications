@@ -30,8 +30,8 @@
 | 1 | Learn about Infrastructure as Code (IaC) | [Bloque 01](./cards/01-iac/README.md) ✅ |
 | 2 | Review Terraform fundamentals | [Bloque 02](./cards/02-fundamentals/README.md) ✅ |
 | 3 | Use the core Terraform workflow | [Bloque 03](./cards/03-core-workflow/README.md) ✅ _(S4·S5)_ |
-| 4 | Read and write configuration | [Bloque 04](./cards/04-configuration/README.md) 🟡 _(S6·S7 hechos; falta S14 securing)_ |
-| 5 | Use and create modules | _pendiente_ |
+| 4 | Read and write configuration | [Bloque 04](./cards/04-configuration/README.md) 🟡 _(S6·S7·S10 hechos; falta S14 securing)_ |
+| 5 | Use and create modules | _pendiente (S12)_ |
 | 6 | Learn about Terraform state management | [Bloque 06](./cards/06-state/README.md) 🟡 _(S9 hecho; falta S11 refactoring)_ |
 | 7 | Maintain infrastructure with Terraform | _pendiente_ |
 | 8 | Use HCP Terraform | _pendiente_ |
@@ -49,7 +49,7 @@
 | 7 — Terraform Configuration · Fundamentals | 12 | 2h 06m | 4 | 04 |
 | 8 — Hands-On Labs · Writing Your First Configs (6 labs) | 7 | 1h 40m | 3, 4 | 03/04 |
 | 9 — Understanding and Managing Terraform State | 14 | 1h 29m | 6 | 06 |
-| 10 — Making Code Reusable (3 labs) | 10 | 2h 14m | 5 | 05 |
+| 10 — Making Code Reusable (3 labs) | 10 | 2h 14m | 4 | 04 |
 | 11 — Refactoring Terraform State | 5 | 41m | 6, 7 | 06, 07 |
 | 12 — Terraform Modules | 8 | 1h 33m | 5 | 05 |
 | 13 — Managing Resource Behavior and Dependencies | 5 | 41m | 7 | 07 |

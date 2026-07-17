@@ -18,8 +18,14 @@
 | 06 | [Variable precedence](./06-variable-precedence.md) | Assign values + order (default < env < tfvars < auto.tfvars < `-var`) _(S7)_ |
 | 07 | [Output block](./07-output-block.md) | `output`; value/description/sensitive; module integration; interpolation _(S7)_ |
 | 08 | [Terraform block & version constraints](./08-terraform-block.md) | `required_version` · `required_providers` · `backend`; `=`/`>=`/`~>` _(S7)_ |
+| 09 | [Built-in functions](./09-built-in-functions.md) | `name(args)`; no user-defined fns; type/numeric/string/collection/CIDR; `terraform console` _(S10)_ |
+| 10 | [Dynamic values](./10-dynamic-values.md) | Interpolation `${…}`; data sources are read-only; compose var+local+data _(S10)_ |
+| 11 | [Local values](./11-locals.md) | `locals {}` (define) vs `local.` (ref); computed inside; not settable from outside _(S10)_ |
+| 12 | [`count` meta-argument](./12-count-meta-argument.md) | N copies by index; `count.index`; reindex gotcha; `cond ? 1 : 0` _(S10)_ |
+| 13 | [`for_each` meta-argument](./13-for_each-meta-argument.md) | Map/set → per-key; `each.key`/`each.value`; stable keys; `toset(list)` _(S10)_ |
 
 > Más cards al cursar **S14** (securing configs: `sensitive`, secrets handling).
+> **S10 "Making Code Reusable"** entra aquí (no en el bloque 05): es lenguaje de configuración —functions, interpolación, locals, `count`/`for_each`— del objetivo 4, no módulos.
 
 ## 🎯 Suggested concepts to cover
 
@@ -32,13 +38,17 @@
 - ✅ **Terraform block**: `required_version`, `required_providers`, `backend`; version constraints `=`/`>=`/`~>`. → card 08 _(S7)_
 - ✅ Resource addressing & **references** (`resource.name.attr`), implicit dependencies. → card 01
 - ✅ **Types & complex structures**: string/number/bool, list, map, set. → card 05 _(object/tuple not in S7)_
-- ⬜ **Local values** (`locals`) and when to use them vs variables. _(not in S6/S7)_
-- ⬜ **Built-in functions** (`element`, `lookup`, `for`, `length`, `merge`, `templatefile`, …) — test with `terraform console`. _(not in S6/S7)_
-- ⬜ Dynamic blocks; expressions (conditionals `? :`, `for` expressions, splat `[*]`). _(not in S6/S7)_
+- ✅ **Local values** (`locals` define / `local.` ref) and when to use them vs variables. → card 11 _(S10)_
+- ✅ **Built-in functions** (`name(args)`; no user-defined; type/numeric/string/collection/CIDR) — test with `terraform console`. → card 09 _(S10)_
+- ✅ **Dynamic values / interpolation** (`${…}`, compose var+local+data; data sources read-only). → card 10 _(S10)_
+- ✅ **Meta-arguments `count` / `for_each`** (index vs stable keys). → cards 12·13 _(S10)_ · [comparativa](../../comparativas/count-vs-for-each.md)
+- ⬜ Dynamic blocks; more expressions (conditionals `? :`, `for` expressions, splat `[*]`). _(not in S10)_
 
 ## 🔗 Related comparisons
 
-_(create in [`../../comparativas/`](../../comparativas/) when they appear)_
+- ✅ [count vs for_each](../../comparativas/count-vs-for-each.md) — numeric index vs stable keys.
+
+_(still to create in [`../../comparativas/`](../../comparativas/) when they appear)_
 
 - Input variables vs locals vs outputs
 - list vs set vs map vs object

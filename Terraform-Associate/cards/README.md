@@ -41,14 +41,16 @@
 
 **Mapeo sección del curso → bloque de cards** (el curso interleava, así que el nº no siempre coincide):
 
+> ⚠️ **El mapeo es orientativo, no una camisa de fuerza.** Antes de escribir, Claude cruza los **temas reales** de la sección con el objetivo del bloque destino y **remapea si no encajan**. El título de una sección puede engañar. _Ejemplo:_ **S10 "Making Code Reusable"** no toca módulos —son functions/interpolación/locals/`count`/`for_each` (objetivo 4)— así que fue a **`04-configuration`**, no a `05-modules`.
+
 | Sección curso | Bloque(s) |
 |---|---|
 | S3 Foundations | `01-iac` + `02-fundamentals` |
 | S4 Core Workflow · S5 CLI | `03-core-workflow` |
-| S6 File Structure · S7 Config · S14 Securing | `04-configuration` |
+| S6 File Structure · S7 Config · **S10 Making Code Reusable** · S14 Securing | `04-configuration` |
 | S8 Hands-On Labs | refuerzan 03/04 (gotchas de lab si surgen) |
 | S9 Managing State · S11 Refactoring State | `06-state` |
-| S10 Making Code Reusable · S12 Modules | `05-modules` |
+| S12 Modules | `05-modules` |
 | S11 (import) · S13 Dependencies · S15 Troubleshooting | `07-maintain` |
 | S16 HCP Terraform | `08-hcp-terraform` |
 | S17 Exam Prep | repaso global — rellenar huecos, no cards nuevas |

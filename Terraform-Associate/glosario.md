@@ -31,10 +31,11 @@
 | **Module** | Conjunto reutilizable de archivos `.tf` invocable con `module` |
 | **Variable** | Entrada parametrizable (`variable` block) |
 | **Output** | Valor expuesto por una config/módulo (`output` block) |
-| **Local** | Valor calculado dentro de la config (`locals` block) |
-| **Meta-argument** | Argumento especial en cualquier recurso: `count`, `for_each`, `depends_on`, `lifecycle`, `provider` |
+| **Local** | Valor calculado dentro de la config. Se **define** en `locals {}` (plural) y se **referencia** con `local.<name>` (singular) |
+| **Built-in function** | Función nativa `nombre(args)` (string/numeric/collection/type-conversion/CIDR). ⚠️ **No hay funciones definidas por el usuario**; probar en `terraform console` |
+| **Meta-argument** | Argumento especial en cualquier recurso: `count` (`count.index`), `for_each` (`each.key`/`each.value`), `depends_on`, `lifecycle`, `provider` |
 | **Expression** | Referencias, condicionales `? :`, `for`, splat `[*]`, funciones |
-| **Interpolation** | `${...}` para insertar expresiones en strings |
+| **Interpolation** | `${...}` para insertar expresiones en strings (fuera de un string, la referencia va "pelada", sin `${}`) |
 
 ## ⚙️ Términos de la CLI / estado
 

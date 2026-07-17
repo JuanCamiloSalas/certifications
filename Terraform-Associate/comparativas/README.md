@@ -56,6 +56,7 @@
 | File | Topic | Block |
 |---|---|---|
 | [terraform-vs-other-tools.md](./terraform-vs-other-tools.md) | Terraform vs IaC peers vs config management | 02 |
+| [count-vs-for-each.md](./count-vs-for-each.md) | Multiple instances: numeric index vs stable keys | 04 |
 | [local-vs-remote-backend.md](./local-vs-remote-backend.md) | Where state lives: local disk vs remote (S3/azurerm/HCP) | 06 |
 | [cli-workspaces-vs-hcp-workspaces.md](./cli-workspaces-vs-hcp-workspaces.md) | Same word, two features: CLI workspaces vs HCP workspaces | 06 |
 
