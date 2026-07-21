@@ -1,6 +1,6 @@
 [![](https://img.shields.io/badge/<_Block-7B42BC?style=for-the-badge)](./README.md)
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Next_block_>-7B42BC?style=for-the-badge)](../08-hcp-terraform/README.md)
+[![](https://img.shields.io/badge/Next_>-7B42BC?style=for-the-badge)](./02-depends-on.md)
 
 # `import` Block
 
@@ -62,4 +62,4 @@ terraform import aws_instance.web i-1234567890abcdef0
 
 [![](https://img.shields.io/badge/<_Block-7B42BC?style=for-the-badge)](./README.md)
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Next_block_>-7B42BC?style=for-the-badge)](../08-hcp-terraform/README.md)
+[![](https://img.shields.io/badge/Next_>-7B42BC?style=for-the-badge)](./02-depends-on.md)

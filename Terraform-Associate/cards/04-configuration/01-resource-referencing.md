@@ -41,7 +41,7 @@ resource "aws_instance" "web" {
 
 ## ⚠️ Common traps
 
-- A reference is an **implicit** dependency — prefer it over `depends_on`; use `depends_on` only for hidden dependencies.
+- A reference is an **implicit** dependency — prefer it over [`depends_on`](../07-maintain/02-depends-on.md); use `depends_on` only for hidden dependencies.
 - Reference syntax has **no `${}`** in modern HCL for a bare reference — `aws_vpc.main.id`, not `"${aws_vpc.main.id}"`.
 
 ---

@@ -21,6 +21,8 @@
 | **`prevent_destroy`** | **`create_before_destroy`** | `prevent_destroy` = bloquea el destroy del recurso · `create_before_destroy` = crea el nuevo antes de borrar el viejo |
 | **`moved`** | **`removed`** | `moved` = reubica/renombra en el state (sigue gestionado) · `removed` = lo saca del state (deja de gestionarse; `lifecycle { destroy = false }` mantiene la infra viva) |
 | **CLI de state** (`state mv`/`rm`, `import`) | **Bloques declarativos** (`moved`/`removed`/`import`) | CLI = imperativo, fuera de la config, sin plan, arriesgado · bloques = en los `.tf`, versionados, revisables en PR, parte de plan/apply |
+| **`check` block** | **precondition/postcondition** | `check` = top-level, corre al final de plan/apply, **solo avisa** (no bloquea) · pre/postcondition = dentro de `lifecycle`, **bloquean** la operación al fallar |
+| **`terraform validate`** | **Custom conditions** | `validate` = sintaxis/consistencia (CLI, sin providers) · variable validation/pre-post/check = reglas de negocio sobre valores reales (en la config) |
 
 ## 🧱 Términos del lenguaje (HCL)
 
@@ -44,6 +46,8 @@
 | **`moved` block** | Refactor declarativo: renombra/reubica un recurso en el state (`from`/`to`) sin recrearlo |
 | **`removed` block** | Refactor declarativo: saca un recurso del state sin destruirlo (`from` + `lifecycle { destroy = false }`); hay que borrar el `resource` |
 | **`import` block** | Refactor declarativo: adopta infra existente (`to` = dirección, `id` = ID del provider); escribir el `resource` antes o `-generate-config-out` |
+| **`lifecycle` options** | `create_before_destroy` (cero downtime) · `prevent_destroy` (bloquea destroy; literal, no variable) · `ignore_changes = [attr]`/`all` (ignora drift) · `replace_triggered_by` (fuerza recreación) |
+| **Custom conditions** | 4 mecanismos de validación: variable `validation`, `precondition`, `postcondition` (**bloquean**) y `check` block (top-level, corre al final, **solo warning**). Todos usan `condition` + `error_message` |
 
 ## ⚙️ Términos de la CLI / estado
 

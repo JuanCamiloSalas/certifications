@@ -1,6 +1,6 @@
 [![](https://img.shields.io/badge/<_Prev-7B42BC?style=for-the-badge)](./12-count-meta-argument.md)
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Next_block_>-7B42BC?style=for-the-badge)](../05-modules/README.md)
+[![](https://img.shields.io/badge/Next_>-7B42BC?style=for-the-badge)](./14-custom-conditions-and-validation.md)
 
 # `for_each` Meta-Argument
 
@@ -62,4 +62,4 @@ resource "aws_instance" "web" {
 
 [![](https://img.shields.io/badge/<_Prev-7B42BC?style=for-the-badge)](./12-count-meta-argument.md)
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Next_block_>-7B42BC?style=for-the-badge)](../05-modules/README.md)
+[![](https://img.shields.io/badge/Next_>-7B42BC?style=for-the-badge)](./14-custom-conditions-and-validation.md)

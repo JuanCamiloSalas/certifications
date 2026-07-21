@@ -30,10 +30,10 @@
 | 1 | Learn about Infrastructure as Code (IaC) | [Bloque 01](./cards/01-iac/README.md) ✅ |
 | 2 | Review Terraform fundamentals | [Bloque 02](./cards/02-fundamentals/README.md) ✅ |
 | 3 | Use the core Terraform workflow | [Bloque 03](./cards/03-core-workflow/README.md) ✅ _(S4·S5)_ |
-| 4 | Read and write configuration | [Bloque 04](./cards/04-configuration/README.md) 🟡 _(S6·S7·S10 hechos; falta S14 securing)_ |
+| 4 | Read and write configuration | [Bloque 04](./cards/04-configuration/README.md) 🟡 _(S6·S7·S10·S13 validación hechos; falta S14 securing)_ |
 | 5 | Use and create modules | [Bloque 05](./cards/05-modules/README.md) ✅ _(S12)_ |
 | 6 | Learn about Terraform state management | [Bloque 06](./cards/06-state/README.md) 🟡 _(S9 + S11 `moved`/`removed` hechos; falta `terraform_remote_state`)_ |
-| 7 | Maintain infrastructure with Terraform | [Bloque 07](./cards/07-maintain/README.md) 🟡 _(S11 `import` hecho; falta S13 dependencies · S15 troubleshooting · replace/provisioners)_ |
+| 7 | Maintain infrastructure with Terraform | [Bloque 07](./cards/07-maintain/README.md) 🟡 _(S11 `import` + S13 `depends_on`/`lifecycle` hechos; falta S15 troubleshooting · replace/provisioners)_ |
 | 8 | Use HCP Terraform | _pendiente_ |
 
 ## 📺 Temario del curso (referencia)
@@ -52,7 +52,7 @@
 | 10 — Making Code Reusable (3 labs) | 10 | 2h 14m | 4 | 04 |
 | 11 — Refactoring Terraform State | 5 | 41m | 6, 7 | 06, 07 |
 | 12 — Terraform Modules | 8 | 1h 33m | 5 | 05 |
-| 13 — Managing Resource Behavior and Dependencies | 5 | 41m | 7 | 07 |
+| 13 — Managing Resource Behavior and Dependencies | 5 | 41m | 7, 4 | 07, 04 |
 | 14 — Securing Terraform Configurations | 9 | 1h 10m | 4 | 04 |
 | 15 — Terraform Troubleshooting | 3 | 12m | 7 | 07 |
 | 16 — HCP Terraform | 18 | 3h 07m | 8 | 08 |
