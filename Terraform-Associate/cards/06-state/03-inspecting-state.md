@@ -47,7 +47,7 @@ terraform state rm aws_instance.old     # forget it — real resource keeps runn
 
 ## 🔄 Easily confused with
 
-- `state mv` vs `state rm` vs `import` → config-driven equivalents in **S11** (`moved` / `removed` / `import` blocks).
+- `state mv` vs `state rm` vs `import` (CLI) → config-driven equivalents: [`moved`](./06-moved-block.md) / [`removed`](./07-removed-block.md) / [`import`](../07-maintain/01-import-block.md) blocks · [comparativa](../../comparativas/refactoring-moved-removed-import.md).
 
 ---
 

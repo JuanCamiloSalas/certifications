@@ -19,6 +19,8 @@
 | **`local-exec`** | **`remote-exec`** | `local-exec` = comando en **tu** máquina · `remote-exec` = comando **en el recurso** creado (vía SSH/WinRM) |
 | **`terraform`** | **HCP Terraform** | `terraform` = la CLI/binario open source · HCP Terraform = plataforma SaaS (remote runs, state, registry, Sentinel) |
 | **`prevent_destroy`** | **`create_before_destroy`** | `prevent_destroy` = bloquea el destroy del recurso · `create_before_destroy` = crea el nuevo antes de borrar el viejo |
+| **`moved`** | **`removed`** | `moved` = reubica/renombra en el state (sigue gestionado) · `removed` = lo saca del state (deja de gestionarse; `lifecycle { destroy = false }` mantiene la infra viva) |
+| **CLI de state** (`state mv`/`rm`, `import`) | **Bloques declarativos** (`moved`/`removed`/`import`) | CLI = imperativo, fuera de la config, sin plan, arriesgado · bloques = en los `.tf`, versionados, revisables en PR, parte de plan/apply |
 
 ## 🧱 Términos del lenguaje (HCL)
 
@@ -36,6 +38,9 @@
 | **Meta-argument** | Argumento especial en cualquier recurso: `count` (`count.index`), `for_each` (`each.key`/`each.value`), `depends_on`, `lifecycle`, `provider` |
 | **Expression** | Referencias, condicionales `? :`, `for`, splat `[*]`, funciones |
 | **Interpolation** | `${...}` para insertar expresiones en strings (fuera de un string, la referencia va "pelada", sin `${}`) |
+| **`moved` block** | Refactor declarativo: renombra/reubica un recurso en el state (`from`/`to`) sin recrearlo |
+| **`removed` block** | Refactor declarativo: saca un recurso del state sin destruirlo (`from` + `lifecycle { destroy = false }`); hay que borrar el `resource` |
+| **`import` block** | Refactor declarativo: adopta infra existente (`to` = dirección, `id` = ID del provider); escribir el `resource` antes o `-generate-config-out` |
 
 ## ⚙️ Términos de la CLI / estado
 
@@ -53,7 +58,7 @@
 | **Plan file (`-out`)** | Plan guardado para aplicar exactamente lo previsto |
 | **Provisioner** | Ejecuta scripts al crear/destruir un recurso (**último recurso**) |
 | **Taint / `-replace`** | Marca un recurso para recrearlo (`-replace=ADDR` es lo moderno) |
-| **Import** | Trae un recurso existente bajo gestión de Terraform |
+| **Import** | Trae un recurso existente bajo gestión de Terraform. Moderno: **`import` block** (previsualizable en plan) · legacy: `terraform import <addr> <id>` (CLI, sin plan, modifica el state al instante) |
 | **Sentinel** | Policy as code en HCP Terraform |
 
 ## 🔢 Operadores de versión

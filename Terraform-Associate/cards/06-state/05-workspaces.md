@@ -1,6 +1,6 @@
 [![](https://img.shields.io/badge/<_Prev-7B42BC?style=for-the-badge)](./04-state-drift-refresh-only.md)
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Next_block_>-7B42BC?style=for-the-badge)](../07-maintain/README.md)
+[![](https://img.shields.io/badge/Next_>-7B42BC?style=for-the-badge)](./06-moved-block.md)
 
 # Workspaces (CLI)
 
@@ -75,4 +75,4 @@ flowchart LR
 
 [![](https://img.shields.io/badge/<_Prev-7B42BC?style=for-the-badge)](./04-state-drift-refresh-only.md)
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Next_block_>-7B42BC?style=for-the-badge)](../07-maintain/README.md)
+[![](https://img.shields.io/badge/Next_>-7B42BC?style=for-the-badge)](./06-moved-block.md)

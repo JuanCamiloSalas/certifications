@@ -8,15 +8,15 @@
 
 ## 🃏 Cards in this block
 
-_(none yet — copy [`../_TEMPLATE.md`](../_TEMPLATE.md) to start)_
-
 | # | Card | Concept |
 |---|---|---|
-| — | — | — |
+| 01 | [`import` block](./01-import-block.md) | Adopt existing infra; `to`/`id`; write resource first / `-generate-config-out`; vs `terraform import` CLI _(S11)_ |
+
+> `moved` / `removed` (refactor del state) viven en el bloque **[`06-state`](../06-state/README.md)** (objetivo 6); los tres comparados en la [comparativa](../../comparativas/refactoring-moved-removed-import.md).
 
 ## 🎯 Suggested concepts to cover
 
-- ⬜ `terraform import` — bring existing resources under management (and the `import` block, 1.5+).
+- ✅ `terraform import` — bring existing resources under management (**`import` block** 1.5+ + CLI). → card 01 _(S11)_
 - ⬜ `-replace=ADDR` (replaces the old `taint`/`untaint` flow) — force recreate a resource.
 - ⬜ **Meta-arguments**: `count` (numeric index) vs `for_each` (map/set, stable keys); `depends_on`; `lifecycle` (`create_before_destroy`, `prevent_destroy`, `ignore_changes`).
 - ⬜ **CLI workspaces** (`terraform workspace new/select/list`) — multiple states from one config. (≠ HCP workspaces.)
@@ -25,10 +25,12 @@ _(none yet — copy [`../_TEMPLATE.md`](../_TEMPLATE.md) to start)_
 
 ## 🔗 Related comparisons
 
-_(create in [`../../comparativas/`](../../comparativas/) when they appear)_
+- ✅ [moved vs removed vs import](../../comparativas/refactoring-moved-removed-import.md) — refactoring blocks + CLI vs declarative.
 
-- count vs for_each
-- CLI workspaces vs HCP Terraform workspaces
+_(still to create in [`../../comparativas/`](../../comparativas/) when they appear)_
+
+- count vs for_each _(ya existe: [comparativa](../../comparativas/count-vs-for-each.md))_
+- CLI workspaces vs HCP Terraform workspaces _(ya existe: [comparativa](../../comparativas/cli-workspaces-vs-hcp-workspaces.md))_
 - local-exec vs remote-exec
 
 ---

@@ -15,8 +15,10 @@
 | 03 | [Inspecting State](./03-inspecting-state.md) | `state list` (direcciones) · `show` (todo) · `state show <addr>` (uno); legacy `mv`/`rm`/`pull`/`push` _(S9)_ |
 | 04 | [State Drift & Refresh-Only](./04-state-drift-refresh-only.md) | Drift; revertir (`apply`) vs aceptar (`apply -refresh-only`); `plan -refresh-only`; perder el state _(S9)_ |
 | 05 | [Workspaces (CLI)](./05-workspaces.md) | Varios states por config; `terraform.tfstate.d/`; `workspace list/new/select`; CLI vs HCP _(S9)_ |
+| 06 | [`moved` block](./06-moved-block.md) | Renombrar/reubicar en el state sin recrear; `from`/`to`; declarativo vs `state mv` _(S11)_ |
+| 07 | [`removed` block](./07-removed-block.md) | Dejar de gestionar sin destruir; `lifecycle { destroy = false }`; borrar el `resource` _(S11)_ |
 
-> Más cards al cursar **S11** (refactoring del state: bloques `moved` / `removed` / `import`; ver también bloque `07`).
+> `import` (adoptar infra existente) va en el bloque **[`07-maintain`](../07-maintain/README.md)** (objetivo 7). Los tres bloques comparados en la [comparativa](../../comparativas/refactoring-moved-removed-import.md).
 
 ## 🎯 Suggested concepts to cover
 
@@ -28,14 +30,13 @@
 - ✅ **Workspaces** (CLI) — multiple states per config; `terraform.tfstate.d/`; CLI vs HCP. → card 05 + [comparativa](../../comparativas/cli-workspaces-vs-hcp-workspaces.md) _(S9)_
 - ⬜ `terraform_remote_state` (data source) — read outputs of another state. _(no en S9)_
 - ⬜ Sensitive data in state and how backends handle it (encryption at rest). _(tocado en cards 01/02; profundizar en S14)_
-- ⬜ **State refactoring** blocks `moved` / `removed` / `import` — config-driven state ops. _(S11)_
+- ✅ **State refactoring** blocks `moved` / `removed` (config-driven state ops). → cards 06·07 _(S11)_ · `import` en bloque 07.
 
 ## 🔗 Related comparisons
 
-_(create in [`../../comparativas/`](../../comparativas/) when they appear)_
-
-- Local vs remote backend
-- state mv vs state rm vs import
+- ✅ [moved vs removed vs import](../../comparativas/refactoring-moved-removed-import.md) — refactoring blocks + CLI vs declarative.
+- ✅ [Local vs remote backend](../../comparativas/local-vs-remote-backend.md)
+- ✅ [CLI vs HCP workspaces](../../comparativas/cli-workspaces-vs-hcp-workspaces.md)
 
 ---
 

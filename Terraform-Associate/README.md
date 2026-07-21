@@ -32,8 +32,8 @@
 | 3 | Use the core Terraform workflow | [Bloque 03](./cards/03-core-workflow/README.md) ✅ _(S4·S5)_ |
 | 4 | Read and write configuration | [Bloque 04](./cards/04-configuration/README.md) 🟡 _(S6·S7·S10 hechos; falta S14 securing)_ |
 | 5 | Use and create modules | _pendiente (S12)_ |
-| 6 | Learn about Terraform state management | [Bloque 06](./cards/06-state/README.md) 🟡 _(S9 hecho; falta S11 refactoring)_ |
-| 7 | Maintain infrastructure with Terraform | _pendiente_ |
+| 6 | Learn about Terraform state management | [Bloque 06](./cards/06-state/README.md) 🟡 _(S9 + S11 `moved`/`removed` hechos; falta `terraform_remote_state`)_ |
+| 7 | Maintain infrastructure with Terraform | [Bloque 07](./cards/07-maintain/README.md) 🟡 _(S11 `import` hecho; falta S13 dependencies · S15 troubleshooting · replace/provisioners)_ |
 | 8 | Use HCP Terraform | _pendiente_ |
 
 ## 📺 Temario del curso (referencia)
