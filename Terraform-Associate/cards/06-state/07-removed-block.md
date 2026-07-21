@@ -1,6 +1,6 @@
 [![](https://img.shields.io/badge/<_Prev-7B42BC?style=for-the-badge)](./06-moved-block.md)
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Next_block_>-7B42BC?style=for-the-badge)](../07-maintain/README.md)
+[![](https://img.shields.io/badge/Next_>-7B42BC?style=for-the-badge)](./08-securing-state-files.md)
 
 # `removed` Block
 
@@ -48,4 +48,4 @@ removed {
 
 [![](https://img.shields.io/badge/<_Prev-7B42BC?style=for-the-badge)](./06-moved-block.md)
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Next_block_>-7B42BC?style=for-the-badge)](../07-maintain/README.md)
+[![](https://img.shields.io/badge/Next_>-7B42BC?style=for-the-badge)](./08-securing-state-files.md)

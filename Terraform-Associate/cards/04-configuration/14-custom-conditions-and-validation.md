@@ -1,6 +1,6 @@
 [![](https://img.shields.io/badge/<_Prev-7B42BC?style=for-the-badge)](./13-for_each-meta-argument.md)
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Next_block_>-7B42BC?style=for-the-badge)](../05-modules/README.md)
+[![](https://img.shields.io/badge/Next_>-7B42BC?style=for-the-badge)](./15-securing-secrets.md)
 
 # Custom Conditions & Validation
 
@@ -78,4 +78,4 @@ check "health" {
 
 [![](https://img.shields.io/badge/<_Prev-7B42BC?style=for-the-badge)](./13-for_each-meta-argument.md)
 [![](https://img.shields.io/badge/Block-175074?style=for-the-badge)](./README.md)
-[![](https://img.shields.io/badge/Next_block_>-7B42BC?style=for-the-badge)](../05-modules/README.md)
+[![](https://img.shields.io/badge/Next_>-7B42BC?style=for-the-badge)](./15-securing-secrets.md)

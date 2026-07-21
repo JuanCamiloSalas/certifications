@@ -1,0 +1,27 @@
+# S14 — Securing Terraform Configurations (resumen de slides)
+
+> Outline de la sección 14 del curso (Bryan Krausen). Tema: **proteger secretos** y **asegurar el state**. Clases 104-111 (suman 1h10m → cubren todo el temario).
+> **No es transcripción** del PDF (`tf_004_14_securing_terraform_configs.pdf`, no versionado) — es el índice de lo que vi, para dar contexto a futuras sesiones y saber qué está convertido en cards.
+> **Alimenta dos bloques:** secretos en config (`sensitive`, env vars, external sources, ephemeral/write-only, Vault) → **`04-configuration`** (objetivo 4b, "secure secret injection"); **securing state files** → **`06-state`** (objetivo 6).
+
+## Lectures — por tema
+
+- **104 · Why Secrets Are Risky:** un password acaba en **≥3 sitios inesperados**. Dónde se filtran: **Logs & Console** (output de `plan`/`apply`, mensajes de error del provider, logs de CI/CD), **Plan files** (`-out`, guardados como artefactos), **State files** (`.tfstate`, JSON en **texto plano**), **Version Control** (`.tfvars`/`.tf` hardcodeados, historial de git = **permanente**). No es un bug: Terraform **necesita** el valor; el trabajo es protegerlo.
+- **105 · Protecting Secrets (overview):** las técnicas son **capas** que trabajan juntas: (1) sensitive variables (ocultan en output/logs) · (2) environment variables (fuera de VCS) · (3) external secret sources (no guardar el secreto en Terraform).
+- **106 · Sensitive Variables & Outputs:** `sensitive = true` en `variable`/`output`. ✅ **Oculta** valores en output de `plan`/`apply`, logs y mensajes de error. ❌ **NO** protege: sigue en el **state en texto plano**, sigue **transmitiéndose al provider**, **no es cifrado** — solo enmascara output. Regla: *"hide from logs", no "encrypt the data"*. Output sensible sale como `<sensitive>`.
+- **107 · Environment Variables:** `export TF_VAR_db_password=...` → Terraform lo lee solo (sin `default`). ✅ nunca en archivos ni en git, ideal CI/CD (GitHub Secrets inyectadas en runtime), compatible con `sensitive = true`. ❌ **NO** mantiene el secreto **fuera del state**.
+- **108 · External Secret Sources:** leer el secreto en runtime desde **AWS Secrets Manager / Azure Key Vault / GCP Secret Manager / HashiCorp Vault** vía provider/data source. ✅ no está en los `.tf`, una sola fuente de verdad, rotación/acceso centralizados. ❌ **igual acaba en el state** (a menos que uses ephemeral). 
+- **109 · Securing State Files:** el state **contendrá** secretos → proteger **dónde se guarda** y **quién accede**. **Local** (laptop, sin cifrar, fácil de commitear, sin control de acceso) vs **Remoto** (S3/HCP: cifrado at-rest, IAM/RBAC, audit logging, locking). **Defense in depth** = cifrado (KMS/customer-managed keys) + access controls (read vs write) + audit logging + state locking. Checklist: remoto en prod · cifrado at-rest · access controls · locking.
+- **110 · Ephemeral Values & Write-only Arguments (TF 1.10+):** **ephemeral values** existen **solo en memoria** durante la operación, **nunca** se escriben a state ni a plan; se recalculan en cada run y se descartan. Variables efímeras → `ephemeral = true`. Usables en: local values, provider blocks, ephemeral resources, ephemeral variables/outputs, provisioner blocks, write-only arguments. **NO** usables en argumentos de un `resource` normal (error: los recursos deben persistir). **Ephemeral resources** = tipo de bloque nuevo (`ephemeral` en vez de `data`), fetch en runtime, nunca persistido (abre/cierra durante la ejecución). **Write-only arguments** = pasar valores temporales a recursos gestionados **sin** persistirlos a state/plan (los define cada provider; suelen ir con una "version" que dispara el reenvío). Es **el** mecanismo que saca los secretos del state.
+- **111 · HashiCorp Vault (dynamic credentials):** problema de las **credenciales estáticas** (long-lived, locales, difíciles de rotar/revocar/auditar, gran superficie de ataque). **Credenciales dinámicas**: identity-based auth → Vault genera creds **short-lived** (TTL corto, p.ej. 15 min / 120 s), scope limitado, **auto-revocadas** al expirar. Con **ephemeral resources**, las creds **no se escriben al state**. Beneficios: gestión centralizada, superficie de ataque reducida, el dev nunca toca las credenciales del cloud.
+
+## Cards generadas desde esta sección
+
+| Bloque | Cards |
+|---|---|
+| `04-configuration` | 15 securing-secrets (dónde se filtran + capas) · 16 sensitive-variables-and-outputs · 17 secrets-env-vars-and-external-sources (+ Vault dynamic creds) · 18 ephemeral-values-and-write-only-arguments |
+| `06-state` | 08 securing-state-files (remoto + cifrado + access control + audit + locking) |
+
+**Comparativas creadas:** `secret-protection-techniques` (sensitive vs env vars vs external vs ephemeral — qué protege: logs / state / git).
+
+> Reconciliación: `TF_VAR_*` ya tenía card en `03/09 environment-variables` (precedencia + provider creds) → aquí se cruza con el ángulo "secretos". `sensitive` ya se mencionaba en `04/05 variable-block` y `04/07 output-block` → se desarrolla en la card 16. El state en texto plano y el cifrado/locking ya estaban en `06/01` y `06/02` → la card `06/08` añade el ángulo de **seguridad** (access control, audit, KMS, defense-in-depth) y cruza. `ephemeral` conecta con Vault (ephemeral resources para fetch de creds). ⚠️ **Corrección de dato:** en S9 se anotó "S3 + locking via `use_lockfile`"; el `06/08` lo reafirma (DynamoDB deprecated).

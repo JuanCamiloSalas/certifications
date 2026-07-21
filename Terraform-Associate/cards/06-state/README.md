@@ -17,8 +17,10 @@
 | 05 | [Workspaces (CLI)](./05-workspaces.md) | Varios states por config; `terraform.tfstate.d/`; `workspace list/new/select`; CLI vs HCP _(S9)_ |
 | 06 | [`moved` block](./06-moved-block.md) | Renombrar/reubicar en el state sin recrear; `from`/`to`; declarativo vs `state mv` _(S11)_ |
 | 07 | [`removed` block](./07-removed-block.md) | Dejar de gestionar sin destruir; `lifecycle { destroy = false }`; borrar el `resource` _(S11)_ |
+| 08 | [Securing state files](./08-securing-state-files.md) | State = secretos en texto plano; remoto + cifrado + access control + audit + locking; defense in depth _(S14)_ |
 
 > `import` (adoptar infra existente) va en el bloque **[`07-maintain`](../07-maintain/README.md)** (objetivo 7). Los tres bloques comparados en la [comparativa](../../comparativas/refactoring-moved-removed-import.md).
+> De **S14** llega la card 08 (securing state, obj 6); el resto de S14 (secretos en config) vive en el bloque [`04`](../04-configuration/README.md) (cards 15-18).
 
 ## 🎯 Suggested concepts to cover
 
@@ -29,7 +31,7 @@
 - ✅ Refresh-only mode — reconcile state with real infra (drift), revert vs accept. → card 04 _(S9)_
 - ✅ **Workspaces** (CLI) — multiple states per config; `terraform.tfstate.d/`; CLI vs HCP. → card 05 + [comparativa](../../comparativas/cli-workspaces-vs-hcp-workspaces.md) _(S9)_
 - ⬜ `terraform_remote_state` (data source) — read outputs of another state. _(no en S9)_
-- ⬜ Sensitive data in state and how backends handle it (encryption at rest). _(tocado en cards 01/02; profundizar en S14)_
+- ✅ Sensitive data in state and how backends handle it (encryption at rest, access control, audit, locking). → card 08 _(S14)_ · keeping secrets **out** of state → [`04/18`](../04-configuration/18-ephemeral-values-and-write-only-arguments.md)
 - ✅ **State refactoring** blocks `moved` / `removed` (config-driven state ops). → cards 06·07 _(S11)_ · `import` en bloque 07.
 
 ## 🔗 Related comparisons
@@ -37,6 +39,7 @@
 - ✅ [moved vs removed vs import](../../comparativas/refactoring-moved-removed-import.md) — refactoring blocks + CLI vs declarative.
 - ✅ [Local vs remote backend](../../comparativas/local-vs-remote-backend.md)
 - ✅ [CLI vs HCP workspaces](../../comparativas/cli-workspaces-vs-hcp-workspaces.md)
+- ✅ [secret protection techniques](../../comparativas/secret-protection-techniques.md) — what protects logs/state/git.
 
 ---
 

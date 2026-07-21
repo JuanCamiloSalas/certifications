@@ -48,6 +48,11 @@
 | **`import` block** | Refactor declarativo: adopta infra existente (`to` = dirección, `id` = ID del provider); escribir el `resource` antes o `-generate-config-out` |
 | **`lifecycle` options** | `create_before_destroy` (cero downtime) · `prevent_destroy` (bloquea destroy; literal, no variable) · `ignore_changes = [attr]`/`all` (ignora drift) · `replace_triggered_by` (fuerza recreación) |
 | **Custom conditions** | 4 mecanismos de validación: variable `validation`, `precondition`, `postcondition` (**bloquean**) y `check` block (top-level, corre al final, **solo warning**). Todos usan `condition` + `error_message` |
+| **`sensitive = true`** | En `variable`/`output`: **enmascara** el valor en output/logs/errores. ⚠️ **NO** cifra ni lo saca del **state** (sigue en texto plano) — solo "hide from logs" |
+| **Ephemeral value** | (TF **1.10+**) valor **solo en memoria**, nunca escrito a state ni plan; se recalcula cada run. Marcar con `ephemeral = true`. **No** válido en args de un `resource` normal |
+| **Ephemeral resource** | Bloque nuevo (`ephemeral`, ≠ `data`/`resource`): fetch en runtime, en memoria, nunca persistido. Ideal para leer secretos/creds de Vault |
+| **Write-only argument** | Arg de un recurso gestionado que acepta un valor **sin** persistirlo a state/plan (lo define el provider; suele llevar un `*_version`) |
+| **Dynamic credentials** | Creds **short-lived** generadas on-demand (p.ej. Vault, TTL de minutos), auto-revocadas. Alternativa a las estáticas long-lived; con ephemeral resources no tocan el state |
 
 ## ⚙️ Términos de la CLI / estado
 

@@ -49,6 +49,7 @@ $Env:TF_LOG = "DEBUG"                  # PowerShell   (cmd: setx TF_LOG "DEBUG")
 ## 🔄 Easily confused with
 
 - The full **variable precedence ladder** (defaults → `TF_VAR_*` → `terraform.tfvars` → `*.auto.tfvars` → `-var`/`-var-file`) is a block 04 (configuration) topic — this card only covers the env-var rung.
+- Using `TF_VAR_*` / provider-cred env vars to **keep secrets out of files/git** → [secrets via env vars & external sources](../04-configuration/17-secrets-env-vars-and-external-sources.md) (note: env vars don't keep secrets out of **state**).
 
 ---
 

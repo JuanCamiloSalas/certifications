@@ -56,6 +56,7 @@
 ## 🔄 Easily confused with
 
 - → [local vs remote backend](../../comparativas/local-vs-remote-backend.md) (where the file lives)
+- Protecting the secrets state holds → [securing state files](./08-securing-state-files.md) · keeping them **out** of state → [ephemeral & write-only](../04-configuration/18-ephemeral-values-and-write-only-arguments.md)
 
 ## 🖼️ Diagram
 
