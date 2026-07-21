@@ -30,7 +30,10 @@
 | **Provider** | Plugin que habla con una API (AWS, Azure, random, local…) |
 | **Resource** | Un objeto de infra gestionado por Terraform (bloque `resource`) |
 | **Data source** | Lee info existente/externa sin gestionarla (bloque `data`) |
-| **Module** | Conjunto reutilizable de archivos `.tf` invocable con `module` |
+| **Module** | Conjunto reutilizable de archivos `.tf` (carpeta) invocable con `module`. Root = el directorio donde corres Terraform |
+| **`module` block** | Llama a un módulo hijo: `module "name" { source … }`. `source` obligatorio · `version` opcional (**solo registry**) · el resto = inputs |
+| **Module source** | De dónde viene el módulo: **registry** (`NS/NAME/PROVIDER`, versionable) · **Git** (`?ref=`) · **local** (`./path`, sin versión) |
+| **`module.<name>.<output>`** | Cómo el root/parent lee un `output` de un módulo hijo (por defecto no tiene acceso a su interior) |
 | **Variable** | Entrada parametrizable (`variable` block) |
 | **Output** | Valor expuesto por una config/módulo (`output` block) |
 | **Local** | Valor calculado dentro de la config. Se **define** en `locals {}` (plural) y se **referencia** con `local.<name>` (singular) |
